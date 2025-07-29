@@ -4,28 +4,53 @@ import { useState, useEffect } from 'react';
 export default function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      text: "Dr. Saleem transformed my smile with veneers. The entire process was painless and the results are amazing!",
+      name: "Peter Chhann",
+      text: "Very helpful Staff and Staff are very friendly and knowledgeable and I have had no issues. Highly recommended",
       rating: 5
     },
     {
-      name: "Michael Chen",
-      text: "The dental implant procedure was smooth and professional. I can eat normally again and my confidence is restored.",
+      name: "Francisco Beltran",
+      text: "One of the nicest dentist in area I bring my kids here, I decided to switch to keep everything at one location. Staff is available to help same day unlike other dentist…Friendly, competent, and happy to help. They also have other options and plans other places do not offer.",
       rating: 5
     },
     {
-      name: "Emily Rodriguez",
-      text: "Invisalign treatment was perfect for my busy lifestyle. The team was always supportive and the results exceeded my expectations.",
+      name: "Ashley Lopez",
+      text: "I love this place. The staff is down to earth and definitely communicates ahead of time. The doctors are fast and always trying to get you in and out on time. They are kid friendly and fast. Love this place",
       rating: 5
     },
     {
-      name: "David Thompson",
-      text: "Emergency dental care when I needed it most. The staff was compassionate and professional throughout the entire process.",
+      name: "Julina Batieste",
+      text: "Awesome team and dentist! Took care of me the same day and felt no pain!",
       rating: 5
     },
     {
-      name: "Lisa Martinez",
-      text: "Family dentistry at its best! My kids actually look forward to their dental visits. The team makes everyone feel comfortable.",
+      name: "Corina Marquez",
+      text: "Staff was nice and helpful.",
+      rating: 5
+    },
+    {
+      name: "Laura Bacaylan",
+      text: "I love Nu Smile Dental! I've been coming here since the March Lane location for about 10yrs now and would highly recommend this location as they provide the best care.",
+      rating: 5
+    },
+    {
+      name: "The Cali Nurse",
+      text: "Super friendly and helpful staff! Was in and out quickly with no issues. Was direct and straight to the point and gave me a detailed breakdown of everything. Highly recommend",
+      rating: 5
+    },
+    {
+      name: "Kenneth Cardenas",
+      text: "Super friendly and helpful staff! Was in and out quickly with no issues. Was direct and straight to the point and gave me a detailed breakdown of everything. Highly recommend",
+      rating: 5
+    },
+    {
+      name: "Mirna Valles",
+      text: "I went in for an extraction the Dr. was super fast they did a great job the staff were super helpful and kind definitely will recommend this dentist to everyone I know :)",
+      rating: 5
+    },
+    {
+      name: "Juan Ibarra",
+      text: "My first time coming here & my experience was great good service nice people will definitely be coming back.",
       rating: 5
     }
   ];

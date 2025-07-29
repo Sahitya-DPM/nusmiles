@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat, Hind } from "next/font/google";
 import "./globals.css";
+import ContactSection from "../components/ContactSection";
+import Footer from "../components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const montserrat = Montserrat({ subsets: ["latin"] });
@@ -29,6 +31,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
+        <ContactSection />
+        <Footer />
       </body>
     </html>
   );
