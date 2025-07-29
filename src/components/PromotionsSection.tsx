@@ -36,13 +36,13 @@ export default function PromotionsSection() {
           {promotions.map((promo, index) => (
             <div 
               key={index} 
-              className={`bg-white rounded-lg p-8 text-center ${
-                promo.highlight ? 'ring-4 ring-warm transform scale-105' : ''
-              }`}
+              className={`bg-white rounded-lg p-8 text-center border-2 border-transparent hover:border-secondary transition-all duration-300 flex flex-col justify-between h-full`}
             >
-              <div className="text-4xl font-bold text-secondary mb-4">{promo.price}</div>
-              <h3 className="text-xl font-semibold text-primary mb-4">{promo.title}</h3>
-              <p className="text-gray-700">{promo.description}</p>
+              <div>
+                <div className="text-4xl font-bold text-secondary mb-4">{promo.price}</div>
+                <h3 className="text-xl font-semibold text-primary mb-4">{promo.title}</h3>
+                <p className="text-gray-700">{promo.description}</p>
+              </div>
               <button className="mt-6 bg-secondary text-white px-6 py-2 rounded-lg hover:bg-secondary-dark transition-colors">
                 Book Now
               </button>
