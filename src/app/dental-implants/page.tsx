@@ -163,9 +163,9 @@ export default function DentalImplantsPage() {
                   ))}
                 </ul>
 
-                <button className="w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary-dark transition-colors duration-300" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                  Book Your Free Consultation Today!
-                </button>
+                <Link href="/appointment" className="w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary-dark transition-colors duration-300 inline-block text-center" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                  Book Free Consultation Today!
+                </Link>
               </div>
             ))}
           </div>

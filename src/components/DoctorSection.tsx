@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function DoctorSection() {
   return (
@@ -186,9 +187,9 @@ export default function DoctorSection() {
 
         {/* CTA Button */}
         <div className="text-center pt-12">
-          <button className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-dark transition-colors shadow-lg uppercase" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <Link href="/appointment" className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-dark transition-colors shadow-lg uppercase inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Schedule Consultation
-          </button>
+          </Link>
         </div>
       </div>
     </section>

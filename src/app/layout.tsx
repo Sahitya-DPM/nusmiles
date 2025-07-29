@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat, Hind } from "next/font/google";
+
 import "./globals.css";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
-const montserrat = Montserrat({ subsets: ["latin"] });
-const hind = Hind({ 
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"]
-});
+
 
 export const metadata: Metadata = {
   title: "Dental Experts - Your Family's Best Dentist in Fresno, CA",
@@ -29,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="font-sans">
         {children}
         <ContactSection />
         <Footer />
