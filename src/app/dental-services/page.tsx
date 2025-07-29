@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import Header from '../../components/Header';
 
 export default function DentalServicesPage() {
@@ -236,12 +237,12 @@ export default function DentalServicesPage() {
             Join our family of satisfied patients and discover why Nu Smile Dental is the trusted choice for dental care in Stockton.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Book Appointment
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary transition-colors" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            </Link>
+            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
-            </button>
+            </a>
           </div>
         </div>
       </section>
