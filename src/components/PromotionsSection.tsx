@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function PromotionsSection() {
   const promotions = [
     {
@@ -43,9 +45,9 @@ export default function PromotionsSection() {
                 <h3 className="text-xl font-semibold text-primary mb-4">{promo.title}</h3>
                 <p className="text-gray-700">{promo.description}</p>
               </div>
-              <button className="mt-6 bg-secondary text-white px-6 py-2 rounded-lg hover:bg-secondary-dark transition-colors">
+              <Link href="/appointment" className="mt-6 bg-secondary text-white px-6 py-2 rounded-lg hover:bg-secondary-dark transition-colors inline-block">
                 Book Now
-              </button>
+              </Link>
             </div>
           ))}
         </div>

@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -58,12 +59,12 @@ export default function HeroSection() {
             Welcome! The dental professionals at Nu Smile Dental are pleased to welcome you to our practice located in Stockton, CA.
           </p>
           <div className="flex flex-col sm:flex-row gap-6">
-            <button className="bg-primary text-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-primary-dark transition-colors shadow-lg uppercase" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-primary text-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-primary-dark transition-colors shadow-lg uppercase inline-block text-center" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Book An Appointment
-            </button>
-            <button className="border-2 border-white text-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-white hover:text-primary transition-colors shadow-lg uppercase" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            </Link>
+            <Link href="/about-us" className="border-2 border-white text-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-white hover:text-primary transition-colors shadow-lg uppercase inline-block text-center" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Learn More
-            </button>
+            </Link>
           </div>
         </div>
       </div>
