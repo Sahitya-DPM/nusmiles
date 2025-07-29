@@ -6,6 +6,7 @@ import Link from 'next/link';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   return (
     <header className="bg-white shadow-md fixed w-full top-0 z-50">
@@ -29,8 +30,35 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <a href="#home" className="text-gray-700 hover:text-primary transition-colors">Home</a>
-            <Link href="/dental-services" className="text-gray-700 hover:text-primary transition-colors">Services</Link>
-            <a href="#about" className="text-gray-700 hover:text-primary transition-colors">About</a>
+            
+            {/* Services with Dropdown */}
+            <div className="relative group">
+              <Link 
+                href="/dental-services"
+                className="text-gray-700 hover:text-primary transition-colors flex items-center"
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                Services
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+              
+              {/* Dropdown Menu */}
+              <div 
+                className={`absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 transition-all duration-200 ${isServicesOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                <Link href="/general-dentistry" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
+                  General Dentistry
+                </Link>
+              </div>
+            </div>
+            
+            <Link href="/invisalign" className="text-gray-700 hover:text-primary transition-colors">Invisalign</Link>
+            <Link href="/about-us" className="text-gray-700 hover:text-primary transition-colors">About</Link>
             <a href="#gallery" className="text-gray-700 hover:text-primary transition-colors">Gallery</a>
             <a href="#contact" className="text-gray-700 hover:text-primary transition-colors">Contact</a>
           </nav>
@@ -64,8 +92,36 @@ export default function Header() {
           <div className="md:hidden py-4 border-t">
             <nav className="flex flex-col space-y-4">
               <a href="#home" className="text-gray-700 hover:text-primary transition-colors">Home</a>
-              <Link href="/dental-services" className="text-gray-700 hover:text-primary transition-colors">Services</Link>
-              <a href="#about" className="text-gray-700 hover:text-primary transition-colors">About</a>
+              
+              {/* Mobile Services Section */}
+              <div>
+                <Link 
+                  href="/dental-services"
+                  className="text-gray-700 hover:text-primary transition-colors flex items-center justify-between w-full"
+                >
+                  Services
+                </Link>
+                <button 
+                  className="text-gray-700 hover:text-primary transition-colors flex items-center justify-between w-full mt-2"
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                >
+                  Services Menu
+                  <svg className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                
+                {isServicesOpen && (
+                  <div className="ml-4 mt-2 space-y-2 border-l-2 border-gray-200 pl-4">
+                    <Link href="/general-dentistry" className="block text-gray-600 hover:text-primary transition-colors">
+                      General Dentistry
+                    </Link>
+                  </div>
+                )}
+              </div>
+              
+              <Link href="/invisalign" className="text-gray-700 hover:text-primary transition-colors">Invisalign</Link>
+              <Link href="/about-us" className="text-gray-700 hover:text-primary transition-colors">About</Link>
               <a href="#gallery" className="text-gray-700 hover:text-primary transition-colors">Gallery</a>
               <a href="#contact" className="text-gray-700 hover:text-primary transition-colors">Contact</a>
               <div className="pt-4 border-t">
