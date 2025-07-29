@@ -6,8 +6,6 @@ import DoctorSection from '@/components/DoctorSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import PromotionsSection from '@/components/PromotionsSection';
 import GalleryCarousel from '@/components/GalleryCarousel';
-import ContactSection from '@/components/ContactSection';
-import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -20,8 +18,6 @@ export default function Home() {
       <PromotionsSection />
       <GalleryCarousel />
       <TestimonialsSection />
-      <ContactSection />
-      <Footer />
     </>
   );
 }

@@ -128,7 +128,7 @@ export default function Header() {
             </div>
           </div>
           
-          <a href="#contact" className="text-gray-700 hover:text-primary transition-colors">Contact</a>
+          <Link href="/contact" className="text-gray-700 hover:text-primary transition-colors">Contact</Link>
         </nav>
 
           {/* Contact Info */}
@@ -259,7 +259,7 @@ export default function Header() {
                 )}
               </div>
               
-              <a href="#contact" className="text-gray-700 hover:text-primary transition-colors">Contact</a>
+              <Link href="/contact" className="text-gray-700 hover:text-primary transition-colors">Contact</Link>
               <div className="pt-4 border-t">
                 <p className="text-sm text-accent">Call us today</p>
                 <a href="tel:(209) 955-1800" className="font-semibold text-primary hover:text-primary-dark transition-colors">
