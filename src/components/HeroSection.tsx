@@ -35,7 +35,7 @@ export default function HeroSection() {
               src={slide}
               alt={`Slide ${index + 1}`}
               fill
-              className="object-cover"
+              className="object-cover object-top-right"
               priority={index === 0}
               sizes="100vw"
             />
@@ -46,21 +46,18 @@ export default function HeroSection() {
       </div>
 
       {/* Content Overlay */}
-      <div className="absolute inset-0 flex items-center justify-center z-10 pt-32 pb-32">
-        <div className="text-center text-white px-4 max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight mt-12" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+      <div className="absolute inset-0 flex items-center z-10 pt-32 pb-32">
+        <div className="text-left text-white px-8 md:px-16 lg:px-24 max-w-4xl">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-none" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', marginTop: '70px', marginBottom: '40px' }}>
             Welcome to Our Practice
           </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl mb-12 max-w-4xl mx-auto leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-xl md:text-2xl lg:text-3xl mb-4 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Welcome to Nu Smile Dental, Your Dentist in Stockton, CA
           </p>
-          <p className="text-lg md:text-xl lg:text-2xl mb-12 max-w-5xl mx-auto leading-loose" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-            Where we care for your health and comfort!
-          </p>
-          <p className="text-base md:text-lg lg:text-xl mb-12 max-w-4xl mx-auto leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-lg md:text-xl lg:text-2xl mb-4 leading-loose" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Welcome! The dental professionals at Nu Smile Dental are pleased to welcome you to our practice located in Stockton, CA.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6">
             <button className="bg-primary text-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-primary-dark transition-colors shadow-lg uppercase" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Book An Appointment
             </button>
