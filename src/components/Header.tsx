@@ -119,6 +119,9 @@ export default function Header() {
               onMouseEnter={() => setIsResourcesOpen(true)}
               onMouseLeave={() => setIsResourcesOpen(false)}
             >
+              <Link href="/patient-education" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
+                Patient Education
+              </Link>
               <Link href="/insurance-billing" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
                 Insurance & Billing
               </Link>
@@ -249,6 +252,9 @@ export default function Header() {
                 
                 {isResourcesOpen && (
                   <div className="ml-4 mt-2 space-y-2 border-l-2 border-gray-200 pl-4">
+                    <Link href="/patient-education" className="block text-gray-600 hover:text-primary transition-colors">
+                      Patient Education
+                    </Link>
                     <Link href="/insurance-billing" className="block text-gray-600 hover:text-primary transition-colors">
                       Insurance & Billing
                     </Link>
