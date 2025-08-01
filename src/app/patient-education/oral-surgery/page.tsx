@@ -31,26 +31,7 @@ export default function OralSurgeryPage() {
       id: 'surgical-procedures',
       title: 'Surgical Procedures',
       icon: '🔪',
-      articles: [
-        {
-          title: 'Oral Surgery Procedures',
-          excerpt: 'Various oral surgery procedures are available to address different dental and oral health issues. Learn about common procedures and their purposes.',
-          category: 'Oral Surgery',
-          readMore: '/patient-education/oral-surgery-procedures'
-        },
-        {
-          title: 'Corrective Jaw Surgery',
-          excerpt: 'Corrective jaw surgery can improve jaw alignment, function, and appearance. Understand when this procedure is recommended.',
-          category: 'Oral Surgery',
-          readMore: '/patient-education/corrective-jaw-surgery'
-        },
-        {
-          title: 'Sinus Surgery',
-          excerpt: 'Sinus surgery may be needed to address sinus-related dental issues. Learn about the connection between sinuses and oral health.',
-          category: 'Oral Surgery',
-          readMore: '/patient-education/sinus-surgery'
-        }
-      ]
+      articles: []
     },
     {
       id: 'specialized-surgery',
@@ -62,18 +43,6 @@ export default function OralSurgeryPage() {
           excerpt: 'Cleft lip and palate are congenital conditions that may require surgical intervention. Learn about treatment options and care.',
           category: 'Oral Surgery',
           readMore: '/patient-education/cleft-lip-and-palate'
-        },
-        {
-          title: 'Facial Trauma and Reconstructive Surgery',
-          excerpt: 'Facial trauma can result from accidents or injuries. Reconstructive surgery can restore function and appearance.',
-          category: 'Oral Surgery',
-          readMore: '/patient-education/facial-trauma-and-reconstructive-surgery'
-        },
-        {
-          title: 'Oral Cancer Screenings and Surgery',
-          excerpt: 'Early detection of oral cancer is crucial. Learn about screening procedures and surgical treatment options.',
-          category: 'Oral Surgery',
-          readMore: '/patient-education/oral-cancer-screenings-and-surgery'
         }
       ]
     },
@@ -82,12 +51,6 @@ export default function OralSurgeryPage() {
       title: 'Diagnostic and Care',
       icon: '🔬',
       articles: [
-        {
-          title: 'Oral Diagnosis and Biopsies',
-          excerpt: 'Proper diagnosis is essential for effective treatment. Learn about diagnostic procedures and biopsy processes.',
-          category: 'Oral Surgery',
-          readMore: '/patient-education/oral-diagnosis-and-biopsies'
-        },
         {
           title: 'Blood Thinners and Oral Surgery',
           excerpt: 'Blood thinners can affect oral surgery procedures. Understand the considerations and precautions needed.',

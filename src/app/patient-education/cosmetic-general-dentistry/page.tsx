@@ -216,14 +216,6 @@ export default function CosmeticGeneralDentistryPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
               {activeCategory?.articles.map((article, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                  <div className="relative h-48">
-                    <Image
-                      src={article.image}
-                      alt={article.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
                   <div className="p-6">
                     <div className="mb-4">
                       <span className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>

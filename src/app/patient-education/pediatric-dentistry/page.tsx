@@ -18,18 +18,6 @@ export default function PediatricDentistryPage() {
           excerpt: 'Pediatric dentistry is the study, practice, teaching, and research of oral care treatments and preventions in children.',
           category: 'Pediatric Dentistry',
           readMore: '/patient-education/about-pediatric-dentistry'
-        },
-        {
-          title: 'Your Child\'s First Dental Appointment',
-          excerpt: 'Learn about preparing for your child\'s first dental visit and what to expect during the appointment.',
-          category: 'Pediatric Dentistry',
-          readMore: '/patient-education/your-childs-first-dental-appointment'
-        },
-        {
-          title: 'Your Child\'s First Teeth',
-          excerpt: 'Understanding the development of your child\'s first teeth and how to care for them.',
-          category: 'Pediatric Dentistry',
-          readMore: '/patient-education/your-childs-first-teeth'
         }
       ]
     },

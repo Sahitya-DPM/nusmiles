@@ -25,62 +25,6 @@ export default function EndodonticsPage() {
           excerpt: 'Common questions and answers about root canal treatment, including what to expect during the procedure and recovery.',
           category: 'Endodontics',
           readMore: '/patient-education/root-canal-faqs'
-        },
-        {
-          title: 'Root Canal Treatment for Children',
-          excerpt: 'Root canal treatment can be performed on children to save primary teeth and maintain proper dental development.',
-          category: 'Endodontics',
-          readMore: '/patient-education/root-canal-treatment-for-children'
-        },
-        {
-          title: 'Root Canal Retreatment',
-          excerpt: 'Sometimes a root canal treatment may not heal properly or may become reinfected, requiring retreatment to save the tooth.',
-          category: 'Endodontics',
-          readMore: '/patient-education/root-canal-retreatment'
-        }
-      ]
-    },
-    {
-      id: 'advanced-procedures',
-      title: 'Advanced Endodontic Procedures',
-      icon: '🔬',
-      articles: [
-        {
-          title: 'Apicoectomy',
-          excerpt: 'An apicoectomy is a surgical procedure that removes the tip of a tooth root and surrounding infected tissue when a root canal treatment is not sufficient.',
-          category: 'Endodontics',
-          readMore: '/patient-education/apicoectomy'
-        },
-        {
-          title: 'Combined Root and Gum Problems',
-          excerpt: 'When both the root canal and gum tissue are affected, a combined treatment approach may be necessary to restore oral health.',
-          category: 'Endodontics',
-          readMore: '/patient-education/combined-root-and-gum-problems'
-        }
-      ]
-    },
-    {
-      id: 'tooth-conditions',
-      title: 'Tooth Conditions & Sensitivity',
-      icon: '🦷',
-      articles: [
-        {
-          title: 'Broken Teeth',
-          excerpt: 'Broken teeth can cause pain and sensitivity. Understanding the different types of fractures and treatment options is important for proper care.',
-          category: 'Endodontics',
-          readMore: '/patient-education/broken-teeth'
-        },
-        {
-          title: 'Tooth Sensitivity',
-          excerpt: 'Tooth sensitivity can be caused by various factors including exposed roots, worn enamel, or dental procedures. Understanding the causes helps in finding the right treatment.',
-          category: 'Endodontics',
-          readMore: '/patient-education/tooth-sensitivity'
-        },
-        {
-          title: 'Whitening Traumatized Teeth',
-          excerpt: 'Teeth that have been traumatized or undergone root canal treatment require special consideration when it comes to whitening procedures.',
-          category: 'Endodontics',
-          readMore: '/patient-education/whitening-traumatized-teeth'
         }
       ]
     }

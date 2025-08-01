@@ -26,18 +26,7 @@ export default function OralHealthPage() {
           category: 'Oral Health',
           readMore: '/patient-education/bad-breath'
         },
-        {
-          title: 'Dental Exams and Professional Cleanings',
-          excerpt: 'Regular dental exams and professional cleanings are essential for maintaining good oral health and preventing dental problems.',
-          category: 'Oral Health',
-          readMore: '/patient-education/dental-exams-and-professional-cleanings'
-        },
-        {
-          title: 'Dry Mouth',
-          excerpt: 'Dry mouth, or xerostomia, can be caused by various factors and can lead to dental problems if not addressed.',
-          category: 'Oral Health',
-          readMore: '/patient-education/dry-mouth'
-        }
+
       ]
     },
     {
@@ -51,39 +40,10 @@ export default function OralHealthPage() {
           category: 'Oral Health',
           readMore: '/patient-education/antibiotic-premedication'
         },
-        {
-          title: 'Blood Pressure Medications and Your Oral Health',
-          excerpt: 'If you experience high blood pressure, it\'s vital that you discuss possible medications with your health care professionals, including your dentist.',
-          category: 'Oral Health',
-          readMore: '/patient-education/blood-pressure-medications-and-your-oral-health'
-        },
-        {
-          title: 'Diabetes and Oral Health',
-          excerpt: 'Diabetes can significantly impact your oral health, and poor oral health can also affect diabetes management.',
-          category: 'Oral Health',
-          readMore: '/patient-education/diabetes-and-oral-health'
-        },
-        {
-          title: 'Eating Disorders and Oral Health',
-          excerpt: 'Eating disorders can have serious consequences for your oral health, affecting teeth, gums, and overall dental wellness.',
-          category: 'Oral Health',
-          readMore: '/patient-education/eating-disorders-and-oral-health'
-        }
+
       ]
     },
-    {
-      id: 'preventive-treatments',
-      title: 'Preventive Treatments',
-      icon: '🛡️',
-      articles: [
-        {
-          title: 'Fluoride Treatments',
-          excerpt: 'Fluoride treatments help strengthen tooth enamel and prevent cavities, especially important for children and adults at risk for decay.',
-          category: 'Oral Health',
-          readMore: '/patient-education/fluoride-treatments'
-        }
-      ]
-    }
+
   ];
 
   return (

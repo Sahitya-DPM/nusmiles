@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Header from '../../../components/Header';
 
-export default function AboutPediatricDentistryPage() {
+export default function FluorideAndYourChildPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -14,10 +14,10 @@ export default function AboutPediatricDentistryPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-            About Pediatric Dentistry
+            Fluoride and Your Child
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-            Specialized dental care for children
+            Understanding the importance of fluoride in children's dental health
           </p>
         </div>
       </section>
@@ -52,7 +52,7 @@ export default function AboutPediatricDentistryPage() {
                 <span className="text-gray-400 mx-2">/</span>
               </li>
               <li className="text-gray-900" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                About Pediatric Dentistry
+                Fluoride and Your Child
               </li>
             </ol>
           </nav>
@@ -65,69 +65,103 @@ export default function AboutPediatricDentistryPage() {
           <div className="prose prose-lg max-w-none">
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                What is Pediatric Dentistry?
+                What is Fluoride?
               </h2>
               <p className="text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                Pediatric dentistry is the study, practice, teaching, and research of oral care treatments and preventions in children. It is a specialized branch of dentistry that focuses on the oral health of children from infancy through adolescence.
+                Fluoride is a naturally occurring mineral that helps strengthen tooth enamel and prevent tooth decay. It works by remineralizing the tooth surface and making it more resistant to acid attacks from bacteria in the mouth.
               </p>
               <p className="text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                Pediatric dentists are specially trained to work with children and understand their unique dental needs, behavioral patterns, and developmental stages. They provide comprehensive oral health care that includes both primary and specialized oral health care for infants and children through adolescence, including those with special health care needs.
+                For children, fluoride is particularly important because their developing teeth are more susceptible to decay. Regular exposure to fluoride can significantly reduce the risk of cavities and help establish a strong foundation for lifelong oral health.
               </p>
             </div>
 
             <div className="mb-12">
               <h3 className="text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                Why Choose a Pediatric Dentist?
+                Sources of Fluoride for Children
               </h3>
               <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                Pediatric dentists have additional training beyond dental school that prepares them to meet the unique needs of children. This includes:
+                Children can receive fluoride from several sources:
               </p>
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <li className="text-gray-700">Child psychology and behavior management</li>
-                <li className="text-gray-700">Growth and development of children's teeth and jaws</li>
-                <li className="text-gray-700">Preventive dental care for children</li>
-                <li className="text-gray-700">Treatment of dental injuries and emergencies</li>
-                <li className="text-gray-700">Care for children with special needs</li>
+                <li className="text-gray-700">Fluoridated drinking water</li>
+                <li className="text-gray-700">Fluoride toothpaste (age-appropriate)</li>
+                <li className="text-gray-700">Professional fluoride treatments at dental visits</li>
+                <li className="text-gray-700">Fluoride supplements (if prescribed by a dentist)</li>
+                <li className="text-gray-700">Some foods and beverages</li>
               </ul>
             </div>
 
             <div className="mb-12">
               <h3 className="text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                Services Provided
+                When to Start Using Fluoride
               </h3>
               <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                Pediatric dentists provide a wide range of services including:
+                The timing of fluoride introduction depends on your child's age and risk of cavities:
               </p>
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <li className="text-gray-700">Comprehensive oral health examinations</li>
-                <li className="text-gray-700">Preventive dental care and cleanings</li>
-                <li className="text-gray-700">Fluoride treatments and sealants</li>
-                <li className="text-gray-700">Cavity fillings and restorations</li>
-                <li className="text-gray-700">Emergency dental care</li>
-                <li className="text-gray-700">Orthodontic evaluations</li>
-                <li className="text-gray-700">Habit counseling (thumb sucking, pacifier use)</li>
+                <li className="text-gray-700"><strong>Birth to 3 years:</strong> Use a tiny smear of fluoride toothpaste (about the size of a grain of rice) twice daily</li>
+                <li className="text-gray-700"><strong>3-6 years:</strong> Use a pea-sized amount of fluoride toothpaste twice daily</li>
+                <li className="text-gray-700"><strong>6+ years:</strong> Continue with pea-sized amount and ensure proper brushing technique</li>
               </ul>
             </div>
 
             <div className="mb-12">
               <h3 className="text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                When to Start Dental Care
+                Professional Fluoride Treatments
               </h3>
               <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                The American Academy of Pediatric Dentistry recommends that children should have their first dental visit by their first birthday or within six months after their first tooth appears. Early dental visits help establish good oral hygiene habits and can prevent dental problems before they start.
+                During regular dental checkups, your child's dentist may recommend professional fluoride treatments. These treatments provide a higher concentration of fluoride than toothpaste and can be especially beneficial for children at higher risk of cavities.
+              </p>
+              <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                Professional fluoride treatments are typically applied as a gel, foam, or varnish and take only a few minutes to complete. They are safe and effective when administered by a dental professional.
               </p>
             </div>
 
             <div className="mb-12">
               <h3 className="text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                Creating Positive Dental Experiences
+                Safety Considerations
               </h3>
               <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                Pediatric dentists are trained to create positive dental experiences for children. They use child-friendly language, explain procedures in ways children can understand, and create a welcoming environment that helps children feel comfortable and safe.
+                While fluoride is beneficial, it's important to use it safely:
               </p>
+              <ul className="list-disc pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                <li className="text-gray-700">Use only the recommended amount of toothpaste</li>
+                <li className="text-gray-700">Supervise young children during brushing to prevent swallowing</li>
+                <li className="text-gray-700">Store fluoride products out of reach of children</li>
+                <li className="text-gray-700">Follow your dentist's recommendations for fluoride supplements</li>
+                <li className="text-gray-700">Be aware of your local water fluoridation status</li>
+              </ul>
+            </div>
+
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                Signs of Fluoride Deficiency
+              </h3>
               <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                This approach helps children develop positive attitudes toward dental care that can last a lifetime, making them more likely to maintain good oral health habits as they grow older.
+                Children who don't get enough fluoride may be at increased risk for:
               </p>
+              <ul className="list-disc pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                <li className="text-gray-700">Tooth decay and cavities</li>
+                <li className="text-gray-700">Weakened tooth enamel</li>
+                <li className="text-gray-700">Increased sensitivity to hot and cold</li>
+                <li className="text-gray-700">More frequent dental problems</li>
+              </ul>
+            </div>
+
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                Working with Your Dentist
+              </h3>
+              <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                Your child's dentist will assess their individual needs and recommend the appropriate fluoride regimen. Factors they consider include:
+              </p>
+              <ul className="list-disc pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                <li className="text-gray-700">Age and developmental stage</li>
+                <li className="text-gray-700">Risk of cavities</li>
+                <li className="text-gray-700">Local water fluoridation</li>
+                <li className="text-gray-700">Diet and oral hygiene habits</li>
+                <li className="text-gray-700">Medical history</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -140,12 +174,28 @@ export default function AboutPediatricDentistryPage() {
             Related Articles
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link href="/patient-education/fluoride-and-your-child" className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+            <Link href="/patient-education/sealants" className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                Fluoride and Your Child
+                Sealants
               </h3>
               <p className="text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                Learn about the importance of fluoride in preventing tooth decay.
+                Learn about dental sealants for cavity prevention.
+              </p>
+            </Link>
+            <Link href="/patient-education/space-maintainers" className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+              <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                Space Maintainers
+              </h3>
+              <p className="text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                Understanding space maintainers for children.
+              </p>
+            </Link>
+            <Link href="/patient-education/about-pediatric-dentistry" className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+              <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                About Pediatric Dentistry
+              </h3>
+              <p className="text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                Learn about specialized dental care for children.
               </p>
             </Link>
           </div>
@@ -156,10 +206,10 @@ export default function AboutPediatricDentistryPage() {
       <section className="py-20 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-            Ready for Your Child's Dental Care?
+            Ready to Protect Your Child's Smile?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-            Our pediatric dental team is here to provide gentle, caring dental care for your child.
+            Our pediatric dental team can help ensure your child gets the right amount of fluoride for optimal oral health.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>

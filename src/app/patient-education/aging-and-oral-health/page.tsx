@@ -128,73 +128,7 @@ export default function AgingAndOralHealthPage() {
         </div>
       </section>
 
-      {/* Related Articles */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-            Related Articles
-          </h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                Dry Mouth
-              </h3>
-              <p className="text-gray-600 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                Dry mouth, or xerostomia, can be caused by various factors and can lead to dental problems if not addressed.
-              </p>
-              <Link 
-                href="/patient-education/dry-mouth"
-                className="inline-flex items-center text-primary hover:text-primary-dark font-semibold transition-colors"
-                style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
-              >
-                Read More
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                Dental Exams and Professional Cleanings
-              </h3>
-              <p className="text-gray-600 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                Regular dental exams and professional cleanings are essential for maintaining good oral health and preventing dental problems.
-              </p>
-              <Link 
-                href="/patient-education/dental-exams-and-professional-cleanings"
-                className="inline-flex items-center text-primary hover:text-primary-dark font-semibold transition-colors"
-                style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
-              >
-                Read More
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                Diabetes and Oral Health
-              </h3>
-              <p className="text-gray-600 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                Diabetes can significantly impact your oral health, and poor oral health can also affect diabetes management.
-              </p>
-              <Link 
-                href="/patient-education/diabetes-and-oral-health"
-                className="inline-flex items-center text-primary hover:text-primary-dark font-semibold transition-colors"
-                style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
-              >
-                Read More
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-primary">
