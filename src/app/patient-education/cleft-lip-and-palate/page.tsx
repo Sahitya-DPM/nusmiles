@@ -287,22 +287,7 @@ export default function CleftLipAndPalatePage() {
             Related Articles
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link href="/patient-education/corrective-jaw-surgery" className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                Corrective Jaw Surgery
-              </h3>
-              <p className="text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                Learn about jaw surgery procedures that may be part of cleft treatment.
-              </p>
-            </Link>
-            <Link href="/patient-education/oral-surgery-procedures" className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                Oral Surgery Procedures
-              </h3>
-              <p className="text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                Understand the various surgical procedures involved in cleft treatment.
-              </p>
-            </Link>
+
             <Link href="/patient-education/sedation-dentistry" className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Sedation Dentistry

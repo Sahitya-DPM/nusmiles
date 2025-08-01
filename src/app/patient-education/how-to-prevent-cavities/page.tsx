@@ -231,14 +231,7 @@ export default function HowToPreventCavitiesPage() {
                 Choose the right toothpaste to help prevent cavities and maintain oral health.
               </p>
             </Link>
-            <Link href="/patient-education/fluoride-treatments" className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                Fluoride Treatments
-              </h3>
-              <p className="text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                Professional fluoride treatments can strengthen enamel and prevent cavities.
-              </p>
-            </Link>
+
           </div>
         </div>
       </section>

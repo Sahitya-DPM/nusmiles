@@ -345,14 +345,7 @@ export default function WisdomTeethRemovalPage() {
                 Understand sedation options for comfortable wisdom teeth removal.
               </p>
             </Link>
-            <Link href="/patient-education/oral-surgery-procedures" className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                Oral Surgery Procedures
-              </h3>
-              <p className="text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                Learn about various oral surgery procedures and their requirements.
-              </p>
-            </Link>
+
           </div>
         </div>
       </section>
