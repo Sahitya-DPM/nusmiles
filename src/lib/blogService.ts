@@ -60,7 +60,7 @@ export const testCreateBlogPost = async (): Promise<string> => {
       content: 'This is the content of the test blog post.',
       imageUrl: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=400&fit=crop',
       publishDate: new Date().toISOString().split('T')[0],
-      urlSlug: 'test-blog-post',
+      slug: 'test-blog-post',
       metaTitle: 'Test Blog Post',
       metaDescription: 'This is a test blog post',
       author: 'Test Author',
@@ -142,17 +142,13 @@ export const getPublishedBlogPosts = async (): Promise<BlogPost[]> => {
   try {
     checkFirebaseAvailability();
     
-    console.log('Querying for published blog posts...');
-    
     // Use a simpler query without orderBy to avoid index requirements
     const q = query(
       collection(db!, BLOG_COLLECTION),
       where('status', '==', 'published')
     );
     
-    console.log('Executing query...');
     const querySnapshot = await getDocs(q);
-    console.log('Query completed, found', querySnapshot.docs.length, 'published posts');
     
     const posts = querySnapshot.docs.map(doc => ({
       id: doc.id,
@@ -166,7 +162,6 @@ export const getPublishedBlogPosts = async (): Promise<BlogPost[]> => {
       return dateB.getTime() - dateA.getTime(); // Descending order
     });
     
-    console.log('Processed and sorted published posts:', posts);
     return posts;
   } catch (error) {
     console.error('Error getting published blog posts:', error);
@@ -203,7 +198,7 @@ export const getBlogPostBySlug = async (slug: string): Promise<BlogPost | null> 
     
     const q = query(
       collection(db!, BLOG_COLLECTION),
-      where('urlSlug', '==', slug),
+      where('slug', '==', slug),
       where('status', '==', 'published')
     );
     const querySnapshot = await getDocs(q);

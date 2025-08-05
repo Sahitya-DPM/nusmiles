@@ -229,7 +229,7 @@ export default function AdminDashboardPage() {
                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                           <div className="flex space-x-2">
                             <Link
-                              href={`/blog/${post.urlSlug}`}
+                              href={`/blog/${post.slug}`}
                               target="_blank"
                               className="text-primary hover:text-primary/80 transition-colors"
                               style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
