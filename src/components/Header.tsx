@@ -99,6 +99,8 @@ export default function Header() {
           
           <Link href="/invisalign" className="text-gray-700 hover:text-primary transition-colors">Invisalign</Link>
           
+          <Link href="/blog" className="text-gray-700 hover:text-primary transition-colors">Blog</Link>
+          
           {/* Resources with Dropdown */}
           <div className="relative group">
             <Link 
@@ -231,6 +233,8 @@ export default function Header() {
               </div>
               
               <Link href="/invisalign" className="text-gray-700 hover:text-primary transition-colors">Invisalign</Link>
+              
+              <Link href="/blog" className="text-gray-700 hover:text-primary transition-colors">Blog</Link>
               
               {/* Mobile Resources Section */}
               <div>
