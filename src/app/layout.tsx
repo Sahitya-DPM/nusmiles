@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
+import { AuthProvider } from "../contexts/AuthContext";
 
 
 
@@ -25,9 +26,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-sans">
-        {children}
-        <ContactSection />
-        <Footer />
+        <AuthProvider>
+          {children}
+          <ContactSection />
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );
