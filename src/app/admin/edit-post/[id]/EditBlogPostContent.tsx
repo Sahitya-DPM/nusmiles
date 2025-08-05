@@ -21,7 +21,7 @@ export default function EditBlogPostContent({ id }: EditBlogPostContentProps) {
     content: '',
     imageUrl: '',
     publishDate: '',
-    urlSlug: '',
+    slug: '',
     metaTitle: '',
     metaDescription: '',
     author: '',
@@ -47,7 +47,7 @@ export default function EditBlogPostContent({ id }: EditBlogPostContentProps) {
             content: blogPost.content || '',
             imageUrl: blogPost.imageUrl || '',
             publishDate: blogPost.publishDate || new Date().toISOString().split('T')[0],
-            urlSlug: blogPost.urlSlug || '',
+            slug: blogPost.slug || '',
             metaTitle: blogPost.metaTitle || '',
             metaDescription: blogPost.metaDescription || '',
             author: blogPost.author || '',
@@ -290,15 +290,15 @@ export default function EditBlogPostContent({ id }: EditBlogPostContentProps) {
 
             {/* URL Slug */}
             <div>
-              <label htmlFor="urlSlug" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="slug" className="block text-sm font-medium text-gray-700 mb-2">
                 URL Slug *
               </label>
               <input
                 type="text"
-                id="urlSlug"
-                name="urlSlug"
+                id="slug"
+                name="slug"
                 required
-                value={formData.urlSlug}
+                value={formData.slug}
                 onChange={handleInputChange}
                 placeholder="my-blog-post-title"
                 className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
