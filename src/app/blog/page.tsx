@@ -12,35 +12,10 @@ export default function BlogPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchBlogPosts = async () => {
-      try {
-        console.log('=== Starting blog post fetch ===');
-        console.log('Current time:', new Date().toISOString());
-        
-        // First, let's get ALL blog posts to see what's in the database
-        console.log('Fetching ALL blog posts...');
-        const allPosts = await getAllBlogPosts();
-        console.log('All blog posts in database:', allPosts);
-        console.log('Number of all posts:', allPosts.length);
-        
-        // Then get only published posts
-        console.log('Fetching published blog posts...');
-        const publishedPosts = await getPublishedBlogPosts();
-        console.log('Published blog posts:', publishedPosts);
-        console.log('Number of published posts:', publishedPosts.length);
-        
-        // Log each post's status
-        allPosts.forEach((post, index) => {
-          console.log(`Post ${index + 1}:`, {
-            id: post.id,
-            title: post.title,
-            status: post.status,
-            publishDate: post.publishDate
-          });
-        });
-        
-        setBlogPosts(publishedPosts);
-        console.log('=== Blog post fetch completed ===');
+         const fetchBlogPosts = async () => {
+       try {
+         const publishedPosts = await getPublishedBlogPosts();
+         setBlogPosts(publishedPosts);
       } catch (error) {
         console.error('Error fetching blog posts:', error);
         console.error('Error details:', {
@@ -115,14 +90,7 @@ export default function BlogPage() {
       {/* Blog Posts Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Temporary Debug Section - Remove this later */}
-          <div className="mb-8 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-            <h3 className="text-lg font-semibold text-yellow-800 mb-2">Debug Info (Remove Later)</h3>
-            <p className="text-yellow-700 text-sm">
-              Check browser console to see all blog posts in database. 
-              Make sure your blog posts are set to "published" status to appear here.
-            </p>
-          </div>
+          
           
           {blogPosts.length === 0 ? (
             <div className="text-center py-20">
@@ -191,7 +159,7 @@ export default function BlogPage() {
                       ))}
                     </div>
                     <Link
-                      href={`/blog/${post.urlSlug}`}
+                      href={`/blog/${post.slug}`}
                       className="inline-flex items-center text-primary font-semibold hover:text-primary/80 transition-colors"
                       style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
                     >

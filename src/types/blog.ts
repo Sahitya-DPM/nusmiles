@@ -5,7 +5,7 @@ export interface BlogPost {
   content: string;
   imageUrl: string;
   publishDate: string;
-  urlSlug: string;
+  slug: string;
   metaTitle?: string;
   metaDescription?: string;
   author?: string;
