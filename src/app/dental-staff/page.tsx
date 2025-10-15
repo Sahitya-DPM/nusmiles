@@ -10,7 +10,7 @@ export default function DentalStaffPage() {
     {
       name: "Dr. Rujul Parikh DDS",
       title: "Dentist in Stockton, CA",
-      image: "/doctor.png",
+      image: "/Rujul.jpeg",
       description: "Dr. Parikh has been passionate about making healthy smiles for more than 20 years. His primary goal is patient care and dental health. He has been educated from a very reputed college GDCH, Ahemedabad, India and he was educated by various professors from Loma Linda University, UCLA, UCSF, UOP, and many others.",
       additionalInfo: "His constant seeking of better technique, knowledge, and wide range of experience made him proficient in many phases of dentistry. He has done countless hours of continuous education. He is a graduate in Orthodontics from the United States Dental Institute and in dental implants, Associate Fellow of AAID, and Fellow of ICOI.",
       personalInfo: "He is happily married with three children and he likes to play table tennis and golf in his free time. He also likes hiking and bicycling. His broad knowledge and attention to detail will make you comfortable in stress full dental environment."
@@ -30,7 +30,7 @@ export default function DentalStaffPage() {
       name: "Carolina RDH",
       title: "Registered Dental Hygienist",
       language: "(Español)",
-      image: "/Carolina.webp",
+      image: "/Carolina RDH (Español).webp",
       description: "With 5 years of Hygiene experience & 15 years total in dentistry, Carolina provides an easy & comfortable experience for our patients during their cleanings.",
       personalInfo: "On her free time, she enjoys spending quality time with her 3 kids & going out to new places!"
     },
@@ -38,7 +38,7 @@ export default function DentalStaffPage() {
       name: "Donna",
       title: "Office Manager/Treatment Coordinator",
       language: "",
-      image: "/Donna.webp",
+      image: "/Donnanew.webp",
       description: "With more than 20 years of experience, Donna is charismatic, knowledgeable, and always willing to go the extra mile to provide a comfortable experience for our patients.",
       personalInfo: "Outside of work, she enjoys spending her time with family, watching anime, and taking care of her tortoise and cats!"
     },
@@ -46,7 +46,7 @@ export default function DentalStaffPage() {
       name: "Serena",
       title: "Receptionist/Scheduling Coordinator",
       language: "(Español)",
-      image: "/Serena.webp",
+      image: "/Serena (Español).webp",
       description: "As one of the first faces you see, Serena always takes care of our patients scheduling & receptionist needs with ease.",
       personalInfo: "When outside of work, she enjoys going out to concerts with friends and being her with family!"
     },
@@ -54,7 +54,7 @@ export default function DentalStaffPage() {
       name: "Laura RDA",
       title: "Registered Dental Assistant",
       language: "(Español)",
-      image: "/Laura.webp",
+      image: "/Laura RDA (Español).webp",
       description: "Always aiming to learn more everyday, Laura strives to be the best assistant she can be!",
       personalInfo: "When she's not working, Laura spends her time with her partner, family, & friends. She loves to travel any chance she gets!"
     },
@@ -62,7 +62,7 @@ export default function DentalStaffPage() {
       name: "Yasmine RDA",
       title: "Registered Dental Assistant",
       language: "",
-      image: "/Yasmine.webp",
+      image: "/Yasmine RDA.webp",
       description: "As one of our Registered Dental Assistants, Yasmine takes pride in providing our patients with a comfortable experience while also ensuring our assistants run smoothly and efficiently.",
       personalInfo: "Outside of work, she loves to spend time with her friends and family and traveling as much as she can!"
     }
@@ -106,8 +106,8 @@ export default function DentalStaffPage() {
 
           <div className="space-y-16">
             {doctors.map((doctor, index) => (
-              <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-                <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+              <div key={index} className={`grid lg:grid-cols-2 gap-12 items-stretch ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+                <div className={`flex flex-col justify-center ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                     {doctor.name}
                   </h3>
@@ -126,15 +126,14 @@ export default function DentalStaffPage() {
                     </p>
                   </div>
                 </div>
-                <div className={`relative ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                  <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <div className={`relative flex items-stretch ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+                  <div className="relative overflow-hidden rounded-2xl shadow-2xl w-full min-h-[600px]">
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent z-10"></div>
                     <Image
                       src={doctor.image}
                       alt={doctor.name}
-                      width={600}
-                      height={700}
-                      className="w-full h-auto object-cover"
+                      fill
+                      className="object-cover"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
@@ -160,13 +159,13 @@ export default function DentalStaffPage() {
               <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="text-center mb-6">
                   <div className="relative w-32 h-32 mx-auto mb-4">
-                    <div className="relative overflow-hidden rounded-full shadow-lg">
+                    <div className="relative w-32 h-32 overflow-hidden rounded-full shadow-lg">
                       <Image
                         src={staff.image}
                         alt={staff.name}
                         width={128}
                         height={128}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-center"
                         sizes="(max-width: 768px) 128px, 128px"
                       />
                     </div>

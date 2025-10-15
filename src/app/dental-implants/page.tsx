@@ -107,7 +107,7 @@ export default function DentalImplantsPage() {
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent z-10"></div>
                 <Image
-                  src="/Dental Implants s.jpeg"
+                  src="/dental implant.jpg"
                   alt="Dental Implants - Stockton, CA Dentist"
                   width={600}
                   height={700}

@@ -35,8 +35,8 @@ export default function PlateletRichFibrinTherapyPage() {
       {/* What is PRF Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+            <div className="flex flex-col justify-center">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 What is Platelet Rich Fibrin Therapy (PRF)?
               </h2>
@@ -53,15 +53,14 @@ export default function PlateletRichFibrinTherapyPage() {
                 </p>
               </div>
             </div>
-            <div className="relative">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative flex items-stretch">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl w-full">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent z-10"></div>
                 <Image
                   src="/PRF2.png"
                   alt="PRF Therapy Process"
-                  width={600}
-                  height={700}
-                  className="w-full h-auto object-cover"
+                  fill
+                  className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
@@ -80,21 +79,20 @@ export default function PlateletRichFibrinTherapyPage() {
             <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+            <div className="relative flex items-stretch">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl w-full">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent z-10"></div>
                 <Image
                   src="/PRF1.png"
                   alt="Nu Smile Dental PRF"
-                  width={600}
-                  height={700}
-                  className="w-full h-auto object-cover"
+                  fill
+                  className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
             </div>
-            <div>
+            <div className="flex flex-col justify-center">
               <div className="space-y-6 text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 <div className="bg-white rounded-xl p-8 shadow-lg">
                   <h3 className="text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>

@@ -273,10 +273,10 @@ export default function BoneGraftingPage() {
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent z-10"></div>
                 <Image
-                  src="/doctor.png"
+                  src="/Rujul.jpeg"
                   alt="Dr. Rujul Parikh - Bone Grafting Specialist"
-                  width={600}
-                  height={700}
+                  width={450}
+                  height={500}
                   className="w-full h-auto object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />

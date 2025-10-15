@@ -84,8 +84,8 @@ export default function AllOn4ImplantDenturesPage() {
       {/* Introduction Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+            <div className="flex flex-col justify-center">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Revolutionary Implant-Supported Treatment
               </h2>
@@ -99,15 +99,14 @@ export default function AllOn4ImplantDenturesPage() {
                 </p>
               </div>
             </div>
-            <div className="relative">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative flex items-stretch">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl w-full">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent z-10"></div>
                 <Image
-                  src="/All+on+4+Dentla+Implant.jpg"
+                  src="/allonx.jpg"
                   alt="All-on-4® Implant Dentures - Stockton, CA"
-                  width={600}
-                  height={700}
-                  className="w-full h-auto object-cover"
+                  fill
+                  className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
@@ -203,21 +202,20 @@ export default function AllOn4ImplantDenturesPage() {
       {/* Doctor Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+            <div className="relative flex items-stretch">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl w-full min-h-[600px]">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent z-10"></div>
                 <Image
-                  src="/doctor.png"
+                  src="/Rujul.jpeg"
                   alt="Dr. Rujul Parikh Stockton, CA"
-                  width={600}
-                  height={700}
-                  className="w-full h-auto object-cover"
+                  fill
+                  className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
             </div>
-            <div>
+            <div className="flex flex-col justify-center">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Dr. Rujul Parikh
               </h2>
