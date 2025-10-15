@@ -86,7 +86,7 @@ export default function InvisalignPage() {
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent z-10"></div>
                 <Image
-                  src="/invisalign1.jpeg"
+                  src="/invisalign-2.png"
                   alt="Invisalign Treatment"
                   width={600}
                   height={700}

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-8">
@@ -41,17 +43,15 @@ export default function Footer() {
               </a>
 
               {/* Blog */}
-              <a 
-                href="https://www.nusmiledentalca.com/blog" 
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link 
+                href="/blog"
                 className="text-gray-400 hover:text-green-500 transition-colors duration-300"
                 aria-label="Blog"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
 

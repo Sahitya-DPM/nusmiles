@@ -26,23 +26,22 @@ export default function DoctorSection() {
         {/* Doctors Container */}
         <div className="space-y-20">
           {/* Dr. Rujul G. Parikh */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
             {/* Doctor Image */}
-            <div className="relative group">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative group flex items-stretch min-h-[600px]">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl w-full">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent z-10"></div>
                 <Image
-                  src="/doctor.png"
+                  src="/Rujul.jpeg"
                   alt="Dr. Rujul G. Parikh DDS"
-                  width={600}
-                  height={700}
-                  className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  fill
+                  className="object-cover transform group-hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               
               {/* Floating stats card */}
-              <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-xl p-6 border border-gray-100">
+              <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-xl p-6 border border-gray-100 z-20">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary mb-1">23+</div>
                   <div className="text-sm text-gray-600 font-medium">Years Experience</div>
@@ -51,7 +50,7 @@ export default function DoctorSection() {
             </div>
 
             {/* Doctor Information */}
-            <div className="space-y-8">
+            <div className="space-y-8 flex flex-col justify-center">
               {/* Name and Title */}
               <div>
                 <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>

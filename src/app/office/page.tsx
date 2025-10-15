@@ -134,6 +134,66 @@ export default function OfficePage() {
                 sizes="(max-width: 768px) 50vw, 25vw"
               />
             </div>
+            <div className="relative overflow-hidden rounded-xl shadow-lg">
+              <Image
+                src="/officepic-1.jpg"
+                alt="Dental Office Stockton CA"
+                width={300}
+                height={200}
+                className="w-full h-48 object-cover"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-xl shadow-lg">
+              <Image
+                src="/officepic-2.jpg"
+                alt="Dental Office Stockton CA"
+                width={300}
+                height={200}
+                className="w-full h-48 object-cover"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-xl shadow-lg">
+              <Image
+                src="/officepic-3.jpg"
+                alt="Dental Office Stockton CA"
+                width={300}
+                height={200}
+                className="w-full h-48 object-cover"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-xl shadow-lg">
+              <Image
+                src="/officepic-4.jpg"
+                alt="Dental Office Stockton CA"
+                width={300}
+                height={200}
+                className="w-full h-48 object-cover"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-xl shadow-lg">
+              <Image
+                src="/officepic-5.jpg"
+                alt="Dental Office Stockton CA"
+                width={300}
+                height={200}
+                className="w-full h-48 object-cover"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-xl shadow-lg">
+              <Image
+                src="/officepic-6.jpg"
+                alt="Dental Office Stockton CA"
+                width={300}
+                height={200}
+                className="w-full h-48 object-cover"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
+            </div>
           </div>
         </div>
       </section>

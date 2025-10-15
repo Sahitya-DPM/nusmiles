@@ -147,8 +147,8 @@ export default function GeneralDentistryPage() {
       {/* Cosmetic Dentistry Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+            <div className="flex flex-col justify-center">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Cosmetic Dentistry in Stockton, CA
               </h2>
@@ -165,15 +165,14 @@ export default function GeneralDentistryPage() {
                 </p>
               </div>
             </div>
-            <div className="relative">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative flex items-stretch">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl w-full">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent z-10"></div>
                 <Image
-                  src="/Cosmetic Dentistry - s.jpeg"
+                  src="/Cosmetic Dentistry2.jpg"
                   alt="Cosmetic Dentistry in Stockton, CA"
-                  width={600}
-                  height={700}
-                  className="w-full h-auto object-cover"
+                  fill
+                  className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>

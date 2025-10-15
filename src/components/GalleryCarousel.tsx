@@ -13,7 +13,13 @@ export default function GalleryCarousel() {
     "/office5.jpg.webp",
     "/office6.jpg.webp",
     "/office07.jpg.webp",
-    "/office08.jpg.webp"
+    "/office08.jpg.webp",
+    "/officepic-1.jpg",
+    "/officepic-2.jpg",
+    "/officepic-3.jpg",
+    "/officepic-4.jpg",
+    "/officepic-5.jpg",
+    "/officepic-6.jpg"
   ];
 
   // Auto-scroll every 3 seconds
