@@ -10,13 +10,13 @@ export default function ExtractionsPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-primary to-secondary mt-24">
+      <section className="relative py-16 md:py-32 bg-gradient-to-br from-primary to-secondary mt-24">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+          <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Dental Extractions
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Understanding tooth extraction procedures and recovery
           </p>
         </div>
@@ -60,17 +60,17 @@ export default function ExtractionsPage() {
       </section>
 
       {/* Content Section */}
-      <section className="py-20 bg-white">
+      <section className="py-10 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
             <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              <h2 className="text-[27px] md:text-3xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Understanding Dental Extractions
               </h2>
-              <p className="text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Dental extraction is the removal of a tooth from its socket in the bone. While dentists always prefer to save natural teeth, sometimes extraction is necessary to preserve overall oral health. Modern extraction techniques are designed to be as comfortable and minimally invasive as possible.
               </p>
-              <p className="text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Extractions can be performed for various reasons, including severe decay, infection, crowding, or trauma. Understanding the process can help alleviate anxiety and ensure proper preparation and recovery.
               </p>
             </div>
@@ -83,35 +83,35 @@ export default function ExtractionsPage() {
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Severe Tooth Decay
               </h4>
-              <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 When tooth decay has progressed to the point where it cannot be repaired with fillings, crowns, or root canal treatment, extraction may be necessary to prevent further damage and infection.
               </p>
 
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Advanced Gum Disease
               </h4>
-              <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Periodontal disease can cause teeth to become loose and unstable. In advanced cases, extraction may be required to preserve the health of surrounding teeth and bone.
               </p>
 
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Dental Crowding
               </h4>
-              <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Sometimes teeth are extracted to create space for orthodontic treatment, allowing other teeth to be properly aligned.
               </p>
 
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Impacted Teeth
               </h4>
-              <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Teeth that are unable to erupt properly, such as wisdom teeth, may need to be extracted to prevent pain, infection, and damage to adjacent teeth.
               </p>
 
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Trauma or Injury
               </h4>
-              <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Teeth that have been severely damaged due to accidents or injuries may need to be extracted if they cannot be restored.
               </p>
             </div>
@@ -124,29 +124,29 @@ export default function ExtractionsPage() {
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Simple Extraction
               </h4>
-              <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Simple extractions are performed on teeth that are visible in the mouth and can be easily accessed. The dentist will:
               </p>
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <li className="text-gray-700">Numb the area with local anesthesia</li>
-                <li className="text-gray-700">Loosen the tooth with an elevator instrument</li>
-                <li className="text-gray-700">Remove the tooth with forceps</li>
-                <li className="text-gray-700">Clean the extraction site</li>
-                <li className="text-gray-700">Place gauze to control bleeding</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Numb the area with local anesthesia</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Loosen the tooth with an elevator instrument</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Remove the tooth with forceps</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Clean the extraction site</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Place gauze to control bleeding</li>
               </ul>
 
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Surgical Extraction
               </h4>
-              <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Surgical extractions are more complex and are used for teeth that are broken off at the gum line, impacted, or difficult to access. This procedure may involve:
               </p>
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <li className="text-gray-700">Making a small incision in the gum</li>
-                <li className="text-gray-700">Removing bone around the tooth if necessary</li>
-                <li className="text-gray-700">Sectioning the tooth into smaller pieces</li>
-                <li className="text-gray-700">Stitching the gum tissue closed</li>
-                <li className="text-gray-700">May require sedation or general anesthesia</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Making a small incision in the gum</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Removing bone around the tooth if necessary</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Sectioning the tooth into smaller pieces</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Stitching the gum tissue closed</li>
+                <li className="text-gray-700 text-[16px] md:text-base">May require sedation or general anesthesia</li>
               </ul>
             </div>
 
@@ -159,22 +159,22 @@ export default function ExtractionsPage() {
                 Consultation and Planning
               </h4>
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <li className="text-gray-700">Comprehensive dental examination</li>
-                <li className="text-gray-700">X-rays to assess tooth and bone structure</li>
-                <li className="text-gray-700">Medical history review</li>
-                <li className="text-gray-700">Discussion of anesthesia options</li>
-                <li className="text-gray-700">Treatment plan and cost estimate</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Comprehensive dental examination</li>
+                <li className="text-gray-700 text-[16px] md:text-base">X-rays to assess tooth and bone structure</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Medical history review</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Discussion of anesthesia options</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Treatment plan and cost estimate</li>
               </ul>
 
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Pre-Procedure Instructions
               </h4>
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <li className="text-gray-700">Avoid eating for several hours before surgery</li>
-                <li className="text-gray-700">Arrange for someone to drive you home if sedation is used</li>
-                <li className="text-gray-700">Wear comfortable clothing</li>
-                <li className="text-gray-700">Avoid smoking before the procedure</li>
-                <li className="text-gray-700">Take prescribed medications as directed</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Avoid eating for several hours before surgery</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Arrange for someone to drive you home if sedation is used</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Wear comfortable clothing</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Avoid smoking before the procedure</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Take prescribed medications as directed</li>
               </ul>
             </div>
 
@@ -187,17 +187,17 @@ export default function ExtractionsPage() {
                 Anesthesia Options
               </h4>
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <li className="text-gray-700">Local anesthesia (numbing the specific area)</li>
-                <li className="text-gray-700">Nitrous oxide (laughing gas for relaxation)</li>
-                <li className="text-gray-700">Oral sedation (medication to reduce anxiety)</li>
-                <li className="text-gray-700">IV sedation (for complex cases)</li>
-                <li className="text-gray-700">General anesthesia (for extensive procedures)</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Local anesthesia (numbing the specific area)</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Nitrous oxide (laughing gas for relaxation)</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Oral sedation (medication to reduce anxiety)</li>
+                <li className="text-gray-700 text-[16px] md:text-base">IV sedation (for complex cases)</li>
+                <li className="text-gray-700 text-[16px] md:text-base">General anesthesia (for extensive procedures)</li>
               </ul>
 
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 The Extraction Process
               </h4>
-              <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 The actual extraction typically takes 20-40 minutes, depending on the complexity. You may feel pressure but should not experience pain due to the anesthesia.
               </p>
             </div>
@@ -211,32 +211,32 @@ export default function ExtractionsPage() {
                 Immediate Post-Procedure Care
               </h4>
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <li className="text-gray-700">Keep gauze in place for 30-45 minutes</li>
-                <li className="text-gray-700">Apply ice packs to reduce swelling</li>
-                <li className="text-gray-700">Take prescribed pain medications</li>
-                <li className="text-gray-700">Rest and avoid strenuous activity</li>
-                <li className="text-gray-700">Avoid smoking and drinking through a straw</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Keep gauze in place for 30-45 minutes</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Apply ice packs to reduce swelling</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Take prescribed pain medications</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Rest and avoid strenuous activity</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Avoid smoking and drinking through a straw</li>
               </ul>
 
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Diet and Oral Hygiene
               </h4>
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <li className="text-gray-700">Eat soft foods for the first few days</li>
-                <li className="text-gray-700">Avoid hot, spicy, or crunchy foods</li>
-                <li className="text-gray-700">Gently rinse with salt water after 24 hours</li>
-                <li className="text-gray-700">Continue brushing other teeth carefully</li>
-                <li className="text-gray-700">Avoid the extraction site while brushing</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Eat soft foods for the first few days</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Avoid hot, spicy, or crunchy foods</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Gently rinse with salt water after 24 hours</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Continue brushing other teeth carefully</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Avoid the extraction site while brushing</li>
               </ul>
 
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Healing Timeline
               </h4>
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <li className="text-gray-700">Initial healing: 1-2 weeks</li>
-                <li className="text-gray-700">Bone healing: 6-8 weeks</li>
-                <li className="text-gray-700">Complete healing: 3-6 months</li>
-                <li className="text-gray-700">Follow-up appointments as scheduled</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Initial healing: 1-2 weeks</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Bone healing: 6-8 weeks</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Complete healing: 3-6 months</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Follow-up appointments as scheduled</li>
               </ul>
             </div>
 
@@ -249,21 +249,21 @@ export default function ExtractionsPage() {
                 Common Side Effects
               </h4>
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <li className="text-gray-700">Swelling and bruising (normal for 2-3 days)</li>
-                <li className="text-gray-700">Mild pain and discomfort</li>
-                <li className="text-gray-700">Slight bleeding (should stop within 24 hours)</li>
-                <li className="text-gray-700">Difficulty opening mouth (temporary)</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Swelling and bruising (normal for 2-3 days)</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Mild pain and discomfort</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Slight bleeding (should stop within 24 hours)</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Difficulty opening mouth (temporary)</li>
               </ul>
 
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 When to Contact Your Dentist
               </h4>
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <li className="text-gray-700">Severe pain that doesn't improve</li>
-                <li className="text-gray-700">Excessive bleeding</li>
-                <li className="text-gray-700">Signs of infection (fever, swelling, pus)</li>
-                <li className="text-gray-700">Numbness that persists beyond 24 hours</li>
-                <li className="text-gray-700">Difficulty breathing or swallowing</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Severe pain that doesn't improve</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Excessive bleeding</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Signs of infection (fever, swelling, pus)</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Numbness that persists beyond 24 hours</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Difficulty breathing or swallowing</li>
               </ul>
             </div>
 
@@ -271,14 +271,14 @@ export default function ExtractionsPage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Replacement Options
               </h3>
-              <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 After extraction, you may want to consider tooth replacement options:
               </p>
               <ul className="list-disc pl-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <li className="text-gray-700">Dental implants (permanent replacement)</li>
-                <li className="text-gray-700">Dental bridges (fixed replacement)</li>
-                <li className="text-gray-700">Partial dentures (removable replacement)</li>
-                <li className="text-gray-700">Full dentures (for multiple extractions)</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Dental implants (permanent replacement)</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Dental bridges (fixed replacement)</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Partial dentures (removable replacement)</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Full dentures (for multiple extractions)</li>
               </ul>
               <p className="text-lg leading-relaxed text-gray-700 mt-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Your dentist can discuss the best replacement option for your specific situation.
@@ -289,14 +289,14 @@ export default function ExtractionsPage() {
       </section>
 
       {/* Related Articles */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-10 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+          <h2 className="text-[27px] md:text-3xl font-bold text-gray-900 mb-8 md:mb-12 text-center" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Related Articles
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link href="/patient-education/wisdom-teeth-removal" className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Wisdom Teeth Removal
               </h3>
               <p className="text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -304,7 +304,7 @@ export default function ExtractionsPage() {
               </p>
             </Link>
             <Link href="/patient-education/sedation-dentistry" className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Sedation Dentistry
               </h3>
               <p className="text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -312,7 +312,7 @@ export default function ExtractionsPage() {
               </p>
             </Link>
             <Link href="/patient-education/dental-implants" className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Dental Implants
               </h3>
               <p className="text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -324,19 +324,19 @@ export default function ExtractionsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary">
+      <section className="py-10 md:py-20 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+          <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Need a Tooth Extraction?
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Our experienced team can perform extractions with comfort and care.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Schedule Consultation
             </Link>
-            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
           </div>

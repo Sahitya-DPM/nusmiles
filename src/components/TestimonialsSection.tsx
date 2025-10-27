@@ -79,13 +79,13 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="pt-10 pb-16 md:py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+          <h2 className="text-[27px] md:text-4xl font-bold text-primary mb-4">
             Patient Testimonials
           </h2>
-          <p className="text-lg text-accent">
+          <p className="text-[16px] md:text-lg text-accent">
             Hear from our satisfied patients about their dental experience
           </p>
         </div>
@@ -99,10 +99,10 @@ export default function TestimonialsSection() {
                   <span key={i} className="text-2xl">⭐</span>
                 ))}
               </div>
-              <p className="text-gray-700 text-lg italic mb-6 leading-relaxed">
+              <p className="text-[16px] md:text-lg text-gray-700 italic mb-6 leading-relaxed">
                 "{testimonials[currentIndex].text}"
               </p>
-              <h3 className="font-semibold text-primary text-xl">
+              <h3 className="font-semibold text-primary text-[16px] md:text-xl">
                 {testimonials[currentIndex].name}
               </h3>
             </div>

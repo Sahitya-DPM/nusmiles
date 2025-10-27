@@ -457,7 +457,7 @@ export default function PatientEducationPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-primary to-secondary mt-24">
+      <section className="relative py-16 md:py-32 bg-gradient-to-br from-primary to-secondary mt-24">
         <div className="absolute inset-0">
           <Image
             src="/Cosmetic Dentistry.jpeg"
@@ -469,24 +469,24 @@ export default function PatientEducationPage() {
           <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+          <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Patient Education
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Comprehensive dental education resources to help you understand your oral health
           </p>
         </div>
       </section>
 
       {/* Introduction Section */}
-      <section className="py-20 bg-white">
+      <section className="py-10 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Your Dental Health Education Hub
             </h2>
             <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Knowledge is power when it comes to your dental health. Explore our comprehensive educational resources organized by category to learn more about various dental procedures, treatments, and oral health topics.
             </p>
           </div>
@@ -494,15 +494,15 @@ export default function PatientEducationPage() {
       </section>
 
       {/* Tabs Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-10 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Tab Navigation */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
+          <div className="flex flex-wrap justify-center gap-3 mb-8 md:mb-12">
             {educationCategories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setActiveTab(category.id)}
-                className={`px-6 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center space-x-3 border-2 ${
+                className={`px-6 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center space-x-3 border-2 text-[16px] md:text-base ${
                   activeTab === category.id
                     ? 'bg-primary text-white border-primary shadow-lg transform scale-105'
                     : 'bg-white text-gray-700 hover:bg-gray-50 border-gray-200 hover:border-primary/30 shadow-md hover:shadow-lg'
@@ -518,9 +518,9 @@ export default function PatientEducationPage() {
           </div>
 
           {/* Tab Content */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+          <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-gray-100">
+            <div className="mb-6 md:mb-8">
+              <h3 className="text-[22px] md:text-2xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 {activeCategory?.title}
               </h3>
               <div className="w-16 h-1 bg-primary rounded-full"></div>
@@ -530,19 +530,19 @@ export default function PatientEducationPage() {
               {activeCategory?.articles.map((article, index) => (
                 <div key={index} className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/20 group">
                   <div className="mb-4">
-                    <span className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                    <span className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-[16px] font-semibold" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                       {article.category}
                     </span>
                   </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                  <h4 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                     {article.title}
                   </h4>
-                  <p className="text-gray-600 mb-4 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                  <p className="text-[16px] text-gray-600 mb-4 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                     {article.excerpt}
                   </p>
                   <Link 
                     href={article.readMore}
-                    className="inline-flex items-center text-primary hover:text-primary-dark font-semibold transition-colors group-hover:translate-x-1 duration-300"
+                    className="inline-flex items-center text-primary hover:text-primary-dark font-semibold transition-colors group-hover:translate-x-1 duration-300 text-[15px] md:text-base"
                     style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
                   >
                     {article.category === 'Cosmetic & General Dentistry' ? 'View All Articles' : 'Read More'}
@@ -557,10 +557,10 @@ export default function PatientEducationPage() {
             {activeCategory?.articles.length === 0 && (
               <div className="text-center py-12">
                 <div className="text-6xl mb-4">📚</div>
-                <h4 className="text-xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                <h4 className="text-[22px] md:text-xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                   Coming Soon
                 </h4>
-                <p className="text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                <p className="text-[16px] text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                   We're working on adding more educational content for this category. Check back soon!
                 </p>
               </div>
@@ -570,30 +570,30 @@ export default function PatientEducationPage() {
       </section>
 
       {/* Educational Videos Section */}
-      <section className="py-20 bg-white">
+      <section className="py-10 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Educational Videos
             </h2>
             <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Take a few minutes to watch our educational videos and learn more about different dental treatments and procedures
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-primary to-secondary rounded-2xl p-8 text-center text-white">
+            <div className="bg-gradient-to-br from-primary to-secondary rounded-2xl p-6 md:p-8 text-center text-white">
               <div className="text-6xl mb-6">🎬</div>
-              <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              <h3 className="text-[22px] md:text-2xl font-bold mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Video topics include general & cosmetic dentistry, implants, oral health and hygiene, orthodontics, and preventative dentistry.
               </h3>
-              <p className="text-lg mb-8 opacity-90" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg mb-8 opacity-90" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Our educational videos are designed to help you understand various dental procedures and make informed decisions about your oral health.
               </p>
               <Link 
                 href="/patient-education/educational-videos" 
-                className="bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block"
+                className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block"
                 style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
               >
                 Watch Educational Videos
@@ -604,19 +604,19 @@ export default function PatientEducationPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary">
+      <section className="py-10 md:py-20 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+          <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Have Questions About Your Dental Health?
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Our team is here to help you understand your treatment options and answer any questions you may have.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Schedule Consultation
             </Link>
-            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
           </div>

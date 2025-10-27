@@ -25,12 +25,12 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-16 bg-gray-100">
+    <section id="contact" className="pt-10 pb-16 md:py-16 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Contact Us</h2>
+            <h2 className="text-[27px] md:text-4xl font-bold text-primary mb-8">Contact Us</h2>
 
             <div className="space-y-6">
               <div>

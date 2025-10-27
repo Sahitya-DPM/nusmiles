@@ -54,13 +54,13 @@ export default function BlogPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-primary to-secondary mt-24">
+      <section className="relative py-16 md:py-32 bg-gradient-to-br from-primary to-secondary mt-24">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+          <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Our Blog
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Stay updated with the latest dental health tips, treatments, and insights
           </p>
         </div>
@@ -88,19 +88,19 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-20 bg-white">
+      <section className="py-10 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           
           {blogPosts.length === 0 ? (
-            <div className="text-center py-20">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+            <div className="text-center py-10 md:py-20">
+              <h2 className="text-[22px] md:text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 No published blog posts available
               </h2>
-              <p className="text-gray-600 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-gray-600 mb-4 text-[16px]" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Check back soon for new articles!
               </p>
-              <p className="text-sm text-gray-500" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] text-gray-500" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Note: Only blog posts with "published" status are shown here. 
                 Check the browser console to see all blog posts in the database.
               </p>
@@ -132,7 +132,7 @@ export default function BlogPage() {
                     />
                   </div>
                   <div className="p-6">
-                    <div className="flex items-center text-sm text-gray-500 mb-3" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                    <div className="flex items-center text-[16px] text-gray-500 mb-3" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                       <span>{formatDate(post.publishDate)}</span>
                       {post.author && (
                         <>
@@ -141,17 +141,17 @@ export default function BlogPage() {
                         </>
                       )}
                     </div>
-                    <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                    <h2 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3 line-clamp-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                       {post.title}
                     </h2>
-                    <p className="text-gray-600 mb-4 line-clamp-3" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                    <p className="text-gray-600 mb-4 line-clamp-3 text-[16px]" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                       {post.description}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {post.tags?.map((tag, index) => (
                         <span
                           key={index}
-                          className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full"
+                          className="px-3 py-1 bg-primary/10 text-primary text-[16px] rounded-full"
                           style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
                         >
                           {tag}
@@ -160,7 +160,7 @@ export default function BlogPage() {
                     </div>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="inline-flex items-center text-primary font-semibold hover:text-primary/80 transition-colors"
+                      className="inline-flex items-center text-primary font-semibold hover:text-primary/80 transition-colors text-[15px] md:text-base"
                       style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
                     >
                       Read More
@@ -177,19 +177,19 @@ export default function BlogPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-10 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+          <h2 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Stay Updated with Our Blog
           </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Get the latest dental health tips and insights delivered to your inbox.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointment" className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary/90 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-primary text-white px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-primary/90 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Schedule Appointment
             </Link>
-            <a href="tel:(209) 955-1800" className="border-2 border-primary text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary hover:text-white transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="border-2 border-primary text-primary px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-primary hover:text-white transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
           </div>
