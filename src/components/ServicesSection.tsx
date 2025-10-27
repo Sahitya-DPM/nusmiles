@@ -43,14 +43,14 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-10 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+          <h2 className="text-[27px] md:text-5xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Our Main Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Comprehensive dental care solutions tailored to your needs
           </p>
         </div>
@@ -78,15 +78,15 @@ export default function ServicesSection() {
 
               {/* Service Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                   {service.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                <p className="text-[16px] md:text-base text-gray-600 leading-relaxed mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                   {service.description}
                 </p>
                 
                 {/* Learn More Button */}
-                <Link href={service.href} className="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-primary-dark transition-colors font-semibold uppercase tracking-wide inline-block text-center" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                <Link href={service.href} className="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-primary-dark transition-colors font-semibold uppercase tracking-wide inline-block text-center text-[15px] md:text-base" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                   Learn More
                 </Link>
               </div>
@@ -96,7 +96,7 @@ export default function ServicesSection() {
 
         {/* View All Services Button */}
         <div className="text-center mt-12">
-          <Link href="/dental-services" className="bg-secondary text-white px-8 py-4 rounded-lg hover:bg-secondary-dark transition-colors font-semibold text-lg uppercase tracking-wide inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <Link href="/dental-services" className="bg-secondary text-white px-8 py-4 rounded-lg hover:bg-secondary-dark transition-colors font-semibold text-[15px] md:text-lg uppercase tracking-wide inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             View All Services
           </Link>
         </div>

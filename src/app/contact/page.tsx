@@ -11,7 +11,7 @@ const ContactPage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-primary to-secondary mt-24">
+      <section className="relative py-16 md:py-32 bg-gradient-to-br from-primary to-secondary mt-24">
         <div className="absolute inset-0">
           <Image
             src="/office1.jpg.webp"
@@ -23,23 +23,23 @@ const ContactPage = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Contact Us
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Get in touch with us today to schedule your appointment or ask any questions about our dental services.
           </p>
         </div>
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-white">
-        <div className="w-full">
+      <section className="py-10 md:py-20 bg-white">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-[27px] md:text-4xl font-bold text-gray-800 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Visit Our Office
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-[16px] md:text-lg text-gray-600 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               1801 E March Ln suite a-165, Stockton, CA, 95210, USA
             </p>
           </div>

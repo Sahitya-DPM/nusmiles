@@ -12,18 +12,19 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-md fixed w-full top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-3 gap-2">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center flex-shrink-0 min-w-0">
             <Link href="/" className="flex items-center">
               {/* Logo Image */}
-              <div className="relative w-40 h-20">
+              <div className="relative w-28 h-14 sm:w-40 sm:h-20">
                 <Image
                   src="https://cdcssl.ibsrv.net/ibimg/smb/218x100_80/webmgr/0t/1/w/64b6d9599db5c_nusmilelogo.png.webp?ab8c818672eef3a981e2d0a2dbd11bd4"
                   alt="Nusmiles Logo"
                   fill
                   className="object-contain"
+                  priority
                 />
               </div>
             </Link>
@@ -150,46 +151,72 @@ export default function Header() {
           </div>
 
           {/* Mobile menu button */}
-          <button
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+          <div className="md:hidden flex items-center flex-shrink-0">
+            <button
+              className="flex items-center justify-center text-black hover:text-primary p-2 focus:outline-none transition-none"
+              style={{ width: '9rem' }}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+              type="button"
+            >
+              {isMenuOpen ? (
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t">
-            <nav className="flex flex-col space-y-4">
-              <Link href="/" className="text-gray-700 hover:text-primary transition-colors">Home</Link>
+          <div className="md:hidden py-4 border-t bg-white">
+            <nav className="flex flex-col space-y-2">
+              <Link 
+                href="/" 
+                className="text-gray-700 hover:text-primary transition-colors py-2 px-2 hover:bg-gray-50 rounded"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Home
+              </Link>
               
               {/* Mobile About Section */}
               <div>
-                <Link 
-                  href="/about-us"
-                  className="text-gray-700 hover:text-primary transition-colors flex items-center justify-between w-full"
-                >
-                  About
-                </Link>
                 <button 
-                  className="text-gray-700 hover:text-primary transition-colors flex items-center justify-between w-full mt-2"
+                  className="text-gray-700 hover:text-primary transition-colors flex items-center justify-between w-full py-2 px-2 hover:bg-gray-50 rounded"
                   onClick={() => setIsAboutOpen(!isAboutOpen)}
                 >
-                  About Menu
+                  <span>About</span>
                   <svg className={`w-4 h-4 transition-transform ${isAboutOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
                 
                 {isAboutOpen && (
-                  <div className="ml-4 mt-2 space-y-2 border-l-2 border-gray-200 pl-4">
-                    <Link href="/office" className="block text-gray-600 hover:text-primary transition-colors">
+                  <div className="ml-4 mt-1 space-y-1 border-l-2 border-primary pl-3">
+                    <Link 
+                      href="/about-us" 
+                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      About Us
+                    </Link>
+                    <Link 
+                      href="/office" 
+                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
                       Office
                     </Link>
-                    <Link href="/dental-staff" className="block text-gray-600 hover:text-primary transition-colors">
+                    <Link 
+                      href="/dental-staff" 
+                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
                       Dental Staff
                     </Link>
                   </div>
@@ -198,84 +225,140 @@ export default function Header() {
               
               {/* Mobile Services Section */}
               <div>
-                <Link 
-                  href="/dental-services"
-                  className="text-gray-700 hover:text-primary transition-colors flex items-center justify-between w-full"
-                >
-                  Services
-                </Link>
                 <button 
-                  className="text-gray-700 hover:text-primary transition-colors flex items-center justify-between w-full mt-2"
+                  className="text-gray-700 hover:text-primary transition-colors flex items-center justify-between w-full py-2 px-2 hover:bg-gray-50 rounded"
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
                 >
-                  Services Menu
+                  <span>Services</span>
                   <svg className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
                 
                 {isServicesOpen && (
-                  <div className="ml-4 mt-2 space-y-2 border-l-2 border-gray-200 pl-4">
-                    <Link href="/general-dentistry" className="block text-gray-600 hover:text-primary transition-colors">
+                  <div className="ml-4 mt-1 space-y-1 border-l-2 border-primary pl-3">
+                    <Link 
+                      href="/dental-services" 
+                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      All Services
+                    </Link>
+                    <Link 
+                      href="/general-dentistry" 
+                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
                       General Dentistry
                     </Link>
-                    <Link href="/dental-implants" className="block text-gray-600 hover:text-primary transition-colors">
+                    <Link 
+                      href="/dental-implants" 
+                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
                       Dental Implants
                     </Link>
-                    <Link href="/all-on-4-implant-dentures" className="block text-gray-600 hover:text-primary transition-colors">
+                    <Link 
+                      href="/all-on-4-implant-dentures" 
+                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
                       All-on-4® Implant Dentures
                     </Link>
-                    <Link href="/platelet-rich-fibrin-therapy-prf" className="block text-gray-600 hover:text-primary transition-colors">
+                    <Link 
+                      href="/platelet-rich-fibrin-therapy-prf" 
+                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
                       Platelet Rich Fibrin Therapy
                     </Link>
                   </div>
                 )}
               </div>
               
-              <Link href="/invisalign" className="text-gray-700 hover:text-primary transition-colors">Invisalign</Link>
+              <Link 
+                href="/invisalign" 
+                className="text-gray-700 hover:text-primary transition-colors py-2 px-2 hover:bg-gray-50 rounded"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Invisalign
+              </Link>
               
-              <Link href="/blog" className="text-gray-700 hover:text-primary transition-colors">Blog</Link>
+              <Link 
+                href="/blog" 
+                className="text-gray-700 hover:text-primary transition-colors py-2 px-2 hover:bg-gray-50 rounded"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Blog
+              </Link>
               
               {/* Mobile Resources Section */}
               <div>
-                <Link 
-                  href="/resources"
-                  className="text-gray-700 hover:text-primary transition-colors flex items-center justify-between w-full"
-                >
-                  Resources
-                </Link>
                 <button 
-                  className="text-gray-700 hover:text-primary transition-colors flex items-center justify-between w-full mt-2"
+                  className="text-gray-700 hover:text-primary transition-colors flex items-center justify-between w-full py-2 px-2 hover:bg-gray-50 rounded"
                   onClick={() => setIsResourcesOpen(!isResourcesOpen)}
                 >
-                  Resources Menu
+                  <span>Resources</span>
                   <svg className={`w-4 h-4 transition-transform ${isResourcesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
                 
                 {isResourcesOpen && (
-                  <div className="ml-4 mt-2 space-y-2 border-l-2 border-gray-200 pl-4">
-                    <Link href="/patient-education" className="block text-gray-600 hover:text-primary transition-colors">
+                  <div className="ml-4 mt-1 space-y-1 border-l-2 border-primary pl-3">
+                    <Link 
+                      href="/resources" 
+                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      All Resources
+                    </Link>
+                    <Link 
+                      href="/patient-education" 
+                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
                       Patient Education
                     </Link>
-                    <Link href="/insurance-billing" className="block text-gray-600 hover:text-primary transition-colors">
+                    <Link 
+                      href="/insurance-billing" 
+                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
                       Insurance & Billing
                     </Link>
-                    <Link href="/before-after" className="block text-gray-600 hover:text-primary transition-colors">
+                    <Link 
+                      href="/before-after" 
+                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
                       Before & After
                     </Link>
                   </div>
                 )}
               </div>
               
-              <Link href="/contact" className="text-gray-700 hover:text-primary transition-colors">Contact</Link>
-              <div className="pt-4 border-t">
-                <p className="text-sm text-accent">Call us today</p>
-                <a href="tel:(209) 955-1800" className="font-semibold text-primary hover:text-primary-dark transition-colors">
+              <Link 
+                href="/contact" 
+                className="text-gray-700 hover:text-primary transition-colors py-2 px-2 hover:bg-gray-50 rounded"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
+              </Link>
+              
+              <div className="pt-4 mt-4 border-t border-gray-200">
+                <p className="text-sm text-accent mb-1">Call us today</p>
+                <a 
+                  href="tel:(209) 955-1800" 
+                  className="block font-semibold text-primary hover:text-primary-dark transition-colors mb-3 text-lg"
+                >
                   (209) 955-1800
                 </a>
-                <Link href="/appointment" className="mt-2 bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-dark transition-colors w-full block text-center">
+                <Link 
+                  href="/appointment" 
+                  className="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-dark transition-colors w-full block text-center font-medium"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   Free Consultation
                 </Link>
               </div>

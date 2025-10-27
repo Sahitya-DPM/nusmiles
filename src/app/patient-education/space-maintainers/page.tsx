@@ -10,13 +10,13 @@ export default function SpaceMaintainersPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-primary to-secondary mt-24">
+      <section className="relative py-16 md:py-32 bg-gradient-to-br from-primary to-secondary mt-24">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+          <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Space Maintainers
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Preserving space for permanent teeth when baby teeth are lost early
           </p>
         </div>
@@ -60,17 +60,17 @@ export default function SpaceMaintainersPage() {
       </section>
 
       {/* Content Section */}
-      <section className="py-20 bg-white">
+      <section className="py-10 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
             <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              <h2 className="text-[27px] md:text-3xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 What are Space Maintainers?
               </h2>
-              <p className="text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Space maintainers are dental appliances designed to preserve the space left by a prematurely lost baby tooth. They prevent adjacent teeth from shifting into the empty space, ensuring that there's adequate room for the permanent tooth to erupt properly.
               </p>
-              <p className="text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 When a baby tooth is lost too early due to decay, injury, or other reasons, the surrounding teeth may drift into the empty space. This can cause crowding and misalignment when the permanent tooth tries to emerge, potentially leading to the need for orthodontic treatment later.
               </p>
             </div>
@@ -79,15 +79,15 @@ export default function SpaceMaintainersPage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 When are Space Maintainers Needed?
               </h3>
-              <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Space maintainers are typically recommended when:
               </p>
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <li className="text-gray-700">A baby tooth is lost before the permanent tooth is ready to erupt</li>
-                <li className="text-gray-700">Multiple baby teeth are lost prematurely</li>
-                <li className="text-gray-700">There's a risk of space loss affecting dental alignment</li>
-                <li className="text-gray-700">The child is at risk for future orthodontic problems</li>
-                <li className="text-gray-700">Early loss of molars that need to maintain space for permanent molars</li>
+                <li className="text-gray-700 text-[16px] md:text-base">A baby tooth is lost before the permanent tooth is ready to erupt</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Multiple baby teeth are lost prematurely</li>
+                <li className="text-gray-700 text-[16px] md:text-base">There's a risk of space loss affecting dental alignment</li>
+                <li className="text-gray-700 text-[16px] md:text-base">The child is at risk for future orthodontic problems</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Early loss of molars that need to maintain space for permanent molars</li>
               </ul>
             </div>
 
@@ -95,15 +95,15 @@ export default function SpaceMaintainersPage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Types of Space Maintainers
               </h3>
-              <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 There are several types of space maintainers, each designed for specific situations:
               </p>
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <li className="text-gray-700"><strong>Fixed space maintainers:</strong> Bonded to adjacent teeth and cannot be removed by the child</li>
-                <li className="text-gray-700"><strong>Removable space maintainers:</strong> Similar to retainers and can be taken out for cleaning</li>
-                <li className="text-gray-700"><strong>Band and loop:</strong> Metal bands cemented to teeth with a wire loop to maintain space</li>
-                <li className="text-gray-700"><strong>Distal shoe:</strong> Used when a primary molar is lost before the permanent molar erupts</li>
-                <li className="text-gray-700"><strong>Lingual arch:</strong> Used when multiple teeth are missing on both sides</li>
+                <li className="text-gray-700 text-[16px] md:text-base"><strong>Fixed space maintainers:</strong> Bonded to adjacent teeth and cannot be removed by the child</li>
+                <li className="text-gray-700 text-[16px] md:text-base"><strong>Removable space maintainers:</strong> Similar to retainers and can be taken out for cleaning</li>
+                <li className="text-gray-700 text-[16px] md:text-base"><strong>Band and loop:</strong> Metal bands cemented to teeth with a wire loop to maintain space</li>
+                <li className="text-gray-700 text-[16px] md:text-base"><strong>Distal shoe:</strong> Used when a primary molar is lost before the permanent molar erupts</li>
+                <li className="text-gray-700 text-[16px] md:text-base"><strong>Lingual arch:</strong> Used when multiple teeth are missing on both sides</li>
               </ul>
             </div>
 
@@ -111,16 +111,16 @@ export default function SpaceMaintainersPage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 The Space Maintainer Process
               </h3>
-              <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Getting a space maintainer involves several steps:
               </p>
               <ol className="list-decimal pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <li className="text-gray-700">Dental examination and X-rays to assess the situation</li>
-                <li className="text-gray-700">Determination of the best type of space maintainer</li>
-                <li className="text-gray-700">Taking impressions of the teeth for custom fabrication</li>
-                <li className="text-gray-700">Fabrication of the space maintainer in a dental lab</li>
-                <li className="text-gray-700">Placement and adjustment of the appliance</li>
-                <li className="text-gray-700">Follow-up visits to monitor progress and make adjustments</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Dental examination and X-rays to assess the situation</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Determination of the best type of space maintainer</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Taking impressions of the teeth for custom fabrication</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Fabrication of the space maintainer in a dental lab</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Placement and adjustment of the appliance</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Follow-up visits to monitor progress and make adjustments</li>
               </ol>
             </div>
 
@@ -128,16 +128,16 @@ export default function SpaceMaintainersPage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Caring for Space Maintainers
               </h3>
-              <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Proper care is essential for the success of space maintainers:
               </p>
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <li className="text-gray-700">Maintain good oral hygiene with regular brushing and flossing</li>
-                <li className="text-gray-700">Avoid sticky foods that could dislodge the appliance</li>
-                <li className="text-gray-700">Don't push or pull on the space maintainer with fingers or tongue</li>
-                <li className="text-gray-700">Attend all scheduled follow-up appointments</li>
-                <li className="text-gray-700">Contact your dentist if the appliance becomes loose or damaged</li>
-                <li className="text-gray-700">For removable appliances, clean them regularly as instructed</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Maintain good oral hygiene with regular brushing and flossing</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Avoid sticky foods that could dislodge the appliance</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Don't push or pull on the space maintainer with fingers or tongue</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Attend all scheduled follow-up appointments</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Contact your dentist if the appliance becomes loose or damaged</li>
+                <li className="text-gray-700 text-[16px] md:text-base">For removable appliances, clean them regularly as instructed</li>
               </ul>
             </div>
 
@@ -145,16 +145,16 @@ export default function SpaceMaintainersPage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Benefits of Space Maintainers
               </h3>
-              <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Space maintainers offer several important benefits:
               </p>
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <li className="text-gray-700">Prevent crowding and misalignment of permanent teeth</li>
-                <li className="text-gray-700">Reduce the need for extensive orthodontic treatment later</li>
-                <li className="text-gray-700">Maintain proper jaw development and facial structure</li>
-                <li className="text-gray-700">Preserve space for permanent teeth to erupt naturally</li>
-                <li className="text-gray-700">Improve long-term oral health outcomes</li>
-                <li className="text-gray-700">Cost-effective preventive treatment</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Prevent crowding and misalignment of permanent teeth</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Reduce the need for extensive orthodontic treatment later</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Maintain proper jaw development and facial structure</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Preserve space for permanent teeth to erupt naturally</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Improve long-term oral health outcomes</li>
+                <li className="text-gray-700 text-[16px] md:text-base">Cost-effective preventive treatment</li>
               </ul>
             </div>
 
@@ -162,16 +162,16 @@ export default function SpaceMaintainersPage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 When Space Maintainers are Removed
               </h3>
-              <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Space maintainers are typically removed when:
               </p>
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <li className="text-gray-700">The permanent tooth is ready to erupt</li>
-                <li className="text-gray-700">The child reaches the appropriate age for the permanent tooth</li>
-                <li className="text-gray-700">X-rays show the permanent tooth is developing properly</li>
-                <li className="text-gray-700">The space maintainer has served its purpose</li>
+                <li className="text-gray-700 text-[16px] md:text-base">The permanent tooth is ready to erupt</li>
+                <li className="text-gray-700 text-[16px] md:text-base">The child reaches the appropriate age for the permanent tooth</li>
+                <li className="text-gray-700 text-[16px] md:text-base">X-rays show the permanent tooth is developing properly</li>
+                <li className="text-gray-700 text-[16px] md:text-base">The space maintainer has served its purpose</li>
               </ul>
-              <p className="text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Your dentist will monitor the development of permanent teeth and determine the optimal time for removal. Regular checkups ensure that the space maintainer is working effectively and can be removed at the right time.
               </p>
             </div>
@@ -180,14 +180,14 @@ export default function SpaceMaintainersPage() {
       </section>
 
       {/* Related Articles */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-10 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+          <h2 className="text-[27px] md:text-3xl font-bold text-gray-900 mb-8 md:mb-12 text-center" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Related Articles
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link href="/patient-education/fluoride-and-your-child" className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Fluoride and Your Child
               </h3>
               <p className="text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -195,7 +195,7 @@ export default function SpaceMaintainersPage() {
               </p>
             </Link>
             <Link href="/patient-education/sealants" className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Sealants
               </h3>
               <p className="text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -203,7 +203,7 @@ export default function SpaceMaintainersPage() {
               </p>
             </Link>
             <Link href="/patient-education/about-pediatric-dentistry" className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 About Pediatric Dentistry
               </h3>
               <p className="text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -215,19 +215,19 @@ export default function SpaceMaintainersPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary">
+      <section className="py-10 md:py-20 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+          <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Protect Your Child's Future Smile
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Our pediatric dental team can assess if your child needs a space maintainer and provide this important preventive treatment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Schedule Consultation
             </Link>
-            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
           </div>

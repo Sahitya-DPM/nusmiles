@@ -23,13 +23,13 @@ export default function PromotionsSection() {
   ];
 
   return (
-    <section className="py-20 bg-primary">
+    <section className="pt-10 pb-20 md:py-20 bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-[27px] md:text-4xl font-bold text-white mb-4">
             Limited-Time Dental Promotions
           </h2>
-          <p className="text-xl text-accent">
+          <p className="text-[16px] md:text-xl text-accent">
             NU SMILE DENTAL is committed to helping patients afford the care they deserve. Take advantage of our current offers:
           </p>
         </div>
@@ -41,11 +41,11 @@ export default function PromotionsSection() {
               className={`bg-white rounded-lg p-8 text-center border-2 border-transparent hover:border-secondary transition-all duration-300 flex flex-col justify-between h-full`}
             >
               <div>
-                <div className="text-4xl font-bold text-secondary mb-4">{promo.price}</div>
-                <h3 className="text-xl font-semibold text-primary mb-4">{promo.title}</h3>
-                <p className="text-gray-700">{promo.description}</p>
+                <div className="text-[27px] md:text-4xl font-bold text-secondary mb-4">{promo.price}</div>
+                <h3 className="text-[22px] md:text-xl font-semibold text-primary mb-4">{promo.title}</h3>
+                <p className="text-[16px] md:text-base text-gray-700">{promo.description}</p>
               </div>
-              <Link href="/appointment" className="mt-6 bg-secondary text-white px-6 py-2 rounded-lg hover:bg-secondary-dark transition-colors inline-block">
+              <Link href="/appointment" className="mt-6 bg-secondary text-white px-6 py-2 rounded-lg hover:bg-secondary-dark transition-colors inline-block text-[15px] md:text-base">
                 Book Now
               </Link>
             </div>

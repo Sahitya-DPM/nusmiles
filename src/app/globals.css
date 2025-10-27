@@ -29,9 +29,9 @@ body {
   background: #2563eb;
 }
 
-/* Smooth transitions */
-* {
-  transition: all 0.2s ease-in-out;
+/* Smooth transitions - Only apply to specific interactive elements */
+a, button:not([aria-label="Toggle menu"]) {
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 
 /* Focus styles */
@@ -40,6 +40,13 @@ input:focus,
 textarea:focus {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
+}
+
+/* Mobile heading line-height */
+@media (max-width: 767px) {
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4;
+  }
 }
 
 /* Custom styles for blog content */

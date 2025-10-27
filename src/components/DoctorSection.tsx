@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function DoctorSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section className="py-10 md:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-primary/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full translate-x-1/2 translate-y-1/2"></div>
@@ -17,7 +17,7 @@ export default function DoctorSection() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
             </svg>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+          <h2 className="text-[27px] md:text-5xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Meet Our Doctors
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
@@ -53,10 +53,10 @@ export default function DoctorSection() {
             <div className="space-y-8 flex flex-col justify-center">
               {/* Name and Title */}
               <div>
-                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                <h3 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                   Dr. Rujul G. Parikh DDS
                 </h3>
-                <p className="text-xl text-primary font-semibold mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                <p className="text-[16px] md:text-xl text-primary font-semibold mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                   General & Implant Dentist in Stockton, CA
                 </p>
                 <div className="w-16 h-1 bg-secondary rounded-full"></div>
@@ -64,7 +64,7 @@ export default function DoctorSection() {
 
               {/* Description */}
               <div className="prose prose-lg max-w-none">
-                <p className="text-gray-700 leading-relaxed text-lg" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                <p className="text-[16px] md:text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                   For more than 23 years, Dr. Rujul G. Parikh DDS has been committed to creating beautiful, healthy smiles. His main priorities are oral health and patient care. As a General Dentist, he has invested many hours in continuing education and constantly updated and educated in dentistry. His continual pursuit of better methods, depth of understanding, and range of experience make him skilled in numerous dental procedures with primary focus on Dental Implants and Dentures.
                 </p>
               </div>
@@ -115,10 +115,10 @@ export default function DoctorSection() {
             <div className="space-y-8 lg:order-1 order-2">
               {/* Name and Title */}
               <div>
-                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                <h3 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                   Dr. Shivli Arora DDS
                 </h3>
-                <p className="text-xl text-primary font-semibold mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                <p className="text-[16px] md:text-xl text-primary font-semibold mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                   General & Cosmetic Dentist in Stockton, CA
                 </p>
                 <div className="w-16 h-1 bg-secondary rounded-full"></div>
@@ -126,7 +126,7 @@ export default function DoctorSection() {
 
               {/* Description */}
               <div className="prose prose-lg max-w-none">
-                <p className="text-gray-700 leading-relaxed text-lg" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                <p className="text-[16px] md:text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                   Working under Dr. Parikh, Dr. Shivli Arora has nearly 10 years of hands on clinical experience and has a passion for cosmetic dentistry in providing patients with the beautiful smile they always wanted. Dr. Arora is certified in Lasers for dental treatment and she strives to further pursue her education for excellence involving Dental Implants, that translates clinical skills and extends to patients emotional well being.
                 </p>
               </div>
@@ -186,7 +186,7 @@ export default function DoctorSection() {
 
         {/* CTA Button */}
         <div className="text-center pt-12">
-          <Link href="/appointment" className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-dark transition-colors shadow-lg uppercase inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <Link href="/appointment" className="bg-primary text-white px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-primary-dark transition-colors shadow-lg uppercase inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Schedule Consultation
           </Link>
         </div>

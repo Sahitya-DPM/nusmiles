@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 export default function GalleryCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const galleryImages = [
     "/office1.jpg.webp",
@@ -22,6 +23,18 @@ export default function GalleryCarousel() {
     "/officepic-6.jpg"
   ];
 
+  // Check if mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   // Auto-scroll every 3 seconds
   useEffect(() => {
     const timer = setInterval(() => {
@@ -31,31 +44,34 @@ export default function GalleryCarousel() {
     return () => clearInterval(timer);
   }, [galleryImages.length]);
 
+  const imagesPerView = isMobile ? 1 : 4;
+  const translatePercentage = isMobile ? 100 : 25;
+
   return (
-    <section className="py-20 bg-white">
+    <section className="py-10 md:py-20 bg-white">
       <div className="w-full px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+          <h2 className="text-[27px] md:text-5xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Our Office Gallery
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Take a virtual tour of our modern dental office and state-of-the-art facilities
           </p>
         </div>
 
         {/* Gallery Carousel */}
         <div className="relative overflow-hidden w-full">
-          <div className="flex transition-transform duration-1000 ease-in-out" style={{ transform: `translateX(-${currentIndex * 25}%)` }}>
+          <div className="flex transition-transform duration-1000 ease-in-out" style={{ transform: `translateX(-${currentIndex * translatePercentage}%)` }}>
             {galleryImages.map((image, index) => (
-              <div key={index} className="w-1/4 flex-shrink-0 px-2">
-                <div className="relative h-80 overflow-hidden">
+              <div key={index} className={`${isMobile ? 'w-full' : 'w-1/4'} flex-shrink-0 px-2`}>
+                <div className="relative h-80 overflow-hidden rounded-lg">
                   <Image
                     src={image}
                     alt={`Office Image ${index + 1}`}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 25vw, 25vw"
+                    sizes="(max-width: 768px) 100vw, 25vw"
                   />
                 </div>
               </div>
@@ -64,12 +80,12 @@ export default function GalleryCarousel() {
 
           {/* Dot Indicators */}
           <div className="flex justify-center mt-8 space-x-3">
-            {Array.from({ length: Math.ceil(galleryImages.length / 4) }, (_, index) => (
+            {Array.from({ length: Math.ceil(galleryImages.length / imagesPerView) }, (_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentIndex(index)}
+                onClick={() => setCurrentIndex(index * imagesPerView)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === Math.floor(currentIndex / 4)
+                  index === Math.floor(currentIndex / imagesPerView)
                     ? 'bg-primary scale-125'
                     : 'bg-gray-300 hover:bg-gray-400'
                 }`}
