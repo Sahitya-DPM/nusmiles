@@ -48,21 +48,21 @@ export default function HeroSection() {
 
       {/* Content Overlay */}
       <div className="absolute inset-0 flex items-center z-10 pt-32 pb-32">
-        <div className="text-left text-white px-8 md:px-16 lg:px-24 max-w-4xl">
-          <h1 className="text-[26px] md:text-6xl lg:text-7xl font-bold leading-none" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', marginTop: '70px', marginBottom: '40px' }}>
+        <div className="text-left text-white px-4 sm:px-8 md:px-16 lg:px-24 max-w-4xl w-full">
+          <h1 className="text-[24px] sm:text-[26px] md:text-6xl lg:text-7xl font-bold leading-tight break-words" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', marginTop: '70px', marginBottom: '40px' }}>
             Welcome to Our Practice
           </h1>
-          <p className="text-[22px] md:text-2xl lg:text-3xl mb-4 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[18px] sm:text-[22px] md:text-2xl lg:text-3xl mb-4 leading-relaxed break-words" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Welcome to Nu Smile Dental, Your Dentist in Stockton, CA
           </p>
-          <p className="text-[16px] md:text-xl lg:text-2xl mb-4 leading-loose" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[14px] sm:text-[16px] md:text-xl lg:text-2xl mb-4 leading-loose break-words" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Welcome! The dental professionals at Nu Smile Dental are pleased to welcome you to our practice located in Stockton, CA.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6">
-            <Link href="/appointment" className="bg-primary text-white px-10 py-5 rounded-lg text-[15px] md:text-xl font-semibold hover:bg-primary-dark transition-colors shadow-lg uppercase inline-block text-center" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+            <Link href="/appointment" className="bg-primary text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg text-[14px] sm:text-[15px] md:text-xl font-semibold hover:bg-primary-dark transition-colors shadow-lg uppercase inline-block text-center w-full sm:w-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Book An Appointment
             </Link>
-            <Link href="/about-us" className="border-2 border-white text-white px-10 py-5 rounded-lg text-[15px] md:text-xl font-semibold hover:bg-white hover:text-primary transition-colors shadow-lg uppercase inline-block text-center" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/about-us" className="border-2 border-white text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg text-[14px] sm:text-[15px] md:text-xl font-semibold hover:bg-white hover:text-primary transition-colors shadow-lg uppercase inline-block text-center w-full sm:w-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Learn More
             </Link>
           </div>

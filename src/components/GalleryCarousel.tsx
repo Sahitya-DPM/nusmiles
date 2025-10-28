@@ -49,9 +49,9 @@ export default function GalleryCarousel() {
 
   return (
     <section className="py-10 md:py-20 bg-white">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16 max-w-7xl mx-auto">
+        <div className="text-center mb-16">
           <h2 className="text-[27px] md:text-5xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Our Office Gallery
           </h2>
@@ -64,8 +64,8 @@ export default function GalleryCarousel() {
         <div className="relative overflow-hidden w-full">
           <div className="flex transition-transform duration-1000 ease-in-out" style={{ transform: `translateX(-${currentIndex * translatePercentage}%)` }}>
             {galleryImages.map((image, index) => (
-              <div key={index} className={`${isMobile ? 'w-full' : 'w-1/4'} flex-shrink-0 px-2`}>
-                <div className="relative h-80 overflow-hidden rounded-lg">
+              <div key={index} className={`${isMobile ? 'w-full' : 'w-1/4'} flex-shrink-0 px-1 sm:px-2`}>
+                <div className="relative h-64 sm:h-80 overflow-hidden rounded-lg">
                   <Image
                     src={image}
                     alt={`Office Image ${index + 1}`}

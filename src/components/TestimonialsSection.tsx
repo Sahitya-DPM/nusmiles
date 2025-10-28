@@ -90,9 +90,9 @@ export default function TestimonialsSection() {
           </p>
         </div>
 
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-4xl mx-auto px-8 sm:px-12 md:px-16">
           {/* Testimonial Card */}
-          <div className="bg-white rounded-lg p-8 shadow-lg text-center relative">
+          <div className="bg-white rounded-lg p-6 sm:p-8 shadow-lg text-center relative">
             <div className="mb-6">
               <div className="flex justify-center text-yellow-400 mb-4">
                 {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
@@ -111,20 +111,20 @@ export default function TestimonialsSection() {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-16 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary-dark transition-colors"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-2 sm:-translate-x-4 md:-translate-x-8 bg-primary text-white p-2 sm:p-3 rounded-full shadow-lg hover:bg-primary-dark transition-colors"
             aria-label="Previous testimonial"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-16 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary-dark transition-colors"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-2 sm:translate-x-4 md:translate-x-8 bg-primary text-white p-2 sm:p-3 rounded-full shadow-lg hover:bg-primary-dark transition-colors"
             aria-label="Next testimonial"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
