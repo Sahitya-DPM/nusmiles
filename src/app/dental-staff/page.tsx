@@ -11,7 +11,7 @@ export default function DentalStaffPage() {
       name: "Dr. Rujul Parikh DDS",
       title: "Dentist in Stockton, CA",
       image: "/Rujul.jpeg",
-      description: "Dr. Parikh has been passionate about making healthy smiles for more than 20 years. His primary goal is patient care and dental health. He has been educated from a very reputed college GDCH, Ahemedabad, India and he was educated by various professors from Loma Linda University, UCLA, UCSF, UOP, and many others.",
+      description: "Dr. Parikh has been passionate about making healthy smiles for more than 25 years. His primary goal is patient care and dental health. He has been educated from a very reputed college GDCH, Ahemedabad, India and he was educated by various professors from Loma Linda University, UCLA, UCSF, UOP, and many others.",
       additionalInfo: "His constant seeking of better technique, knowledge, and wide range of experience made him proficient in many phases of dentistry. He has done countless hours of continuous education. He is a graduate in Orthodontics from the United States Dental Institute and in dental implants, Associate Fellow of AAID, and Fellow of ICOI.",
       personalInfo: "He is happily married with three children and he likes to play table tennis and golf in his free time. He also likes hiking and bicycling. His broad knowledge and attention to detail will make you comfortable in stress full dental environment."
     },

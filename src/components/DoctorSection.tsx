@@ -43,7 +43,7 @@ export default function DoctorSection() {
               {/* Floating stats card */}
               <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-xl p-6 border border-gray-100 z-20">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-1">23+</div>
+                  <div className="text-3xl font-bold text-primary mb-1">25+</div>
                   <div className="text-sm text-gray-600 font-medium">Years Experience</div>
                 </div>
               </div>
@@ -65,7 +65,7 @@ export default function DoctorSection() {
               {/* Description */}
               <div className="prose prose-lg max-w-none">
                 <p className="text-[16px] md:text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                  For more than 23 years, Dr. Rujul G. Parikh DDS has been committed to creating beautiful, healthy smiles. His main priorities are oral health and patient care. As a General Dentist, he has invested many hours in continuing education and constantly updated and educated in dentistry. His continual pursuit of better methods, depth of understanding, and range of experience make him skilled in numerous dental procedures with primary focus on Dental Implants and Dentures.
+                  For more than 25 years, Dr. Rujul G. Parikh DDS has been committed to creating beautiful, healthy smiles. His main priorities are oral health and patient care. As a General Dentist, he has invested many hours in continuing education and constantly updated and educated in dentistry. His continual pursuit of better methods, depth of understanding, and range of experience make him skilled in numerous dental procedures with primary focus on Dental Implants and Dentures.
                 </p>
               </div>
 
