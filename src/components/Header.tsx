@@ -50,15 +50,24 @@ export default function Header() {
             
                           {/* About Dropdown Menu */}
               <div 
-                className={`absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 transition-all duration-200 ${isAboutOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+                className={`absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg py-2 transition-all duration-200 ${isAboutOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
                 onMouseEnter={() => setIsAboutOpen(true)}
                 onMouseLeave={() => setIsAboutOpen(false)}
               >
-                <Link href="/office" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
-                  Office
+                <Link href="/about-us" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
+                  About Us
                 </Link>
                 <Link href="/dental-staff" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
-                  Dental Staff
+                  Meet Our Doctors
+                </Link>
+                <Link href="/office" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
+                  Office Gallery
+                </Link>
+                <Link href="/smile-gallery" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
+                  Smile Gallery
+                </Link>
+                <Link href="/testimonials" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
+                  Testimonials
                 </Link>
               </div>
           </div>
@@ -92,13 +101,14 @@ export default function Header() {
               <Link href="/all-on-4-implant-dentures" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
                 All-on-4® Implant Dentures
               </Link>
+              <Link href="/invisalign" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
+                Invisalign
+              </Link>
               <Link href="/platelet-rich-fibrin-therapy-prf" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
                 Platelet Rich Fibrin Therapy
               </Link>
             </div>
           </div>
-          
-          <Link href="/invisalign" className="text-gray-700 hover:text-primary transition-colors">Invisalign</Link>
           
           <Link href="/blog" className="text-gray-700 hover:text-primary transition-colors">Blog</Link>
           
@@ -127,9 +137,6 @@ export default function Header() {
               </Link>
               <Link href="/insurance-billing" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
                 Insurance & Billing
-              </Link>
-              <Link href="/before-after" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
-                Before & After
               </Link>
             </div>
           </div>
@@ -206,18 +213,32 @@ export default function Header() {
                       About Us
                     </Link>
                     <Link 
-                      href="/office" 
-                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Office
-                    </Link>
-                    <Link 
                       href="/dental-staff" 
                       className="block py-2 text-gray-600 hover:text-primary transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      Dental Staff
+                      Meet Our Doctors
+                    </Link>
+                    <Link 
+                      href="/office" 
+                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Office Gallery
+                    </Link>
+                    <Link 
+                      href="/smile-gallery" 
+                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Smile Gallery
+                    </Link>
+                    <Link 
+                      href="/testimonials" 
+                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Testimonials
                     </Link>
                   </div>
                 )}
@@ -266,6 +287,13 @@ export default function Header() {
                       All-on-4® Implant Dentures
                     </Link>
                     <Link 
+                      href="/invisalign" 
+                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Invisalign
+                    </Link>
+                    <Link 
                       href="/platelet-rich-fibrin-therapy-prf" 
                       className="block py-2 text-gray-600 hover:text-primary transition-colors"
                       onClick={() => setIsMenuOpen(false)}
@@ -275,14 +303,6 @@ export default function Header() {
                   </div>
                 )}
               </div>
-              
-              <Link 
-                href="/invisalign" 
-                className="text-gray-700 hover:text-primary transition-colors py-2 px-2 hover:bg-gray-50 rounded"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Invisalign
-              </Link>
               
               <Link 
                 href="/blog" 
@@ -326,13 +346,6 @@ export default function Header() {
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Insurance & Billing
-                    </Link>
-                    <Link 
-                      href="/before-after" 
-                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Before & After
                     </Link>
                   </div>
                 )}

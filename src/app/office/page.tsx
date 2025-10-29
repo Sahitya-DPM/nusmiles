@@ -194,6 +194,16 @@ export default function OfficePage() {
                 sizes="(max-width: 768px) 50vw, 25vw"
               />
             </div>
+            <div className="relative overflow-hidden rounded-xl shadow-lg">
+              <Image
+                src="/mtc office picture.JPG"
+                alt="Nu Smile Dental Office Team"
+                width={300}
+                height={200}
+                className="w-full h-48 object-cover"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
+            </div>
           </div>
         </div>
       </section>

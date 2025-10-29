@@ -146,7 +146,7 @@ export default function AboutUsPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <div className="text-[22px] md:text-3xl font-bold text-primary mb-2">23+</div>
+              <div className="text-[22px] md:text-3xl font-bold text-primary mb-2">25+</div>
               <div className="text-gray-600 font-medium">Years of Experience</div>
             </div>
             
