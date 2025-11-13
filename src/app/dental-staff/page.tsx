@@ -51,14 +51,6 @@ export default function DentalStaffPage() {
       personalInfo: "When outside of work, she enjoys going out to concerts with friends and being her with family!"
     },
     {
-      name: "Laura RDA",
-      title: "Registered Dental Assistant",
-      language: "(Español)",
-      image: "/Laura RDA (Español).webp",
-      description: "Always aiming to learn more everyday, Laura strives to be the best assistant she can be!",
-      personalInfo: "When she's not working, Laura spends her time with her partner, family, & friends. She loves to travel any chance she gets!"
-    },
-    {
       name: "Yasmine RDA",
       title: "Registered Dental Assistant",
       language: "",
@@ -154,9 +146,9 @@ export default function DentalStaffPage() {
             <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {staffMembers.map((staff, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300" style={{ padding: '2rem' }}>
                 <div className="text-center mb-6">
                   <div className="relative w-32 h-32 mx-auto mb-4">
                     <div className="relative w-32 h-32 overflow-hidden rounded-full shadow-lg">

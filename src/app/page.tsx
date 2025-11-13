@@ -6,8 +6,8 @@ import HomeGallerySection from '@/components/HomeGallerySection';
 import DoctorSection from '@/components/DoctorSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import TestimonialVideoSection from '@/components/TestimonialVideoSection';
-import PromotionsSection from '@/components/PromotionsSection';
 import GalleryCarousel from '@/components/GalleryCarousel';
+import CTASection from '@/components/CTASection';
 
 export default function Home() {
   return (
@@ -15,13 +15,13 @@ export default function Home() {
       <Header />
       <HeroSection />
       <AboutSection />
-      <ServicesSection />
-      <HomeGallerySection />
-      <DoctorSection />
-      <PromotionsSection />
-      <GalleryCarousel />
       <TestimonialsSection />
+      <HomeGallerySection />
+      <ServicesSection />
+      <DoctorSection />
+      <GalleryCarousel />
       <TestimonialVideoSection />
+      <CTASection />
     </>
   );
 }

@@ -8,7 +8,7 @@ export default function HeroSection() {
       {/* Office Team Photo */}
       <div className="relative w-full h-full">
         <Image
-          src="/mtc office picture.JPG"
+          src="/heroimage.jpg"
           alt="Nu Smile Dental Office Team"
           fill
           className="object-cover object-center"
@@ -16,7 +16,7 @@ export default function HeroSection() {
           sizes="100vw"
         />
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70"></div>
       </div>
 
       {/* Content Overlay */}
