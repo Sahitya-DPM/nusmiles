@@ -8,18 +8,6 @@ import Header from '@/components/Header';
 const ResourcesPage = () => {
   const resources = [
     {
-      title: "Insurance & Billing",
-      description: "Learn about our accepted insurance plans, payment options, and financing solutions to make your dental care affordable.",
-      image: "/office1.jpg.webp",
-      link: "/insurance-billing",
-      features: [
-        "Accepted Insurance Plans",
-        "Payment Options",
-        "CareCredit Financing",
-        "Sunbit Financing"
-      ]
-    },
-    {
       title: "Before & After Gallery",
       description: "View real patient transformations and see the amazing results our dental procedures can achieve.",
       image: "/Cosmetic Dentistry.jpeg",
@@ -52,7 +40,7 @@ const ResourcesPage = () => {
             Dental Resources
           </h1>
           <p className="text-[16px] md:text-2xl max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-            Everything you need to know about dental care, insurance, and financing
+            Everything you need to know about dental care and patient results
           </p>
         </div>
       </section>
@@ -65,7 +53,7 @@ const ResourcesPage = () => {
               Helpful Resources
             </h2>
             <p className="text-[16px] md:text-lg text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-              Access important information about insurance, billing, and see real patient results to help you make informed decisions about your dental care.
+              Access important information and see real patient results to help you make informed decisions about your dental care.
             </p>
           </div>
 

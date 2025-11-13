@@ -3,77 +3,19 @@ import Link from 'next/link';
 import Header from '../../components/Header';
 
 export default function SmileGalleryPage() {
-  const beforeAfterCases = [
-    {
-      id: 1,
-      title: 'Complete Smile Restoration',
-      category: 'Cosmetic Dentistry',
-      collageImage: '/Copy of Copy of JOSUE RUIZ 1-COLLAGE.jpg',
-      description: 'Full smile transformation with advanced cosmetic procedures'
-    },
-    {
-      id: 2,
-      title: 'Dental Implant Restoration',
-      category: 'Dental Implants',
-      collageImage: '/Copy of Copy of M.C BEFORE-COLLAGE.jpg',
-      description: 'Complete restoration with dental implants'
-    },
-    {
-      id: 3,
-      title: 'Comprehensive Smile Makeover',
-      category: 'Cosmetic Dentistry',
-      collageImage: '/Copy of Copy of MICAH P 1-COLLAGE.jpg',
-      description: 'Life-changing smile transformation'
-    },
-    {
-      id: 4,
-      title: 'Advanced Dental Restoration',
-      category: 'Dental Implants',
-      collageImage: '/Copy of Copy of N.A BEFORE-COLLAGE.jpg',
-      description: 'Multiple tooth replacement with implants'
-    },
-    {
-      id: 5,
-      title: 'Beautiful Smile Enhancement',
-      category: 'Cosmetic Dentistry',
-      collageImage: '/Copy of Copy of pristine (10)-COLLAGE.jpg',
-      description: 'Cosmetic enhancement for natural-looking results'
-    },
-    {
-      id: 6,
-      title: 'Full Mouth Restoration',
-      category: 'Dental Implants',
-      collageImage: '/Copy of Copy of SAL G 1-COLLAGE.jpg',
-      description: 'Complete oral rehabilitation with implants'
-    },
-    {
-      id: 7,
-      title: 'Smile Transformation',
-      category: 'Cosmetic Dentistry',
-      collageImage: '/Copy of Copy of SILVIA C. BEFORE (2)-COLLAGE.jpg',
-      description: 'Stunning cosmetic dentistry results'
-    },
-    {
-      id: 8,
-      title: 'Cosmetic Veneers',
-      category: 'Cosmetic Dentistry',
-      collageImage: '/Copy of Copy of STACI B 1-COLLAGE.jpg',
-      description: 'Beautiful smile with porcelain veneers'
-    },
-    {
-      id: 9,
-      title: 'Complete Dental Makeover',
-      category: 'Dental Implants',
-      collageImage: '/Copy of Copy of SUE HER 1-COLLAGE.jpg',
-      description: 'Full mouth restoration with dental implants'
-    },
-    {
-      id: 10,
-      title: 'Invisalign Treatment',
-      category: 'Invisalign',
-      collageImage: '/pristine (1)-COLLAGE.jpg',
-      description: 'Straightened teeth with clear aligners'
-    }
+  const galleryImages = [
+    '/Copy of Copy of JOSUE RUIZ 1-COLLAGE.jpg',
+    '/Copy of Copy of M.C BEFORE-COLLAGE.jpg',
+    '/Copy of Copy of MICAH P 1-COLLAGE.jpg',
+    '/Copy of Copy of N.A BEFORE-COLLAGE.jpg',
+    '/Copy of Copy of pristine (10)-COLLAGE.jpg',
+    '/Copy of Copy of SAL G 1-COLLAGE.jpg',
+    '/Copy of Copy of SILVIA C. BEFORE (2)-COLLAGE.jpg',
+    '/Copy of Copy of STACI B 1-COLLAGE.jpg',
+    '/Copy of Copy of SUE HER 1-COLLAGE.jpg',
+    '/pristine (1)-COLLAGE.jpg',
+    '/A.V 1-COLLAGE.jpg',
+    '/image_69137e115beb0-COLLAGE.jpg'
   ];
 
   return (
@@ -109,41 +51,22 @@ export default function SmileGalleryPage() {
             <h2 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Browse Our Smile Transformations
             </h2>
-            <div className="flex flex-wrap justify-center gap-3 mb-8">
-              <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">Invisalign</span>
-              <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">Dental Implants</span>
-              <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">Cosmetic Dentistry</span>
-              <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">Restorative</span>
-            </div>
+            <p className="text-[16px] md:text-lg text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              See the amazing before and after results from our patients
+            </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {beforeAfterCases.map((case_) => (
-              <div key={case_.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                <div className="p-6 pb-4">
-                  <div className="mb-3">
-                    <span className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold">
-                      {case_.category}
-                    </span>
-                  </div>
-                  <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                    {case_.title}
-                  </h3>
-                  <p className="text-[16px] text-gray-600 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                    {case_.description}
-                  </p>
-                </div>
-
-                <div className="px-4 pb-4">
-                  <div className="relative overflow-hidden rounded-lg">
-                    <Image
-                      src={case_.collageImage}
-                      alt={`${case_.title} - Before and After`}
-                      width={600}
-                      height={400}
-                      className="w-full h-auto object-cover"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                  </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {galleryImages.map((image, index) => (
+              <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                <div className="relative overflow-hidden">
+                  <Image
+                    src={image}
+                    alt={`Smile Transformation ${index + 1} - Before and After`}
+                    width={600}
+                    height={400}
+                    className="w-full h-auto object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
                 </div>
               </div>
             ))}

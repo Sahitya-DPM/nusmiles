@@ -5,23 +5,27 @@ import Image from 'next/image';
 export default function GalleryCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(true);
 
   const galleryImages = [
     "/office1.jpg.webp",
     "/office2.jpg.webp", 
     "/office3.jpg.webp",
-    "/office4.jpg.webp",
-    "/office5.jpg.webp",
-    "/office6.jpg.webp",
-    "/office07.jpg.webp",
     "/office08.jpg.webp",
     "/officepic-1.jpg",
     "/officepic-2.jpg",
     "/officepic-3.jpg",
     "/officepic-4.jpg",
     "/officepic-5.jpg",
-    "/officepic-6.jpg"
+    "/officepic-6.jpg",
+    "/20251112_113726.jpg",
+    "/20251001_153520.jpg",
+    "/20251001_153927.jpg"
   ];
+
+  // Create infinite loop by duplicating images multiple times
+  const duplicatedImages = [...galleryImages, ...galleryImages, ...galleryImages];
+  const startIndex = galleryImages.length; // Start from the middle set
 
   // Check if mobile
   useEffect(() => {
@@ -35,14 +39,36 @@ export default function GalleryCarousel() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Auto-scroll every 3 seconds
+  // Initialize to middle set
+  useEffect(() => {
+    setCurrentIndex(startIndex);
+  }, []);
+
+  // Auto-scroll every 3 seconds with seamless infinite loop
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % galleryImages.length);
+      setCurrentIndex((prevIndex) => {
+        const nextIndex = prevIndex + 1;
+        // When we reach near the end, reset to equivalent position in first set seamlessly
+        if (nextIndex >= duplicatedImages.length - galleryImages.length) {
+          // Disable transition, reset position, then re-enable transition
+          requestAnimationFrame(() => {
+            setIsTransitioning(false);
+            requestAnimationFrame(() => {
+              setCurrentIndex(startIndex);
+              requestAnimationFrame(() => {
+                setIsTransitioning(true);
+              });
+            });
+          });
+          return nextIndex;
+        }
+        return nextIndex;
+      });
     }, 3000);
 
     return () => clearInterval(timer);
-  }, [galleryImages.length]);
+  }, [galleryImages.length, duplicatedImages.length, startIndex]);
 
   const imagesPerView = isMobile ? 1 : 4;
   const translatePercentage = isMobile ? 100 : 25;
@@ -62,35 +88,25 @@ export default function GalleryCarousel() {
 
         {/* Gallery Carousel */}
         <div className="relative overflow-hidden w-full">
-          <div className="flex transition-transform duration-1000 ease-in-out" style={{ transform: `translateX(-${currentIndex * translatePercentage}%)` }}>
-            {galleryImages.map((image, index) => (
-              <div key={index} className={`${isMobile ? 'w-full' : 'w-1/4'} flex-shrink-0 px-1 sm:px-2`}>
+          <div 
+            className="flex" 
+            style={{ 
+              transform: `translateX(-${currentIndex * translatePercentage}%)`,
+              transition: isTransitioning ? 'transform 1s ease-in-out' : 'none'
+            }}
+          >
+            {duplicatedImages.map((image, index) => (
+              <div key={`${image}-${index}`} className={`${isMobile ? 'w-full' : 'w-1/4'} flex-shrink-0 px-1 sm:px-2`}>
                 <div className="relative h-64 sm:h-80 overflow-hidden rounded-lg">
                   <Image
                     src={image}
-                    alt={`Office Image ${index + 1}`}
+                    alt={`Office Image ${(index % galleryImages.length) + 1}`}
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 25vw"
                   />
                 </div>
               </div>
-            ))}
-          </div>
-
-          {/* Dot Indicators */}
-          <div className="flex justify-center mt-8 space-x-3">
-            {Array.from({ length: Math.ceil(galleryImages.length / imagesPerView) }, (_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index * imagesPerView)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === Math.floor(currentIndex / imagesPerView)
-                    ? 'bg-primary scale-125'
-                    : 'bg-gray-300 hover:bg-gray-400'
-                }`}
-                aria-label={`Go to slide group ${index + 1}`}
-              />
             ))}
           </div>
         </div>
