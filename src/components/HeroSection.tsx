@@ -11,7 +11,10 @@ export default function HeroSection() {
           src="/heroimage.jpg"
           alt="Nu Smile Dental Office Team"
           fill
-          className="object-cover object-center"
+          className="object-cover"
+          style={{
+            objectPosition: 'center top'
+          }}
           priority
           sizes="100vw"
         />
@@ -25,7 +28,7 @@ export default function HeroSection() {
           <h1 className="text-[24px] sm:text-[26px] md:text-6xl lg:text-7xl font-bold leading-tight break-words" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', marginBottom: '40px' }}>
             Welcome to Our Practice
           </h1>
-          <p className="text-[18px] sm:text-[22px] md:text-2xl lg:text-3xl mb-4 leading-relaxed whitespace-nowrap" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[18px] sm:text-[22px] md:text-2xl lg:text-3xl mb-4 leading-relaxed break-words" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Welcome to Nu Smile Dental, Your Dentist in Stockton, CA
           </p>
           <p className="text-[14px] sm:text-[16px] md:text-xl lg:text-2xl mb-4 leading-loose break-words" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>

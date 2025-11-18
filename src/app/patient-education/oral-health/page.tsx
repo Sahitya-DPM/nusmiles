@@ -40,7 +40,12 @@ export default function OralHealthPage() {
           category: 'Oral Health',
           readMore: '/patient-education/antibiotic-premedication'
         },
-
+        {
+          title: 'Blood Pressure Medications and Your Oral Health',
+          excerpt: 'If you experience high blood pressure, it\'s vital that you discuss possible medications with your health care professionals, including your dentist.',
+          category: 'Oral Health',
+          readMore: '/patient-education/oral-health'
+        }
       ]
     },
 

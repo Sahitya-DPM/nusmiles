@@ -11,7 +11,7 @@ const ResourcesPage = () => {
       title: "Before & After Gallery",
       description: "View real patient transformations and see the amazing results our dental procedures can achieve.",
       image: "/Cosmetic Dentistry.jpeg",
-      link: "/before-after",
+      link: "/smile-gallery",
       features: [
         "Smile Makeovers",
         "Dental Implants",

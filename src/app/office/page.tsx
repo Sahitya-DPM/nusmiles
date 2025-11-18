@@ -221,7 +221,7 @@ export default function OfficePage() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <p className="text-[16px] md:text-lg text-gray-700 leading-relaxed mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                We know you have many choices when choosing a Dentist in Stockton, Ca so we have made requesting an appointment a simple process via our Web site. If, for any reason you cannot keep a scheduled appointment, or will be delayed, please call us as soon as possible.
+                We know you have many choices when choosing a Dentist in Stockton, CA so we have made requesting an appointment a simple process via our website. If, for any reason you cannot keep a scheduled appointment, or will be delayed, please call us as soon as possible.
               </p>
               <Link href="/appointment" className="bg-primary text-white px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-primary-dark transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Schedule Your Appointment

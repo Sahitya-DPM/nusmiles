@@ -95,21 +95,21 @@ export default function CosmeticGeneralDentistryPage() {
           title: 'Root Canal Therapy',
           excerpt: 'Root canal therapy is a treatment used to repair and save a tooth that is badly decayed or becomes infected.',
           category: 'Restorative Dentistry',
-          readMore: '/patient-education/root-canal-therapy',
+          readMore: '/patient-education/root-canal-treatment',
           image: '/General Dentistry.jpeg'
         },
         {
           title: 'Dental Extractions',
           excerpt: 'Tooth extraction is the removal of a tooth from its socket in the bone, typically performed when a tooth is severely damaged.',
           category: 'Restorative Dentistry',
-          readMore: '/patient-education/dental-extractions',
+          readMore: '/patient-education/extractions',
           image: '/General Dentistry.jpeg'
         },
         {
           title: 'Dental Sealants',
           excerpt: 'Dental sealants are thin, protective coatings that adhere to the chewing surface of your back teeth to prevent cavities.',
           category: 'Restorative Dentistry',
-          readMore: '/patient-education/dental-sealants',
+          readMore: '/patient-education/sealants',
           image: '/General Dentistry.jpeg'
         }
       ]

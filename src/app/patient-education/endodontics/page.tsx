@@ -25,6 +25,18 @@ export default function EndodonticsPage() {
           excerpt: 'Common questions and answers about root canal treatment, including what to expect during the procedure and recovery.',
           category: 'Endodontics',
           readMore: '/patient-education/root-canal-faqs'
+        },
+        {
+          title: 'Apicoectomy',
+          excerpt: 'An apicoectomy is a surgical procedure that removes the tip of a tooth root and surrounding infected tissue when a root canal treatment is not sufficient.',
+          category: 'Endodontics',
+          readMore: '/patient-education/endodontics'
+        },
+        {
+          title: 'Broken Teeth',
+          excerpt: 'Broken teeth can cause pain and sensitivity. Understanding the different types of fractures and treatment options is important for proper care.',
+          category: 'Endodontics',
+          readMore: '/patient-education/endodontics'
         }
       ]
     }

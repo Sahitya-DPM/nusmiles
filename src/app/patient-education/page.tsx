@@ -350,7 +350,7 @@ export default function PatientEducationPage() {
           title: 'Thumb Sucking',
           excerpt: 'Understanding thumb sucking habits and their effects on dental development.',
           category: 'Pediatric Dentistry',
-          readMore: '/patient-education/pediatric-dentistry'
+          readMore: '/patient-education/thumb-sucking'
         },
         {
           title: 'Nitrous Oxide for Children',
