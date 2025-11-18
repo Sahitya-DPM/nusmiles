@@ -31,7 +31,32 @@ export default function OralSurgeryPage() {
       id: 'surgical-procedures',
       title: 'Surgical Procedures',
       icon: '🔪',
-      articles: []
+      articles: [
+        {
+          title: 'Oral Surgery Procedures',
+          excerpt: 'Various oral surgery procedures are available to address different dental and oral health issues. Learn about common procedures and their purposes.',
+          category: 'Oral Surgery',
+          readMore: '/patient-education/oral-surgery'
+        },
+        {
+          title: 'Facial Trauma and Reconstructive Surgery',
+          excerpt: 'Facial trauma can result from accidents or injuries. Reconstructive surgery can restore function and appearance.',
+          category: 'Oral Surgery',
+          readMore: '/patient-education/oral-surgery'
+        },
+        {
+          title: 'Corrective Jaw Surgery',
+          excerpt: 'Corrective jaw surgery can improve jaw alignment, function, and appearance. Understand when this procedure is recommended.',
+          category: 'Oral Surgery',
+          readMore: '/patient-education/oral-surgery'
+        },
+        {
+          title: 'Sinus Surgery',
+          excerpt: 'Sinus surgery may be needed to address sinus-related dental issues. Learn about the connection between sinuses and oral health.',
+          category: 'Oral Surgery',
+          readMore: '/patient-education/oral-surgery'
+        }
+      ]
     },
     {
       id: 'specialized-surgery',
@@ -43,6 +68,18 @@ export default function OralSurgeryPage() {
           excerpt: 'Cleft lip and palate are congenital conditions that may require surgical intervention. Learn about treatment options and care.',
           category: 'Oral Surgery',
           readMore: '/patient-education/cleft-lip-and-palate'
+        },
+        {
+          title: 'Oral Cancer Screenings and Surgery',
+          excerpt: 'Early detection of oral cancer is crucial. Learn about screening procedures and surgical treatment options.',
+          category: 'Oral Surgery',
+          readMore: '/patient-education/oral-surgery'
+        },
+        {
+          title: 'Oral Diagnosis and Biopsies',
+          excerpt: 'Proper diagnosis is essential for effective treatment. Learn about diagnostic procedures and biopsy processes.',
+          category: 'Oral Surgery',
+          readMore: '/patient-education/oral-surgery'
         }
       ]
     },

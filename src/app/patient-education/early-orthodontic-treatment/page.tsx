@@ -169,7 +169,7 @@ export default function EarlyOrthodonticTreatmentPage() {
                 Learn more about orthodontic treatment options and procedures.
               </p>
             </Link>
-            <Link href="/patient-education/invisalign" className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+            <Link href="/invisalign" className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Invisalign
               </h3>

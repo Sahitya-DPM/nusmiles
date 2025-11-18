@@ -12,9 +12,14 @@ export const metadata: Metadata = {
   description: "Life-Changing Dental Implants. Painless Dental Veneers. Same-Day Emergency Appointments. Interest-Free Financing Available. Free Financing Consults. Se Habla Español.",
   keywords: "dentist, dental implants, veneers, emergency dental, Fresno, CA, family dentist",
   icons: {
-    icon: '/64b6d9599db5c_nusmilelogo.png.webp',
-    shortcut: '/64b6d9599db5c_nusmilelogo.png.webp',
-    apple: '/64b6d9599db5c_nusmilelogo.png.webp',
+    icon: [
+      { url: '/favicon.png', sizes: 'any' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    shortcut: '/favicon.png',
+    apple: [
+      { url: '/favicon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
 };
 
