@@ -11,7 +11,7 @@ export default function PediatricDentistryPage() {
     {
       id: 'general-care',
       title: 'General Care',
-      icon: '👶',
+      icon: 'ðŸ‘¶',
       articles: [
         {
           title: 'About Pediatric Dentistry',
@@ -36,7 +36,7 @@ export default function PediatricDentistryPage() {
     {
       id: 'preventive-care',
       title: 'Preventive Care',
-      icon: '🦷',
+      icon: 'ðŸ¦·',
       articles: [
         {
           title: 'Fluoride and Your Child',
@@ -61,7 +61,7 @@ export default function PediatricDentistryPage() {
     {
       id: 'development-and-habits',
       title: 'Development & Habits',
-      icon: '🧸',
+      icon: 'ðŸ§¸',
       articles: [
         {
           title: 'Pregnancy and Your Child\'s Developing Teeth',
@@ -80,7 +80,7 @@ export default function PediatricDentistryPage() {
     {
       id: 'treatment-options',
       title: 'Treatment Options',
-      icon: '🏥',
+      icon: 'ðŸ¥',
       articles: [
         {
           title: 'Nitrous Oxide for Children',
@@ -111,7 +111,7 @@ export default function PediatricDentistryPage() {
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
             Pediatric Dentistry
           </h1>
-          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Specialized dental care for children
           </p>
         </div>
@@ -156,10 +156,10 @@ export default function PediatricDentistryPage() {
               </h2>
               <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
               <div className="space-y-4 md:space-y-6 text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   Pediatric dentistry focuses on the oral health of children from infancy through adolescence. Early dental care is essential for establishing good oral hygiene habits and preventing dental problems.
                 </p>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   Our pediatric dental team is specially trained to work with children, making dental visits comfortable and positive experiences that set the foundation for a lifetime of good oral health.
                 </p>
               </div>
@@ -167,8 +167,8 @@ export default function PediatricDentistryPage() {
             <div className="relative">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-gradient-to-br from-primary/10 to-secondary/10 p-6 md:p-8">
                 <div className="text-center">
-                  <div className="text-4xl md:text-6xl mb-4">👶</div>
-                  <h3 className="text-[22px] md:text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+                  <div className="text-4xl md:text-6xl mb-4">ðŸ‘¶</div>
+                  <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                     Caring for Little Smiles
                   </h3>
                   <p className="text-[16px] md:text-base text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -189,7 +189,7 @@ export default function PediatricDentistryPage() {
               Pediatric Dental Topics
             </h2>
             <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
-            <p className="text-[16px] md:text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Learn about children's dental care and development
             </p>
           </div>
@@ -216,7 +216,7 @@ export default function PediatricDentistryPage() {
           {/* Tab Content */}
           <div>
             <div className="mb-6 md:mb-8">
-              <h3 className="text-[22px] md:text-2xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 {activeCategory?.title}
               </h3>
               <div className="w-16 h-1 bg-primary rounded-full"></div>
@@ -230,7 +230,7 @@ export default function PediatricDentistryPage() {
                       {article.category}
                     </span>
                   </div>
-                  <h4 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+                  <h4 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                     {article.title}
                   </h4>
                   <p className="text-[16px] md:text-base text-gray-600 mb-4 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -259,14 +259,14 @@ export default function PediatricDentistryPage() {
           <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
             Ready for Your Child's Dental Care?
           </h2>
-          <p className="text-[16px] md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Our pediatric dental team is here to provide gentle, caring dental care for your child.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointment" className="bg-white text-primary px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-white text-primary px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Schedule Consultation
             </Link>
-            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
           </div>

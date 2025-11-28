@@ -12,7 +12,7 @@ export default function OralHealthPage() {
     {
       id: 'general-oral-health',
       title: 'General Oral Health',
-      icon: '🦷',
+      icon: 'ðŸ¦·',
       articles: [
         {
           title: 'Aging and Oral Health',
@@ -32,7 +32,7 @@ export default function OralHealthPage() {
     {
       id: 'medical-conditions',
       title: 'Medical Conditions & Oral Health',
-      icon: '💊',
+      icon: 'ðŸ’Š',
       articles: [
         {
           title: 'Antibiotic Premedication',
@@ -71,7 +71,7 @@ export default function OralHealthPage() {
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
             Oral Health
           </h1>
-          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Comprehensive guide to maintaining optimal oral health and preventing dental problems
           </p>
         </div>
@@ -108,7 +108,7 @@ export default function OralHealthPage() {
               Understanding Oral Health
             </h2>
             <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
-            <p className="text-[16px] md:text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Good oral health is essential for overall well-being. Our comprehensive guide covers everything from basic oral hygiene to managing medical conditions that affect your dental health.
             </p>
           </div>
@@ -149,7 +149,7 @@ export default function OralHealthPage() {
                           {article.category}
                         </span>
                       </div>
-                      <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+                      <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                         {article.title}
                       </h3>
                       <p className="text-[16px] md:text-base text-gray-600 mb-4 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -184,13 +184,13 @@ export default function OralHealthPage() {
               </h2>
               <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
               <div className="space-y-4 md:space-y-6 text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   Your oral health is closely connected to your overall health. Poor oral hygiene can lead to various health problems, including heart disease, diabetes complications, and respiratory infections.
                 </p>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   Regular dental checkups, proper brushing and flossing, and a healthy diet are essential for maintaining good oral health and preventing dental problems before they become serious.
                 </p>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   Understanding how medical conditions, medications, and lifestyle factors affect your oral health can help you make informed decisions about your dental care.
                 </p>
               </div>
@@ -198,8 +198,8 @@ export default function OralHealthPage() {
             <div className="relative">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-gradient-to-br from-primary/10 to-secondary/10 p-6 md:p-8">
                 <div className="text-center">
-                  <div className="text-4xl md:text-6xl mb-4">🦷</div>
-                  <h3 className="text-[22px] md:text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+                  <div className="text-4xl md:text-6xl mb-4">ðŸ¦·</div>
+                  <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                     Your Oral Health Matters
                   </h3>
                   <p className="text-[16px] md:text-base text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -218,14 +218,14 @@ export default function OralHealthPage() {
           <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
             Ready to Improve Your Oral Health?
           </h2>
-          <p className="text-[16px] md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Schedule a comprehensive dental exam and cleaning to ensure your oral health is in optimal condition.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointment" className="bg-white text-primary px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-white text-primary px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Schedule Appointment
             </Link>
-            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
           </div>

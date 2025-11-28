@@ -12,7 +12,7 @@ export default function EmergencyCarePage() {
     {
       id: 'gum-emergencies',
       title: 'Gum Emergencies',
-      icon: '🦷',
+      icon: 'ðŸ¦·',
       articles: [
         {
           title: 'Gum Emergencies',
@@ -25,7 +25,7 @@ export default function EmergencyCarePage() {
     {
       id: 'orthodontic-emergencies',
       title: 'Orthodontic Emergencies',
-      icon: '🦷',
+      icon: 'ðŸ¦·',
       articles: [
         {
           title: 'Orthodontic Emergencies',
@@ -38,7 +38,7 @@ export default function EmergencyCarePage() {
     {
       id: 'tooth-pain',
       title: 'Tooth Pain',
-      icon: '🦷',
+      icon: 'ðŸ¦·',
       articles: [
         {
           title: 'Tooth Pain',
@@ -51,7 +51,7 @@ export default function EmergencyCarePage() {
     {
       id: 'traumatic-injuries',
       title: 'Traumatic Dental Injuries',
-      icon: '🦷',
+      icon: 'ðŸ¦·',
       articles: [
         {
           title: 'Traumatic Dental Injuries',
@@ -85,7 +85,7 @@ export default function EmergencyCarePage() {
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
             Emergency Dental Care
           </h1>
-          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Immediate care for dental emergencies and urgent oral health issues
           </p>
         </div>
@@ -122,7 +122,7 @@ export default function EmergencyCarePage() {
               When to Seek Emergency Dental Care
             </h2>
             <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
-            <p className="text-[16px] md:text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Dental emergencies can happen at any time and require immediate attention. Understanding the different types of dental emergencies and knowing when to seek professional help can make a significant difference in preserving your oral health.
             </p>
           </div>
@@ -133,17 +133,17 @@ export default function EmergencyCarePage() {
       <section className="py-6 md:py-12 bg-red-50 border-t border-b border-red-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
-            <h3 className="text-[22px] md:text-2xl font-bold text-red-600 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
-              🚨 Emergency Dental Care Available
+            <h3 className="text-[22px] md:text-[16px] font-bold text-red-600 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              ðŸš¨ Emergency Dental Care Available
             </h3>
-            <p className="text-[16px] md:text-lg text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               If you're experiencing a dental emergency, don't wait. Contact us immediately for urgent care.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:(209) 955-1800" className="bg-red-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-red-700 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <a href="tel:(209) 955-1800" className="bg-red-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-red-700 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Call (209) 955-1800
               </a>
-              <Link href="/appointment" className="border-2 border-red-600 text-red-600 px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-red-600 hover:text-white transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <Link href="/appointment" className="border-2 border-red-600 text-red-600 px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-red-600 hover:text-white transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Schedule Emergency Visit
               </Link>
             </div>
@@ -176,7 +176,7 @@ export default function EmergencyCarePage() {
           {/* Tab Content */}
           <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
             <div className="mb-6 md:mb-8">
-              <h3 className="text-[22px] md:text-2xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 {activeCategory?.title}
               </h3>
               <div className="w-16 h-1 bg-primary rounded-full"></div>
@@ -190,7 +190,7 @@ export default function EmergencyCarePage() {
                       {article.category}
                     </span>
                   </div>
-                  <h4 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+                  <h4 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                     {article.title}
                   </h4>
                   <p className="text-[16px] md:text-base text-gray-600 mb-4 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -226,9 +226,9 @@ export default function EmergencyCarePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             <div className="text-center">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <span className="text-2xl md:text-3xl">🆘</span>
+                <span className="text-2xl md:text-3xl">ðŸ†˜</span>
               </div>
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 Stay Calm
               </h3>
               <p className="text-[16px] md:text-base text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -238,9 +238,9 @@ export default function EmergencyCarePage() {
 
             <div className="text-center">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <span className="text-2xl md:text-3xl">📞</span>
+                <span className="text-2xl md:text-3xl">ðŸ“ž</span>
               </div>
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 Call Immediately
               </h3>
               <p className="text-[16px] md:text-base text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -250,9 +250,9 @@ export default function EmergencyCarePage() {
 
             <div className="text-center">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <span className="text-2xl md:text-3xl">🧊</span>
+                <span className="text-2xl md:text-3xl">ðŸ§Š</span>
               </div>
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 Apply Ice
               </h3>
               <p className="text-[16px] md:text-base text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -262,9 +262,9 @@ export default function EmergencyCarePage() {
 
             <div className="text-center">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <span className="text-2xl md:text-3xl">🚫</span>
+                <span className="text-2xl md:text-3xl">ðŸš«</span>
               </div>
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 Don't Delay
               </h3>
               <p className="text-[16px] md:text-base text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -281,14 +281,14 @@ export default function EmergencyCarePage() {
           <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
             Don't Wait for Dental Emergencies
           </h2>
-          <p className="text-[16px] md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             If you're experiencing a dental emergency, contact us immediately. We provide urgent care to address your dental needs quickly and effectively.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:(209) 955-1800" className="bg-white text-primary px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="bg-white text-primary px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
-            <Link href="/appointment" className="border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Schedule Emergency Visit
             </Link>
           </div>

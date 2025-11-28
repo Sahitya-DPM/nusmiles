@@ -26,7 +26,7 @@ export default function TraumaticDentalInjuriesPage() {
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Traumatic Dental Injuries
           </h1>
-          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Emergency care for dental trauma and accidents
           </p>
         </div>
@@ -79,43 +79,43 @@ export default function TraumaticDentalInjuriesPage() {
               Understanding Traumatic Dental Injuries
             </h2>
             
-            <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Traumatic dental injuries can occur from accidents, sports injuries, or other impacts to the mouth. Quick action and proper emergency care can make a significant difference in preserving your teeth and preventing further damage.
             </p>
 
-            <h3 className="text-[22px] md:text-2xl font-bold text-gray-900 mb-4 mt-8" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+            <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4 mt-8" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Types of Traumatic Dental Injuries
             </h3>
 
             <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Knocked-Out Tooth (Avulsion)
             </h4>
-            <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               A completely knocked-out tooth is a dental emergency that requires immediate attention. The tooth may be able to be reimplanted if treated quickly.
             </p>
 
             <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Displaced Tooth (Luxation)
             </h4>
-            <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               A tooth that has been pushed out of position but is still in the socket. This can include intrusion (pushed into the jawbone) or extrusion (pushed out of the socket).
             </p>
 
             <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Fractured Tooth
             </h4>
-            <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               A tooth that has been chipped, cracked, or broken. The severity can range from minor enamel chips to complete tooth fractures.
             </p>
 
             <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Soft Tissue Injuries
             </h4>
-            <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Injuries to the lips, gums, tongue, or inside of the cheeks. These can include cuts, tears, or puncture wounds.
             </p>
 
-            <h3 className="text-[22px] md:text-2xl font-bold text-gray-900 mb-4 mt-8" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+            <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4 mt-8" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Immediate Steps for Different Injuries
             </h3>
 
@@ -160,11 +160,11 @@ export default function TraumaticDentalInjuriesPage() {
               <li className="text-gray-700 text-[16px] md:text-base">Seek medical attention if bleeding doesn't stop</li>
             </ol>
 
-            <h3 className="text-[22px] md:text-2xl font-bold text-gray-900 mb-4 mt-8" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+            <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4 mt-8" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               When to Seek Emergency Care
             </h3>
             
-            <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Seek immediate emergency dental care for:
             </p>
             
@@ -178,11 +178,11 @@ export default function TraumaticDentalInjuriesPage() {
               <li className="text-gray-700 text-[16px] md:text-base">Jaw pain or difficulty opening/closing mouth</li>
             </ul>
 
-            <h3 className="text-[22px] md:text-2xl font-bold text-gray-900 mb-4 mt-8" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+            <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4 mt-8" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Prevention of Traumatic Dental Injuries
             </h3>
             
-            <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               To prevent traumatic dental injuries:
             </p>
             
@@ -216,7 +216,7 @@ export default function TraumaticDentalInjuriesPage() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Gum Emergencies
               </h3>
               <p className="text-[16px] text-gray-600 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -235,7 +235,7 @@ export default function TraumaticDentalInjuriesPage() {
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Tooth Pain
               </h3>
               <p className="text-[16px] text-gray-600 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -254,7 +254,7 @@ export default function TraumaticDentalInjuriesPage() {
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Dental Crowns
               </h3>
               <p className="text-[16px] text-gray-600 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -281,7 +281,7 @@ export default function TraumaticDentalInjuriesPage() {
           <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Experienced Dental Trauma?
           </h2>
-          <p className="text-[16px] md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Don't wait to get the care you need. Contact us immediately for emergency dental trauma treatment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

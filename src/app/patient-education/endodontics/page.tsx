@@ -12,7 +12,7 @@ export default function EndodonticsPage() {
     {
       id: 'root-canal-treatment',
       title: 'Root Canal Treatment',
-      icon: '🦷',
+      icon: 'ðŸ¦·',
       articles: [
         {
           title: 'Root Canal Treatment',
@@ -64,7 +64,7 @@ export default function EndodonticsPage() {
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
             Endodontics
           </h1>
-          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Advanced root canal therapy and endodontic treatments
           </p>
         </div>
@@ -101,7 +101,7 @@ export default function EndodonticsPage() {
               Understanding Endodontics
             </h2>
             <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
-            <p className="text-[16px] md:text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Endodontics is the branch of dentistry that focuses on the diagnosis and treatment of diseases and injuries of the dental pulp and surrounding tissues. Our endodontic treatments are designed to save your natural teeth and maintain your oral health.
             </p>
           </div>
@@ -133,7 +133,7 @@ export default function EndodonticsPage() {
           {/* Tab Content */}
           <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
             <div className="mb-6 md:mb-8">
-              <h3 className="text-[22px] md:text-2xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 {activeCategory?.title}
               </h3>
               <div className="w-16 h-1 bg-primary rounded-full"></div>
@@ -147,7 +147,7 @@ export default function EndodonticsPage() {
                       {article.category}
                     </span>
                   </div>
-                  <h4 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+                  <h4 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                     {article.title}
                   </h4>
                   <p className="text-[16px] md:text-base text-gray-600 mb-4 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -183,9 +183,9 @@ export default function EndodonticsPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             <div className="text-center">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <span className="text-2xl md:text-3xl">🦷</span>
+                <span className="text-2xl md:text-3xl">ðŸ¦·</span>
               </div>
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 Save Natural Teeth
               </h3>
               <p className="text-[16px] md:text-base text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -195,9 +195,9 @@ export default function EndodonticsPage() {
 
             <div className="text-center">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <span className="text-2xl md:text-3xl">😊</span>
+                <span className="text-2xl md:text-3xl">ðŸ˜Š</span>
               </div>
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 Maintain Function
               </h3>
               <p className="text-[16px] md:text-base text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -207,9 +207,9 @@ export default function EndodonticsPage() {
 
             <div className="text-center">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <span className="text-2xl md:text-3xl">💪</span>
+                <span className="text-2xl md:text-3xl">ðŸ’ª</span>
               </div>
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 Prevent Further Damage
               </h3>
               <p className="text-[16px] md:text-base text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -219,9 +219,9 @@ export default function EndodonticsPage() {
 
             <div className="text-center">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <span className="text-2xl md:text-3xl">💰</span>
+                <span className="text-2xl md:text-3xl">ðŸ’°</span>
               </div>
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 Cost Effective
               </h3>
               <p className="text-[16px] md:text-base text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -238,14 +238,14 @@ export default function EndodonticsPage() {
           <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
             Need Endodontic Treatment?
           </h2>
-          <p className="text-[16px] md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             If you're experiencing tooth pain or have been told you need a root canal, contact us for expert endodontic care.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointment" className="bg-white text-primary px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-white text-primary px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Schedule Consultation
             </Link>
-            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
           </div>

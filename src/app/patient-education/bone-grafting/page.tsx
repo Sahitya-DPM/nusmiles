@@ -98,7 +98,7 @@ export default function BoneGraftingPage() {
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Bone Grafting
           </h1>
-          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Advanced bone regeneration for successful dental implant treatment in Stockton, CA
           </p>
         </div>
@@ -114,13 +114,13 @@ export default function BoneGraftingPage() {
               </h2>
               <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
               <div className="space-y-6 text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg md:text-[16px] leading-relaxed">
                   Bone grafting is a surgical procedure that replaces missing bone with material from your own body, a donor, or synthetic sources. This procedure is essential for patients who have lost bone density due to tooth loss, gum disease, or trauma.
                 </p>
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg md:text-[16px] leading-relaxed">
                   When teeth are missing for an extended period, the jawbone begins to deteriorate. Bone grafting rebuilds this lost bone structure, creating a solid foundation for dental implants and ensuring long-term success of your dental restoration.
                 </p>
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg md:text-[16px] leading-relaxed">
                   Our advanced bone grafting techniques use the latest technology and materials to provide predictable, long-lasting results. Dr. Parikh's expertise ensures optimal outcomes for even the most complex cases.
                 </p>
               </div>
@@ -149,7 +149,7 @@ export default function BoneGraftingPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Types of Bone Grafts
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-xl md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               We offer various bone grafting options to meet your specific needs
             </p>
           </div>
@@ -188,7 +188,7 @@ export default function BoneGraftingPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Treatment Process
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-xl md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Our comprehensive approach to bone grafting
             </p>
           </div>
@@ -220,7 +220,7 @@ export default function BoneGraftingPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Bone Grafting Pricing
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-xl md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Transparent pricing for all your bone grafting needs
             </p>
           </div>
@@ -288,13 +288,13 @@ export default function BoneGraftingPage() {
               </h2>
               <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
               <div className="space-y-6 text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg md:text-[16px] leading-relaxed">
                   Dr. Parikh is a highly skilled dental surgeon with over 24 years of experience in advanced dental procedures, including bone grafting and dental implant placement. His expertise in bone regeneration techniques ensures optimal outcomes for even the most challenging cases.
                 </p>
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg md:text-[16px] leading-relaxed">
                   As an Associate Fellow of AAID and Fellow of ICOI and GDIA, Dr. Parikh has received extensive training in bone grafting procedures from leading experts in the field. He stays current with the latest advancements in bone regeneration technology and techniques.
                 </p>
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg md:text-[16px] leading-relaxed">
                   Dr. Parikh's commitment to continuing education and his passion for excellence in dentistry make him the trusted choice for bone grafting procedures in Stockton and the surrounding areas. He takes pride in helping patients achieve the strong foundation they need for successful dental implant treatment.
                 </p>
               </div>
@@ -309,14 +309,14 @@ export default function BoneGraftingPage() {
           <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Ready to Restore Your Jawbone?
           </h2>
-          <p className="text-[16px] md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Contact us today to learn how bone grafting can prepare you for successful dental implant treatment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Schedule Consultation
             </Link>
-            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
           </div>

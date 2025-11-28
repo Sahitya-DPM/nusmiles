@@ -186,7 +186,7 @@ const SimpleTextEditor: React.FC<SimpleTextEditorProps> = ({
           className="px-2 py-1 text-sm bg-white border border-gray-300 rounded hover:bg-gray-50"
           title="List"
         >
-          • List
+          â€¢ List
         </button>
         <button
           type="button"
@@ -194,7 +194,7 @@ const SimpleTextEditor: React.FC<SimpleTextEditorProps> = ({
           className="px-2 py-1 text-sm bg-white border border-gray-300 rounded hover:bg-gray-50"
           title="Link"
         >
-          🔗
+          ðŸ”—
         </button>
         <button
           type="button"
@@ -202,7 +202,7 @@ const SimpleTextEditor: React.FC<SimpleTextEditorProps> = ({
           className="px-2 py-1 text-sm bg-white border border-gray-300 rounded hover:bg-gray-50"
           title="Line Break"
         >
-          ↵
+          â†µ
         </button>
         <button
           type="button"

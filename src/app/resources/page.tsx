@@ -39,7 +39,7 @@ const ResourcesPage = () => {
           <h1 className="text-[27px] md:text-5xl font-bold mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Dental Resources
           </h1>
-          <p className="text-[16px] md:text-2xl max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Everything you need to know about dental care and patient results
           </p>
         </div>
@@ -52,7 +52,7 @@ const ResourcesPage = () => {
             <h2 className="text-[27px] md:text-4xl font-bold text-gray-800 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Helpful Resources
             </h2>
-            <p className="text-[16px] md:text-lg text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Access important information and see real patient results to help you make informed decisions about your dental care.
             </p>
           </div>
@@ -69,7 +69,7 @@ const ResourcesPage = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-[22px] md:text-2xl font-bold text-gray-800 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                  <h3 className="text-[22px] md:text-[16px] font-bold text-gray-800 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                     {resource.title}
                   </h3>
                   <p className="text-[16px] text-gray-600 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -105,7 +105,7 @@ const ResourcesPage = () => {
           <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Ready to Experience Exceptional Dental Care?
           </h2>
-          <p className="text-[16px] md:text-xl text-white mb-8" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white mb-8" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Join our family of satisfied patients and discover why Nu Smile Dental is the trusted choice for dental care in Stockton.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

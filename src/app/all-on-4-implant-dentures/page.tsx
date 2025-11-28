@@ -64,7 +64,7 @@ export default function AllOn4ImplantDenturesPage() {
         <div className="absolute inset-0">
           <Image
             src="/Dental Implants s.jpeg"
-            alt="All-on-4® Implant Dentures"
+            alt="All-on-4Â® Implant Dentures"
             fill
             className="object-cover"
             sizes="100vw"
@@ -73,9 +73,9 @@ export default function AllOn4ImplantDenturesPage() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-            All-on-4® Implant Dentures
+            All-on-4Â® Implant Dentures
           </h1>
-          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Revolutionary implant-supported denture treatment in Stockton, CA
           </p>
         </div>
@@ -91,10 +91,10 @@ export default function AllOn4ImplantDenturesPage() {
               </h2>
               <div className="w-24 h-1 bg-primary rounded-full mb-8 mx-auto lg:mx-0"></div>
               <div className="space-y-6 text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <p className="text-[16px] md:text-lg leading-relaxed">
-                  All-on-4® implant-supported denture treatment is the process of placing a minimum of four dental implants in each jaw to stabilize a non-removable denture. It combines the best of both worlds: the ability to restore a fully edentulous arch with the stability of dental implants.
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
+                  All-on-4Â® implant-supported denture treatment is the process of placing a minimum of four dental implants in each jaw to stabilize a non-removable denture. It combines the best of both worlds: the ability to restore a fully edentulous arch with the stability of dental implants.
                 </p>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   Standard dentures are stabilized and retained on the ridge of the jaws, making them likely to move around when eating and speaking. Implant-supported dentures provide much stronger support as the implants act as an anchor for the dentures to provide an easier experience for you, our patient.
                 </p>
               </div>
@@ -104,7 +104,7 @@ export default function AllOn4ImplantDenturesPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent z-10"></div>
                 <Image
                   src="/allonx.jpg"
-                  alt="All-on-4® Implant Dentures - Stockton, CA"
+                  alt="All-on-4Â® Implant Dentures - Stockton, CA"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -122,8 +122,8 @@ export default function AllOn4ImplantDenturesPage() {
             <h2 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Treatment Process
             </h2>
-            <p className="text-[16px] md:text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-              Our comprehensive approach to All-on-4® implant dentures
+            <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              Our comprehensive approach to All-on-4Â® implant dentures
             </p>
           </div>
 
@@ -131,11 +131,11 @@ export default function AllOn4ImplantDenturesPage() {
             {treatmentSteps.map((step, index) => (
               <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-[22px] md:text-2xl font-bold text-white" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                  <span className="text-[22px] md:text-[16px] font-bold text-white" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                     {step.step}
                   </span>
                 </div>
-                <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-4 text-center" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4 text-center" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                   {step.title}
                 </h3>
                 <p className="text-gray-700 text-center leading-relaxed text-[16px]" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -152,9 +152,9 @@ export default function AllOn4ImplantDenturesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-              All-on-4® Pricing Options
+              All-on-4Â® Pricing Options
             </h2>
-            <p className="text-[16px] md:text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Transparent pricing for all your implant denture needs
             </p>
           </div>
@@ -163,7 +163,7 @@ export default function AllOn4ImplantDenturesPage() {
             {pricingOptions.map((option, index) => (
               <div key={index} className="bg-gray-50 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
                 <div className="text-center mb-6">
-                  <h3 className="text-[22px] md:text-2xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                  <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                     {option.title}
                   </h3>
                   <div className="text-[27px] md:text-4xl font-bold text-primary mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
@@ -221,13 +221,13 @@ export default function AllOn4ImplantDenturesPage() {
               </h2>
               <div className="w-24 h-1 bg-primary rounded-full mb-8 mx-auto lg:mx-0"></div>
               <div className="space-y-6 text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   Dr. Parikh has been practicing for more than 24 years and he is passionate about achieving excellence in dentistry with a focus on Dental Implants. He has been trained by many national and international surgeons to become an Associate Fellow of AAID and a Fellow of ICOI and GDIA.
                 </p>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   Over the years he has invested to advance his knowledge in many phases of dentistry including Dental Implants, Dental Extractions, Cosmetic and Restorative dentistry, Orthodontics, TMD, Sleep Apnea, Endodontics and many others and have treated thousands of patients.
                 </p>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   He recognizes the importance of ongoing dental education for enhancing the quality of patient care, ensuring patient safety, and staying abreast of the latest developments in techniques, materials, and technology. He actively pursues education across all facets of dentistry to remain well-informed and proficient in his field.
                 </p>
               </div>
@@ -244,14 +244,14 @@ export default function AllOn4ImplantDenturesPage() {
           <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Ready to Experience Exceptional Dental Care?
           </h2>
-          <p className="text-[16px] md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Join our family of satisfied patients and discover why Nu Smile Dental is the trusted choice for dental care in Stockton.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Book Appointment
             </Link>
-            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
           </div>

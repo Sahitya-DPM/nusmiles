@@ -16,7 +16,7 @@ export default function HowToPreventCavitiesPage() {
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             How to Prevent Cavities
           </h1>
-          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Effective strategies for maintaining cavity-free teeth
           </p>
         </div>
@@ -67,10 +67,10 @@ export default function HowToPreventCavitiesPage() {
               <h2 className="text-[27px] md:text-3xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Understanding Cavity Prevention
               </h2>
-              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Cavities, also known as dental caries, are permanently damaged areas in the hard surface of your teeth that develop into tiny openings or holes. They are caused by a combination of factors, including bacteria in your mouth, frequent snacking, sipping sugary drinks, and not cleaning your teeth well.
               </p>
-              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 The good news is that cavities are largely preventable. With proper oral hygiene, a healthy diet, and regular dental care, you can significantly reduce your risk of developing cavities.
               </p>
             </div>
@@ -83,21 +83,21 @@ export default function HowToPreventCavitiesPage() {
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Brush Twice Daily
               </h4>
-              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Brush your teeth at least twice a day with fluoride toothpaste. Use a soft-bristled toothbrush and brush for at least two minutes each time. Pay special attention to the gumline and hard-to-reach areas.
               </p>
 
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Floss Daily
               </h4>
-              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Flossing removes food particles and plaque from between your teeth where your toothbrush can't reach. Make flossing a daily habit, preferably before bedtime.
               </p>
 
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Use Fluoride Products
               </h4>
-              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Fluoride helps strengthen tooth enamel and makes it more resistant to acid attacks. Use fluoride toothpaste and consider fluoride mouthwash if recommended by your dentist.
               </p>
             </div>
@@ -110,7 +110,7 @@ export default function HowToPreventCavitiesPage() {
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Limit Sugary Foods and Drinks
               </h4>
-              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Sugar feeds the bacteria in your mouth that produce acids that attack tooth enamel. Limit your consumption of sugary snacks, candies, sodas, and fruit juices. When you do consume them, try to do so with meals rather than as snacks.
               </p>
 
@@ -127,7 +127,7 @@ export default function HowToPreventCavitiesPage() {
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Stay Hydrated
               </h4>
-              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Drink plenty of water throughout the day. Water helps wash away food particles and bacteria, and it's the best beverage for your teeth. Fluoridated water provides additional cavity protection.
               </p>
             </div>
@@ -140,21 +140,21 @@ export default function HowToPreventCavitiesPage() {
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Regular Dental Check-ups
               </h4>
-              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Visit your dentist regularly for check-ups and professional cleanings. Your dentist can detect early signs of cavities and provide preventive treatments like sealants or fluoride applications.
               </p>
 
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Dental Sealants
               </h4>
-              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Sealants are thin, protective coatings applied to the chewing surfaces of back teeth. They create a barrier that prevents food and bacteria from getting stuck in the grooves of your teeth.
               </p>
 
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Consider Xylitol
               </h4>
-              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Xylitol is a natural sweetener that can help prevent cavities. It reduces the levels of harmful bacteria in your mouth and can be found in sugar-free gum and some dental products.
               </p>
             </div>
@@ -167,21 +167,21 @@ export default function HowToPreventCavitiesPage() {
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 For Children
               </h4>
-              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Children are particularly susceptible to cavities. Start oral hygiene habits early, supervise brushing until age 7-8, and ensure they use fluoride toothpaste. Consider sealants for their permanent molars.
               </p>
 
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 For Adults
               </h4>
-              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Adults may be at risk for cavities around existing fillings or at the root surfaces if gums have receded. Pay extra attention to these areas and consider using fluoride mouthwash.
               </p>
 
               <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Dry Mouth
               </h4>
-              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Saliva helps wash away food particles and neutralize acids. If you have dry mouth (due to medications, medical conditions, or other factors), talk to your dentist about special preventive measures.
               </p>
             </div>
@@ -190,7 +190,7 @@ export default function HowToPreventCavitiesPage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Warning Signs of Cavities
               </h3>
-              <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Early detection is key to preventing serious dental problems. Watch for these signs:
               </p>
               <ul className="list-disc pl-6 space-y-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -200,7 +200,7 @@ export default function HowToPreventCavitiesPage() {
                 <li className="text-gray-700 text-[16px] md:text-base">Pain when biting down</li>
                 <li className="text-gray-700 text-[16px] md:text-base">Spontaneous toothache</li>
               </ul>
-              <p className="text-lg leading-relaxed text-gray-700 mt-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-lg md:text-[16px] leading-relaxed text-gray-700 mt-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 If you notice any of these signs, schedule a dental appointment promptly.
               </p>
             </div>
@@ -216,7 +216,7 @@ export default function HowToPreventCavitiesPage() {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link href="/patient-education/how-to-brush-and-floss" className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 How to Brush and Floss
               </h3>
               <p className="text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -224,7 +224,7 @@ export default function HowToPreventCavitiesPage() {
               </p>
             </Link>
             <Link href="/patient-education/toothpaste" className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Toothpaste
               </h3>
               <p className="text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -242,14 +242,14 @@ export default function HowToPreventCavitiesPage() {
           <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Ready to Prevent Cavities?
           </h2>
-          <p className="text-[16px] md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Our dental team can help you develop a personalized cavity prevention plan.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Schedule Consultation
             </Link>
-            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
           </div>

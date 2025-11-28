@@ -32,7 +32,7 @@ export default function HomeGallerySection() {
             Smile Gallery
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6"></div>
-          <p className="text-[16px] md:text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             See the amazing smile transformations we've created for our patients
           </p>
         </div>
@@ -47,7 +47,7 @@ export default function HomeGallerySection() {
                     {case_.category}
                   </span>
                 </div>
-                <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                   {case_.title}
                 </h3>
               </div>
@@ -72,7 +72,7 @@ export default function HomeGallerySection() {
         <div className="text-center">
           <Link 
             href="/smile-gallery" 
-            className="bg-primary text-white px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-primary-dark transition-colors shadow-lg uppercase inline-block" 
+            className="bg-primary text-white px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-primary-dark transition-colors shadow-lg uppercase inline-block" 
             style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
           >
             View Full Gallery
@@ -82,4 +82,3 @@ export default function HomeGallerySection() {
     </section>
   );
 }
-

@@ -99,7 +99,7 @@ export default function Header() {
                 Dental Implants
               </Link>
               <Link href="/all-on-4-implant-dentures" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
-                All-on-4® Implant Dentures
+                All-on-4Â® Implant Dentures
               </Link>
               <Link href="/invisalign" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
                 Invisalign
@@ -281,7 +281,7 @@ export default function Header() {
                       className="block py-2 text-gray-600 hover:text-primary transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      All-on-4® Implant Dentures
+                      All-on-4Â® Implant Dentures
                     </Link>
                     <Link 
                       href="/invisalign" 

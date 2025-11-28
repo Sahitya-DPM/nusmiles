@@ -79,7 +79,7 @@ export default function DentalImplantsPage() {
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Dental Implants
           </h1>
-          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Permanent tooth replacement solution in Stockton, CA
           </p>
         </div>
@@ -95,10 +95,10 @@ export default function DentalImplantsPage() {
               </h2>
               <div className="w-24 h-1 bg-primary rounded-full mb-8 mx-auto lg:mx-0"></div>
               <div className="space-y-6 text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   Dental implants from Nu Smile Dental are small titanium posts that replace the roots of missing teeth. They are inserted into your jawbone during a minor surgical procedure that takes place at our dental office in Stockton, CA.
                 </p>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   After the implant has been placed in your jawbone, a completely lifelike porcelain tooth crown is attached. In some cases, the implant needs to fuse with the bone for several months before it is permanently crowned; in other cases, you can have new (but temporary) teeth the same day your implants are placed.
                 </p>
               </div>
@@ -127,7 +127,7 @@ export default function DentalImplantsPage() {
             <h2 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Dental Implant Pricing
             </h2>
-            <p className="text-[16px] md:text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Transparent pricing for all your dental implant needs
             </p>
           </div>
@@ -136,7 +136,7 @@ export default function DentalImplantsPage() {
             {pricingOptions.map((option, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
                 <div className="text-center mb-6">
-                  <h3 className="text-[22px] md:text-2xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                  <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                     {option.title}
                   </h3>
                   <div className="text-[27px] md:text-4xl font-bold text-primary mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
@@ -179,7 +179,7 @@ export default function DentalImplantsPage() {
             <h2 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Frequently Asked Questions
             </h2>
-            <p className="text-[16px] md:text-xl text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Everything you need to know about dental implants
             </p>
           </div>
@@ -191,7 +191,7 @@ export default function DentalImplantsPage() {
                   className="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-200 flex items-center justify-between"
                   onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
                 >
-                  <h3 className="text-[16px] md:text-lg font-semibold text-gray-900" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                  <h3 className="text-[16px] md:text-[16px] font-semibold text-gray-900" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                     {faq.question}
                   </h3>
                   <svg 
@@ -222,14 +222,14 @@ export default function DentalImplantsPage() {
           <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Ready to Experience Exceptional Dental Care?
           </h2>
-          <p className="text-[16px] md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Join our family of satisfied patients and discover why Nu Smile Dental is the trusted choice for dental care in Stockton.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Book Appointment
             </Link>
-            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
           </div>

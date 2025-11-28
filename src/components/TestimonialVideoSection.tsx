@@ -21,7 +21,7 @@ export default function TestimonialVideoSection() {
             Patient Video Testimonials
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6"></div>
-          <p className="text-[16px] md:text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Hear directly from our patients about their experience at Nu Smile Dental
           </p>
         </div>
@@ -47,4 +47,3 @@ export default function TestimonialVideoSection() {
     </section>
   );
 }
-

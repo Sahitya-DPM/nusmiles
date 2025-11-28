@@ -22,7 +22,7 @@ export default function GallerySection() {
           <h3 className="text-2xl md:text-3xl font-bold text-secondary mb-6">
             Before & After Gallery
           </h3>
-          <p className="text-lg text-accent">
+          <p className="text-lg md:text-[16px] text-accent">
             Real transformations from our satisfied patients
           </p>
         </div>

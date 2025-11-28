@@ -6,8 +6,8 @@ export default function ServicesSection() {
   const services = [
     {
       id: 1,
-      title: "All-on-4® Implant Dentures",
-      description: "All-on-4® implant-supported denture treatment is the process of placing a minimum of four dental implants in each jaw to stabilize a non-removable denture.",
+      title: "All-on-4Â® Implant Dentures",
+      description: "All-on-4Â® implant-supported denture treatment is the process of placing a minimum of four dental implants in each jaw to stabilize a non-removable denture.",
       image: "/AdobeStock_1305134131.jpeg",
       href: "/all-on-4-implant-dentures",
       icon: (
@@ -50,7 +50,7 @@ export default function ServicesSection() {
           <h2 className="text-[27px] md:text-5xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Our Main Services
           </h2>
-          <p className="text-[16px] md:text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Comprehensive dental care solutions tailored to your needs
           </p>
         </div>
@@ -78,7 +78,7 @@ export default function ServicesSection() {
 
               {/* Service Content */}
               <div className="p-6">
-                <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                   {service.title}
                 </h3>
                 <p className="text-[16px] md:text-base text-gray-600 leading-relaxed mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -96,7 +96,7 @@ export default function ServicesSection() {
 
         {/* View All Services Button */}
         <div className="text-center mt-12">
-          <Link href="/dental-services" className="bg-secondary text-white px-8 py-4 rounded-lg hover:bg-secondary-dark transition-colors font-semibold text-[15px] md:text-lg uppercase tracking-wide inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <Link href="/dental-services" className="bg-secondary text-white px-8 py-4 rounded-lg hover:bg-secondary-dark transition-colors font-semibold text-[15px] md:text-[16px] uppercase tracking-wide inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             View All Services
           </Link>
         </div>

@@ -70,7 +70,7 @@ export default function GallerySlider() {
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
             Our Dental Gallery
           </h2>
-          <p className="text-lg text-accent">
+          <p className="text-lg md:text-[16px] text-accent">
             Explore our state-of-the-art dental facility and treatments
           </p>
         </div>

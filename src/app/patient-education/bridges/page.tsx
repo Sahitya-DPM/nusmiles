@@ -26,7 +26,7 @@ export default function BridgesPage() {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Dental Bridges
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-xl md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Restoring function and aesthetics with prosthetic tooth replacement
           </p>
         </div>
@@ -79,59 +79,59 @@ export default function BridgesPage() {
               Understanding Dental Bridges
             </h2>
             
-            <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               When you lose a tooth, it affects not just the appearance but also the function of your smile. It can be difficult to eat or speak naturally. Extra stress is put on your remaining teeth, you're at greater risk for developing gum disease, your remaining teeth can shift out of position, causing bite problems, and the shape of your face and jaw can change over time.
             </p>
 
-            <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               A bridge is a restoration that will help you maintain your oral health while making your smile complete again.
             </p>
 
-            <h3 className="text-[22px] md:text-2xl font-bold text-gray-900 mb-4 mt-8" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+            <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4 mt-8" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               How Dental Bridges Work
             </h3>
             
-            <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Bridges use prosthetic teeth to "bridge" the gaps caused by missing teeth. These false teeth are known as pontics, and are crafted from metal, porcelain, or porcelain fused to metal. Pontics can be matched in size, shape, and color to the teeth they are replacing for a natural appearance. A bridge can replace up to four teeth, but is typically used to replace one or two.
             </p>
 
-            <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               There are four common types of bridges, and the type of bridge that is best for you will depend on your preferences, your oral health, the location and number of missing teeth, cost, and other factors. Because a bridge requires healthy teeth, gums, and bones for long-lasting and successful restoration, any dental problems will need to be treated beforehand.
             </p>
 
-            <h3 className="text-[22px] md:text-2xl font-bold text-gray-900 mb-4 mt-8" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+            <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4 mt-8" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Types of Dental Bridges
             </h3>
 
             <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Traditional Bridge
             </h4>
-            <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Traditional bridges are fixed in place and are anchored by crowns placed on the healthy teeth on each side of the gap. First, the two supporting teeth, known as abutment teeth, are prepared for crowns. This requires removing part of the tooth structure and creating an impression of each tooth. Crowns are created from these impressions and are attached to each side of the artificial tooth, creating the bridge. The crowns are then cemented to the prepared teeth, securing the entire bridge unit in place.
             </p>
 
             <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Cantilever Bridge
             </h4>
-            <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               A cantilever bridge is used when there are no teeth available on both sides of the missing tooth to serve as abutment teeth. In this case, a healthy tooth on one side of the gap can be fitted with a crown to hold a single pontic. Because the pontic is only attached on one side, cantilever bridges aren't recommended for the rear of the jaw, where chewing forces are much more powerful and the extra stress can damage the abutment tooth over time.
             </p>
 
             <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Maryland Bridge
             </h4>
-            <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               A Maryland bridge is a more conservative treatment than a traditional bridge because there is no need for crowns to hold the bridge in place. A pontic is created with two wings made of resin, porcelain, or metal attached to its back. These wings are then bonded to the backs of the two abutment teeth. This type of fixed bridge is often used to replace one or two front teeth; it's not strong enough to replace molars. Because no crowns are necessary, a Maryland bridge is generally more cost-effective than other options.
             </p>
 
             <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Implant-Supported Bridge
             </h4>
-            <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               An implant-supported bridge is a bridge attached to dental implants. Posts are surgically implanted in the jawbone, and, over a period of months, fuse with the bone, providing an exceptionally strong foundation for a bridge. The number of implants needed will depend on the location of the bridge (upper or lower jaw), the number of pontics, and the quantity and density of the bone.
             </p>
 
-            <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Once the implant posts have healed and are well-integrated into the jawbone, metal or ceramic abutments are secured to the posts. The bridge is then secured to these abutments. The bridge can be fixed or removable for easier cleaning.
             </p>
 
@@ -144,7 +144,7 @@ export default function BridgesPage() {
               </p>
             </div>
 
-            <p className="text-[16px] md:text-lg leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] leading-relaxed text-gray-700 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               You have many options for replacing a lost tooth. Your dentist can help you determine which type of bridge is best suited to restore your healthy, confident smile.
             </p>
           </div>
@@ -160,7 +160,7 @@ export default function BridgesPage() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Dental Implants
               </h3>
               <p className="text-[16px] text-gray-600 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -179,7 +179,7 @@ export default function BridgesPage() {
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Dental Crowns
               </h3>
               <p className="text-[16px] text-gray-600 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -198,7 +198,7 @@ export default function BridgesPage() {
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Dentures
               </h3>
               <p className="text-[16px] text-gray-600 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -225,14 +225,14 @@ export default function BridgesPage() {
           <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Ready to Restore Your Smile?
           </h2>
-          <p className="text-[16px] md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Schedule a consultation with Dr. Parikh to discuss if dental bridges are the right solution for your missing teeth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Schedule Consultation
             </Link>
-            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
           </div>

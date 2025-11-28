@@ -5,7 +5,7 @@ export default function PromotionsSection() {
     {
       price: "$49",
       title: "Emergency Exam",
-      description: "Tooth pain can't wait—same-day emergency appointments available.",
+      description: "Tooth pain can't waitâ€”same-day emergency appointments available.",
       highlight: true
     },
     {
@@ -17,7 +17,7 @@ export default function PromotionsSection() {
     {
       price: "FREE",
       title: "Invisalign Consultation",
-      description: "Get answers to all your questions—no pressure, no obligation.",
+      description: "Get answers to all your questionsâ€”no pressure, no obligation.",
       highlight: false
     }
   ];
@@ -29,7 +29,7 @@ export default function PromotionsSection() {
           <h2 className="text-[27px] md:text-4xl font-bold text-white mb-4">
             Limited-Time Dental Promotions
           </h2>
-          <p className="text-[16px] md:text-xl text-accent">
+          <p className="text-[16px] md:text-[16px] text-accent">
             NU SMILE DENTAL is committed to helping patients afford the care they deserve. Take advantage of our current offers:
           </p>
         </div>
@@ -42,7 +42,7 @@ export default function PromotionsSection() {
             >
               <div>
                 <div className="text-[27px] md:text-4xl font-bold text-secondary mb-4">{promo.price}</div>
-                <h3 className="text-[22px] md:text-xl font-semibold text-primary mb-4">{promo.title}</h3>
+                <h3 className="text-[22px] md:text-[16px] font-semibold text-primary mb-4">{promo.title}</h3>
                 <p className="text-[16px] md:text-base text-gray-700">{promo.description}</p>
               </div>
               <Link href="/appointment" className="mt-6 bg-secondary text-white px-6 py-2 rounded-lg hover:bg-secondary-dark transition-colors inline-block text-[15px] md:text-base">

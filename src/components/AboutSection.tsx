@@ -19,19 +19,19 @@ export default function AboutSection() {
               
               <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
               
-              <p className="text-[16px] md:text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Welcome! The dental professionals at Nu Smile Dental are pleased to welcome you to our practice located in Stockton, CA.
               </p>
               
-              <p className="text-[16px] md:text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 We want all our patients to be informed decision makers and fully understand any health issues you face. That's why we've developed a website loaded with valuable information about dental and dental problems and treatments. We encourage you to visit this site whenever you have concern about your teeth.
               </p>
               
-              <p className="text-[16px] md:text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Our website also provides you with background about our staff, office hours, insurance policies, appointment procedures, maps, directions to our office and other useful information. We know how hectic life can be and are committed to making our practice convenient and accessible. And we want you to feel confident that when you choose Nu Smile Dental, you're working with doctors and other professionals who are qualified, experienced and caring.
               </p>
               
-              <p className="text-[16px] md:text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Please take a few moments to look through this site to get a better feel for Nu Smile Dental's capabilities and services. We also invite you to email or call our office at any time to request an appointment or ask any questions. Thank you.
               </p>
             </div>
@@ -42,7 +42,7 @@ export default function AboutSection() {
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent z-10"></div>
               <Image
-                src="/Stockton Dentist.jpg"
+                src="/trusted-partner.jpeg"
                 alt="Stockton Dentist"
                 width={600}
                 height={700}

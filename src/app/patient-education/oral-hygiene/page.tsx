@@ -11,7 +11,7 @@ export default function OralHygienePage() {
     {
       id: 'daily-care',
       title: 'Daily Care',
-      icon: '🦷',
+      icon: 'ðŸ¦·',
       articles: [
         {
           title: 'How to Brush and Floss',
@@ -36,7 +36,7 @@ export default function OralHygienePage() {
     {
       id: 'prevention',
       title: 'Prevention',
-      icon: '🛡️',
+      icon: 'ðŸ›¡ï¸',
       articles: [
         {
           title: 'How to Prevent Cavities',
@@ -55,7 +55,7 @@ export default function OralHygienePage() {
     {
       id: 'special-care',
       title: 'Special Care',
-      icon: '👶',
+      icon: 'ðŸ‘¶',
       articles: [
         {
           title: 'Oral Hygiene for Kids',
@@ -80,7 +80,7 @@ export default function OralHygienePage() {
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
             Oral Hygiene
           </h1>
-          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Essential practices for maintaining healthy teeth and gums
           </p>
         </div>
@@ -125,13 +125,13 @@ export default function OralHygienePage() {
               </h2>
               <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
               <div className="space-y-4 md:space-y-6 text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   Good oral hygiene is the cornerstone of dental health. It involves daily practices that help prevent tooth decay, gum disease, and other oral health problems.
                 </p>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   Proper oral hygiene includes brushing your teeth at least twice a day, flossing daily, using mouthwash, and maintaining a healthy diet. These practices help remove plaque and bacteria that can cause dental problems.
                 </p>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   Regular dental check-ups and professional cleanings are also essential components of good oral hygiene, as they help identify and address issues before they become serious problems.
                 </p>
               </div>
@@ -139,8 +139,8 @@ export default function OralHygienePage() {
             <div className="relative">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-gradient-to-br from-primary/10 to-secondary/10 p-6 md:p-8">
                 <div className="text-center">
-                  <div className="text-4xl md:text-6xl mb-4">🦷</div>
-                  <h3 className="text-[22px] md:text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+                  <div className="text-4xl md:text-6xl mb-4">ðŸ¦·</div>
+                  <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                     Daily Oral Care
                   </h3>
                   <p className="text-[16px] md:text-base text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -161,7 +161,7 @@ export default function OralHygienePage() {
               Oral Hygiene Topics
             </h2>
             <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
-            <p className="text-[16px] md:text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Explore different aspects of oral hygiene and learn how to maintain optimal dental health
             </p>
           </div>
@@ -188,7 +188,7 @@ export default function OralHygienePage() {
           {/* Tab Content */}
           <div>
             <div className="mb-6 md:mb-8">
-              <h3 className="text-[22px] md:text-2xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 {activeCategory?.title}
               </h3>
               <div className="w-16 h-1 bg-primary rounded-full"></div>
@@ -202,7 +202,7 @@ export default function OralHygienePage() {
                       {article.category}
                     </span>
                   </div>
-                  <h4 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+                  <h4 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                     {article.title}
                   </h4>
                   <p className="text-[16px] md:text-base text-gray-600 mb-4 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -238,9 +238,9 @@ export default function OralHygienePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             <div className="text-center">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <span className="text-2xl md:text-3xl">🦷</span>
+                <span className="text-2xl md:text-3xl">ðŸ¦·</span>
               </div>
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 Prevents Cavities
               </h3>
               <p className="text-[16px] md:text-base text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -250,9 +250,9 @@ export default function OralHygienePage() {
 
             <div className="text-center">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <span className="text-2xl md:text-3xl">😊</span>
+                <span className="text-2xl md:text-3xl">ðŸ˜Š</span>
               </div>
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 Fresh Breath
               </h3>
               <p className="text-[16px] md:text-base text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -262,9 +262,9 @@ export default function OralHygienePage() {
 
             <div className="text-center">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <span className="text-2xl md:text-3xl">💪</span>
+                <span className="text-2xl md:text-3xl">ðŸ’ª</span>
               </div>
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 Gum Health
               </h3>
               <p className="text-[16px] md:text-base text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -274,9 +274,9 @@ export default function OralHygienePage() {
 
             <div className="text-center">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <span className="text-2xl md:text-3xl">❤️</span>
+                <span className="text-2xl md:text-3xl">â¤ï¸</span>
               </div>
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 Overall Health
               </h3>
               <p className="text-[16px] md:text-base text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -293,14 +293,14 @@ export default function OralHygienePage() {
           <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
             Ready to Improve Your Oral Hygiene?
           </h2>
-          <p className="text-[16px] md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Our team can help you develop the best oral hygiene routine for your specific needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointment" className="bg-white text-primary px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-white text-primary px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Schedule Consultation
             </Link>
-            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
           </div>
