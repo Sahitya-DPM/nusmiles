@@ -11,7 +11,7 @@ export default function OralSurgeryPage() {
     {
       id: 'extractions',
       title: 'Extractions',
-      icon: '🦷',
+      icon: 'ðŸ¦·',
       articles: [
         {
           title: 'Extractions',
@@ -30,7 +30,7 @@ export default function OralSurgeryPage() {
     {
       id: 'surgical-procedures',
       title: 'Surgical Procedures',
-      icon: '🔪',
+      icon: 'ðŸ”ª',
       articles: [
         {
           title: 'Oral Surgery Procedures',
@@ -61,7 +61,7 @@ export default function OralSurgeryPage() {
     {
       id: 'specialized-surgery',
       title: 'Specialized Surgery',
-      icon: '🏥',
+      icon: 'ðŸ¥',
       articles: [
         {
           title: 'Cleft Lip and Palate',
@@ -86,7 +86,7 @@ export default function OralSurgeryPage() {
     {
       id: 'diagnostic-and-care',
       title: 'Diagnostic and Care',
-      icon: '🔬',
+      icon: 'ðŸ”¬',
       articles: [
         {
           title: 'Blood Thinners and Oral Surgery',
@@ -117,7 +117,7 @@ export default function OralSurgeryPage() {
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
             Oral Surgery
           </h1>
-          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Advanced surgical procedures for complex dental and oral health issues
           </p>
         </div>
@@ -162,13 +162,13 @@ export default function OralSurgeryPage() {
               </h2>
               <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
               <div className="space-y-4 md:space-y-6 text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   Oral surgery encompasses a wide range of surgical procedures involving the mouth, jaw, and face. These procedures are performed by oral and maxillofacial surgeons who have extensive training in both dentistry and surgery.
                 </p>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   From simple tooth extractions to complex reconstructive procedures, oral surgery can address various conditions including impacted teeth, jaw misalignment, facial trauma, and oral pathology.
                 </p>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   Modern oral surgery techniques prioritize patient comfort and safety, often incorporating advanced technology and sedation options to ensure a positive experience.
                 </p>
               </div>
@@ -176,8 +176,8 @@ export default function OralSurgeryPage() {
             <div className="relative">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-gradient-to-br from-primary/10 to-secondary/10 p-6 md:p-8">
                 <div className="text-center">
-                  <div className="text-4xl md:text-6xl mb-4">🏥</div>
-                  <h3 className="text-[22px] md:text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+                  <div className="text-4xl md:text-6xl mb-4">ðŸ¥</div>
+                  <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                     Expert Surgical Care
                   </h3>
                   <p className="text-[16px] md:text-base text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -198,7 +198,7 @@ export default function OralSurgeryPage() {
               Oral Surgery Procedures
             </h2>
             <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
-            <p className="text-[16px] md:text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Explore different types of oral surgery procedures and understand what each involves
             </p>
           </div>
@@ -225,7 +225,7 @@ export default function OralSurgeryPage() {
           {/* Tab Content */}
           <div>
             <div className="mb-6 md:mb-8">
-              <h3 className="text-[22px] md:text-2xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 {activeCategory?.title}
               </h3>
               <div className="w-16 h-1 bg-primary rounded-full"></div>
@@ -239,7 +239,7 @@ export default function OralSurgeryPage() {
                       {article.category}
                     </span>
                   </div>
-                  <h4 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+                  <h4 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                     {article.title}
                   </h4>
                   <p className="text-[16px] md:text-base text-gray-600 mb-4 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -275,9 +275,9 @@ export default function OralSurgeryPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             <div className="text-center">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <span className="text-2xl md:text-3xl">👨‍⚕️</span>
+                <span className="text-2xl md:text-3xl">ðŸ‘¨â€âš•ï¸</span>
               </div>
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 Expert Surgeons
               </h3>
               <p className="text-[16px] md:text-base text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -287,9 +287,9 @@ export default function OralSurgeryPage() {
 
             <div className="text-center">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <span className="text-2xl md:text-3xl">🔬</span>
+                <span className="text-2xl md:text-3xl">ðŸ”¬</span>
               </div>
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 Advanced Technology
               </h3>
               <p className="text-[16px] md:text-base text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -299,9 +299,9 @@ export default function OralSurgeryPage() {
 
             <div className="text-center">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <span className="text-2xl md:text-3xl">😴</span>
+                <span className="text-2xl md:text-3xl">ðŸ˜´</span>
               </div>
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 Comfort Options
               </h3>
               <p className="text-[16px] md:text-base text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -311,9 +311,9 @@ export default function OralSurgeryPage() {
 
             <div className="text-center">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <span className="text-2xl md:text-3xl">🎯</span>
+                <span className="text-2xl md:text-3xl">ðŸŽ¯</span>
               </div>
-              <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
+              <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
                 Comprehensive Care
               </h3>
               <p className="text-[16px] md:text-base text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -330,14 +330,14 @@ export default function OralSurgeryPage() {
           <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', lineHeight: '1.4' }}>
             Need Oral Surgery Consultation?
           </h2>
-          <p className="text-[16px] md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Our experienced oral surgeons can evaluate your needs and recommend the best treatment options.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointment" className="bg-white text-primary px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-white text-primary px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Schedule Consultation
             </Link>
-            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
           </div>

@@ -15,7 +15,7 @@ export default function CTASection() {
 
             {/* Right Side - Description and Buttons */}
             <div className="space-y-6">
-              <p className="text-white text-lg md:text-xl leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-white text-lg md:text-[16px] leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Experience exceptional dental care with our expert team. We provide comprehensive dental services to help you achieve your healthiest, most beautiful smile that lasts a lifetime.
               </p>
               
@@ -42,4 +42,3 @@ export default function CTASection() {
     </section>
   );
 }
-

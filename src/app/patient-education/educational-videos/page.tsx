@@ -12,7 +12,7 @@ export default function EducationalVideosPage() {
     {
       id: 'general-cosmetic',
       title: 'General & Cosmetic Dentistry',
-      icon: '🦷',
+      icon: 'ðŸ¦·',
       description: 'Learn about various general and cosmetic dental procedures',
       videos: [
         {
@@ -55,7 +55,7 @@ export default function EducationalVideosPage() {
     {
       id: 'dental-implants',
       title: 'Dental Implants',
-      icon: '🦿',
+      icon: 'ðŸ¦¿',
       description: 'Comprehensive information about dental implant procedures and care',
       videos: [
         {
@@ -66,8 +66,8 @@ export default function EducationalVideosPage() {
           comingSoon: true
         },
         {
-          title: 'All-on-4® Implant Procedure',
-          description: 'Detailed explanation of the All-on-4® implant denture process',
+          title: 'All-on-4Â® Implant Procedure',
+          description: 'Detailed explanation of the All-on-4Â® implant denture process',
           duration: '7:45',
           thumbnail: '/All+on+4+Dentla+Implant.jpg',
           comingSoon: true
@@ -98,7 +98,7 @@ export default function EducationalVideosPage() {
     {
       id: 'oral-health-hygiene',
       title: 'Oral Health & Hygiene',
-      icon: '🧼',
+      icon: 'ðŸ§¼',
       description: 'Essential tips and techniques for maintaining optimal oral health',
       videos: [
         {
@@ -141,7 +141,7 @@ export default function EducationalVideosPage() {
     {
       id: 'orthodontics',
       title: 'Orthodontics',
-      icon: '🦷',
+      icon: 'ðŸ¦·',
       description: 'Information about orthodontic treatments including Invisalign',
       videos: [
         {
@@ -184,7 +184,7 @@ export default function EducationalVideosPage() {
     {
       id: 'pediatric-dentistry',
       title: 'Pediatric Dentistry',
-      icon: '👶',
+      icon: 'ðŸ‘¶',
       description: 'Dental care for children and establishing good oral health habits',
       videos: [
         {
@@ -227,7 +227,7 @@ export default function EducationalVideosPage() {
     {
       id: 'emergency-care',
       title: 'Emergency Care',
-      icon: '🚨',
+      icon: 'ðŸš¨',
       description: 'What to do in dental emergencies and when to seek immediate care',
       videos: [
         {
@@ -270,7 +270,7 @@ export default function EducationalVideosPage() {
     {
       id: 'endodontics',
       title: 'Endodontics',
-      icon: '🔬',
+      icon: 'ðŸ”¬',
       description: 'Root canal therapy and treatment of dental pulp issues',
       videos: [
         {
@@ -306,7 +306,7 @@ export default function EducationalVideosPage() {
     {
       id: 'oral-surgery',
       title: 'Oral Surgery',
-      icon: '🔪',
+      icon: 'ðŸ”ª',
       description: 'Surgical procedures and complex dental extractions',
       videos: [
         {
@@ -342,7 +342,7 @@ export default function EducationalVideosPage() {
     {
       id: 'periodontal-therapy',
       title: 'Periodontal Therapy',
-      icon: '🦷',
+      icon: 'ðŸ¦·',
       description: 'Treatment of gum disease and periodontal conditions',
       videos: [
         {
@@ -378,7 +378,7 @@ export default function EducationalVideosPage() {
     {
       id: 'technology',
       title: 'Technology',
-      icon: '⚡',
+      icon: 'âš¡',
       description: 'Modern dental technology and advanced treatment options',
       videos: [
         {
@@ -435,7 +435,7 @@ export default function EducationalVideosPage() {
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Educational Videos
           </h1>
-          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Take a few minutes to watch our educational videos and learn more about different dental treatments and procedures
           </p>
         </div>
@@ -472,7 +472,7 @@ export default function EducationalVideosPage() {
               Learn About Your Dental Health
             </h2>
             <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-xl md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Video topics include general & cosmetic dentistry, implants, oral health and hygiene, orthodontics, pediatric dentistry, emergency care, endodontics, oral surgery, periodontal therapy, and modern dental technology. Our comprehensive educational videos are designed to help you understand various dental procedures and make informed decisions about your oral health.
             </p>
           </div>
@@ -526,7 +526,7 @@ export default function EducationalVideosPage() {
                     />
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
                       <div className="text-center">
-                        <div className="text-6xl mb-4">🎥</div>
+                        <div className="text-6xl mb-4">ðŸŽ¥</div>
                         <div className="bg-white/90 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
                           Coming Soon
                         </div>
@@ -575,11 +575,11 @@ export default function EducationalVideosPage() {
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-gray-100 rounded-2xl p-8 text-center">
-              <div className="text-8xl mb-6">🎬</div>
+              <div className="text-8xl mb-6">ðŸŽ¬</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Welcome to Nu Smile Dental
               </h3>
-              <p className="text-lg text-gray-600 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-lg md:text-[16px] text-gray-600 mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Meet Dr. Rujul Parikh and learn about our comprehensive dental services in Stockton, CA. This introductory video will give you an overview of our practice and what makes us different.
               </p>
               <div className="bg-primary text-white px-6 py-3 rounded-lg font-semibold inline-block" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
@@ -596,7 +596,7 @@ export default function EducationalVideosPage() {
           <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Ready to Learn More About Your Dental Health?
           </h2>
-          <p className="text-[16px] md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             While our video library is being prepared, explore our comprehensive patient education articles or schedule a consultation to discuss your dental health.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -606,7 +606,7 @@ export default function EducationalVideosPage() {
             <Link href="/appointment" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Schedule Consultation
             </Link>
-            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
           </div>

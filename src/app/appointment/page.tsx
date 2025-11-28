@@ -88,7 +88,7 @@ export default function AppointmentPage() {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Schedule an Appointment
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-xl md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             SCHEDULE AN APPOINTMENT WITH US!
           </p>
         </div>
@@ -102,7 +102,7 @@ export default function AppointmentPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Request Appointment
               </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <p className="text-lg md:text-[16px] text-gray-600 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 To request appointment availability, please fill out the form below. Our scheduling coordinator will contact you to confirm your appointment.
               </p>
             </div>

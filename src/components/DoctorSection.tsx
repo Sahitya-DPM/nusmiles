@@ -56,7 +56,7 @@ export default function DoctorSection() {
                 <h3 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                   Dr. Rujul G. Parikh DDS
                 </h3>
-                <p className="text-[16px] md:text-xl text-primary font-semibold mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                <p className="text-[16px] md:text-[16px] text-primary font-semibold mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                   General & Implant Dentist in Stockton, CA
                 </p>
                 <div className="w-16 h-1 bg-secondary rounded-full"></div>
@@ -64,7 +64,7 @@ export default function DoctorSection() {
 
               {/* Description */}
               <div className="prose prose-lg max-w-none">
-                <p className="text-[16px] md:text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                   For more than 25 years, Dr. Rujul G. Parikh DDS has been committed to creating beautiful, healthy smiles. His main priorities are oral health and patient care. As a General Dentist, he has invested many hours in continuing education and constantly updated and educated in dentistry. His continual pursuit of better methods, depth of understanding, and range of experience make him skilled in numerous dental procedures with primary focus on Dental Implants and Dentures.
                 </p>
               </div>
@@ -118,7 +118,7 @@ export default function DoctorSection() {
                 <h3 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                   Dr. Shivli Arora DDS
                 </h3>
-                <p className="text-[16px] md:text-xl text-primary font-semibold mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                <p className="text-[16px] md:text-[16px] text-primary font-semibold mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                   General & Cosmetic Dentist in Stockton, CA
                 </p>
                 <div className="w-16 h-1 bg-secondary rounded-full"></div>
@@ -126,7 +126,7 @@ export default function DoctorSection() {
 
               {/* Description */}
               <div className="prose prose-lg max-w-none">
-                <p className="text-[16px] md:text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                   Working under Dr. Parikh, Dr. Shivli Arora has nearly 10 years of hands on clinical experience and has a passion for cosmetic dentistry in providing patients with the beautiful smile they always wanted. Dr. Arora is certified in Lasers for dental treatment and she strives to further pursue her education for excellence involving Dental Implants, that translates clinical skills and extends to patients emotional well being.
                 </p>
               </div>
@@ -186,7 +186,7 @@ export default function DoctorSection() {
 
         {/* CTA Button */}
         <div className="text-center pt-12">
-          <Link href="/appointment" className="bg-primary text-white px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-primary-dark transition-colors shadow-lg uppercase inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <Link href="/appointment" className="bg-primary text-white px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-primary-dark transition-colors shadow-lg uppercase inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Schedule Consultation
           </Link>
         </div>

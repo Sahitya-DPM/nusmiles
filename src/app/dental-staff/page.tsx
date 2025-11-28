@@ -29,8 +29,8 @@ export default function DentalStaffPage() {
     {
       name: "Carolina RDH",
       title: "Registered Dental Hygienist",
-      language: "(Español)",
-      image: "/Carolina RDH (Español).webp",
+      language: "(EspaÃ±ol)",
+      image: "/Carolina RDH (EspaÃ±ol).webp",
       description: "With 5 years of Hygiene experience & 15 years total in dentistry, Carolina provides an easy & comfortable experience for our patients during their cleanings.",
       personalInfo: "On her free time, she enjoys spending quality time with her 3 kids & going out to new places!"
     },
@@ -45,8 +45,8 @@ export default function DentalStaffPage() {
     {
       name: "Serena",
       title: "Receptionist/Scheduling Coordinator",
-      language: "(Español)",
-      image: "/Serena (Español).webp",
+      language: "(EspaÃ±ol)",
+      image: "/Serena (EspaÃ±ol).webp",
       description: "As one of the first faces you see, Serena always takes care of our patients scheduling & receptionist needs with ease.",
       personalInfo: "When outside of work, she enjoys going out to concerts with friends and being her with family!"
     },
@@ -80,7 +80,7 @@ export default function DentalStaffPage() {
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Dental Staff
           </h1>
-          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Meet our dedicated team of dental professionals in Stockton, CA
           </p>
         </div>
@@ -103,17 +103,17 @@ export default function DentalStaffPage() {
                   <h3 className="text-[22px] md:text-3xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                     {doctor.name}
                   </h3>
-                  <p className="text-[16px] md:text-lg text-primary font-semibold mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                  <p className="text-[16px] md:text-[16px] text-primary font-semibold mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                     {doctor.title}
                   </p>
                   <div className="space-y-4 text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                    <p className="text-[16px] md:text-lg leading-relaxed">
+                    <p className="text-[16px] md:text-[16px] leading-relaxed">
                       {doctor.description}
                     </p>
-                    <p className="text-[16px] md:text-lg leading-relaxed">
+                    <p className="text-[16px] md:text-[16px] leading-relaxed">
                       {doctor.additionalInfo}
                     </p>
-                    <p className="text-[16px] md:text-lg leading-relaxed">
+                    <p className="text-[16px] md:text-[16px] leading-relaxed">
                       {doctor.personalInfo}
                     </p>
                   </div>
@@ -162,10 +162,10 @@ export default function DentalStaffPage() {
                       />
                     </div>
                   </div>
-                  <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                  <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                     {staff.name} {staff.language && <span className="text-primary text-sm">{staff.language}</span>}
                   </h3>
-                  <p className="text-[16px] md:text-lg text-primary font-semibold" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                  <p className="text-[16px] md:text-[16px] text-primary font-semibold" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                     {staff.title}
                   </p>
                 </div>
@@ -189,14 +189,14 @@ export default function DentalStaffPage() {
           <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Ready to Experience Exceptional Dental Care?
           </h2>
-          <p className="text-[16px] md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Join our family of satisfied patients and discover why Nu Smile Dental is the trusted choice for dental care in Stockton.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Book Appointment
             </Link>
-            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
           </div>

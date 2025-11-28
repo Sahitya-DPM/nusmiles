@@ -10,7 +10,7 @@ export default function TestimonialsSection() {
     },
     {
       name: "Verified Patient",
-      text: "One of the nicest dentist in area I bring my kids here, I decided to switch to keep everything at one location. Staff is available to help same day unlike other dentist…Friendly, competent, and happy to help. They also have other options and plans other places do not offer.",
+      text: "One of the nicest dentist in area I bring my kids here, I decided to switch to keep everything at one location. Staff is available to help same day unlike other dentistâ€¦Friendly, competent, and happy to help. They also have other options and plans other places do not offer.",
       rating: 5
     },
     {
@@ -85,7 +85,7 @@ export default function TestimonialsSection() {
           <h2 className="text-[27px] md:text-4xl font-bold text-primary mb-4">
             Patient Testimonials
           </h2>
-          <p className="text-[16px] md:text-lg text-accent">
+          <p className="text-[16px] md:text-[16px] text-accent">
             Hear from our satisfied patients about their dental experience
           </p>
         </div>
@@ -96,13 +96,13 @@ export default function TestimonialsSection() {
             <div className="mb-6">
               <div className="flex justify-center text-yellow-400 mb-4">
                 {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                  <span key={i} className="text-2xl">⭐</span>
+                  <span key={i} className="text-2xl">â­</span>
                 ))}
               </div>
-              <p className="text-[16px] md:text-lg text-gray-700 italic mb-6 leading-relaxed">
+              <p className="text-[16px] md:text-[16px] text-gray-700 italic mb-6 leading-relaxed">
                 "{testimonials[currentIndex].text}"
               </p>
-              <h3 className="font-semibold text-primary text-[16px] md:text-xl">
+              <h3 className="font-semibold text-primary text-[16px] md:text-[16px]">
                 {testimonials[currentIndex].name}
               </h3>
             </div>

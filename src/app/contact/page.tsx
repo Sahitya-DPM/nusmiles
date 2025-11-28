@@ -26,7 +26,7 @@ const ContactPage = () => {
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Contact Us
           </h1>
-          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Get in touch with us today to schedule your appointment or ask any questions about our dental services.
           </p>
         </div>
@@ -39,7 +39,7 @@ const ContactPage = () => {
             <h2 className="text-[27px] md:text-4xl font-bold text-gray-800 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Visit Our Office
             </h2>
-            <p className="text-[16px] md:text-lg text-gray-600 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] text-gray-600 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               1801 E March Ln suite a-165, Stockton, CA, 95210, USA
             </p>
           </div>

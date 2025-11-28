@@ -28,7 +28,7 @@ export default function TestimonialsPage() {
     {
       id: 2,
       name: "Verified Patient",
-      treatment: "All-on-4® Implant Dentures",
+      treatment: "All-on-4Â® Implant Dentures",
       rating: 5,
       text: "Life-changing experience! The All-on-4 treatment has given me my confidence back. The entire team was professional, caring, and thorough. Highly recommend Nu Smile Dental!",
       date: "3 months ago"
@@ -87,7 +87,7 @@ export default function TestimonialsPage() {
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Patient Testimonials
           </h1>
-          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Hear what our patients have to say about their experience at Nu Smile Dental
           </p>
         </div>
@@ -101,7 +101,7 @@ export default function TestimonialsPage() {
               Video Testimonials
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6"></div>
-            <p className="text-[16px] md:text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Watch our patients share their smile transformation stories
             </p>
           </div>
@@ -133,7 +133,7 @@ export default function TestimonialsPage() {
               What Our Patients Say
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6"></div>
-            <p className="text-[16px] md:text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Real reviews from real patients who love their new smiles
             </p>
           </div>
@@ -185,7 +185,7 @@ export default function TestimonialsPage() {
               <div className="text-[16px] text-gray-600 font-medium">Happy Patients</div>
             </div>
             <div className="text-center">
-              <div className="text-[32px] md:text-5xl font-bold text-primary mb-2">5★</div>
+              <div className="text-[32px] md:text-5xl font-bold text-primary mb-2">5â˜…</div>
               <div className="text-[16px] text-gray-600 font-medium">Average Rating</div>
             </div>
             <div className="text-center">
@@ -202,14 +202,14 @@ export default function TestimonialsPage() {
           <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Ready to Start Your Smile Journey?
           </h2>
-          <p className="text-[16px] md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Join our family of satisfied patients and experience the Nu Smile Dental difference
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Book Appointment
             </Link>
-            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
           </div>
@@ -218,4 +218,3 @@ export default function TestimonialsPage() {
     </div>
   );
 }
-

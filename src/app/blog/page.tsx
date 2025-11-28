@@ -60,7 +60,7 @@ export default function BlogPage() {
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Our Blog
           </h1>
-          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Stay updated with the latest dental health tips, treatments, and insights
           </p>
         </div>
@@ -94,7 +94,7 @@ export default function BlogPage() {
           
           {blogPosts.length === 0 ? (
             <div className="text-center py-10 md:py-20">
-              <h2 className="text-[22px] md:text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              <h2 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 No published blog posts available
               </h2>
               <p className="text-gray-600 mb-4 text-[16px]" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -136,12 +136,12 @@ export default function BlogPage() {
                       <span>{formatDate(post.publishDate)}</span>
                       {post.author && (
                         <>
-                          <span className="mx-2">•</span>
+                          <span className="mx-2">â€¢</span>
                           <span>{post.author}</span>
                         </>
                       )}
                     </div>
-                    <h2 className="text-[22px] md:text-xl font-bold text-gray-900 mb-3 line-clamp-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                    <h2 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-3 line-clamp-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                       {post.title}
                     </h2>
                     <p className="text-gray-600 mb-4 line-clamp-3 text-[16px]" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -182,14 +182,14 @@ export default function BlogPage() {
           <h2 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Stay Updated with Our Blog
           </h2>
-          <p className="text-[16px] md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-gray-600 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Get the latest dental health tips and insights delivered to your inbox.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointment" className="bg-primary text-white px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-primary/90 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-primary text-white px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-primary/90 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Schedule Appointment
             </Link>
-            <a href="tel:(209) 955-1800" className="border-2 border-primary text-primary px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-primary hover:text-white transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="border-2 border-primary text-primary px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-primary hover:text-white transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
           </div>

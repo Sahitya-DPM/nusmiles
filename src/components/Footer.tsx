@@ -56,7 +56,7 @@ export default function Footer() {
           </div>
 
           <div className="mt-4 text-sm text-gray-400">
-            <a href="https://www.henryscheinone.com/products/officite" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Copyright © 2025 MH Sub I, LLC dba Officite</a>
+            <a href="https://www.henryscheinone.com/products/officite" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Copyright Â© 2025 MH Sub I, LLC dba Officite</a>
             <span>. </span>
             <a href="https://secure.officite.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Admin Log In</a>
             <span> </span>

@@ -114,6 +114,13 @@ textarea:focus {
 .blog-content p {
   margin-bottom: 1rem;
   font-family: 'Hind', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .blog-content p {
+    font-size: 16px;
+  }
 }
 
 .blog-content ul {

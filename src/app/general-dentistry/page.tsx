@@ -88,7 +88,7 @@ export default function GeneralDentistryPage() {
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             General Dentistry
           </h1>
-          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Comprehensive dental care for your entire family in Stockton, CA
           </p>
         </div>
@@ -107,7 +107,7 @@ export default function GeneralDentistryPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {generalServices.map((service, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                <h3 className="text-[22px] md:text-xl font-semibold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                <h3 className="text-[22px] md:text-[16px] font-semibold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                   {service.title}
                 </h3>
                 <p className="text-gray-600 text-[16px]" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -132,7 +132,7 @@ export default function GeneralDentistryPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {cosmeticServices.map((service, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-6 text-center">
-                <h3 className="text-[22px] md:text-xl font-semibold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                <h3 className="text-[22px] md:text-[16px] font-semibold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                   {service.title}
                 </h3>
                 <p className="text-gray-600 text-[16px]" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -154,13 +154,13 @@ export default function GeneralDentistryPage() {
               </h2>
               <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
               <div className="space-y-6 text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   At NuSmile Dental, Dr. Parikh, Dr. Arora, and our team strive to provide our patients with the beautiful smile that they have always been looking for! As they say, a smile says it all!
                 </p>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   We offer a multitude of cosmetic treatments at the convenience of our Stockton dental office, varying from repairing chips and cracks, to brightening the color of your teeth. All of our cosmetic services are done in-house, so you can feel comfortable receiving care from people you already know and trust.
                 </p>
-                <p className="text-[16px] md:text-lg leading-relaxed font-semibold">
+                <p className="text-[16px] md:text-[16px] leading-relaxed font-semibold">
                   Dr. Parikh and Dr. Arora have keen interest in providing cosmetic treatments, and always strive for perfection when making improvements to our patients' smiles. We'd love to take on your cosmetic treatment today!
                 </p>
               </div>
@@ -189,7 +189,7 @@ export default function GeneralDentistryPage() {
           </h2>
           <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
           <div className="text-gray-700 space-y-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-            <p className="text-[16px] md:text-lg leading-relaxed">
+            <p className="text-[16px] md:text-[16px] leading-relaxed">
               Maintaining a beautiful smile after cosmetic treatment requires some work. Brushing and flossing twice a day is strongly encouraged. Avoiding smoking is the best care for your gums and teeth in the long run. Maintenance for cosmetic work varies for the treatment, but it's best to stay away from colored foods such as coffee, ketchup, fruit juice, etc. due to whitened teeth being more at risk to staining after treatment.
             </p>
           </div>
@@ -219,10 +219,10 @@ export default function GeneralDentistryPage() {
               </h2>
               <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
               <div className="space-y-6 text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   Shopping for the right dentist is a serious undertaking. There are so many factors that can play a role in who is the ideal general dentist to fit your needs. You want someone knowledgeable with years of expertise, but you also want someone caring, thoughtful, and able to offer you comprehensive dental care all in one convenient location.
                 </p>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   If you are still on the hunt for a new dentist here in Stockton, CA, we're so happy you found us. Dr. Rujul Parikh and the team at Nu Smile Dental pride themselves on providing the very best general dentistry you can find.
                 </p>
               </div>
@@ -239,14 +239,14 @@ export default function GeneralDentistryPage() {
           <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Ready to Experience Exceptional Dental Care?
           </h2>
-          <p className="text-[16px] md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Join our family of satisfied patients and discover why Nu Smile Dental is the trusted choice for dental care in Stockton.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Book Appointment
             </Link>
-            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
           </div>

@@ -26,7 +26,7 @@ export default function PlateletRichFibrinTherapyPage() {
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Platelet Rich Fibrin Therapy (PRF)
           </h1>
-          <p className="text-[16px] md:text-2xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Advanced healing therapy for enhanced recovery after oral surgery
           </p>
         </div>
@@ -42,13 +42,13 @@ export default function PlateletRichFibrinTherapyPage() {
               </h2>
               <div className="w-24 h-1 bg-primary rounded-full mb-8 mx-auto lg:mx-0"></div>
               <div className="space-y-6 text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   Platelet Rich Fibrin therapy is the practice of utilizing the multiple healing compounds naturally found in our blood plasma to create a membrane that is used to enhance the healing process of a socket site from oral surgery.
                 </p>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   Treatments that may use PRF therapy include Extractions, Bone Grafts, & Dental Implants. Blood plasma is made up of White Blood Cells (Leukocytes), Platelets, Fibrin, & Stem Cells that all promote healing in the human body.
                 </p>
-                <p className="text-[16px] md:text-lg leading-relaxed">
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
                   The therapy takes place in office and uses a small amount of the patient's blood by blood draw before treatment begins.
                 </p>
               </div>
@@ -95,19 +95,19 @@ export default function PlateletRichFibrinTherapyPage() {
             <div className="flex flex-col justify-center">
               <div className="space-y-6 text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 <div className="bg-white rounded-xl p-8 shadow-lg">
-                  <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                  <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                     Leading PRF Therapy Provider
                   </h3>
-                  <p className="text-[16px] md:text-lg leading-relaxed">
+                  <p className="text-[16px] md:text-[16px] leading-relaxed">
                     <strong>Nusmile Dental</strong> is one of the first offices in the Central Valley area practicing in PRF Therapy during oral surgery since 2015 with hundreds of procedures with excellent end results.
                   </p>
                 </div>
                 
                 <div className="bg-white rounded-xl p-8 shadow-lg">
-                  <h3 className="text-[22px] md:text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                  <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                     Enhanced Healing Benefits
                   </h3>
-                  <p className="text-[16px] md:text-lg leading-relaxed mb-4">
+                  <p className="text-[16px] md:text-[16px] leading-relaxed mb-4">
                     Thanks to the healing factors in blood plasma, there are plenty of benefits to the therapy such as:
                   </p>
                   <ul className="space-y-3">
@@ -155,14 +155,14 @@ export default function PlateletRichFibrinTherapyPage() {
           <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
             Ready to Experience Exceptional Dental Care?
           </h2>
-          <p className="text-[16px] md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <p className="text-[16px] md:text-[16px] text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Join our family of satisfied patients and discover why Nu Smile Dental is the trusted choice for dental care in Stockton.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <Link href="/appointment" className="bg-white text-primary px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Book Appointment
             </Link>
-            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:(209) 955-1800" className="border-2 border-white text-white px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
           </div>
