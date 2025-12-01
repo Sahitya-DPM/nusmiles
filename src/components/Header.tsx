@@ -179,10 +179,10 @@ export default function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t bg-white">
-            <nav className="flex flex-col space-y-2">
+            <nav className="flex flex-col space-y-1">
               <Link 
                 href="/" 
-                className="text-gray-700 hover:text-primary transition-colors py-2 px-2 hover:bg-gray-50 rounded"
+                className="text-gray-700 hover:text-primary transition-colors py-2.5 px-4 hover:bg-gray-50 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
@@ -191,119 +191,147 @@ export default function Header() {
               {/* Mobile About Section */}
               <div>
                 <button 
-                  className="text-gray-700 hover:text-primary transition-colors flex items-center justify-between w-full py-2 px-2 hover:bg-gray-50 rounded"
-                  onClick={() => setIsAboutOpen(!isAboutOpen)}
+                  className="text-gray-700 hover:text-primary transition-colors flex items-center justify-between w-full py-2.5 px-4 hover:bg-gray-50 rounded-md font-medium"
+                  onClick={() => {
+                    setIsAboutOpen(!isAboutOpen);
+                    setIsServicesOpen(false);
+                    setIsResourcesOpen(false);
+                  }}
+                  aria-expanded={isAboutOpen}
                 >
                   <span>About</span>
-                  <svg className={`w-4 h-4 transition-transform ${isAboutOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg 
+                    className={`w-5 h-5 transition-transform duration-200 ${isAboutOpen ? 'rotate-180' : ''}`} 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
                 
-                {isAboutOpen && (
-                  <div className="ml-4 mt-1 space-y-1 border-l-2 border-primary pl-3">
+                <div 
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    isAboutOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <div className="ml-4 mt-1 mb-2 space-y-0.5 border-l-2 border-primary pl-4">
                     <Link 
                       href="/about-us" 
-                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       About Us
                     </Link>
                     <Link 
                       href="/dental-staff" 
-                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Meet Our Doctors
                     </Link>
                     <Link 
                       href="/office" 
-                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Office Gallery
                     </Link>
                     <Link 
                       href="/smile-gallery" 
-                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Smile Gallery
                     </Link>
                     <Link 
                       href="/testimonials" 
-                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Testimonials
                     </Link>
                   </div>
-                )}
+                </div>
               </div>
               
               {/* Mobile Services Section */}
               <div>
                 <button 
-                  className="text-gray-700 hover:text-primary transition-colors flex items-center justify-between w-full py-2 px-2 hover:bg-gray-50 rounded"
-                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className="text-gray-700 hover:text-primary transition-colors flex items-center justify-between w-full py-2.5 px-4 hover:bg-gray-50 rounded-md font-medium"
+                  onClick={() => {
+                    setIsServicesOpen(!isServicesOpen);
+                    setIsAboutOpen(false);
+                    setIsResourcesOpen(false);
+                  }}
+                  aria-expanded={isServicesOpen}
                 >
                   <span>Services</span>
-                  <svg className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg 
+                    className={`w-5 h-5 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
                 
-                {isServicesOpen && (
-                  <div className="ml-4 mt-1 space-y-1 border-l-2 border-primary pl-3">
+                <div 
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    isServicesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <div className="ml-4 mt-1 mb-2 space-y-0.5 border-l-2 border-primary pl-4">
                     <Link 
                       href="/dental-services" 
-                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       All Services
                     </Link>
                     <Link 
                       href="/general-dentistry" 
-                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       General Dentistry
                     </Link>
                     <Link 
                       href="/dental-implants" 
-                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Dental Implants
                     </Link>
                     <Link 
                       href="/all-on-4-implant-dentures" 
-                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      All-on-4Â® Implant Dentures
+                      All-on-4® Implant Dentures
                     </Link>
                     <Link 
                       href="/invisalign" 
-                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Invisalign
                     </Link>
                     <Link 
                       href="/platelet-rich-fibrin-therapy-prf" 
-                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Platelet Rich Fibrin Therapy
                     </Link>
                   </div>
-                )}
+                </div>
               </div>
               
               <Link 
                 href="/blog" 
-                className="text-gray-700 hover:text-primary transition-colors py-2 px-2 hover:bg-gray-50 rounded"
+                className="text-gray-700 hover:text-primary transition-colors py-2.5 px-4 hover:bg-gray-50 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Blog
@@ -312,38 +340,52 @@ export default function Header() {
               {/* Mobile Resources Section */}
               <div>
                 <button 
-                  className="text-gray-700 hover:text-primary transition-colors flex items-center justify-between w-full py-2 px-2 hover:bg-gray-50 rounded"
-                  onClick={() => setIsResourcesOpen(!isResourcesOpen)}
+                  className="text-gray-700 hover:text-primary transition-colors flex items-center justify-between w-full py-2.5 px-4 hover:bg-gray-50 rounded-md font-medium"
+                  onClick={() => {
+                    setIsResourcesOpen(!isResourcesOpen);
+                    setIsAboutOpen(false);
+                    setIsServicesOpen(false);
+                  }}
+                  aria-expanded={isResourcesOpen}
                 >
                   <span>Resources</span>
-                  <svg className={`w-4 h-4 transition-transform ${isResourcesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg 
+                    className={`w-5 h-5 transition-transform duration-200 ${isResourcesOpen ? 'rotate-180' : ''}`} 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
                 
-                {isResourcesOpen && (
-                  <div className="ml-4 mt-1 space-y-1 border-l-2 border-primary pl-3">
+                <div 
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    isResourcesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <div className="ml-4 mt-1 mb-2 space-y-0.5 border-l-2 border-primary pl-4">
                     <Link 
                       href="/resources" 
-                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       All Resources
                     </Link>
                     <Link 
                       href="/patient-education" 
-                      className="block py-2 text-gray-600 hover:text-primary transition-colors"
+                      className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Patient Education
                     </Link>
                   </div>
-                )}
+                </div>
               </div>
               
               <Link 
                 href="/contact" 
-                className="text-gray-700 hover:text-primary transition-colors py-2 px-2 hover:bg-gray-50 rounded"
+                className="text-gray-700 hover:text-primary transition-colors py-2.5 px-4 hover:bg-gray-50 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact

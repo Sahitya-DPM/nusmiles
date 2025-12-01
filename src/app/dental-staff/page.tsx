@@ -29,8 +29,8 @@ export default function DentalStaffPage() {
     {
       name: "Carolina RDH",
       title: "Registered Dental Hygienist",
-      language: "(EspaÃ±ol)",
-      image: "/Carolina RDH (EspaÃ±ol).webp",
+      language: "",
+      image: "/Carolina RDH (Español).webp",
       description: "With 5 years of Hygiene experience & 15 years total in dentistry, Carolina provides an easy & comfortable experience for our patients during their cleanings.",
       personalInfo: "On her free time, she enjoys spending quality time with her 3 kids & going out to new places!"
     },
@@ -45,8 +45,8 @@ export default function DentalStaffPage() {
     {
       name: "Serena",
       title: "Receptionist/Scheduling Coordinator",
-      language: "(EspaÃ±ol)",
-      image: "/Serena (EspaÃ±ol).webp",
+      language: "",
+      image: "/Serena (Español).webp",
       description: "As one of the first faces you see, Serena always takes care of our patients scheduling & receptionist needs with ease.",
       personalInfo: "When outside of work, she enjoys going out to concerts with friends and being her with family!"
     },
@@ -163,7 +163,7 @@ export default function DentalStaffPage() {
                     </div>
                   </div>
                   <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                    {staff.name} {staff.language && <span className="text-primary text-sm">{staff.language}</span>}
+                    {staff.name}
                   </h3>
                   <p className="text-[16px] md:text-[16px] text-primary font-semibold" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                     {staff.title}
