@@ -4,53 +4,38 @@ import { useState, useEffect } from 'react';
 export default function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Verified Patient",
-      text: "Very helpful Staff and Staff are very friendly and knowledgeable and I have had no issues. Highly recommended",
-      rating: 5
-    },
-    {
-      name: "Verified Patient",
-      text: "One of the nicest dentist in area I bring my kids here, I decided to switch to keep everything at one location. Staff is available to help same day unlike other dentistâ€¦Friendly, competent, and happy to help. They also have other options and plans other places do not offer.",
-      rating: 5
-    },
-    {
-      name: "Verified Patient",
-      text: "I love this place. The staff is down to earth and definitely communicates ahead of time. The doctors are fast and always trying to get you in and out on time. They are kid friendly and fast. Love this place",
-      rating: 5
-    },
-    {
-      name: "Verified Patient",
-      text: "Awesome team and dentist! Took care of me the same day and felt no pain!",
-      rating: 5
-    },
-    {
-      name: "Verified Patient",
-      text: "Staff was nice and helpful.",
-      rating: 5
-    },
-    {
-      name: "Verified Patient",
+      name: "The Cali Nurse",
       text: "I love Nu Smile Dental! I've been coming here since the March Lane location for about 10yrs now and would highly recommend this location as they provide the best care.",
       rating: 5
     },
     {
-      name: "Verified Patient",
-      text: "Super friendly and helpful staff! Was in and out quickly with no issues. Was direct and straight to the point and gave me a detailed breakdown of everything. Highly recommend",
+      name: "Francisco Beltran",
+      text: "One of the nicest dentist in area I bring my kids here, I decided to switch to keep everything at one location. Staff is available to help same day unlike other dentist…Friendly, competent, and happy to help. They also have other options and plans other places do not offer.",
       rating: 5
     },
     {
-      name: "Verified Patient",
-      text: "Super friendly and helpful staff! Was in and out quickly with no issues. Was direct and straight to the point and gave me a detailed breakdown of everything. Highly recommend",
+      name: "Julina Batieste",
+      text: "I love this place. The staff is down to earth and definitely communicates ahead of time. The doctors are fast and always trying to get you in and out on time. They are kid friendly and fast. Love this place",
       rating: 5
     },
     {
-      name: "Verified Patient",
-      text: "I went in for an extraction the Dr. was super fast they did a great job the staff were super helpful and kind definitely will recommend this dentist to everyone I know :)",
+      name: "Corina Marquez",
+      text: "Awesome team and dentist! Took care of me the same day and felt no pain!",
       rating: 5
     },
     {
-      name: "Verified Patient",
-      text: "My first time coming here & my experience was great good service nice people will definitely be coming back.",
+      name: "Laura Bacaylan",
+      text: "I have been a patient here for a couple of years. Today I brought my daughter in and the dentist was friendly and addressed our concerns. Staff was nice and helpful.",
+      rating: 5
+    },
+    {
+      name: "Elaine Daphne Talaid",
+      text: "I love it here! Staff are very friendly and knowledgeable and I have had no issues whatsoever. Highly recommended",
+      rating: 5
+    },
+    {
+      name: "Matthew Jr Eagan",
+      text: "For being so last minute as a new patient. And needing my teeth worked on because of a Heath issue. They did everything I needed done in a short notice. I highly recommend going here. All staff are super friendly and caring.",
       rating: 5
     }
   ];
@@ -96,7 +81,9 @@ export default function TestimonialsSection() {
             <div className="mb-6">
               <div className="flex justify-center text-yellow-400 mb-4">
                 {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                  <span key={i} className="text-2xl">â­</span>
+                  <svg key={i} className="w-6 h-6 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                  </svg>
                 ))}
               </div>
               <p className="text-[16px] md:text-[16px] text-gray-700 italic mb-6 leading-relaxed">
@@ -146,4 +133,4 @@ export default function TestimonialsSection() {
       </div>
     </section>
   );
-} 
+}

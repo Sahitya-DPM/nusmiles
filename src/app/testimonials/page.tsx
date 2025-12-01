@@ -19,7 +19,6 @@ export default function TestimonialsPage() {
   const writtenTestimonials = [
     {
       id: 1,
-      name: "Verified Patient",
       treatment: "Dental Implants",
       rating: 5,
       text: "Dr. Parikh and his team are amazing! After years of dental anxiety, they made me feel completely at ease. My dental implants look and feel natural. I can't thank them enough!",
@@ -27,15 +26,13 @@ export default function TestimonialsPage() {
     },
     {
       id: 2,
-      name: "Verified Patient",
-      treatment: "All-on-4Â® Implant Dentures",
+      treatment: "All-on-4® Implant Dentures",
       rating: 5,
       text: "Life-changing experience! The All-on-4 treatment has given me my confidence back. The entire team was professional, caring, and thorough. Highly recommend Nu Smile Dental!",
       date: "3 months ago"
     },
     {
       id: 3,
-      name: "Verified Patient",
       treatment: "Veneers",
       rating: 5,
       text: "I'm so happy with my new smile! Dr. Arora did an incredible job with my veneers. The results exceeded my expectations. Everyone here is friendly and professional.",
@@ -43,7 +40,6 @@ export default function TestimonialsPage() {
     },
     {
       id: 4,
-      name: "Verified Patient",
       treatment: "General Dentistry",
       rating: 5,
       text: "Best dental office in Stockton! The staff is wonderful, the office is clean and modern, and they really take time to explain everything. I actually look forward to my appointments now!",
@@ -51,7 +47,6 @@ export default function TestimonialsPage() {
     },
     {
       id: 5,
-      name: "Verified Patient",
       treatment: "Invisalign",
       rating: 5,
       text: "Dr. Parikh made my Invisalign journey smooth and easy. The results are perfect and the whole process was comfortable. Thank you Nu Smile Dental for my beautiful straight smile!",
@@ -59,7 +54,6 @@ export default function TestimonialsPage() {
     },
     {
       id: 6,
-      name: "Verified Patient",
       treatment: "Cosmetic Dentistry",
       rating: 5,
       text: "Outstanding service from start to finish! The team at Nu Smile Dental transformed my smile. Dr. Arora is talented and caring. I couldn't be happier with the results!",
@@ -152,13 +146,10 @@ export default function TestimonialsPage() {
                   "{testimonial.text}"
                 </p>
                 <div className="border-t border-gray-200 pt-4">
-                  <p className="text-[16px] font-semibold text-gray-900 mb-1" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                    {testimonial.name}
-                  </p>
-                  <p className="text-sm text-primary font-medium" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                  <p className="text-sm text-primary font-medium mb-2" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                     {testimonial.treatment}
                   </p>
-                  <p className="text-xs text-gray-500 mt-2">{testimonial.date}</p>
+                  <p className="text-xs text-gray-500">{testimonial.date}</p>
                 </div>
               </div>
             ))}
@@ -185,7 +176,7 @@ export default function TestimonialsPage() {
               <div className="text-[16px] text-gray-600 font-medium">Happy Patients</div>
             </div>
             <div className="text-center">
-              <div className="text-[32px] md:text-5xl font-bold text-primary mb-2">5â˜…</div>
+              <div className="text-[32px] md:text-5xl font-bold text-primary mb-2">5★</div>
               <div className="text-[16px] text-gray-600 font-medium">Average Rating</div>
             </div>
             <div className="text-center">
