@@ -556,7 +556,7 @@ export default function PatientEducationPage() {
 
             {activeCategory?.articles.length === 0 && (
               <div className="text-center py-12">
-                <div className="text-6xl mb-4">ðŸ“š</div>
+                <div className="text-6xl mb-4">📚</div>
                 <h4 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                   Coming Soon
                 </h4>
@@ -584,7 +584,7 @@ export default function PatientEducationPage() {
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-primary to-secondary rounded-2xl p-6 md:p-8 text-center text-white">
-              <div className="text-6xl mb-6">ðŸŽ¬</div>
+              <div className="text-6xl mb-6">🎶</div>
               <h3 className="text-[22px] md:text-[16px] font-bold mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Video topics include general & cosmetic dentistry, implants, oral health and hygiene, orthodontics, and preventative dentistry.
               </h3>
