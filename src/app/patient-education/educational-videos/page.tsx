@@ -575,7 +575,7 @@ export default function EducationalVideosPage() {
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-gray-100 rounded-2xl p-8 text-center">
-              <div className="text-8xl mb-6">ðŸŽ¬</div>
+              <div className="text-8xl mb-6">🎶</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Welcome to Nu Smile Dental
               </h3>
