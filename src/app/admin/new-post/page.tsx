@@ -6,7 +6,7 @@ import { useAuth } from '../../../contexts/AuthContext';
 import { createBlogPost } from '../../../lib/blogService';
 import { BlogFormData } from '../../../types/blog';
 import ProtectedRoute from '../../../components/ProtectedRoute';
-import SimpleTextEditor from '../../../components/SimpleTextEditor';
+import WordPressEditor from '../../../components/WordPressEditor';
 
 export default function NewBlogPostPage() {
   const router = useRouter();
@@ -19,7 +19,16 @@ export default function NewBlogPostPage() {
     tags: [],
     status: 'draft',
     publishDate: new Date().toISOString().split('T')[0],
-    slug: ''
+    slug: '',
+    primaryKeyword: '',
+    metaTitle: '',
+    metaDescription: '',
+    canonicalUrl: '',
+    ogImageUrl: '',
+    jsonLdCode: '',
+    breadcrumbCode: '',
+    faqCode: '',
+    medicalConditionCode: ''
   });
   const [saving, setSaving] = useState(false);
   const [imageFile, setImageFile] = useState<File | null>(null);
@@ -33,10 +42,32 @@ export default function NewBlogPostPage() {
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
+      // Check file size (limit to 2MB before compression)
+      const maxFileSize = 2 * 1024 * 1024; // 2MB
+      if (file.size > maxFileSize) {
+        alert('Image file is too large. Please use an image smaller than 2MB.');
+        e.target.value = ''; // Clear the input
+        return;
+      }
+
       setImageFile(file);
       const reader = new FileReader();
       reader.onload = (e) => {
-        setImagePreview(e.target?.result as string);
+        const base64Image = e.target?.result as string;
+        setImagePreview(base64Image);
+        
+        // Check base64 size (Firestore limit is ~1MB)
+        const base64Size = new Blob([base64Image]).size;
+        const maxBase64Size = 900000; // ~900KB to be safe
+        
+        if (base64Size > maxBase64Size) {
+          console.warn('Base64 image is too large, will use placeholder if Storage upload fails');
+          // Don't store the base64 if it's too large
+          setFormData(prev => ({ ...prev, imageUrl: '' }));
+        } else {
+          // Store base64 as fallback if Firebase Storage fails
+          setFormData(prev => ({ ...prev, imageUrl: base64Image }));
+        }
       };
       reader.readAsDataURL(file);
     }
@@ -45,21 +76,58 @@ export default function NewBlogPostPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.title.trim() || !formData.content.trim()) {
-      alert('Please fill in all required fields (title and content)');
+    // Validate mandatory fields
+    if (!formData.title.trim()) {
+      alert('Please enter a post title');
+      return;
+    }
+    if (!formData.description.trim()) {
+      alert('Please enter a post description');
+      return;
+    }
+    if (!formData.content.trim()) {
+      alert('Please enter blog content');
+      return;
+    }
+    if (!formData.publishDate) {
+      alert('Please select a publish date');
+      return;
+    }
+    if (!formData.primaryKeyword.trim()) {
+      alert('Please enter a primary keyword');
+      return;
+    }
+    if (!formData.slug.trim()) {
+      alert('Please enter a slug/URL');
+      return;
+    }
+    if (!formData.metaTitle.trim()) {
+      alert('Please enter a meta title');
+      return;
+    }
+    if (!formData.metaDescription.trim()) {
+      alert('Please enter a meta description');
+      return;
+    }
+    if (!imageFile && !formData.imageUrl) {
+      alert('Please upload an image or provide an image URL');
       return;
     }
 
     setSaving(true);
     try {
-      console.log('Creating blog post...');
+      console.log('Creating blog post with data:', {
+        ...formData,
+        imageFile: imageFile ? imageFile.name : 'none'
+      });
       const postId = await createBlogPost(formData, imageFile || undefined);
       console.log('Blog post created successfully with ID:', postId);
       alert('Blog post created successfully!');
       router.push('/admin/dashboard');
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error creating blog post:', error);
-      alert('Failed to create blog post. Please try again.');
+      const errorMessage = error?.message || 'Failed to create blog post. Please try again.';
+      alert(`Error: ${errorMessage}`);
     } finally {
       setSaving(false);
     }
@@ -68,7 +136,7 @@ export default function NewBlogPostPage() {
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-gray-50 py-8">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="flex justify-between items-center mb-6">
               <h1 className="text-3xl font-bold text-gray-900" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -84,10 +152,10 @@ export default function NewBlogPostPage() {
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Title */}
+              {/* Post Title - Mandatory */}
               <div>
                 <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-2">
-                  Blog Title *
+                  Post Title *
                 </label>
                 <input
                   type="text"
@@ -101,62 +169,65 @@ export default function NewBlogPostPage() {
                 />
               </div>
 
-              {/* Description */}
+              {/* Post Description - Mandatory */}
               <div>
                 <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-2">
-                  Blog Description
+                  Post Description *
                 </label>
                 <textarea
                   id="description"
                   name="description"
                   value={formData.description}
                   onChange={handleInputChange}
-                  rows={3}
+                  required
+                  rows={4}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
                 />
               </div>
 
-              {/* Blog Image URL */}
-              <div>
-                <label htmlFor="imageUrl" className="block text-sm font-medium text-gray-700 mb-2">
-                  Blog Image URL
-                </label>
-                <input
-                  type="url"
-                  id="imageUrl"
-                  name="imageUrl"
-                  value={formData.imageUrl}
-                  onChange={handleInputChange}
-                  placeholder="https://example.com/image.jpg"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
-                />
-              </div>
-
-              {/* Image File Upload */}
+              {/* Post Image - Mandatory */}
               <div>
                 <label htmlFor="imageFile" className="block text-sm font-medium text-gray-700 mb-2">
-                  Or Upload Image File
+                  Post Image * (Upload Image)
                 </label>
                 <input
                   type="file"
                   id="imageFile"
                   accept="image/*"
                   onChange={handleImageChange}
+                  required={!formData.imageUrl}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
                 {imagePreview && (
-                  <div className="mt-2">
-                    <img src={imagePreview} alt="Preview" className="w-32 h-32 object-cover rounded-md" />
+                  <div className="mt-4">
+                    <p className="text-sm text-gray-600 mb-2">Image Preview:</p>
+                    <img 
+                      src={imagePreview} 
+                      alt="Preview" 
+                      className="max-w-full h-auto max-h-96 object-contain rounded-md border border-gray-300" 
+                    />
+                  </div>
+                )}
+                {!imagePreview && formData.imageUrl && (
+                  <div className="mt-4">
+                    <p className="text-sm text-gray-600 mb-2">Current Image URL:</p>
+                    <img 
+                      src={formData.imageUrl} 
+                      alt="Current" 
+                      className="max-w-full h-auto max-h-96 object-contain rounded-md border border-gray-300" 
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
+                    />
                   </div>
                 )}
               </div>
 
-              {/* Publish Date */}
+              {/* Publish Date - Mandatory */}
               <div>
                 <label htmlFor="publishDate" className="block text-sm font-medium text-gray-700 mb-2">
-                  Publish Date
+                  Publish Date *
                 </label>
                 <input
                   type="date"
@@ -164,8 +235,200 @@ export default function NewBlogPostPage() {
                   name="publishDate"
                   value={formData.publishDate}
                   onChange={handleInputChange}
+                  required
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+                />
+              </div>
+
+              {/* Primary Keyword - Mandatory */}
+              <div>
+                <label htmlFor="primaryKeyword" className="block text-sm font-medium text-gray-700 mb-2">
+                  Primary Keyword *
+                </label>
+                <input
+                  type="text"
+                  id="primaryKeyword"
+                  name="primaryKeyword"
+                  value={formData.primaryKeyword}
+                  onChange={handleInputChange}
+                  required
+                  placeholder="e.g., dental implants, teeth whitening"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+                />
+              </div>
+
+              {/* Slug / URL - Mandatory */}
+              <div>
+                <label htmlFor="slug" className="block text-sm font-medium text-gray-700 mb-2">
+                  Slug / URL *
+                </label>
+                <input
+                  type="text"
+                  id="slug"
+                  name="slug"
+                  value={formData.slug}
+                  onChange={handleInputChange}
+                  required
+                  placeholder="e.g., dental-implants-guide"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+                />
+                <p className="mt-1 text-sm text-gray-500">URL-friendly version of the title (lowercase, hyphens instead of spaces)</p>
+              </div>
+
+              {/* Meta Title - Mandatory */}
+              <div>
+                <label htmlFor="metaTitle" className="block text-sm font-medium text-gray-700 mb-2">
+                  Meta Title *
+                </label>
+                <input
+                  type="text"
+                  id="metaTitle"
+                  name="metaTitle"
+                  value={formData.metaTitle}
+                  onChange={handleInputChange}
+                  required
+                  maxLength={60}
+                  placeholder="SEO title (max 60 characters)"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+                />
+                <p className="mt-1 text-sm text-gray-500">{formData.metaTitle.length}/60 characters</p>
+              </div>
+
+              {/* Meta Description - Mandatory */}
+              <div>
+                <label htmlFor="metaDescription" className="block text-sm font-medium text-gray-700 mb-2">
+                  Meta Description *
+                </label>
+                <textarea
+                  id="metaDescription"
+                  name="metaDescription"
+                  value={formData.metaDescription}
+                  onChange={handleInputChange}
+                  required
+                  rows={3}
+                  maxLength={160}
+                  placeholder="SEO description (max 160 characters)"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+                />
+                <p className="mt-1 text-sm text-gray-500">{formData.metaDescription.length}/160 characters</p>
+              </div>
+
+              {/* Canonical URL - Optional */}
+              <div>
+                <label htmlFor="canonicalUrl" className="block text-sm font-medium text-gray-700 mb-2">
+                  Canonical URL
+                </label>
+                <input
+                  type="url"
+                  id="canonicalUrl"
+                  name="canonicalUrl"
+                  value={formData.canonicalUrl}
+                  onChange={handleInputChange}
+                  placeholder="https://example.com/canonical-url"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+                />
+              </div>
+
+              {/* OG Image URL - Optional */}
+              <div>
+                <label htmlFor="ogImageUrl" className="block text-sm font-medium text-gray-700 mb-2">
+                  OG Image URL
+                </label>
+                <input
+                  type="url"
+                  id="ogImageUrl"
+                  name="ogImageUrl"
+                  value={formData.ogImageUrl}
+                  onChange={handleInputChange}
+                  placeholder="https://example.com/og-image.jpg"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+                />
+              </div>
+
+              {/* JSON-LD Code - Optional */}
+              <div>
+                <label htmlFor="jsonLdCode" className="block text-sm font-medium text-gray-700 mb-2">
+                  JSON-LD Code
+                </label>
+                <textarea
+                  id="jsonLdCode"
+                  name="jsonLdCode"
+                  value={formData.jsonLdCode}
+                  onChange={handleInputChange}
+                  rows={6}
+                  placeholder='{"@context": "https://schema.org", "@type": "Article", ...}'
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+                />
+              </div>
+
+              {/* Breadcrumb Code - Optional */}
+              <div>
+                <label htmlFor="breadcrumbCode" className="block text-sm font-medium text-gray-700 mb-2">
+                  Breadcrumb Code
+                </label>
+                <textarea
+                  id="breadcrumbCode"
+                  name="breadcrumbCode"
+                  value={formData.breadcrumbCode}
+                  onChange={handleInputChange}
+                  rows={4}
+                  placeholder='{"@context": "https://schema.org", "@type": "BreadcrumbList", ...}'
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+                />
+              </div>
+
+              {/* FAQ Code - Optional */}
+              <div>
+                <label htmlFor="faqCode" className="block text-sm font-medium text-gray-700 mb-2">
+                  FAQ Code
+                </label>
+                <textarea
+                  id="faqCode"
+                  name="faqCode"
+                  value={formData.faqCode}
+                  onChange={handleInputChange}
+                  rows={6}
+                  placeholder='{"@context": "https://schema.org", "@type": "FAQPage", ...}'
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+                />
+              </div>
+
+              {/* MedicalCondition Code - Optional */}
+              <div>
+                <label htmlFor="medicalConditionCode" className="block text-sm font-medium text-gray-700 mb-2">
+                  MedicalCondition Code
+                </label>
+                <textarea
+                  id="medicalConditionCode"
+                  name="medicalConditionCode"
+                  value={formData.medicalConditionCode}
+                  onChange={handleInputChange}
+                  rows={6}
+                  placeholder='{"@context": "https://schema.org", "@type": "MedicalCondition", ...}'
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+                />
+              </div>
+
+              {/* Content */}
+              <div>
+                <label htmlFor="content" className="block text-sm font-medium text-gray-700 mb-2">
+                  Blog Content *
+                </label>
+                <WordPressEditor
+                  value={formData.content}
+                  onChange={(content) => setFormData(prev => ({ ...prev, content }))}
+                  placeholder="Write your blog content here..."
                 />
               </div>
 
@@ -187,20 +450,8 @@ export default function NewBlogPostPage() {
                 </select>
               </div>
 
-              {/* Content */}
-              <div>
-                <label htmlFor="content" className="block text-sm font-medium text-gray-700 mb-2">
-                  Blog Content *
-                </label>
-                <SimpleTextEditor
-                  value={formData.content}
-                  onChange={(content) => setFormData(prev => ({ ...prev, content }))}
-                  placeholder="Write your blog content here. You can use HTML tags for formatting."
-                />
-              </div>
-
               {/* Submit Button */}
-              <div className="flex justify-end">
+              <div className="flex justify-end pt-4 border-t">
                 <button
                   type="submit"
                   disabled={saving}
