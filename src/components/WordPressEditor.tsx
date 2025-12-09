@@ -79,10 +79,11 @@ const WordPressEditor: React.FC<WordPressEditorProps> = ({
       {/* Headings */}
       <select
         onChange={(e) => {
-          const level = parseInt(e.target.value) as 1 | 2 | 3 | 4 | 5 | 6;
-          if (level === 0) {
+          const levelValue = parseInt(e.target.value);
+          if (levelValue === 0) {
             editor.chain().focus().setParagraph().run();
-          } else {
+          } else if (levelValue >= 1 && levelValue <= 6) {
+            const level = levelValue as 1 | 2 | 3 | 4 | 5 | 6;
             editor.chain().focus().toggleHeading({ level }).run();
           }
         }}
