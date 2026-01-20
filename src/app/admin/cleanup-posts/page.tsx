@@ -35,6 +35,13 @@ export default function CleanupPostsPage() {
       const pattern = /<p class="text-\[16px\] md:text-\[16px\] text-white\/90 max-w-3xl mx-auto" style="font-family: Hind, Arial, Helvetica, sans-serif;">/g;
       
       for (const post of posts) {
+        if (!post.id) {
+          logs.push(`- Skipped: Post has no ID`);
+          setResults([...logs]);
+          skippedCount++;
+          continue;
+        }
+        
         const content = post.content || '';
         
         if (pattern.test(content)) {
