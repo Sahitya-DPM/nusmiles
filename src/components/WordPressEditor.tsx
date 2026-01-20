@@ -75,7 +75,7 @@ const WordPressEditor: React.FC<WordPressEditorProps> = ({
   }
 
   const MenuBar = () => (
-    <div className="border-b border-gray-300 bg-gray-50 p-2 flex flex-wrap gap-1 rounded-t-md">
+    <div className="sticky top-[52px] z-40 border border-gray-300 bg-gray-50 p-2 flex flex-wrap gap-1 rounded-t-md">
       {/* Headings */}
       <select
         onChange={(e) => {
@@ -298,9 +298,11 @@ const WordPressEditor: React.FC<WordPressEditorProps> = ({
   );
 
   return (
-    <div className={`wordpress-editor border border-gray-300 rounded-md ${className}`}>
+    <div className={`wordpress-editor ${className}`}>
       <MenuBar />
-      <EditorContent editor={editor} />
+      <div className="border border-gray-300 border-t-0 rounded-b-md">
+        <EditorContent editor={editor} />
+      </div>
       <style jsx global>{`
         .wordpress-editor .ProseMirror {
           outline: none;
