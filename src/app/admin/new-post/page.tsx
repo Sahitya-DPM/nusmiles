@@ -31,45 +31,16 @@ export default function NewBlogPostPage() {
     medicalConditionCode: ''
   });
   const [saving, setSaving] = useState(false);
-  const [imageFile, setImageFile] = useState<File | null>(null);
-  const [imagePreview, setImagePreview] = useState<string | null>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      // Check file size (limit to 2MB before compression)
-      const maxFileSize = 2 * 1024 * 1024; // 2MB
-      if (file.size > maxFileSize) {
-        alert('Image file is too large. Please use an image smaller than 2MB.');
-        e.target.value = ''; // Clear the input
-        return;
-      }
-
-      setImageFile(file);
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const base64Image = e.target?.result as string;
-        setImagePreview(base64Image);
-        
-        // Check base64 size (Firestore limit is ~1MB)
-        const base64Size = new Blob([base64Image]).size;
-        const maxBase64Size = 900000; // ~900KB to be safe
-        
-        if (base64Size > maxBase64Size) {
-          console.warn('Base64 image is too large, will use placeholder if Storage upload fails');
-          // Don't store the base64 if it's too large
-          setFormData(prev => ({ ...prev, imageUrl: '' }));
-        } else {
-          // Store base64 as fallback if Firebase Storage fails
-          setFormData(prev => ({ ...prev, imageUrl: base64Image }));
-        }
-      };
-      reader.readAsDataURL(file);
+    
+    // Auto-generate imageUrl from filename
+    if (name === 'imageUrl') {
+      const filename = value.trim();
+      setFormData(prev => ({ ...prev, imageUrl: filename ? `/images/${filename}` : '' }));
+    } else {
+      setFormData(prev => ({ ...prev, [name]: value }));
     }
   };
 
@@ -109,18 +80,15 @@ export default function NewBlogPostPage() {
       alert('Please enter a meta description');
       return;
     }
-    if (!imageFile && !formData.imageUrl) {
-      alert('Please upload an image or provide an image URL');
+    if (!formData.imageUrl) {
+      alert('Please enter an image filename');
       return;
     }
 
     setSaving(true);
     try {
-      console.log('Creating blog post with data:', {
-        ...formData,
-        imageFile: imageFile ? imageFile.name : 'none'
-      });
-      const postId = await createBlogPost(formData, imageFile || undefined);
+      console.log('Creating blog post with data:', formData);
+      const postId = await createBlogPost(formData);
       console.log('Blog post created successfully with ID:', postId);
       alert('Blog post created successfully!');
       router.push('/admin/dashboard');
@@ -186,38 +154,41 @@ export default function NewBlogPostPage() {
                 />
               </div>
 
-              {/* Post Image - Mandatory */}
+              {/* Image Filename - Mandatory */}
               <div>
-                <label htmlFor="imageFile" className="block text-sm font-medium text-gray-700 mb-2">
-                  Post Image * (Upload Image)
+                <label htmlFor="imageUrl" className="block text-sm font-medium text-gray-700 mb-2">
+                  Image Filename * (from /public/images/ folder)
                 </label>
                 <input
-                  type="file"
-                  id="imageFile"
-                  accept="image/*"
-                  onChange={handleImageChange}
-                  required={!formData.imageUrl}
+                  type="text"
+                  id="imageUrl"
+                  name="imageUrl"
+                  value={formData.imageUrl.replace('/images/', '')}
+                  onChange={handleInputChange}
+                  required
+                  placeholder="e.g., dental-implant-insurance-coverage.jpg"
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
                 />
-                {imagePreview && (
+                <p className="mt-1 text-sm text-gray-500">
+                  Place your image in <code className="bg-gray-100 px-2 py-1 rounded">/public/images/</code> folder and enter the filename here
+                </p>
+                {formData.imageUrl && (
                   <div className="mt-4">
                     <p className="text-sm text-gray-600 mb-2">Image Preview:</p>
                     <img 
-                      src={imagePreview} 
-                      alt="Preview" 
-                      className="max-w-full h-auto max-h-96 object-contain rounded-md border border-gray-300" 
-                    />
-                  </div>
-                )}
-                {!imagePreview && formData.imageUrl && (
-                  <div className="mt-4">
-                    <p className="text-sm text-gray-600 mb-2">Current Image URL:</p>
-                    <img 
                       src={formData.imageUrl} 
-                      alt="Current" 
+                      alt="Preview" 
                       className="max-w-full h-auto max-h-96 object-contain rounded-md border border-gray-300" 
                       onError={(e) => {
                         (e.target as HTMLImageElement).style.display = 'none';
+                        const parent = (e.target as HTMLImageElement).parentElement;
+                        if (parent) {
+                          const errorMsg = document.createElement('p');
+                          errorMsg.className = 'text-sm text-red-600 mt-2';
+                          errorMsg.textContent = 'Image not found. Make sure the file exists in /public/images/ folder';
+                          parent.appendChild(errorMsg);
+                        }
                       }}
                     />
                   </div>

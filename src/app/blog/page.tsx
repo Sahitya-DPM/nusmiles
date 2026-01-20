@@ -10,13 +10,14 @@ import { BlogPost } from '../../types/blog';
 export default function BlogPage() {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
+  const [visibleCount, setVisibleCount] = useState(9); // Initially show 9 blogs
 
   useEffect(() => {
          const fetchBlogPosts = async () => {
-       try {
-         const publishedPosts = await getPublishedBlogPosts();
-         setBlogPosts(publishedPosts);
-      } catch (error) {
+      try {
+        const publishedPosts = await getPublishedBlogPosts();
+        setBlogPosts(publishedPosts);
+     } catch (error) {
         console.error('Error fetching blog posts:', error);
         console.error('Error details:', {
           message: error instanceof Error ? error.message : 'Unknown error',
@@ -29,6 +30,13 @@ export default function BlogPage() {
 
     fetchBlogPosts();
   }, []);
+
+  const loadMoreBlogs = () => {
+    setVisibleCount(prevCount => prevCount + 3); // Load 3 more blogs
+  };
+
+  const visibleBlogPosts = blogPosts.slice(0, visibleCount);
+  const hasMoreBlogs = visibleCount < blogPosts.length;
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -106,8 +114,9 @@ export default function BlogPage() {
               </p>
             </div>
           ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post) => (
+            <>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {visibleBlogPosts.map((post) => (
                 <article key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                   <div className="relative h-48">
                     <Image
@@ -170,8 +179,22 @@ export default function BlogPage() {
                     </Link>
                   </div>
                 </article>
-              ))}
-            </div>
+                ))}
+              </div>
+              
+              {/* Read More Button */}
+              {hasMoreBlogs && (
+                <div className="flex justify-center mt-12">
+                  <button
+                    onClick={loadMoreBlogs}
+                    className="bg-primary text-white px-8 py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                    style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+                  >
+                    Read More
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </div>
       </section>

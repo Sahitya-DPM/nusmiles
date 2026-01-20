@@ -39,6 +39,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             title: post.title,
             slug: post.slug,
             status: post.status,
+            imageUrl: post.imageUrl,
+            hasImage: !!post.imageUrl,
             hasContent: !!post.content,
             contentLength: post.content?.length || 0,
             contentPreview: post.content?.substring(0, 100) || 'No content'
@@ -193,7 +195,20 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 fill
                 className="object-cover"
                 sizes="100vw"
+                onError={(e) => {
+                  console.error('Image failed to load:', blogPost.imageUrl);
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                }}
+                onLoad={() => {
+                  console.log('Image loaded successfully:', blogPost.imageUrl);
+                }}
               />
+            )}
+            {!blogPost.imageUrl && (
+              <div className="w-full h-full flex items-center justify-center bg-gray-200">
+                <p className="text-gray-500">No image available</p>
+              </div>
             )}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80"></div>
           </div>

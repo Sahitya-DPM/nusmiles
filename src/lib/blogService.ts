@@ -11,8 +11,7 @@ import {
   orderBy,
   serverTimestamp 
 } from 'firebase/firestore';
-import { ref, uploadBytes, getDownloadURL, deleteObject } from 'firebase/storage';
-import { db, storage } from './firebase';
+import { db } from './firebase';
 import { BlogPost, BlogFormData } from '../types/blog';
 
 const BLOG_COLLECTION = 'blog-posts';
@@ -21,9 +20,6 @@ const BLOG_COLLECTION = 'blog-posts';
 const checkFirebaseAvailability = () => {
   if (!db) {
     throw new Error('Firestore is not configured. Please set up your Firebase credentials in .env.local');
-  }
-  if (!storage) {
-    throw new Error('Firebase Storage is not configured. Please set up your Firebase credentials in .env.local');
   }
 };
 
@@ -58,7 +54,7 @@ export const testCreateBlogPost = async (): Promise<string> => {
       title: 'Test Blog Post',
       description: 'This is a test blog post',
       content: 'This is the content of the test blog post.',
-      imageUrl: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=400&fit=crop',
+      imageUrl: '/images/test-image.jpg',
       publishDate: new Date().toISOString().split('T')[0],
       slug: 'test-blog-post',
       metaTitle: 'Test Blog Post',
@@ -81,67 +77,12 @@ export const testCreateBlogPost = async (): Promise<string> => {
 };
 
 // Create a new blog post
-export const createBlogPost = async (blogData: BlogFormData, imageFile?: File): Promise<string> => {
+export const createBlogPost = async (blogData: BlogFormData): Promise<string> => {
   try {
     checkFirebaseAvailability();
     
-    let imageUrl = blogData.imageUrl;
-    
-    // If we already have a base64 image, check its size first
-    if (imageFile && blogData.imageUrl && blogData.imageUrl.startsWith('data:')) {
-      const base64Size = new Blob([blogData.imageUrl]).size;
-      const maxSize = 1000000; // 1MB limit for Firestore (with some buffer)
-      
-      if (base64Size > maxSize) {
-        console.warn('Base64 image is too large for Firestore, using placeholder');
-        imageUrl = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1lcmlmIiBmb250LXNpemU9IjI0IiBmaWxsPSIjNmI3MjgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+QmxvZyBJbWFnZTwvdGV4dD48L3N2Zz4=';
-      } else {
-        console.log('Using base64 image from form (skipping Storage upload to avoid CORS issues)');
-        imageUrl = blogData.imageUrl;
-      }
-    } else if (imageFile) {
-      // Try to upload to Storage, but with timeout to prevent hanging
-      try {
-        console.log('Attempting to upload image to Firebase Storage...');
-        const timestamp = Date.now();
-        const imageName = `blog-images/${timestamp}-${imageFile.name}`;
-        const imageRef = ref(storage!, imageName);
-        
-        // Add timeout to prevent hanging
-        const uploadPromise = uploadBytes(imageRef, imageFile);
-        const timeoutPromise = new Promise((_, reject) => 
-          setTimeout(() => reject(new Error('Upload timeout')), 10000)
-        );
-        
-        await Promise.race([uploadPromise, timeoutPromise]);
-        imageUrl = await getDownloadURL(imageRef);
-        console.log('Image uploaded successfully to Storage:', imageUrl);
-      } catch (uploadError: any) {
-        console.error('Image upload failed (CORS or timeout):', uploadError);
-        // Use base64 if available and not too large, otherwise placeholder
-        if (blogData.imageUrl && blogData.imageUrl.startsWith('data:')) {
-          const base64Size = new Blob([blogData.imageUrl]).size;
-          const maxSize = 1000000; // 1MB limit for Firestore (with some buffer)
-          
-          if (base64Size > maxSize) {
-            console.warn('Base64 image is too large for Firestore, using placeholder');
-            imageUrl = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1lcmlmIiBmb250LXNpemU9IjI0IiBmaWxsPSIjNmI3MjgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+QmxvZyBJbWFnZTwvdGV4dD48L3N2Zz4=';
-          } else {
-            imageUrl = blogData.imageUrl;
-            console.log('Using base64 image as fallback');
-          }
-        } else {
-          imageUrl = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1lcmlmIiBmb250LXNpemU9IjI0IiBmaWxsPSIjNmI3MjgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+QmxvZyBJbWFnZTwvdGV4dD48L3N2Zz4=';
-          console.warn('Using placeholder image');
-        }
-      }
-    }
-    
-    // Only use placeholder if no image URL is provided and no file is uploaded
-    if (!imageUrl && !imageFile) {
-      console.log('No image provided, using placeholder');
-      imageUrl = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1lcmlmIiBmb250LXNpemU9IjI0IiBmaWxsPSIjNmI3MjgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+QmxvZyBJbWFnZTwvdGV4dD48L3N2Zz4=';
-    }
+    // Image URL is already set to /images/{filename} from the form
+    const imageUrl = blogData.imageUrl || '';
 
     const blogPost: Omit<BlogPost, 'id'> = {
       ...blogData,
@@ -208,10 +149,10 @@ export const getAllBlogPosts = async (): Promise<BlogPost[]> => {
       ...doc.data()
     })) as BlogPost[];
     
-    // Sort in JavaScript instead of Firestore
+    // Sort by publishDate in descending order (most recent first: 2026, 2025, 2024, etc.)
     posts.sort((a, b) => {
-      const dateA = a.createdAt instanceof Date ? a.createdAt : new Date(a.createdAt);
-      const dateB = b.createdAt instanceof Date ? b.createdAt : new Date(b.createdAt);
+      const dateA = new Date(a.publishDate);
+      const dateB = new Date(b.publishDate);
       return dateB.getTime() - dateA.getTime(); // Descending order
     });
     
@@ -240,10 +181,10 @@ export const getPublishedBlogPosts = async (): Promise<BlogPost[]> => {
       ...doc.data()
     })) as BlogPost[];
     
-    // Sort in JavaScript instead of Firestore
+    // Sort by publishDate in descending order (most recent first: 2026, 2025, 2024, etc.)
     posts.sort((a, b) => {
-      const dateA = a.createdAt instanceof Date ? a.createdAt : new Date(a.createdAt);
-      const dateB = b.createdAt instanceof Date ? b.createdAt : new Date(b.createdAt);
+      const dateA = new Date(a.publishDate);
+      const dateB = new Date(b.publishDate);
       return dateB.getTime() - dateA.getTime(); // Descending order
     });
     
@@ -452,44 +393,12 @@ export const getBlogPostBySlug = async (slug: string): Promise<BlogPost | null> 
 };
 
 // Update a blog post
-export const updateBlogPost = async (id: string, blogData: Partial<BlogFormData>, imageFile?: File): Promise<void> => {
+export const updateBlogPost = async (id: string, blogData: Partial<BlogFormData>): Promise<void> => {
   try {
     checkFirebaseAvailability();
     
-    let imageUrl = blogData.imageUrl;
-    
-    // Upload image file to Firebase Storage if provided
-    if (imageFile) {
-      try {
-        console.log('Uploading image to Firebase Storage...');
-        const timestamp = Date.now();
-        const imageName = `blog-images/${timestamp}-${imageFile.name}`;
-        const imageRef = ref(storage!, imageName);
-        
-        await uploadBytes(imageRef, imageFile);
-        imageUrl = await getDownloadURL(imageRef);
-        console.log('Image uploaded successfully:', imageUrl);
-      } catch (uploadError: any) {
-        console.error('Image upload failed (CORS or other error):', uploadError);
-        // If upload fails and we have a base64 imageUrl from the form, use it
-        // Otherwise use placeholder
-        if (!blogData.imageUrl || !blogData.imageUrl.startsWith('data:')) {
-          imageUrl = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1lcmlmIiBmb250LXNpemU9IjI0IiBmaWxsPSIjNmI3MjgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+QmxvZyBJbWFnZTwvdGV4dD48L3N2Zz4=';
-          console.warn('Using placeholder image. Please fix Firebase Storage CORS configuration.');
-        } else {
-          // Use the base64 image that was already converted
-          imageUrl = blogData.imageUrl;
-          console.log('Using base64 image as fallback due to Storage upload failure');
-        }
-        // Don't throw error - allow post to be updated
-      }
-    }
-    
-    // Only use placeholder if no image URL is provided and no file is uploaded
-    if (!imageUrl && !imageFile) {
-      console.log('No image provided, using placeholder');
-      imageUrl = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1lcmlmIiBmb250LXNpemU9IjI0IiBmaWxsPSIjNmI3MjgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+QmxvZyBJbWFnZTwvdGV4dD48L3N2Zz4=';
-    }
+    // Image URL is already set to /images/{filename} from the form
+    const imageUrl = blogData.imageUrl;
 
     const updateData: any = {
       ...blogData,
@@ -512,40 +421,6 @@ export const updateBlogPost = async (id: string, blogData: Partial<BlogFormData>
     console.log('Blog post updated successfully');
   } catch (error) {
     console.error('Error updating blog post:', error);
-    throw error;
-  }
-};
-
-// Update existing blog posts with placeholder images to use real images
-export const updatePlaceholderImages = async (): Promise<void> => {
-  try {
-    checkFirebaseAvailability();
-    
-    console.log('Updating placeholder images...');
-    
-    const allPosts = await getAllBlogPosts();
-    const postsWithPlaceholders = allPosts.filter(post => 
-      post.imageUrl && post.imageUrl.includes('data:image/svg+xml;base64')
-    );
-    
-    console.log(`Found ${postsWithPlaceholders.length} posts with placeholder images`);
-    
-    for (const post of postsWithPlaceholders) {
-      if (post.id) {
-        const updateData = {
-          imageUrl: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=400&fit=crop',
-          updatedAt: new Date()
-        };
-        
-        const docRef = doc(db!, BLOG_COLLECTION, post.id);
-        await updateDoc(docRef, updateData);
-        console.log(`Updated post: ${post.title}`);
-      }
-    }
-    
-    console.log('Placeholder images update completed');
-  } catch (error) {
-    console.error('Error updating placeholder images:', error);
     throw error;
   }
 };
