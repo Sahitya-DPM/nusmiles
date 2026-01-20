@@ -21,7 +21,6 @@ export default function EditBlogPostPage({ params }: EditBlogPostPageProps) {
   const postIdRef = useRef<string>('');
   const [formData, setFormData] = useState<BlogFormData>({
     title: '',
-    description: '',
     content: '',
     imageUrl: '',
     tags: [],
@@ -56,7 +55,6 @@ export default function EditBlogPostPage({ params }: EditBlogPostPageProps) {
         if (post) {
           setFormData({
             title: post.title || '',
-            description: post.description || '',
             content: post.content || '',
             imageUrl: post.imageUrl || '',
             tags: post.tags || [],
@@ -138,10 +136,6 @@ export default function EditBlogPostPage({ params }: EditBlogPostPageProps) {
     // Validate mandatory fields
     if (!formData.title.trim()) {
       alert('Please enter a post title');
-      return;
-    }
-    if (!formData.description.trim()) {
-      alert('Please enter a post description');
       return;
     }
     if (!formData.content.trim()) {
@@ -234,23 +228,6 @@ export default function EditBlogPostPage({ params }: EditBlogPostPageProps) {
                   value={formData.title}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
-                />
-              </div>
-
-              {/* Post Description - Mandatory */}
-              <div>
-                <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-2">
-                  Post Description *
-                </label>
-                <textarea
-                  id="description"
-                  name="description"
-                  value={formData.description}
-                  onChange={handleInputChange}
-                  required
-                  rows={4}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
                 />
@@ -494,15 +471,19 @@ export default function EditBlogPostPage({ params }: EditBlogPostPageProps) {
               </div>
 
               {/* Content */}
-              <div>
-                <label htmlFor="content" className="block text-sm font-medium text-gray-700 mb-2">
-                  Blog Content *
-                </label>
-                <WordPressEditor
-                  value={formData.content}
-                  onChange={(content) => setFormData(prev => ({ ...prev, content }))}
-                  placeholder="Write your blog content here..."
-                />
+              <div className="relative">
+                <div className="sticky top-0 z-50 bg-white pt-2 pb-2 -mx-6 px-6">
+                  <label htmlFor="content" className="block text-sm font-medium text-gray-700 mb-2">
+                    Blog Content *
+                  </label>
+                </div>
+                <div className="-mx-6 px-6">
+                  <WordPressEditor
+                    value={formData.content}
+                    onChange={(content) => setFormData(prev => ({ ...prev, content }))}
+                    placeholder="Write your blog content here..."
+                  />
+                </div>
               </div>
 
               {/* Status */}
