@@ -216,11 +216,6 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               {blogPost.title}
             </h1>
-            {blogPost.description && (
-              <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                {blogPost.description}
-              </p>
-            )}
           </div>
         </section>
 
