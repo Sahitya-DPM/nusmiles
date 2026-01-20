@@ -1,7 +1,7 @@
 export interface BlogPost {
   id?: string;
   title: string;
-  description: string;
+  description?: string;
   content: string;
   imageUrl: string;
   publishDate: string;
@@ -24,7 +24,7 @@ export interface BlogPost {
 
 export interface BlogFormData {
   title: string;
-  description: string;
+  description?: string;
   content: string;
   imageUrl: string;
   publishDate: string;

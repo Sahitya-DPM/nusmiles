@@ -13,7 +13,6 @@ export default function NewBlogPostPage() {
   const { user } = useAuth();
   const [formData, setFormData] = useState<BlogFormData>({
     title: '',
-    description: '',
     content: '',
     imageUrl: '',
     tags: [],
@@ -50,10 +49,6 @@ export default function NewBlogPostPage() {
     // Validate mandatory fields
     if (!formData.title.trim()) {
       alert('Please enter a post title');
-      return;
-    }
-    if (!formData.description.trim()) {
-      alert('Please enter a post description');
       return;
     }
     if (!formData.content.trim()) {
@@ -132,23 +127,6 @@ export default function NewBlogPostPage() {
                   value={formData.title}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
-                />
-              </div>
-
-              {/* Post Description - Mandatory */}
-              <div>
-                <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-2">
-                  Post Description *
-                </label>
-                <textarea
-                  id="description"
-                  name="description"
-                  value={formData.description}
-                  onChange={handleInputChange}
-                  required
-                  rows={4}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
                 />
