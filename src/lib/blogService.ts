@@ -103,7 +103,6 @@ export const createBlogPost = async (blogData: BlogFormData): Promise<string> =>
     // Normalize slug (trim whitespace) and status (lowercase) for consistency
     const firestoreData: any = {
       title: blogPost.title,
-      description: blogPost.description,
       content: blogPost.content,
       imageUrl: imageUrl,
       publishDate: blogPost.publishDate || new Date().toISOString().split('T')[0],
@@ -116,6 +115,9 @@ export const createBlogPost = async (blogData: BlogFormData): Promise<string> =>
       createdAt: blogPost.createdAt instanceof Date ? blogPost.createdAt : new Date(blogPost.createdAt),
       updatedAt: blogPost.updatedAt instanceof Date ? blogPost.updatedAt : new Date(blogPost.updatedAt)
     };
+    
+    // Add optional description field if it exists
+    if (blogPost.description) firestoreData.description = blogPost.description;
     
     // Add optional fields if they exist
     if (blogPost.canonicalUrl) firestoreData.canonicalUrl = blogPost.canonicalUrl;
