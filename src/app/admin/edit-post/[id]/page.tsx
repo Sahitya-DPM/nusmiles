@@ -40,6 +40,9 @@ export default function EditBlogPostPage({ params }: EditBlogPostPageProps) {
   });
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const [imageError, setImageError] = useState<string>('');
+  const [imageFile, setImageFile] = useState<File | null>(null);
+  const [imagePreview, setImagePreview] = useState<string | null>(null);
 
   useEffect(() => {
     const loadPost = async () => {
