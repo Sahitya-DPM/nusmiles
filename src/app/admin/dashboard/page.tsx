@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useAuth } from '../../../contexts/AuthContext';
-import { getAllBlogPosts, deleteBlogPost, updatePlaceholderImages } from '../../../lib/blogService';
+import { getAllBlogPosts, deleteBlogPost } from '../../../lib/blogService';
 import { BlogPost } from '../../../types/blog';
 import ProtectedRoute from '../../../components/ProtectedRoute';
 
@@ -12,7 +12,6 @@ export default function AdminDashboardPage() {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [deletingId, setDeletingId] = useState<string | null>(null);
-  const [updatingImages, setUpdatingImages] = useState(false);
   const { user, logout } = useAuth();
 
   useEffect(() => {
@@ -57,31 +56,6 @@ export default function AdminDashboardPage() {
     }
   };
 
-  const handleUpdatePlaceholderImages = async () => {
-    if (!confirm('This will update all blog posts with placeholder images to use real images. Continue?')) {
-      return;
-    }
-
-    setUpdatingImages(true);
-    try {
-      console.log('Updating placeholder images...');
-      await updatePlaceholderImages();
-      console.log('Placeholder images updated, refreshing posts...');
-      await fetchBlogPosts(); // Refresh the posts list
-      alert('Placeholder images updated successfully!');
-    } catch (error) {
-      console.error('Error updating placeholder images:', error);
-      
-      let errorMessage = 'Failed to update placeholder images';
-      if (error instanceof Error) {
-        errorMessage = error.message;
-      }
-      
-      alert(`Error: ${errorMessage}`);
-    } finally {
-      setUpdatingImages(false);
-    }
-  };
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -120,14 +94,6 @@ export default function AdminDashboardPage() {
                 <span className="text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                   Welcome, {user?.email}
                 </span>
-                <button
-                  onClick={handleUpdatePlaceholderImages}
-                  disabled={updatingImages}
-                  className="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600 transition-colors disabled:opacity-50"
-                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
-                >
-                  {updatingImages ? 'Updating...' : 'Fix Images'}
-                </button>
                 <Link
                   href="/admin/new-post"
                   className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors"

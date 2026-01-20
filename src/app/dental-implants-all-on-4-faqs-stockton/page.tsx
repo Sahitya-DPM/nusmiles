@@ -23,7 +23,7 @@ export default function DentalImplantsAllOn4FaqsPage() {
 
   const faqSections = [
     {
-      title: 'Section 1: General Information FAQs',
+      title: 'General Information FAQs',
       faqs: [
         {
           question: 'What are dental implants?',
@@ -40,7 +40,7 @@ export default function DentalImplantsAllOn4FaqsPage() {
       ]
     },
     {
-      title: 'Section 2: Features / Services FAQs',
+      title: 'Features / Services FAQs',
       faqs: [
         {
           question: 'What types of dental implant solutions do you offer?',
@@ -57,7 +57,7 @@ export default function DentalImplantsAllOn4FaqsPage() {
       ]
     },
     {
-      title: 'Section 3: Process / How It Works FAQs',
+      title: 'Process / How It Works FAQs',
       faqs: [
         {
           question: 'What is the first step in getting dental implants?',
@@ -74,7 +74,7 @@ export default function DentalImplantsAllOn4FaqsPage() {
       ]
     },
     {
-      title: 'Section 4: Benefits / Why Choose Us FAQs',
+      title: 'Benefits / Why Choose Us FAQs',
       faqs: [
         {
           question: 'Why choose Nu Smile Dental for dental implants?',
@@ -91,7 +91,7 @@ export default function DentalImplantsAllOn4FaqsPage() {
       ]
     },
     {
-      title: 'Section 5: Pricing / Plans / Cost FAQs',
+      title: 'Pricing / Plans / Cost FAQs',
       faqs: [
         {
           question: 'Are dental implants more expensive than other tooth replacement options?',
@@ -108,7 +108,7 @@ export default function DentalImplantsAllOn4FaqsPage() {
       ]
     },
     {
-      title: 'Section 6: Support / Technical / Policy FAQs',
+      title: 'Support / Technical / Policy FAQs',
       faqs: [
         {
           question: 'Is dental implant surgery painful?',
@@ -125,7 +125,7 @@ export default function DentalImplantsAllOn4FaqsPage() {
       ]
     },
     {
-      title: 'Section 7: Final / Miscellaneous FAQs',
+      title: 'Final / Miscellaneous FAQs',
       faqs: [
         {
           question: 'Can my body reject a dental implant?',
@@ -195,7 +195,7 @@ export default function DentalImplantsAllOn4FaqsPage() {
             {faqSectionsWithIndices.map((section, sectionIndex) => (
               <div key={sectionIndex} className="space-y-4">
                 {/* Section Heading */}
-                <h2 className={`text-[22px] md:text-2xl font-bold text-gray-900 mb-4 ${sectionIndex === 0 ? 'pt-0' : 'pt-4 border-t border-gray-200'}`} style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                <h2 className={`text-[18px] md:text-2xl font-bold text-gray-900 mb-4 text-center md:text-left ${sectionIndex === 0 ? 'pt-0' : 'pt-4 border-t border-gray-200'}`} style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                   {section.title}
                 </h2>
                 
