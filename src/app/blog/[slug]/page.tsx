@@ -81,10 +81,10 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     document.title = blogPost.metaTitle || blogPost.title;
 
     // Meta Title
-    updateMetaTag('title', blogPost.metaTitle || blogPost.title);
+    updateMetaTag('title', blogPost.metaTitle || blogPost.title || '');
     
     // Meta Description
-    updateMetaTag('description', blogPost.metaDescription || blogPost.description);
+    updateMetaTag('description', blogPost.metaDescription || blogPost.description || '');
     
     // Canonical URL
     let canonicalLink = document.querySelector('link[rel="canonical"]');
