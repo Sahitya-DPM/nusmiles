@@ -100,8 +100,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     // Open Graph tags
     updateMetaTag('og:type', 'article', true);
     updateMetaTag('og:url', postUrl, true);
-    updateMetaTag('og:title', blogPost.metaTitle || blogPost.title, true);
-    updateMetaTag('og:description', blogPost.metaDescription || blogPost.description, true);
+    updateMetaTag('og:title', blogPost.metaTitle || blogPost.title || '', true);
+    updateMetaTag('og:description', blogPost.metaDescription || blogPost.description || '', true);
     if (ogImage) {
       updateMetaTag('og:image', ogImage, true);
     }
@@ -109,8 +109,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     // Twitter tags
     updateMetaTag('twitter:card', 'summary_large_image', true);
     updateMetaTag('twitter:url', postUrl, true);
-    updateMetaTag('twitter:title', blogPost.metaTitle || blogPost.title, true);
-    updateMetaTag('twitter:description', blogPost.metaDescription || blogPost.description, true);
+    updateMetaTag('twitter:title', blogPost.metaTitle || blogPost.title || '', true);
+    updateMetaTag('twitter:description', blogPost.metaDescription || blogPost.description || '', true);
     if (ogImage) {
       updateMetaTag('twitter:image', ogImage, true);
     }
