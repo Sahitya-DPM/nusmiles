@@ -7,6 +7,7 @@ import { createBlogPost } from '../../../lib/blogService';
 import { BlogFormData } from '../../../types/blog';
 import ProtectedRoute from '../../../components/ProtectedRoute';
 import WordPressEditor from '../../../components/WordPressEditor';
+import { uploadImageToCloudinary, validateImageFile } from '../../../lib/cloudinaryService';
 
 export default function NewBlogPostPage() {
   const router = useRouter();
@@ -30,16 +31,50 @@ export default function NewBlogPostPage() {
     medicalConditionCode: ''
   });
   const [saving, setSaving] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState(0);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    
-    // Auto-generate imageUrl from filename
-    if (name === 'imageUrl') {
-      const filename = value.trim();
-      setFormData(prev => ({ ...prev, imageUrl: filename ? `/images/${filename}` : '' }));
-    } else {
-      setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    // Validate file
+    const validation = validateImageFile(file);
+    if (!validation.valid) {
+      alert(validation.error);
+      return;
+    }
+
+    setUploading(true);
+    setUploadProgress(0);
+
+    try {
+      // Simulate upload progress
+      const progressInterval = setInterval(() => {
+        setUploadProgress(prev => Math.min(prev + 10, 90));
+      }, 200);
+
+      // Upload to Cloudinary
+      const imageUrl = await uploadImageToCloudinary(file);
+      
+      clearInterval(progressInterval);
+      setUploadProgress(100);
+
+      // Update form data with Cloudinary URL
+      setFormData(prev => ({ ...prev, imageUrl }));
+      
+      alert('Image uploaded successfully!');
+    } catch (error: any) {
+      console.error('Error uploading image:', error);
+      alert(`Failed to upload image: ${error.message}`);
+    } finally {
+      setUploading(false);
+      setUploadProgress(0);
     }
   };
 
@@ -76,7 +111,7 @@ export default function NewBlogPostPage() {
       return;
     }
     if (!formData.imageUrl) {
-      alert('Please enter an image filename');
+      alert('Please upload an image');
       return;
     }
 
@@ -132,45 +167,57 @@ export default function NewBlogPostPage() {
                 />
               </div>
 
-              {/* Image Filename - Mandatory */}
+              {/* Upload Image - Mandatory */}
               <div>
-                <label htmlFor="imageUrl" className="block text-sm font-medium text-gray-700 mb-2">
-                  Image Filename * (from /public/images/ folder)
+                <label htmlFor="imageUpload" className="block text-sm font-medium text-gray-700 mb-2">
+                  Upload Image * (Stored in Cloudinary)
                 </label>
-                <input
-                  type="text"
-                  id="imageUrl"
-                  name="imageUrl"
-                  value={formData.imageUrl.replace('/images/', '')}
-                  onChange={handleInputChange}
-                  required
-                  placeholder="e.g., dental-implant-insurance-coverage.jpg"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
-                />
-                <p className="mt-1 text-sm text-gray-500">
-                  Place your image in <code className="bg-gray-100 px-2 py-1 rounded">/public/images/</code> folder and enter the filename here
-                </p>
-                {formData.imageUrl && (
-                  <div className="mt-4">
-                    <p className="text-sm text-gray-600 mb-2">Image Preview:</p>
-                    <img 
-                      src={formData.imageUrl} 
-                      alt="Preview" 
-                      className="max-w-full h-auto max-h-96 object-contain rounded-md border border-gray-300" 
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).style.display = 'none';
-                        const parent = (e.target as HTMLImageElement).parentElement;
-                        if (parent) {
-                          const errorMsg = document.createElement('p');
-                          errorMsg.className = 'text-sm text-red-600 mt-2';
-                          errorMsg.textContent = 'Image not found. Make sure the file exists in /public/images/ folder';
-                          parent.appendChild(errorMsg);
-                        }
-                      }}
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-4">
+                    <input
+                      type="file"
+                      id="imageUpload"
+                      accept="image/jpeg,image/jpg,image/png,image/webp,image/gif"
+                      onChange={handleImageUpload}
+                      disabled={uploading}
+                      className="block w-full text-sm text-gray-500
+                        file:mr-4 file:py-2 file:px-4
+                        file:rounded-md file:border-0
+                        file:text-sm file:font-semibold
+                        file:bg-blue-50 file:text-blue-700
+                        hover:file:bg-blue-100
+                        disabled:opacity-50 disabled:cursor-not-allowed"
                     />
                   </div>
-                )}
+                  
+                  {uploading && (
+                    <div className="w-full bg-gray-200 rounded-full h-2.5">
+                      <div 
+                        className="bg-blue-600 h-2.5 rounded-full transition-all duration-300"
+                        style={{ width: `${uploadProgress}%` }}
+                      ></div>
+                      <p className="text-sm text-gray-600 mt-1">Uploading... {uploadProgress}%</p>
+                    </div>
+                  )}
+                  
+                  <p className="text-sm text-gray-500">
+                    Upload image to Cloudinary CDN. Supported: JPG, PNG, WebP, GIF (Max 10MB)
+                  </p>
+                  
+                  {formData.imageUrl && (
+                    <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-md">
+                      <p className="text-sm font-medium text-green-800 mb-2">✓ Image Uploaded Successfully</p>
+                      <img 
+                        src={formData.imageUrl} 
+                        alt="Preview" 
+                        className="max-w-full h-auto max-h-96 object-contain rounded-md border border-gray-300 mb-2" 
+                      />
+                      <p className="text-xs text-gray-600 break-all">
+                        Cloudinary URL: {formData.imageUrl}
+                      </p>
+                    </div>
+                  )}
+                </div>
               </div>
 
               {/* Publish Date - Mandatory */}

@@ -162,21 +162,29 @@ export default function AdminDashboardPage() {
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="flex items-center">
                             <div className="flex-shrink-0 h-12 w-12">
-                              <Image
-                                src={post.imageUrl}
-                                alt={post.title}
-                                width={48}
-                                height={48}
-                                className="h-12 w-12 rounded-lg object-cover"
-                              />
+                              {post.imageUrl ? (
+                                <Image
+                                  src={post.imageUrl}
+                                  alt={post.title}
+                                  width={48}
+                                  height={48}
+                                  className="h-12 w-12 rounded-lg object-cover"
+                                />
+                              ) : (
+                                <div className="h-12 w-12 rounded-lg bg-gray-200 flex items-center justify-center">
+                                  <span className="text-gray-400 text-xs">No image</span>
+                                </div>
+                              )}
                             </div>
                             <div className="ml-4">
                               <div className="text-sm font-medium text-gray-900" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                                 {post.title}
                               </div>
-                              <div className="text-sm text-gray-500" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                                {post.description.substring(0, 60)}...
-                              </div>
+                              {post.description && (
+                                <div className="text-sm text-gray-500" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                                  {post.description.substring(0, 60)}...
+                                </div>
+                              )}
                             </div>
                           </div>
                         </td>
