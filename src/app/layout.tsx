@@ -21,6 +21,12 @@ export const metadata: Metadata = {
       { url: '/favicon.png', sizes: '180x180', type: 'image/png' },
     ],
   },
+  verification: {
+    google: [
+      'OY7qYQ2lQOQHb8mHVwN439Szytkj0EXjSeAsRh3AdVw', // General
+      'Wridp05slnEXWXgSos5uepSV0x9zBFYwRFJCoo1sDtU', // Spreckels park
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -30,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="overflow-x-hidden">
-      <body className="font-sans overflow-x-hidden">
+      <body className="font-sans overflow-x-hidden" suppressHydrationWarning>
         <AuthProvider>
           {children}
           <ContactSection />
