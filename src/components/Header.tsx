@@ -31,25 +31,25 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-                  <nav className="hidden md:flex space-x-8">
-          <Link href="/" className="text-gray-700 hover:text-primary transition-colors">Home</Link>
-          
-          {/* About with Dropdown */}
-          <div className="relative group">
-            <Link 
-              href="/about-us"
-              className="text-gray-700 hover:text-primary transition-colors flex items-center"
-              onMouseEnter={() => setIsAboutOpen(true)}
-              onMouseLeave={() => setIsAboutOpen(false)}
-            >
-              About
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </Link>
-            
-                          {/* About Dropdown Menu */}
-              <div 
+          <nav className="hidden md:flex space-x-8">
+            <Link href="/" className="text-gray-700 hover:text-primary transition-colors">Home</Link>
+
+            {/* About with Dropdown */}
+            <div className="relative group">
+              <Link
+                href="/about-us"
+                className="text-gray-700 hover:text-primary transition-colors flex items-center"
+                onMouseEnter={() => setIsAboutOpen(true)}
+                onMouseLeave={() => setIsAboutOpen(false)}
+              >
+                About
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+
+              {/* About Dropdown Menu */}
+              <div
                 className={`absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg py-2 transition-all duration-200 ${isAboutOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
                 onMouseEnter={() => setIsAboutOpen(true)}
                 onMouseLeave={() => setIsAboutOpen(false)}
@@ -70,76 +70,87 @@ export default function Header() {
                   Testimonials
                 </Link>
               </div>
-          </div>
-          
-          {/* Services with Dropdown */}
-          <div className="relative group">
-            <Link 
-              href="/dental-services"
-              className="text-gray-700 hover:text-primary transition-colors flex items-center"
-              onMouseEnter={() => setIsServicesOpen(true)}
-              onMouseLeave={() => setIsServicesOpen(false)}
-            >
-              Services
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </Link>
-            
-            {/* Dropdown Menu */}
-            <div 
-              className={`absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 transition-all duration-200 ${isServicesOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
-              onMouseEnter={() => setIsServicesOpen(true)}
-              onMouseLeave={() => setIsServicesOpen(false)}
-            >
-              <Link href="/general-dentistry" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
-                General Dentistry
-              </Link>
-              <Link href="/dental-implants" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
-                Dental Implants
-              </Link>
-              <Link href="/all-on-4-implant-dentures" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
-                All-on-4Â® Implant Dentures
-              </Link>
-              <Link href="/invisalign" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
-                Invisalign
-              </Link>
-              <Link href="/platelet-rich-fibrin-therapy-prf" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
-                Platelet Rich Fibrin Therapy
-              </Link>
             </div>
-          </div>
-          
-          <Link href="/blog" className="text-gray-700 hover:text-primary transition-colors">Blog</Link>
-          
-          {/* Resources with Dropdown */}
-          <div className="relative group">
-            <Link 
-              href="/resources"
-              className="text-gray-700 hover:text-primary transition-colors flex items-center"
-              onMouseEnter={() => setIsResourcesOpen(true)}
-              onMouseLeave={() => setIsResourcesOpen(false)}
-            >
-              Resources
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </Link>
-            
-            {/* Resources Dropdown Menu */}
-            <div 
-              className={`absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 transition-all duration-200 ${isResourcesOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
-              onMouseEnter={() => setIsResourcesOpen(true)}
-              onMouseLeave={() => setIsResourcesOpen(false)}
-            >
-              <Link href="/patient-education" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
-                Patient Education
+
+            {/* Services with Dropdown */}
+            <div className="relative group">
+              <Link
+                href="/dental-services"
+                className="text-gray-700 hover:text-primary transition-colors flex items-center"
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                Services
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
               </Link>
+
+              {/* Dropdown Menu */}
+              <div
+                className={`absolute top-full left-0 mt-2 w-72 bg-white shadow-lg rounded-lg py-2 transition-all duration-200 ${isServicesOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                <Link href="/general-dentistry" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
+                  General Dentistry
+                </Link>
+
+                {/* Dental Implants Subgroup */}
+                <div className="px-4 py-2">
+                  <Link href="/dental-implants" className="block text-gray-900 font-semibold hover:text-primary transition-colors mb-1">
+                    Dental Implants
+                  </Link>
+                  <div className="pl-4 space-y-1 border-l-2 border-gray-100">
+                    <Link href="/services/dental-implants-all-on-4-faqs-stockton" className="block text-sm text-gray-600 hover:text-primary transition-colors py-1">
+                      Dental Implants & All-on-4® FAQs
+                    </Link>
+                  </div>
+                </div>
+
+                <Link href="/all-on-4-implant-dentures" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
+                  All-on-4® Implant Dentures
+                </Link>
+
+                <Link href="/invisalign" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
+                  Invisalign
+                </Link>
+                <Link href="/platelet-rich-fibrin-therapy-prf" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
+                  Platelet Rich Fibrin Therapy
+                </Link>
+              </div>
             </div>
-          </div>
-          
-          <Link href="/contact" className="text-gray-700 hover:text-primary transition-colors">Contact</Link>
-        </nav>
+
+            <Link href="/blog" className="text-gray-700 hover:text-primary transition-colors">Blog</Link>
+
+            {/* Resources with Dropdown */}
+            <div className="relative group">
+              <Link
+                href="/resources"
+                className="text-gray-700 hover:text-primary transition-colors flex items-center"
+                onMouseEnter={() => setIsResourcesOpen(true)}
+                onMouseLeave={() => setIsResourcesOpen(false)}
+              >
+                Resources
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+
+              {/* Resources Dropdown Menu */}
+              <div
+                className={`absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 transition-all duration-200 ${isResourcesOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+                onMouseEnter={() => setIsResourcesOpen(true)}
+                onMouseLeave={() => setIsResourcesOpen(false)}
+              >
+                <Link href="/patient-education" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
+                  Patient Education
+                </Link>
+              </div>
+            </div>
+
+            <Link href="/contact" className="text-gray-700 hover:text-primary transition-colors">Contact</Link>
+          </nav>
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-6">
@@ -180,17 +191,17 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t bg-white">
             <nav className="flex flex-col space-y-1">
-              <Link 
-                href="/" 
+              <Link
+                href="/"
                 className="text-gray-700 hover:text-primary transition-colors py-2.5 px-4 hover:bg-gray-50 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
-              
+
               {/* Mobile About Section */}
               <div>
-                <button 
+                <button
                   className="text-gray-700 hover:text-primary transition-colors flex items-center justify-between w-full py-2.5 px-4 hover:bg-gray-50 rounded-md font-medium"
                   onClick={() => {
                     setIsAboutOpen(!isAboutOpen);
@@ -200,52 +211,51 @@ export default function Header() {
                   aria-expanded={isAboutOpen}
                 >
                   <span>About</span>
-                  <svg 
-                    className={`w-5 h-5 transition-transform duration-200 ${isAboutOpen ? 'rotate-180' : ''}`} 
-                    fill="none" 
-                    stroke="currentColor" 
+                  <svg
+                    className={`w-5 h-5 transition-transform duration-200 ${isAboutOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                
-                <div 
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isAboutOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                  }`}
+
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${isAboutOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    }`}
                 >
                   <div className="ml-4 mt-1 mb-2 space-y-0.5 border-l-2 border-primary pl-4">
-                    <Link 
-                      href="/about-us" 
+                    <Link
+                      href="/about-us"
                       className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       About Us
                     </Link>
-                    <Link 
-                      href="/dental-staff" 
+                    <Link
+                      href="/dental-staff"
                       className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Meet Our Doctors
                     </Link>
-                    <Link 
-                      href="/office" 
+                    <Link
+                      href="/office"
                       className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Office Gallery
                     </Link>
-                    <Link 
-                      href="/smile-gallery" 
+                    <Link
+                      href="/smile-gallery"
                       className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Smile Gallery
                     </Link>
-                    <Link 
-                      href="/testimonials" 
+                    <Link
+                      href="/testimonials"
                       className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
@@ -254,10 +264,10 @@ export default function Header() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Mobile Services Section */}
               <div>
-                <button 
+                <button
                   className="text-gray-700 hover:text-primary transition-colors flex items-center justify-between w-full py-2.5 px-4 hover:bg-gray-50 rounded-md font-medium"
                   onClick={() => {
                     setIsServicesOpen(!isServicesOpen);
@@ -267,59 +277,69 @@ export default function Header() {
                   aria-expanded={isServicesOpen}
                 >
                   <span>Services</span>
-                  <svg 
-                    className={`w-5 h-5 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} 
-                    fill="none" 
-                    stroke="currentColor" 
+                  <svg
+                    className={`w-5 h-5 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                
-                <div 
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isServicesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                  }`}
+
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${isServicesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    }`}
                 >
                   <div className="ml-4 mt-1 mb-2 space-y-0.5 border-l-2 border-primary pl-4">
-                    <Link 
-                      href="/dental-services" 
+                    <Link
+                      href="/dental-services"
                       className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       All Services
                     </Link>
-                    <Link 
-                      href="/general-dentistry" 
+                    <Link
+                      href="/general-dentistry"
                       className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       General Dentistry
                     </Link>
-                    <Link 
-                      href="/dental-implants" 
-                      className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Dental Implants
-                    </Link>
-                    <Link 
-                      href="/all-on-4-implant-dentures" 
+                    <div className="py-1">
+                      <Link
+                        href="/dental-implants"
+                        className="block py-2 text-gray-800 font-medium hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Dental Implants
+                      </Link>
+                      <div className="pl-4 border-l-2 border-gray-100 ml-2 space-y-1">
+                        <Link
+                          href="/services/dental-implants-all-on-4-faqs-stockton"
+                          className="block py-1.5 text-sm text-gray-600 hover:text-primary rounded-md px-2 transition-colors"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          Dental Implants & All-on-4® FAQs
+                        </Link>
+                      </div>
+                    </div>
+                    <Link
+                      href="/all-on-4-implant-dentures"
                       className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       All-on-4® Implant Dentures
                     </Link>
-                    <Link 
-                      href="/invisalign" 
+                    <Link
+                      href="/invisalign"
                       className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Invisalign
                     </Link>
-                    <Link 
-                      href="/platelet-rich-fibrin-therapy-prf" 
+                    <Link
+                      href="/platelet-rich-fibrin-therapy-prf"
                       className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
@@ -328,18 +348,18 @@ export default function Header() {
                   </div>
                 </div>
               </div>
-              
-              <Link 
-                href="/blog" 
+
+              <Link
+                href="/blog"
                 className="text-gray-700 hover:text-primary transition-colors py-2.5 px-4 hover:bg-gray-50 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Blog
               </Link>
-              
+
               {/* Mobile Resources Section */}
               <div>
-                <button 
+                <button
                   className="text-gray-700 hover:text-primary transition-colors flex items-center justify-between w-full py-2.5 px-4 hover:bg-gray-50 rounded-md font-medium"
                   onClick={() => {
                     setIsResourcesOpen(!isResourcesOpen);
@@ -349,31 +369,30 @@ export default function Header() {
                   aria-expanded={isResourcesOpen}
                 >
                   <span>Resources</span>
-                  <svg 
-                    className={`w-5 h-5 transition-transform duration-200 ${isResourcesOpen ? 'rotate-180' : ''}`} 
-                    fill="none" 
-                    stroke="currentColor" 
+                  <svg
+                    className={`w-5 h-5 transition-transform duration-200 ${isResourcesOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                
-                <div 
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isResourcesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                  }`}
+
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${isResourcesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    }`}
                 >
                   <div className="ml-4 mt-1 mb-2 space-y-0.5 border-l-2 border-primary pl-4">
-                    <Link 
-                      href="/resources" 
+                    <Link
+                      href="/resources"
                       className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       All Resources
                     </Link>
-                    <Link 
-                      href="/patient-education" 
+                    <Link
+                      href="/patient-education"
                       className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
@@ -382,25 +401,25 @@ export default function Header() {
                   </div>
                 </div>
               </div>
-              
-              <Link 
-                href="/contact" 
+
+              <Link
+                href="/contact"
                 className="text-gray-700 hover:text-primary transition-colors py-2.5 px-4 hover:bg-gray-50 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
               </Link>
-              
+
               <div className="pt-4 mt-4 border-t border-gray-200">
                 <p className="text-sm text-accent mb-1">Call us today</p>
-                <a 
-                  href="tel:(209) 955-1800" 
+                <a
+                  href="tel:(209) 955-1800"
                   className="block font-semibold text-primary hover:text-primary-dark transition-colors mb-3 text-lg"
                 >
                   (209) 955-1800
                 </a>
-                <Link 
-                  href="/appointment" 
+                <Link
+                  href="/appointment"
                   className="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-dark transition-colors w-full block text-center font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >

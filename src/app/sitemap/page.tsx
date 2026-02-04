@@ -16,6 +16,7 @@ export default function SitemapPage() {
     { path: '/general-dentistry', name: 'General Dentistry' },
     { path: '/dental-implants', name: 'Dental Implants' },
     { path: '/all-on-4-implant-dentures', name: 'All-on-4 Implant Dentures' },
+    { path: '/services/dental-implants-all-on-4-faqs-stockton', name: 'Dental Implants & All-on-4® FAQs' },
     { path: '/invisalign', name: 'Invisalign' },
     { path: '/platelet-rich-fibrin-therapy-prf', name: 'Platelet Rich Fibrin Therapy (PRF)' },
     { path: '/patient-education', name: 'Patient Education' },
@@ -88,7 +89,7 @@ export default function SitemapPage() {
           <ul className="space-y-2">
             {routes.map((route) => (
               <li key={route.path}>
-                <Link 
+                <Link
                   href={route.path}
                   className="text-blue-600 hover:text-blue-800 hover:underline transition-colors"
                 >

@@ -1,14 +1,14 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Header from '../../components/Header';
+import Header from '../../../components/Header';
 
 export default function DentalImplantsAllOn4FaqsPage() {
 
   // Set meta tags dynamically
   useEffect(() => {
     document.title = 'Dental Implants & All-on-4® FAQs | Nu Smile Dental Stockton, CA';
-    
+
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
@@ -167,7 +167,7 @@ export default function DentalImplantsAllOn4FaqsPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative py-16 md:py-32 bg-gradient-to-br from-primary to-secondary mt-24">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -198,43 +198,43 @@ export default function DentalImplantsAllOn4FaqsPage() {
                 <h2 className={`text-[18px] md:text-2xl font-bold text-gray-900 mb-4 text-center md:text-left ${sectionIndex === 0 ? 'pt-0' : 'pt-4 border-t border-gray-200'}`} style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                   {section.title}
                 </h2>
-                
+
                 {/* Section FAQs */}
                 {section.faqs.map((faq) => (
-                    <div key={faq.globalIndex} className="bg-white border border-gray-200 rounded-lg overflow-hidden">
-                      <button
-                        className="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-200 flex items-center justify-between"
-                        onClick={() => {
-                          const newOpenFaqs = new Set(openFaqs);
-                          if (newOpenFaqs.has(faq.globalIndex)) {
-                            newOpenFaqs.delete(faq.globalIndex);
-                          } else {
-                            newOpenFaqs.add(faq.globalIndex);
-                          }
-                          setOpenFaqs(newOpenFaqs);
-                        }}
+                  <div key={faq.globalIndex} className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                    <button
+                      className="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-200 flex items-center justify-between"
+                      onClick={() => {
+                        const newOpenFaqs = new Set(openFaqs);
+                        if (newOpenFaqs.has(faq.globalIndex)) {
+                          newOpenFaqs.delete(faq.globalIndex);
+                        } else {
+                          newOpenFaqs.add(faq.globalIndex);
+                        }
+                        setOpenFaqs(newOpenFaqs);
+                      }}
+                    >
+                      <h3 className="text-[16px] md:text-[16px] font-semibold text-gray-900" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                        {faq.question}
+                      </h3>
+                      <svg
+                        className={`w-5 h-5 text-gray-500 transition-transform duration-200 ${openFaqs.has(faq.globalIndex) ? 'rotate-180' : ''}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
                       >
-                        <h3 className="text-[16px] md:text-[16px] font-semibold text-gray-900" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                          {faq.question}
-                        </h3>
-                        <svg 
-                          className={`w-5 h-5 text-gray-500 transition-transform duration-200 ${openFaqs.has(faq.globalIndex) ? 'rotate-180' : ''}`} 
-                          fill="none" 
-                          stroke="currentColor" 
-                          viewBox="0 0 24 24"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </button>
-                      <div className={`overflow-hidden transition-all duration-300 ${openFaqs.has(faq.globalIndex) ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                        <div className="px-6 py-4 bg-white">
-                          <p className="text-gray-700 leading-relaxed text-[16px]" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                            {faq.answer}
-                          </p>
-                        </div>
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    <div className={`overflow-hidden transition-all duration-300 ${openFaqs.has(faq.globalIndex) ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                      <div className="px-6 py-4 bg-white">
+                        <p className="text-gray-700 leading-relaxed text-[16px]" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                          {faq.answer}
+                        </p>
                       </div>
                     </div>
-                  ))}
+                  </div>
+                ))}
               </div>
             ))}
           </div>
