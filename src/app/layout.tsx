@@ -24,7 +24,6 @@ export const metadata: Metadata = {
   verification: {
     google: [
       'OY7qYQ2lQOQHb8mHVwN439Szytkj0EXjSeAsRh3AdVw', // General
-      'Wridp05slnEXWXgSos5uepSV0x9zBFYwRFJCoo1sDtU', // Spreckels park
     ],
   },
 };
