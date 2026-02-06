@@ -15,6 +15,7 @@ export default function NewBlogPostPage() {
   const [formData, setFormData] = useState<BlogFormData>({
     title: '',
     content: '',
+    excerpt: '',
     imageUrl: '',
     tags: [],
     status: 'draft',
@@ -61,13 +62,13 @@ export default function NewBlogPostPage() {
 
       // Upload to Cloudinary
       const imageUrl = await uploadImageToCloudinary(file);
-      
+
       clearInterval(progressInterval);
       setUploadProgress(100);
 
       // Update form data with Cloudinary URL
       setFormData(prev => ({ ...prev, imageUrl }));
-      
+
       alert('Image uploaded successfully!');
     } catch (error: any) {
       console.error('Error uploading image:', error);
@@ -80,7 +81,7 @@ export default function NewBlogPostPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validate mandatory fields
     if (!formData.title.trim()) {
       alert('Please enter a post title');
@@ -167,6 +168,23 @@ export default function NewBlogPostPage() {
                 />
               </div>
 
+              {/* Excerpt */}
+              <div>
+                <label htmlFor="excerpt" className="block text-sm font-medium text-gray-700 mb-2">
+                  Excerpt (Summary for blog main page)
+                </label>
+                <textarea
+                  id="excerpt"
+                  name="excerpt"
+                  value={formData.excerpt}
+                  onChange={handleInputChange}
+                  rows={3}
+                  placeholder="A short summary of the post to show on the blog listing page..."
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+                />
+              </div>
+
               {/* Upload Image - Mandatory */}
               <div>
                 <label htmlFor="imageUpload" className="block text-sm font-medium text-gray-700 mb-2">
@@ -189,28 +207,28 @@ export default function NewBlogPostPage() {
                         disabled:opacity-50 disabled:cursor-not-allowed"
                     />
                   </div>
-                  
+
                   {uploading && (
                     <div className="w-full bg-gray-200 rounded-full h-2.5">
-                      <div 
+                      <div
                         className="bg-blue-600 h-2.5 rounded-full transition-all duration-300"
                         style={{ width: `${uploadProgress}%` }}
                       ></div>
                       <p className="text-sm text-gray-600 mt-1">Uploading... {uploadProgress}%</p>
                     </div>
                   )}
-                  
+
                   <p className="text-sm text-gray-500">
                     Upload image to Cloudinary CDN. Supported: JPG, PNG, WebP, GIF (Max 10MB)
                   </p>
-                  
+
                   {formData.imageUrl && (
                     <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-md">
                       <p className="text-sm font-medium text-green-800 mb-2">✓ Image Uploaded Successfully</p>
-                      <img 
-                        src={formData.imageUrl} 
-                        alt="Preview" 
-                        className="max-w-full h-auto max-h-96 object-contain rounded-md border border-gray-300 mb-2" 
+                      <img
+                        src={formData.imageUrl}
+                        alt="Preview"
+                        className="max-w-full h-auto max-h-96 object-contain rounded-md border border-gray-300 mb-2"
                       />
                       <p className="text-xs text-gray-600 break-all">
                         Cloudinary URL: {formData.imageUrl}

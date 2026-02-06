@@ -3,6 +3,7 @@ export interface BlogPost {
   title: string;
   description?: string;
   content: string;
+  excerpt?: string;
   imageUrl: string;
   publishDate: string;
   slug: string;
@@ -26,6 +27,7 @@ export interface BlogFormData {
   title: string;
   description?: string;
   content: string;
+  excerpt?: string;
   imageUrl: string;
   publishDate: string;
   slug: string;
