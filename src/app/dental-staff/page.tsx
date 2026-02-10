@@ -1,7 +1,13 @@
-'use client';
+
 
 import React from 'react';
+import type { Metadata } from 'next';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: "Meet the Dental Team | NuSmile Dental",
+  description: "Get to know the caring dental team at NuSmile Dental committed to providing personalized and comfortable dental treatment.",
+};
 import Link from 'next/link';
 import Header from '../../components/Header';
 
@@ -63,7 +69,7 @@ export default function DentalStaffPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative py-16 md:py-32 bg-gradient-to-br from-primary to-secondary mt-24">
         <div className="absolute inset-0">

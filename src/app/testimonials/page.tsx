@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: "Patient Testimonials & Reviews Stockton",
+  description: "Read real reviews and watch testimonials from happy NuSmile Dental patients who transformed their smiles with us.",
+};
 import Link from 'next/link';
 import Header from '../../components/Header';
 
@@ -64,7 +70,7 @@ export default function TestimonialsPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative py-16 md:py-32 bg-gradient-to-br from-primary to-secondary mt-24">
         <div className="absolute inset-0">

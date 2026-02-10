@@ -1,6 +1,10 @@
-'use client';
-
+import type { Metadata } from "next";
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: "PRF Therapy for Dental Healing Stockton",
+  description: "Learn how platelet-rich fibrin therapy enhances healing after dental procedures and supports faster recovery at NuSmile Dental.",
+};
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '../../components/Header';
@@ -9,7 +13,7 @@ export default function PlateletRichFibrinTherapyPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative py-16 md:py-32 bg-gradient-to-br from-primary to-secondary mt-24">
         <div className="absolute inset-0">
@@ -102,7 +106,7 @@ export default function PlateletRichFibrinTherapyPage() {
                     <strong>Nusmile Dental</strong> is one of the first offices in the Central Valley area practicing in PRF Therapy during oral surgery since 2015 with hundreds of procedures with excellent end results.
                   </p>
                 </div>
-                
+
                 <div className="bg-white rounded-xl p-8 shadow-lg">
                   <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                     Enhanced Healing Benefits

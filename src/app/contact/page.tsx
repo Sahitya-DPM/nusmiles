@@ -1,6 +1,10 @@
-'use client';
-
+import type { Metadata } from "next";
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: "Contact NuSmile Dental | Stockton Dentist",
+  description: "Contact NuSmile Dental to schedule visits, ask questions, or learn more about dental treatment options and patient care services.",
+};
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Header';
@@ -9,7 +13,7 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative py-16 md:py-32 bg-gradient-to-br from-primary to-secondary mt-24">
         <div className="absolute inset-0">
@@ -43,7 +47,7 @@ const ContactPage = () => {
               1801 E March Ln suite a-165, Stockton, CA, 95210, USA
             </p>
           </div>
-          
+
           {/* Google Maps Embed */}
           <div className="w-full h-96 md:h-[500px]">
             <iframe

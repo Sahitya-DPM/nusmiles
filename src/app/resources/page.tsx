@@ -1,6 +1,10 @@
-'use client';
-
+import type { Metadata } from "next";
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: "Patient Resources & Smile Gallery",
+  description: "Explore patient resources including our smile gallery, financial options, and dental health information.",
+};
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Header';
@@ -24,7 +28,7 @@ const ResourcesPage = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative h-80 md:h-96 flex items-center justify-center mt-24">
         <Image
@@ -85,7 +89,7 @@ const ResourcesPage = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link 
+                  <Link
                     href={resource.link}
                     className="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-dark transition-colors font-semibold text-[15px] md:text-base"
                     style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
@@ -109,14 +113,14 @@ const ResourcesPage = () => {
             Join our family of satisfied patients and discover why Nu Smile Dental is the trusted choice for dental care in Stockton.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <Link
               href="/appointment"
               className="bg-white text-primary px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-[15px] md:text-base"
               style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
             >
               Book Appointment
             </Link>
-            <a 
+            <a
               href="tel:(209) 955-1800"
               className="bg-transparent text-white border-2 border-white px-8 py-3 rounded-lg hover:bg-white hover:text-primary transition-colors font-semibold text-[15px] md:text-base"
               style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}

@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: "Complete Dental Services in Stockton",
+  description: "Explore comprehensive dental services at NuSmile Dental including preventive, cosmetic, restorative, and implant dentistry in Stockton.",
+};
 import Link from 'next/link';
 import Header from '../../components/Header';
 
@@ -73,7 +79,7 @@ export default function DentalServicesPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative py-16 md:py-32 bg-gradient-to-br from-primary to-secondary mt-24">
         <div className="absolute inset-0">
@@ -131,12 +137,12 @@ export default function DentalServicesPage() {
                     </h3>
                   </div>
                 </div>
-                
+
                 <div className="p-8">
                   <p className="text-gray-700 text-[16px] md:text-[16px] mb-6 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                     {service.description}
                   </p>
-                  
+
                   <div className="space-y-3">
                     <h4 className="font-semibold text-primary text-[16px] md:text-[16px] mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                       Services Include:
@@ -170,7 +176,7 @@ export default function DentalServicesPage() {
               Complete dental care solutions for every member of your family
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {additionalServices.map((service, index) => (
               <div key={index} className="bg-gray-50 p-6 rounded-lg text-center hover:bg-primary hover:text-white transition-colors duration-300">
@@ -193,7 +199,7 @@ export default function DentalServicesPage() {
               </h2>
               <div className="w-24 h-1 bg-red-500 mx-auto rounded-full mb-6"></div>
             </div>
-            
+
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
                 <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -208,7 +214,7 @@ export default function DentalServicesPage() {
                   </p>
                 </div>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-24 h-24 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

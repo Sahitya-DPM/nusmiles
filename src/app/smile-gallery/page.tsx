@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: "Smile Gallery | NuSmile Dental Results",
+  description: "View real patient smile transformations from NuSmile Dental showcasing cosmetic, restorative, and implant dentistry results.",
+};
 import Link from 'next/link';
 import Header from '../../components/Header';
 
@@ -21,7 +27,7 @@ export default function SmileGalleryPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative py-16 md:py-32 bg-gradient-to-br from-primary to-secondary mt-24">
         <div className="absolute inset-0">
@@ -83,7 +89,7 @@ export default function SmileGalleryPage() {
             </h2>
             <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
             <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-              Join our satisfied patients who have experienced life-changing smile transformations. 
+              Join our satisfied patients who have experienced life-changing smile transformations.
               Our team of experts is ready to help you achieve the smile you've always dreamed of.
             </p>
           </div>

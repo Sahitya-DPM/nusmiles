@@ -1,6 +1,10 @@
-'use client';
-
+import type { Metadata } from "next";
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: "NuSmile Dental Office Information Stockton",
+  description: "Find office details, directions, hours, and patient information for visiting NuSmile Dental in Stockton comfortably.",
+};
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '../../components/Header';
@@ -25,7 +29,7 @@ export default function OfficePage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative py-16 md:py-32 bg-gradient-to-br from-primary to-secondary mt-24">
         <div className="absolute inset-0">
@@ -177,7 +181,7 @@ export default function OfficePage() {
             </h2>
             <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
           </div>
-          
+
           <div className="max-w-3xl mx-auto text-center">
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
