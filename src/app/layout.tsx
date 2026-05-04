@@ -8,8 +8,8 @@ import { AuthProvider } from "../contexts/AuthContext";
 
 
 export const metadata: Metadata = {
-  title: "Dental Experts - Your Family's Best Dentist in Fresno, CA",
-  description: "Life-Changing Dental Implants. Painless Dental Veneers. Same-Day Emergency Appointments. Interest-Free Financing Available. Free Financing Consults. Se Habla EspaÃ±ol.",
+  title: "NuSmile Dental | Family Dentist in Stockton",
+  description: "Visit NuSmile Dental for modern, comfortable dental care in Stockton offering implants, Invisalign, and general dentistry for all ages.",
   keywords: "dentist, dental implants, veneers, emergency dental, Fresno, CA, family dentist",
   icons: {
     icon: [
