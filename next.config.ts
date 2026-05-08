@@ -136,6 +136,25 @@ const nextConfig: NextConfig = {
   compress: true,
   // Optimize production builds
   productionBrowserSourceMaps: false,
+  async redirects() {
+    return [
+      {
+        source: '/sitemap',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/patient-education/root-canal-therapy',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/patient-education/dentures',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
