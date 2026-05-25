@@ -66,7 +66,7 @@ export default function BlogPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-            Our Blog
+            Blog
           </h1>
           <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Stay updated with the latest dental health tips, treatments, and insights

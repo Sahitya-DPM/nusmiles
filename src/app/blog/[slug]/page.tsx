@@ -86,16 +86,14 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     // Meta Description
     updateMetaTag('description', blogPost.metaDescription || blogPost.description || '');
     
-    // Canonical URL
+    // Canonical URL — always use this page's URL
     let canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (blogPost.canonicalUrl) {
-      if (!canonicalLink) {
-        canonicalLink = document.createElement('link');
-        canonicalLink.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonicalLink);
-      }
-      canonicalLink.setAttribute('href', blogPost.canonicalUrl);
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalLink);
     }
+    canonicalLink.setAttribute('href', postUrl);
     
     // Open Graph tags
     updateMetaTag('og:type', 'article', true);
