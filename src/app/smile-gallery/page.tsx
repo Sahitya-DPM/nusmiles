@@ -4,7 +4,6 @@ import Header from '../../components/Header';
 
 export default function SmileGalleryPage() {
   const galleryImages = [
-    '/Copy of Copy of JOSUE RUIZ 1-COLLAGE.jpg',
     '/Copy of Copy of M.C BEFORE-COLLAGE.jpg',
     '/Copy of Copy of MICAH P 1-COLLAGE.jpg',
     '/Copy of Copy of N.A BEFORE-COLLAGE.jpg',

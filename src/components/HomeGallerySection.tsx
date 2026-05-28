@@ -7,7 +7,7 @@ export default function HomeGallerySection() {
       id: 1,
       title: 'Cosmetic Dentistry',
       category: 'Smile Transformation',
-      collageImage: '/Copy of Copy of JOSUE RUIZ 1-COLLAGE.jpg',
+      collageImage: '/CopyofCopyofSALG1-COLLAGE.avif',
     },
     {
       id: 2,
