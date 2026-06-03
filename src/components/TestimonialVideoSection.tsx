@@ -1,11 +1,6 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import { useState } from "react";
 
 export default function TestimonialVideoSection() {
   const testimonialVideos = [
@@ -25,6 +20,20 @@ export default function TestimonialVideoSection() {
       videoUrl: "/4.mp4",
     },
   ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) =>
+      prev === testimonialVideos.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) =>
+      prev === 0 ? testimonialVideos.length - 1 : prev - 1
+    );
+  };
 
   return (
     <section className="py-10 md:py-20 bg-white">
@@ -53,49 +62,59 @@ export default function TestimonialVideoSection() {
           </p>
         </div>
 
-        {/* Video Carousel */}
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={24}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          loop={true}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-          breakpoints={{
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
-          className="pb-14"
-        >
-          {testimonialVideos.map((video) => (
-            <SwiperSlide key={video.id}>
-              <div className="bg-black rounded-2xl overflow-hidden shadow-xl">
-                <video
-                  className="w-full h-auto"
-                  controls
-                  controlsList="nodownload"
-                  preload="metadata"
-                  style={{ maxHeight: "400px" }}
-                >
-                  <source src={video.videoUrl} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
+        {/* Carousel */}
+        <div className="relative max-w-4xl mx-auto">
+          <div className="bg-black rounded-2xl overflow-hidden shadow-2xl">
+            <video
+              key={testimonialVideos[currentIndex].videoUrl}
+              className="w-full h-auto"
+              controls
+              controlsList="nodownload"
+              style={{ maxHeight: "500px" }}
+            >
+              <source
+                src={testimonialVideos[currentIndex].videoUrl}
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
 
-              <h3 className="text-center mt-4 text-lg font-semibold text-gray-800">
-                {video.title}
-              </h3>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+          <h3 className="text-center mt-4 text-lg font-semibold text-gray-800">
+            {testimonialVideos[currentIndex].title}
+          </h3>
+
+          {/* Previous Button */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold"
+          >
+            ‹
+          </button>
+
+          {/* Next Button */}
+          <button
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold"
+          >
+            ›
+          </button>
+
+          {/* Dots */}
+          <div className="flex justify-center gap-2 mt-6">
+            {testimonialVideos.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all ${
+                  currentIndex === index
+                    ? "bg-primary"
+                    : "bg-gray-300"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
