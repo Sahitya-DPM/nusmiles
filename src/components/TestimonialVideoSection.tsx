@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 export default function TestimonialVideoSection() {
   const testimonialVideos = [
     {
@@ -29,6 +31,20 @@ export default function TestimonialVideoSection() {
     },
   ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) =>
+      prev >= testimonialVideos.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) =>
+      prev <= 0 ? testimonialVideos.length - 1 : prev - 1
+    );
+  };
+
   return (
     <section className="py-10 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,24 +72,68 @@ export default function TestimonialVideoSection() {
           </p>
         </div>
 
-        {/* Videos */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonialVideos.map((video) => (
-            <div
-              key={video.id}
-              className="bg-black rounded-2xl overflow-hidden shadow-xl"
-            >
+        {/* Carousel */}
+        <div className="relative">
+          {/* Desktop - Show 3 Videos */}
+          <div className="hidden md:grid md:grid-cols-3 gap-6">
+            {[0, 1, 2].map((offset) => {
+              const video =
+                testimonialVideos[
+                  (currentIndex + offset) % testimonialVideos.length
+                ];
+
+              return (
+                <div
+                  key={video.id}
+                  className="bg-black rounded-2xl overflow-hidden shadow-xl"
+                >
+                  <video
+                    controls
+                    preload="metadata"
+                    playsInline
+                    className="w-full h-[350px] object-cover"
+                  >
+                    <source src={video.videoUrl} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Mobile - Show 1 Video */}
+          <div className="md:hidden">
+            <div className="bg-black rounded-2xl overflow-hidden shadow-xl">
               <video
-                src={video.videoUrl}
                 controls
                 preload="metadata"
                 playsInline
-                className="w-full h-[300px] object-cover"
+                className="w-full"
               >
+                <source
+                  src={testimonialVideos[currentIndex].videoUrl}
+                  type="video/mp4"
+                />
                 Your browser does not support the video tag.
               </video>
             </div>
-          ))}
+          </div>
+
+          {/* Previous Button */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-2 md:-left-5 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center z-10 text-xl"
+          >
+            ‹
+          </button>
+
+          {/* Next Button */}
+          <button
+            onClick={nextSlide}
+            className="absolute right-2 md:-right-5 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center z-10 text-xl"
+          >
+            ›
+          </button>
         </div>
       </div>
     </section>
