@@ -7,27 +7,27 @@ export default function TestimonialVideoSection() {
     {
       id: 1,
       title: "Patient Success Story 1",
-      videoUrl: "/video1.mp4",
+      videoUrl: "/video 1.mov",
     },
     {
       id: 2,
       title: "Patient Success Story 2",
-      videoUrl: "/video2.mp4",
+      videoUrl: "/video 2.mov",
     },
     {
       id: 3,
       title: "Patient Success Story 3",
-      videoUrl: "/video3.mp4",
+      videoUrl: "/video 1.mov",
     },
     {
       id: 4,
       title: "Patient Success Story 4",
-      videoUrl: "/video4.mp4",
+      videoUrl: "/video 2.mov",
     },
     {
       id: 5,
       title: "Patient Success Story 5",
-      videoUrl: "/video5.mp4",
+      videoUrl: "/video 1.mov",
     },
   ];
 
