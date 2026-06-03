@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
 export default function TestimonialVideoSection() {
   const testimonialVideos = [
     {
@@ -31,18 +29,6 @@ export default function TestimonialVideoSection() {
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const maxIndex = Math.max(0, testimonialVideos.length - 3);
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
-  };
-
   return (
     <section className="py-10 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,7 +43,7 @@ export default function TestimonialVideoSection() {
             Patient Video Testimonials
           </h2>
 
-          <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6" />
+          <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6"></div>
 
           <p
             className="text-[16px] text-gray-600 max-w-3xl mx-auto"
@@ -70,79 +56,24 @@ export default function TestimonialVideoSection() {
           </p>
         </div>
 
-        {/* Carousel */}
-        <div className="relative">
-          {/* Desktop */}
-          <div className="hidden md:block overflow-hidden">
+        {/* Videos */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {testimonialVideos.map((video) => (
             <div
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{
-                transform: `translateX(-${currentIndex * 33.3333}%)`,
-              }}
+              key={video.id}
+              className="bg-black rounded-2xl overflow-hidden shadow-xl"
             >
-              {testimonialVideos.map((video) => (
-                <div
-                  key={video.id}
-                  className="w-1/3 flex-shrink-0 px-3"
-                >
-                  <div className="bg-black rounded-2xl overflow-hidden shadow-xl">
-                    <video
-                      src={video.videoUrl}
-                      controls
-                      preload="metadata"
-                      className="w-full h-auto"
-                    >
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                </div>
-              ))}
+              <video
+                src={video.videoUrl}
+                controls
+                preload="metadata"
+                playsInline
+                className="w-full h-[300px] object-cover"
+              >
+                Your browser does not support the video tag.
+              </video>
             </div>
-          </div>
-
-          {/* Mobile */}
-          <div className="md:hidden overflow-hidden">
-            <div
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{
-                transform: `translateX(-${currentIndex * 100}%)`,
-              }}
-            >
-              {testimonialVideos.map((video) => (
-                <div
-                  key={video.id}
-                  className="w-full flex-shrink-0 px-2"
-                >
-                  <div className="bg-black rounded-2xl overflow-hidden shadow-xl">
-                    <video
-                      src={video.videoUrl}
-                      controls
-                      preload="metadata"
-                      className="w-full h-auto"
-                    >
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Previous */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center z-10"
-          >
-            ‹
-          </button>
-
-          {/* Next */}
-          <button
-            onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center z-10"
-          >
-            ›
-          </button>
+          ))}
         </div>
       </div>
     </section>
