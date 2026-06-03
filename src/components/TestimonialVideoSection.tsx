@@ -19,20 +19,28 @@ export default function TestimonialVideoSection() {
       title: "Patient Success Story 3",
       videoUrl: "/4.mp4",
     },
+    {
+      id: 4,
+      title: "Patient Success Story 4",
+      videoUrl: "/5.mp4",
+    },
+    {
+      id: 5,
+      title: "Patient Success Story 5",
+      videoUrl: "/6.mp4",
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const maxIndex = Math.max(0, testimonialVideos.length - 3);
+
   const nextSlide = () => {
-    setCurrentIndex((prev) =>
-      prev === testimonialVideos.length - 1 ? 0 : prev + 1
-    );
+    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? testimonialVideos.length - 1 : prev - 1
-    );
+    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
   };
 
   return (
@@ -63,31 +71,67 @@ export default function TestimonialVideoSection() {
         </div>
 
         {/* Carousel */}
-        <div className="relative max-w-4xl mx-auto">
-          <div className="bg-black rounded-2xl overflow-hidden shadow-2xl">
-            <video
-              key={testimonialVideos[currentIndex].videoUrl}
-              className="w-full h-auto"
-              controls
-              controlsList="nodownload"
-              style={{ maxHeight: "500px" }}
+        <div className="relative">
+          {/* Desktop */}
+          <div className="hidden md:block overflow-hidden">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{
+                transform: `translateX(-${currentIndex * 33.333}%)`,
+              }}
             >
-              <source
-                src={testimonialVideos[currentIndex].videoUrl}
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
+              {testimonialVideos.map((video) => (
+                <div
+                  key={video.id}
+                  className="w-1/3 flex-shrink-0 px-3"
+                >
+                  <div className="bg-black rounded-2xl overflow-hidden shadow-2xl">
+                    <video
+                      className="w-full h-auto"
+                      controls
+                      controlsList="nodownload"
+                    >
+                      <source src={video.videoUrl} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <h3 className="text-center mt-4 text-lg font-semibold text-gray-800">
-            {testimonialVideos[currentIndex].title}
-          </h3>
+          {/* Mobile */}
+          <div className="md:hidden overflow-hidden">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{
+                transform: `translateX(-${currentIndex * 100}%)`,
+              }}
+            >
+              {testimonialVideos.map((video) => (
+                <div
+                  key={video.id}
+                  className="w-full flex-shrink-0 px-2"
+                >
+                  <div className="bg-black rounded-2xl overflow-hidden shadow-2xl">
+                    <video
+                      className="w-full h-auto"
+                      controls
+                      controlsList="nodownload"
+                    >
+                      <source src={video.videoUrl} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* Previous Button */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold"
+            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center z-10"
           >
             ‹
           </button>
@@ -95,25 +139,10 @@ export default function TestimonialVideoSection() {
           {/* Next Button */}
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold"
+            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center z-10"
           >
             ›
           </button>
-
-          {/* Dots */}
-          <div className="flex justify-center gap-2 mt-6">
-            {testimonialVideos.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all ${
-                  currentIndex === index
-                    ? "bg-primary"
-                    : "bg-gray-300"
-                }`}
-              />
-            ))}
-          </div>
         </div>
       </div>
     </section>
