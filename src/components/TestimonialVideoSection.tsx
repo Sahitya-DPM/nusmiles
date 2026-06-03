@@ -28,12 +28,7 @@ export default function TestimonialVideoSection() {
       id: 4,
       title: "Patient Success Story 4",
       videoUrl: "/5.mov",
-    },
-    {
-      id: 5,
-      title: "Patient Success Story 5",
-      videoUrl: "/6.mp4",
-    },
+    }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
