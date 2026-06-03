@@ -3,12 +3,17 @@ export default function TestimonialVideoSection() {
     {
       id: 1,
       title: 'Patient Success Story 1',
-      videoUrl: '/video 1.MOV'
+      videoUrl: '/1.mp4'
     },
     {
       id: 2,
       title: 'Patient Success Story 2',
-      videoUrl: '/video 2.MOV'
+      videoUrl: '/3.mp4'
+    },
+    {
+      id: 2,
+      title: 'Patient Success Story 2',
+      videoUrl: '/4.mp4'
     }
   ];
 
