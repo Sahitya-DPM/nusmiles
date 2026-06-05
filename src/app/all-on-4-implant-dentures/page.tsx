@@ -73,7 +73,7 @@ export default function AllOn4ImplantDenturesPage() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-            All-on-4Â® Implant Dentures
+            All-on-4A® Implant Dentures
           </h1>
           <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Revolutionary implant-supported denture treatment in Stockton, CA
@@ -92,7 +92,7 @@ export default function AllOn4ImplantDenturesPage() {
               <div className="w-24 h-1 bg-primary rounded-full mb-8 mx-auto lg:mx-0"></div>
               <div className="space-y-6 text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 <p className="text-[16px] md:text-[16px] leading-relaxed">
-                  All-on-4Â® implant-supported denture treatment is the process of placing a minimum of four dental implants in each jaw to stabilize a non-removable denture. It combines the best of both worlds: the ability to restore a fully edentulous arch with the stability of dental implants.
+                  All-on-4A® implant-supported denture treatment is the process of placing a minimum of four dental implants in each jaw to stabilize a non-removable denture. It combines the best of both worlds: the ability to restore a fully edentulous arch with the stability of dental implants.
                 </p>
                 <p className="text-[16px] md:text-[16px] leading-relaxed">
                   Standard dentures are stabilized and retained on the ridge of the jaws, making them likely to move around when eating and speaking. Implant-supported dentures provide much stronger support as the implants act as an anchor for the dentures to provide an easier experience for you, our patient.
@@ -123,7 +123,7 @@ export default function AllOn4ImplantDenturesPage() {
               Treatment Process
             </h2>
             <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-              Our comprehensive approach to All-on-4Â® implant dentures
+              Our comprehensive approach to All-on-4A® implant dentures
             </p>
           </div>
 
@@ -152,7 +152,7 @@ export default function AllOn4ImplantDenturesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-              All-on-4Â® Pricing Options
+              All-on-4A® Pricing Options
             </h2>
             <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Transparent pricing for all your implant denture needs
