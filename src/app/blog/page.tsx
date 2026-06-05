@@ -46,7 +46,16 @@ export default function BlogPage() {
     });
   };
 
-
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-white">
+        <Header />
+        <div className="flex justify-center items-center min-h-screen">
+          <div className="text-xl">Loading blog posts...</div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -57,7 +66,7 @@ export default function BlogPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-            Our Blog
+            Blog
           </h1>
           <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
             Stay updated with the latest dental health tips, treatments, and insights
@@ -145,7 +154,7 @@ export default function BlogPage() {
                         {post.title}
                       </h2>
                       <p className="text-gray-600 mb-4 line-clamp-3 text-[16px]" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                        {post.description}
+                        {post.excerpt || post.description}
                       </p>
                       <div className="flex flex-wrap gap-2 mb-4">
                         {post.tags?.map((tag, index) => (

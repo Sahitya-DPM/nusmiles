@@ -1,10 +1,6 @@
-import type { Metadata } from "next";
-import React from 'react';
+'use client';
 
-export const metadata: Metadata = {
-  title: "General Dentistry Services in Stockton",
-  description: "Maintain healthy teeth and gums with preventive and routine general dentistry services designed for long-term oral wellness.",
-};
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '../../components/Header';
@@ -75,7 +71,7 @@ export default function GeneralDentistryPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-
+      
       {/* Hero Section */}
       <section className="relative py-16 md:py-32 bg-gradient-to-br from-primary to-secondary mt-24">
         <div className="absolute inset-0">

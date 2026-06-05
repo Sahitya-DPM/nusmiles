@@ -164,7 +164,7 @@ export default function DoctorSection() {
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 to-transparent z-10"></div>
                 <Image
-                  src="/Shivli Arora.png"
+                  src="/Shivli Arora.jpg"
                   alt="Dr. Shivli Arora DDS"
                   width={600}
                   height={700}

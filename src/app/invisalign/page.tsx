@@ -1,10 +1,4 @@
-import type { Metadata } from "next";
 import Image from 'next/image';
-
-export const metadata: Metadata = {
-  title: "Invisalign Clear Aligners Stockton",
-  description: "Straighten your teeth discreetly with Invisalign clear aligners at NuSmile Dental. Custom treatment for a perfect smile.",
-};
 import Link from 'next/link';
 import Header from '../../components/Header';
 
@@ -38,7 +32,7 @@ export default function InvisalignPage() {
 
   const conditions = [
     "Crookedness",
-    "Crowding",
+    "Crowding", 
     "Gaps",
     "Overbite",
     "Underbite"
@@ -47,7 +41,7 @@ export default function InvisalignPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-
+      
       {/* Hero Section */}
       <section className="relative py-16 md:py-32 bg-gradient-to-br from-primary to-secondary mt-24">
         <div className="absolute inset-0">
@@ -78,11 +72,11 @@ export default function InvisalignPage() {
               <h2 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Transform Your Smile Discreetly
               </h2>
-
+              
               <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Have you ever struggled with oddly spaced or misaligned teeth but never wanted to get braces? That's why our dentists here at NuSmile Dental in Stockton, CA offer a more practical solution! Invisalign is quick and easy and keeps your smile looking natural all while straightening your teeth with minimal effort. You can discreetly straighten your teeth and get confidence in your smile.
               </p>
-
+              
               <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 With Invisalign, you have the ability to eat and drink anything you'd like without restriction, as long as you remove the aligners while eating. Invisalign won't impact your day to day life and won't cause you to change much about your normal lifestyle. In fact, no one will ever notice your aligners and you don't have to disclose the information to anyone you don't want to.
               </p>

@@ -1,27 +1,9 @@
-import type { Metadata } from "next";
 import Image from 'next/image';
-
-export const metadata: Metadata = {
-  title: "Patient Testimonials & Reviews Stockton",
-  description: "Read real reviews and watch testimonials from happy NuSmile Dental patients who transformed their smiles with us.",
-};
 import Link from 'next/link';
 import Header from '../../components/Header';
+import TestimonialVideoSection from '../../components/TestimonialVideoSection';
 
 export default function TestimonialsPage() {
-  const testimonialVideos = [
-    {
-      id: 1,
-      title: 'Patient Success Story 1',
-      videoUrl: '/video 1.MOV'
-    },
-    {
-      id: 2,
-      title: 'Patient Success Story 2',
-      videoUrl: '/video 2.MOV'
-    }
-  ];
-
   const writtenTestimonials = [
     {
       id: 1,
@@ -70,7 +52,7 @@ export default function TestimonialsPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-
+      
       {/* Hero Section */}
       <section className="relative py-16 md:py-32 bg-gradient-to-br from-primary to-secondary mt-24">
         <div className="absolute inset-0">
@@ -93,37 +75,7 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* Video Testimonials Section */}
-      <section className="py-10 md:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-[27px] md:text-5xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-              Video Testimonials
-            </h2>
-            <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6"></div>
-            <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-              Watch our patients share their smile transformation stories
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {testimonialVideos.map((video) => (
-              <div key={video.id} className="relative bg-black rounded-2xl overflow-hidden shadow-2xl">
-                <video
-                  className="w-full h-auto"
-                  controls
-                  controlsList="nodownload"
-                  style={{ maxHeight: '400px' }}
-                >
-                  <source src={video.videoUrl} type="video/quicktime" />
-                  <source src={video.videoUrl} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TestimonialVideoSection showViewAllLink={false} />
 
       {/* Written Testimonials Section */}
       <section className="py-10 md:py-20 bg-white">

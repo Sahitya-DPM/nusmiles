@@ -1,15 +1,15 @@
-import { 
-  collection, 
-  addDoc, 
-  updateDoc, 
-  deleteDoc, 
-  doc, 
-  getDocs, 
-  getDoc, 
-  query, 
-  where, 
+import {
+  collection,
+  addDoc,
+  updateDoc,
+  deleteDoc,
+  doc,
+  getDocs,
+  getDoc,
+  query,
+  where,
   orderBy,
-  serverTimestamp 
+  serverTimestamp
 } from 'firebase/firestore';
 import { db } from './firebase';
 import { BlogPost, BlogFormData } from '../types/blog';
@@ -27,16 +27,16 @@ const checkFirebaseAvailability = () => {
 export const testFirebaseConnection = async () => {
   try {
     checkFirebaseAvailability();
-    
+
     // Test Firestore connection
     const testDoc = await addDoc(collection(db!, 'test'), {
       test: true,
       timestamp: new Date()
     });
-    
+
     // Clean up test document
     await deleteDoc(testDoc);
-    
+
     console.log('Firebase connection test successful');
     return true;
   } catch (error) {
@@ -49,7 +49,7 @@ export const testFirebaseConnection = async () => {
 export const testCreateBlogPost = async (): Promise<string> => {
   try {
     checkFirebaseAvailability();
-    
+
     const testBlogPost = {
       title: 'Test Blog Post',
       description: 'This is a test blog post',
@@ -80,7 +80,7 @@ export const testCreateBlogPost = async (): Promise<string> => {
 export const createBlogPost = async (blogData: BlogFormData): Promise<string> => {
   try {
     checkFirebaseAvailability();
-    
+
     // Image URL is already set to /images/{filename} from the form
     const imageUrl = blogData.imageUrl || '';
 
@@ -98,12 +98,13 @@ export const createBlogPost = async (blogData: BlogFormData): Promise<string> =>
       hasImage: !!imageUrl,
       imageType: imageUrl?.substring(0, 20)
     });
-    
+
     // Convert dates to Firestore Timestamps if needed
     // Normalize slug (trim whitespace) and status (lowercase) for consistency
     const firestoreData: any = {
       title: blogPost.title,
       content: blogPost.content,
+      excerpt: blogPost.excerpt || '',
       imageUrl: imageUrl,
       publishDate: blogPost.publishDate || new Date().toISOString().split('T')[0],
       slug: blogPost.slug?.trim() || '',
@@ -115,10 +116,10 @@ export const createBlogPost = async (blogData: BlogFormData): Promise<string> =>
       createdAt: blogPost.createdAt instanceof Date ? blogPost.createdAt : new Date(blogPost.createdAt),
       updatedAt: blogPost.updatedAt instanceof Date ? blogPost.updatedAt : new Date(blogPost.updatedAt)
     };
-    
+
     // Add optional description field if it exists
     if (blogPost.description) firestoreData.description = blogPost.description;
-    
+
     // Add optional fields if they exist
     if (blogPost.canonicalUrl) firestoreData.canonicalUrl = blogPost.canonicalUrl;
     if (blogPost.ogImageUrl) firestoreData.ogImageUrl = blogPost.ogImageUrl;
@@ -127,7 +128,7 @@ export const createBlogPost = async (blogData: BlogFormData): Promise<string> =>
     if (blogPost.faqCode) firestoreData.faqCode = blogPost.faqCode;
     if (blogPost.medicalConditionCode) firestoreData.medicalConditionCode = blogPost.medicalConditionCode;
     if (blogPost.author) firestoreData.author = blogPost.author;
-    
+
     console.log('Saving to Firestore...');
     const docRef = await addDoc(collection(db!, BLOG_COLLECTION), firestoreData);
     console.log('Blog post created successfully with ID:', docRef.id);
@@ -142,22 +143,22 @@ export const createBlogPost = async (blogData: BlogFormData): Promise<string> =>
 export const getAllBlogPosts = async (): Promise<BlogPost[]> => {
   try {
     checkFirebaseAvailability();
-    
+
     const q = query(collection(db!, BLOG_COLLECTION));
     const querySnapshot = await getDocs(q);
-    
+
     const posts = querySnapshot.docs.map(doc => ({
       id: doc.id,
       ...doc.data()
     })) as BlogPost[];
-    
+
     // Sort by publishDate in descending order (most recent first: 2026, 2025, 2024, etc.)
     posts.sort((a, b) => {
       const dateA = new Date(a.publishDate);
       const dateB = new Date(b.publishDate);
       return dateB.getTime() - dateA.getTime(); // Descending order
     });
-    
+
     return posts;
   } catch (error) {
     console.error('Error getting blog posts:', error);
@@ -169,27 +170,27 @@ export const getAllBlogPosts = async (): Promise<BlogPost[]> => {
 export const getPublishedBlogPosts = async (): Promise<BlogPost[]> => {
   try {
     checkFirebaseAvailability();
-    
+
     // Use a simpler query without orderBy to avoid index requirements
     const q = query(
       collection(db!, BLOG_COLLECTION),
       where('status', '==', 'published')
     );
-    
+
     const querySnapshot = await getDocs(q);
-    
+
     const posts = querySnapshot.docs.map(doc => ({
       id: doc.id,
       ...doc.data()
     })) as BlogPost[];
-    
+
     // Sort by publishDate in descending order (most recent first: 2026, 2025, 2024, etc.)
     posts.sort((a, b) => {
       const dateA = new Date(a.publishDate);
       const dateB = new Date(b.publishDate);
       return dateB.getTime() - dateA.getTime(); // Descending order
     });
-    
+
     return posts;
   } catch (error) {
     console.error('Error getting published blog posts:', error);
@@ -201,10 +202,10 @@ export const getPublishedBlogPosts = async (): Promise<BlogPost[]> => {
 export const getBlogPostById = async (id: string): Promise<BlogPost | null> => {
   try {
     checkFirebaseAvailability();
-    
+
     const docRef = doc(db!, BLOG_COLLECTION, id);
     const docSnap = await getDoc(docRef);
-    
+
     if (docSnap.exists()) {
       return {
         id: docSnap.id,
@@ -223,32 +224,32 @@ export const getBlogPostById = async (id: string): Promise<BlogPost | null> => {
 export const getBlogPostBySlug = async (slug: string): Promise<BlogPost | null> => {
   try {
     checkFirebaseAvailability();
-    
+
     // Normalize slug: trim whitespace and convert to lowercase for comparison
     const normalizedSlug = slug.trim().toLowerCase();
     console.log('Searching for blog post with slug:', slug, '(normalized:', normalizedSlug + ')');
-    
+
     // Helper function to normalize status for comparison
     const normalizeStatus = (status: string | undefined): string => {
       if (!status) return '';
       return String(status).trim().toLowerCase();
     };
-    
+
     // Helper function to normalize slug for comparison
     const normalizeSlugForComparison = (slugValue: string | undefined): string => {
       if (!slugValue) return '';
       return String(slugValue).trim().toLowerCase();
     };
-    
+
     // First try to find by slug only (to debug)
     const qBySlug = query(
       collection(db!, BLOG_COLLECTION),
       where('slug', '==', slug.trim())
     );
     const slugSnapshot = await getDocs(qBySlug);
-    
+
     console.log(`Found ${slugSnapshot.size} post(s) with slug "${slug.trim()}"`);
-    
+
     if (!slugSnapshot.empty) {
       slugSnapshot.docs.forEach((doc, index) => {
         const data = doc.data();
@@ -268,7 +269,7 @@ export const getBlogPostBySlug = async (slug: string): Promise<BlogPost | null> 
           hasMetaTitle: !!data.metaTitle
         });
       });
-      
+
       // Check if any post has status 'published' (case-insensitive)
       const publishedPost = slugSnapshot.docs.find(doc => {
         const data = doc.data();
@@ -276,7 +277,7 @@ export const getBlogPostBySlug = async (slug: string): Promise<BlogPost | null> 
         const docStatus = normalizeStatus(data.status);
         return docSlug === normalizedSlug && docStatus === 'published';
       });
-      
+
       if (publishedPost) {
         const postData = {
           id: publishedPost.id,
@@ -304,7 +305,7 @@ export const getBlogPostBySlug = async (slug: string): Promise<BlogPost | null> 
         console.warn('Please change the post status to "published" in the admin dashboard.');
       }
     }
-    
+
     // Also try the query with status filter (in case there's an index issue)
     try {
       const q = query(
@@ -313,16 +314,16 @@ export const getBlogPostBySlug = async (slug: string): Promise<BlogPost | null> 
         where('status', '==', 'published')
       );
       const querySnapshot = await getDocs(q);
-      
+
       console.log(`Query with status filter found ${querySnapshot.size} published post(s) with slug "${slug.trim()}"`);
-      
+
       if (!querySnapshot.empty) {
         // Find the one that matches the normalized slug (in case of case differences)
         const matchingDoc = querySnapshot.docs.find(doc => {
           const docSlug = normalizeSlugForComparison(doc.data().slug);
           return docSlug === normalizedSlug;
         }) || querySnapshot.docs[0];
-        
+
         const postData = {
           id: matchingDoc.id,
           ...matchingDoc.data()
@@ -364,7 +365,7 @@ export const getBlogPostBySlug = async (slug: string): Promise<BlogPost | null> 
         }
       }
     }
-    
+
     // Last resort: get all published posts and find by slug (case-insensitive)
     console.log('Trying alternative: get all published posts and filter by slug...');
     try {
@@ -385,7 +386,7 @@ export const getBlogPostBySlug = async (slug: string): Promise<BlogPost | null> 
     } catch (altError) {
       console.error('Error with alternative method:', altError);
     }
-    
+
     console.warn(`No published post found with slug "${slug}".`);
     return null;
   } catch (error) {
@@ -398,7 +399,7 @@ export const getBlogPostBySlug = async (slug: string): Promise<BlogPost | null> 
 export const updateBlogPost = async (id: string, blogData: Partial<BlogFormData>): Promise<void> => {
   try {
     checkFirebaseAvailability();
-    
+
     // Image URL is already set to /images/{filename} from the form
     const imageUrl = blogData.imageUrl;
 
@@ -408,7 +409,7 @@ export const updateBlogPost = async (id: string, blogData: Partial<BlogFormData>
       updatedAt: new Date(),
       publishDate: blogData.publishDate || new Date().toISOString().split('T')[0]
     };
-    
+
     // Normalize slug and status for consistency
     if (updateData.slug) {
       updateData.slug = updateData.slug.trim();
@@ -431,13 +432,13 @@ export const updateBlogPost = async (id: string, blogData: Partial<BlogFormData>
 export const deleteBlogPost = async (id: string): Promise<void> => {
   try {
     checkFirebaseAvailability();
-    
+
     console.log('Deleting blog post with ID:', id);
-    
+
     // Delete the document directly (no need to delete images since we use URLs)
     const docRef = doc(db!, BLOG_COLLECTION, id);
     await deleteDoc(docRef);
-    
+
     console.log('Blog post deleted successfully');
   } catch (error) {
     console.error('Error deleting blog post:', error);

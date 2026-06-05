@@ -5,7 +5,21 @@ import Header from '../../../components/Header';
 
 export default function DentalImplantsAllOn4FaqsPage() {
 
-  // Manual meta tag setting removed in favor of Next.js Metadata API in layout.tsx
+  // Set meta tags dynamically
+  useEffect(() => {
+    document.title = 'Dental Implants & All-on-4® FAQs | Nu Smile Dental Stockton, CA';
+
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Explore common questions about dental implants and All-on-4® implant-supported dentures at Nu Smile Dental in Stockton, CA. Learn about procedures, benefits, costs, and care.');
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = 'Explore common questions about dental implants and All-on-4® implant-supported dentures at Nu Smile Dental in Stockton, CA. Learn about procedures, benefits, costs, and care.';
+      document.getElementsByTagName('head')[0].appendChild(meta);
+    }
+  }, []);
 
   const faqSections = [
     {

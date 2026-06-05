@@ -1,13 +1,7 @@
-
+'use client';
 
 import React from 'react';
-import type { Metadata } from 'next';
 import Image from 'next/image';
-
-export const metadata: Metadata = {
-  title: "Meet the Dental Team | NuSmile Dental",
-  description: "Get to know the caring dental team at NuSmile Dental committed to providing personalized and comfortable dental treatment.",
-};
 import Link from 'next/link';
 import Header from '../../components/Header';
 
@@ -24,7 +18,7 @@ export default function DentalStaffPage() {
     {
       name: "Dr. Shivli Arora DDS",
       title: "Dentist in Stockton, CA",
-      image: "/DrShivli Arora.webp",
+      image: "/Shivli Arora.jpg",
       description: "Working under Dr. Parikh, Dr. Shivli Arora has nearly 10 years of hands on clinical experience and has a passion for cosmetic dentistry in providing patients with the beautiful smile they always wanted.",
       additionalInfo: "Having a major in Periodontics from the prestigious Amrita School of Dentistry and an MDS from Rajiv Gandhi University of Health Sciences in India, along with dental credentials from the renowned UCSF. Dr. Arora is certified in Lasers for dental treatment and she strives to further pursue her education for excellence involving Dental Implants, that translates clinical skills and extends to patients emotional well being.",
       personalInfo: "She is happily married with a daughter and loves to spend quality time with her friends and family, cooking, and camping. Offering only the best care, you will feel comfortable receiving treatment from both of our doctors."
@@ -36,7 +30,7 @@ export default function DentalStaffPage() {
       name: "Carolina RDH",
       title: "Registered Dental Hygienist",
       language: "",
-      image: "/Carolina RDH (Español).webp",
+      image: "/Carolina RDH2.jpg",
       description: "With 5 years of Hygiene experience & 15 years total in dentistry, Carolina provides an easy & comfortable experience for our patients during their cleanings.",
       personalInfo: "On her free time, she enjoys spending quality time with her 3 kids & going out to new places!"
     },
@@ -44,7 +38,7 @@ export default function DentalStaffPage() {
       name: "Donna",
       title: "Office Manager/Treatment Coordinator",
       language: "",
-      image: "/Donnanew.webp",
+      image: "/donna2.jpg",
       description: "With more than 20 years of experience, Donna is charismatic, knowledgeable, and always willing to go the extra mile to provide a comfortable experience for our patients.",
       personalInfo: "Outside of work, she enjoys spending her time with family, watching anime, and taking care of her tortoise and cats!"
     },
@@ -52,7 +46,7 @@ export default function DentalStaffPage() {
       name: "Serena",
       title: "Receptionist/Scheduling Coordinator",
       language: "",
-      image: "/Serena (Español).webp",
+      image: "/Serena.jpg",
       description: "As one of the first faces you see, Serena always takes care of our patients scheduling & receptionist needs with ease.",
       personalInfo: "When outside of work, she enjoys going out to concerts with friends and being her with family!"
     },
@@ -69,7 +63,7 @@ export default function DentalStaffPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-
+      
       {/* Hero Section */}
       <section className="relative py-16 md:py-32 bg-gradient-to-br from-primary to-secondary mt-24">
         <div className="absolute inset-0">

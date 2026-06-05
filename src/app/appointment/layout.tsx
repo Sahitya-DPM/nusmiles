@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Request Dental Appointment Stockton",
-    description: "Schedule your dental visit at NuSmile Dental. Easy online appointment request for checkups, consultations, and treatments.",
+  title: "Book Dental Appointment in Stockton",
+  description:
+    "Schedule your dental appointment at NuSmile Dental easily online for preventive, cosmetic, and restorative treatments.",
 };
 
-export default function Layout({
-    children,
+export default function AppointmentLayout({
+  children,
 }: {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-    return children;
+  return children;
 }

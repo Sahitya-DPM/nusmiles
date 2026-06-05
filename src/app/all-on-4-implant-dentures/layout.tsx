@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "All-on-4 Implant Dentures in Stockton",
-    description: "Restore full smiles with All-on-4 implant dentures designed to improve stability, chewing function, and long-term comfort.",
+  title: "All-on-4 Implant Dentures in Stockton",
+  description:
+    "Restore full smiles with All-on-4 implant dentures designed to improve stability, chewing function, and long-term comfort.",
 };
 
-export default function Layout({
-    children,
+export default function AllOn4ImplantDenturesLayout({
+  children,
 }: {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-    return children;
+  return children;
 }

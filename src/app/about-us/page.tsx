@@ -1,10 +1,4 @@
-import type { Metadata } from "next";
 import Image from 'next/image';
-
-export const metadata: Metadata = {
-  title: "About NuSmile Dental | Stockton Dentist",
-  description: "Learn about NuSmile Dental's experienced team, modern technology, and commitment to patient-centered dental care in Stockton.",
-};
 import Link from 'next/link';
 import Header from '../../components/Header';
 
@@ -12,7 +6,7 @@ export default function AboutUsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-
+      
       {/* Hero Section */}
       <section className="relative py-16 md:py-32 bg-gradient-to-br from-primary to-secondary mt-24">
         <div className="absolute inset-0">
@@ -44,19 +38,19 @@ export default function AboutUsPage() {
               <h2 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
                 Your Trusted Dental Care Partner
               </h2>
-
+              
               <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Welcome! The dental professionals at Nu Smile Dental are pleased to welcome you to our practice located in Stockton, CA.
               </p>
-
+              
               <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 We want all our patients to be informed decision makers and fully understand any health issues you face. That's why we've developed a website loaded with valuable information about dental and dental problems and treatments. We encourage you to visit this site whenever you have concern about your teeth.
               </p>
-
+              
               <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Our website also provides you with background about our staff, office hours, insurance policies, appointment procedures, maps, directions to our office and other useful information. We know how hectic life can be and are committed to making our practice convenient and accessible.
               </p>
-
+              
               <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 We want you to feel confident that when you choose Nu Smile Dental, you're working with doctors and other professionals who are qualified, experienced and caring.
               </p>
@@ -155,17 +149,17 @@ export default function AboutUsPage() {
               <div className="text-[22px] md:text-3xl font-bold text-primary mb-2">25+</div>
               <div className="text-gray-600 font-medium">Years of Experience</div>
             </div>
-
+            
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
               <div className="text-[22px] md:text-3xl font-bold text-primary mb-2">1000+</div>
               <div className="text-gray-600 font-medium">Happy Patients</div>
             </div>
-
+            
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
               <div className="text-[22px] md:text-3xl font-bold text-primary mb-2">24/7</div>
               <div className="text-gray-600 font-medium">Emergency Care</div>
             </div>
-
+            
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
               <div className="text-[22px] md:text-3xl font-bold text-primary mb-2">100%</div>
               <div className="text-gray-600 font-medium">Patient Satisfaction</div>

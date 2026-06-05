@@ -6,8 +6,8 @@ export default function ServicesSection() {
   const services = [
     {
       id: 1,
-      title: "All-on-4Â® Implant Dentures",
-      description: "All-on-4Â® implant-supported denture treatment is the process of placing a minimum of four dental implants in each jaw to stabilize a non-removable denture.",
+      title: "All-on-4® Implant Dentures",
+      description: "All-on-4® implant-supported denture treatment is the process of placing a minimum of four dental implants in each jaw to stabilize a non-removable denture.",
       image: "/AdobeStock_1305134131.jpeg",
       href: "/all-on-4-implant-dentures",
       icon: (
