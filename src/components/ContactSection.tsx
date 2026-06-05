@@ -35,7 +35,7 @@ export default function ContactSection() {
             <div className="space-y-6">
               <div>
                 <h3 className="text-lg font-semibold text-primary mb-2">Address</h3>
-                <p className="text-gray-700">1801 E March Ln suite a-165, Stockton, CA, 95210, USA</p>
+                <p className="text-gray-700">1801 E March Ln A165, Stockton, CA 95210, United States</p>
               </div>
 
               <div>

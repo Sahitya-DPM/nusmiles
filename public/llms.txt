@@ -12,7 +12,7 @@ NuSmiles Dental provides preventive dentistry, cosmetic dental care, dental impl
 ## Practice Details
 - Practice Name: NuSmiles Dental
 - Dentist: Dr. Rujul Parikh DDS
-- Address: 1801 E March Lane Suite A-165, Stockton, CA 95210, United States
+- Address: 1801 E March Ln A165, Stockton, CA 95210, United States
 - Phone: (209) 955-1800 
 
 ## Dental Services

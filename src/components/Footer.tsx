@@ -110,15 +110,18 @@ export default function Footer() {
               Address
             </h3>
             <p className="text-gray-400 text-sm mb-6">
-              626 E Yosemite Ave,<br />
-              Manteca, CA 95336, United States
+              1801 E March Ln A165,<br />
+              Stockton, CA 95210, United States
             </p>
             <h3 className="text-lg font-semibold mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Working Hours
             </h3>
             <div className="text-gray-400 text-sm space-y-1">
-              <p>Monday - Friday: 9 am–6 pm</p>
-              <p>Saturday and Sunday: Closed</p>
+              <p>Monday and Tuesday: 9:30 am–6 pm</p>
+              <p>Wednesday: 9:30 am–5 pm</p>
+              <p>Thursday and Friday: 9:30 am–6 pm</p>
+              <p>Saturday: Closed</p>
+              <p>Sunday: Closed</p>
             </div>
             <p className="mt-4">
               <a href="tel:(209) 955-1800" className="text-white font-semibold hover:text-gray-300 transition-colors">

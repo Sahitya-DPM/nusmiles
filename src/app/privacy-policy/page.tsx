@@ -225,8 +225,8 @@ export default function PrivacyPolicyPage() {
             <p className={textClass}><strong>Telephone:</strong> <a href="tel:(209) 955-1800" className="text-primary hover:underline">(209) 955-1800</a></p>
             <p className={textClass}>
               <strong>Address:</strong><br />
-              626 E Yosemite Ave<br />
-              Manteca, CA 95336<br />
+              1801 E March Ln A165<br />
+              Stockton, CA 95210<br />
               United States
             </p>
           </div>
