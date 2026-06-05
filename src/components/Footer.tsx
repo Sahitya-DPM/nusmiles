@@ -10,14 +10,9 @@ const services = [
 ];
 
 const quickLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/about-us', label: 'About Us' },
-  { href: '/dental-staff', label: 'Meet Our Doctors' },
-  { href: '/smile-gallery', label: 'Smile Gallery' },
-  { href: '/testimonials', label: 'Testimonials' },
-  { href: '/contact', label: 'Contact' },
-  { href: '/appointment', label: 'Book Appointment' },
-  { href: '/blog', label: 'Blog' },
+  { href: '/privacy-policy', label: 'Privacy Policy' },
+  { href: '/disclaimer', label: 'Disclaimer' },
+  { href: '/sitemap.xml', label: 'Sitemap' },
 ];
 
 export default function Footer() {
@@ -115,8 +110,8 @@ export default function Footer() {
               Address
             </h3>
             <p className="text-gray-400 text-sm mb-6">
-              1801 E March Ln suite a-165,<br />
-              Stockton, CA, 95210, USA
+              626 E Yosemite Ave,<br />
+              Manteca, CA 95336, United States
             </p>
             <h3 className="text-lg font-semibold mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
               Working Hours

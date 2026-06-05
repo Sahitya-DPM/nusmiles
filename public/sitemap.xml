@@ -98,9 +98,14 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nusmiledentalca.com/sitemap</loc>
-  <lastmod>2026-02-04T12:50:21+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://www.nusmiledentalca.com/privacy-policy</loc>
+  <lastmod>2026-06-05T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.nusmiledentalca.com/disclaimer</loc>
+  <lastmod>2026-06-05T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.nusmiledentalca.com/patient-education/cosmetic-general-dentistry</loc>
