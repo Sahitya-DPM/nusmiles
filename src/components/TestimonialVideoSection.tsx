@@ -2,8 +2,7 @@
 
 import { useRef, useState } from 'react';
 import Link from 'next/link';
-
-const VIDEO_SRC = '/video1.mp4';
+import { TESTIMONIAL_VIDEO_URL } from '@/lib/site';
 
 interface TestimonialVideoSectionProps {
   showViewAllLink?: boolean;
@@ -16,40 +15,18 @@ export default function TestimonialVideoSection({
 }: TestimonialVideoSectionProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [showOverlay, setShowOverlay] = useState(true);
-  const [videoError, setVideoError] = useState(false);
 
-  const handlePlay = async () => {
+  const handlePlay = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    setVideoError(false);
-
-    try {
-      if (video.readyState < HTMLMediaElement.HAVE_METADATA) {
-        video.load();
-        await new Promise<void>((resolve, reject) => {
-          const onReady = () => {
-            video.removeEventListener('loadedmetadata', onReady);
-            video.removeEventListener('error', onError);
-            resolve();
-          };
-          const onError = () => {
-            video.removeEventListener('loadedmetadata', onReady);
-            video.removeEventListener('error', onError);
-            reject(new Error('Video failed to load'));
-          };
-          video.addEventListener('loadedmetadata', onReady);
-          video.addEventListener('error', onError);
-        });
-      }
-
-      await video.play();
-      setShowOverlay(false);
-    } catch (error) {
-      console.error('Error playing video:', error);
-      setShowOverlay(false);
-      setVideoError(true);
-    }
+    video
+      .play()
+      .then(() => setShowOverlay(false))
+      .catch((error) => {
+        console.error('Error playing video:', error);
+        setShowOverlay(false);
+      });
   };
 
   return (
@@ -68,30 +45,18 @@ export default function TestimonialVideoSection({
             <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-[16/9] bg-black rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl ring-4 ring-white">
               <video
                 ref={videoRef}
-                src={VIDEO_SRC}
+                src={TESTIMONIAL_VIDEO_URL}
                 className="absolute inset-0 w-full h-full object-contain bg-black"
                 controls
                 controlsList="nodownload"
                 playsInline
-                preload="auto"
+                preload="metadata"
                 onEnded={() => setShowOverlay(true)}
-                onError={() => {
-                  setVideoError(true);
-                  setShowOverlay(false);
-                }}
               >
                 Your browser does not support the video tag.
               </video>
 
-              {videoError && (
-                <div className="absolute inset-0 z-20 flex items-center justify-center bg-black/80 px-6 text-center">
-                  <p className="text-sm text-white" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                    Unable to load the video. Please refresh the page and try again.
-                  </p>
-                </div>
-              )}
-
-              {showOverlay && !videoError && (
+              {showOverlay && (
                 <button
                   type="button"
                   onClick={handlePlay}
