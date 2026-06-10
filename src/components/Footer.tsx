@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { PHONE_DISPLAY, PHONE_TEL } from '@/lib/site';
 
 const services = [
   { href: '/general-dentistry', label: 'General Dentistry' },
@@ -124,8 +125,8 @@ export default function Footer() {
               <p>Sunday: Closed</p>
             </div>
             <p className="mt-4">
-              <a href="tel:(209) 955-1800" className="text-white font-semibold hover:text-gray-300 transition-colors">
-                (209) 955-1800
+              <a href={PHONE_TEL} className="text-white font-semibold hover:text-gray-300 transition-colors">
+                {PHONE_DISPLAY}
               </a>
             </p>
           </div>

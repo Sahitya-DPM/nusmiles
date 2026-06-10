@@ -222,7 +222,7 @@ export default function PrivacyPolicyPage() {
           <div className={sectionClass}>
             <h2 className={headingClass} style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>Contact Information</h2>
             <p className={textClass}><strong>Name of Contact Person:</strong> Dr. Rujul G. Parikh</p>
-            <p className={textClass}><strong>Telephone:</strong> <a href="tel:(209) 955-1800" className="text-primary hover:underline">(209) 955-1800</a></p>
+            <p className={textClass}><strong>Telephone:</strong> <a href="tel:+12099551800" className="text-primary hover:underline">(209) 955-1800</a></p>
             <p className={textClass}>
               <strong>Address:</strong><br />
               1801 E March Ln A165<br />

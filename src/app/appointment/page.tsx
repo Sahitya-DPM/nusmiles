@@ -317,7 +317,7 @@ export default function AppointmentPage() {
                   For dental emergencies outside of regular hours, please call our emergency line.
                 </p>
                 <a 
-                  href="tel:(209) 955-1800" 
+                  href="tel:+12099551800" 
                   className="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors"
                   style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
                 >
@@ -343,7 +343,7 @@ export default function AppointmentPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>Phone</h4>
-                    <a href="tel:(209) 955-1800" className="text-primary hover:text-primary-dark transition-colors" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                    <a href="tel:+12099551800" className="text-primary hover:text-primary-dark transition-colors" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                       (209) 955-1800
                     </a>
                   </div>

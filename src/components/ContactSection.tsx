@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { PHONE_DISPLAY, PHONE_TEL } from '@/lib/site';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -68,8 +69,8 @@ export default function ContactSection() {
 
               <div>
                 <h3 className="text-lg font-semibold text-primary mb-2">Phone</h3>
-                <a href="tel:(209) 955-1800" className="text-secondary font-semibold text-lg hover:text-secondary-dark transition-colors">
-                  (209) 955-1800
+                <a href={PHONE_TEL} className="text-secondary font-semibold text-lg hover:text-secondary-dark transition-colors">
+                  {PHONE_DISPLAY}
                 </a>
               </div>
 

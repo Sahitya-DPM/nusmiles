@@ -140,7 +140,7 @@ export default function EmergencyCarePage() {
               If you're experiencing a dental emergency, don't wait. Contact us immediately for urgent care.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:(209) 955-1800" className="bg-red-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-red-700 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              <a href="tel:+12099551800" className="bg-red-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-red-700 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 Call (209) 955-1800
               </a>
               <Link href="/appointment" className="border-2 border-red-600 text-red-600 px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-red-600 hover:text-white transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -285,7 +285,7 @@ export default function EmergencyCarePage() {
             If you're experiencing a dental emergency, contact us immediately. We provide urgent care to address your dental needs quickly and effectively.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:(209) 955-1800" className="bg-white text-primary px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            <a href="tel:+12099551800" className="bg-white text-primary px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
               Call (209) 955-1800
             </a>
             <Link href="/appointment" className="border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-[15px] md:text-[16px] font-semibold hover:bg-white hover:text-primary transition-colors inline-block" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>

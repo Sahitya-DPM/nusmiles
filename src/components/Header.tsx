@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { PHONE_DISPLAY, PHONE_TEL } from '@/lib/site';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -156,8 +157,8 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-6">
             <div className="text-sm">
               <p className="text-accent">Call us today</p>
-              <a href="tel:(209) 955-1800" className="font-semibold text-primary hover:text-primary-dark transition-colors">
-                (209) 955-1800
+              <a href={PHONE_TEL} className="font-semibold text-primary hover:text-primary-dark transition-colors">
+                {PHONE_DISPLAY}
               </a>
             </div>
             <Link href="/appointment" className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-dark transition-colors">
@@ -413,10 +414,10 @@ export default function Header() {
               <div className="pt-4 mt-4 border-t border-gray-200">
                 <p className="text-sm text-accent mb-1">Call us today</p>
                 <a
-                  href="tel:(209) 955-1800"
+                  href={PHONE_TEL}
                   className="block font-semibold text-primary hover:text-primary-dark transition-colors mb-3 text-lg"
                 >
-                  (209) 955-1800
+                  {PHONE_DISPLAY}
                 </a>
                 <Link
                   href="/appointment"

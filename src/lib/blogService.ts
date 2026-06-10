@@ -13,6 +13,7 @@ import {
 } from 'firebase/firestore';
 import { db } from './firebase';
 import { BlogPost, BlogFormData } from '../types/blog';
+import { sanitizeSlug } from './site';
 
 const BLOG_COLLECTION = 'blog-posts';
 
@@ -107,7 +108,7 @@ export const createBlogPost = async (blogData: BlogFormData): Promise<string> =>
       excerpt: blogPost.excerpt || '',
       imageUrl: imageUrl,
       publishDate: blogPost.publishDate || new Date().toISOString().split('T')[0],
-      slug: blogPost.slug?.trim() || '',
+      slug: sanitizeSlug(blogPost.slug || ''),
       primaryKeyword: blogPost.primaryKeyword,
       metaTitle: blogPost.metaTitle,
       metaDescription: blogPost.metaDescription,
@@ -412,7 +413,7 @@ export const updateBlogPost = async (id: string, blogData: Partial<BlogFormData>
 
     // Normalize slug and status for consistency
     if (updateData.slug) {
-      updateData.slug = updateData.slug.trim();
+      updateData.slug = sanitizeSlug(updateData.slug);
     }
     if (updateData.status) {
       updateData.status = updateData.status.toLowerCase();

@@ -117,7 +117,7 @@ const ResourcesPage = () => {
               Book Appointment
             </Link>
             <a 
-              href="tel:(209) 955-1800"
+              href="tel:+12099551800"
               className="bg-transparent text-white border-2 border-white px-8 py-3 rounded-lg hover:bg-white hover:text-primary transition-colors font-semibold text-[15px] md:text-base"
               style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
             >
