@@ -258,6 +258,38 @@ export default function BlogPostContent({ slug }: BlogPostContentProps) {
             .blog-content em {
               font-style: italic;
             }
+            .blog-content .tableWrapper {
+              overflow-x: auto;
+              margin: 1.5rem 0;
+            }
+            .blog-content table,
+            .blog-content .blog-table {
+              border-collapse: collapse;
+              table-layout: fixed;
+              width: 100%;
+              margin: 0;
+            }
+            .blog-content td,
+            .blog-content th,
+            .blog-content .blog-table-cell,
+            .blog-content .blog-table-header {
+              min-width: 1em;
+              border: 1px solid #d1d5db;
+              padding: 8px 12px;
+              vertical-align: top;
+              box-sizing: border-box;
+            }
+            .blog-content th,
+            .blog-content .blog-table-header {
+              font-weight: bold;
+              text-align: left;
+              background-color: #f3f4f6;
+              color: #111827;
+            }
+            .blog-content td p,
+            .blog-content th p {
+              margin: 0;
+            }
           `}</style>
 
           <div className="mt-12 pt-8 border-t border-gray-200">
