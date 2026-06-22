@@ -392,7 +392,7 @@ export const getBlogPostBySlug = async (slug: string): Promise<BlogPost | null> 
     return null;
   } catch (error) {
     console.error('Error getting blog post by slug:', error);
-    throw error;
+    return null;
   }
 };
 

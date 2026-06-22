@@ -22,54 +22,59 @@ export default function StructuredData({
   faqCode,
   medicalConditionCode,
 }: StructuredDataProps) {
-  const blocks: { id: string; code: string }[] = [];
+  try {
+    const blocks: { id: string; code: string }[] = [];
 
-  let primaryJsonLd = normalizeSchemaCode(jsonLdCode);
+    let primaryJsonLd = normalizeSchemaCode(jsonLdCode);
 
-  if (!primaryJsonLd && post?.content) {
-    const embeddedSchemas = extractSchemaFromHtml(post.content);
-    if (embeddedSchemas.length > 0) {
-      primaryJsonLd = embeddedSchemas[0];
-      embeddedSchemas.slice(1).forEach((code, index) => {
-        blocks.push({ id: `embedded-${index}`, code });
-      });
+    if (!primaryJsonLd && post?.content) {
+      const embeddedSchemas = extractSchemaFromHtml(post.content);
+      if (embeddedSchemas.length > 0) {
+        primaryJsonLd = embeddedSchemas[0];
+        embeddedSchemas.slice(1).forEach((code, index) => {
+          blocks.push({ id: `embedded-${index}`, code });
+        });
+      }
     }
-  }
 
-  if (!primaryJsonLd && post && canonicalUrl) {
-    primaryJsonLd = buildDefaultBlogSchema(post, canonicalUrl);
-  }
-
-  if (primaryJsonLd) {
-    blocks.unshift({ id: 'json-ld', code: primaryJsonLd });
-  }
-
-  const optionalBlocks = [
-    { id: 'breadcrumb', code: normalizeSchemaCode(breadcrumbCode) },
-    { id: 'faq', code: normalizeSchemaCode(faqCode) },
-    { id: 'medical-condition', code: normalizeSchemaCode(medicalConditionCode) },
-  ];
-
-  for (const block of optionalBlocks) {
-    if (block.code) {
-      blocks.push({ id: block.id, code: block.code });
+    if (!primaryJsonLd && post && canonicalUrl) {
+      primaryJsonLd = buildDefaultBlogSchema(post, canonicalUrl);
     }
-  }
 
-  if (blocks.length === 0) {
+    if (primaryJsonLd) {
+      blocks.unshift({ id: 'json-ld', code: primaryJsonLd });
+    }
+
+    const optionalBlocks = [
+      { id: 'breadcrumb', code: normalizeSchemaCode(breadcrumbCode) },
+      { id: 'faq', code: normalizeSchemaCode(faqCode) },
+      { id: 'medical-condition', code: normalizeSchemaCode(medicalConditionCode) },
+    ];
+
+    for (const block of optionalBlocks) {
+      if (block.code) {
+        blocks.push({ id: block.id, code: block.code });
+      }
+    }
+
+    if (blocks.length === 0) {
+      return null;
+    }
+
+    return (
+      <>
+        {blocks.map(({ id, code }) => (
+          <script
+            key={id}
+            type="application/ld+json"
+            data-structured-data={id}
+            dangerouslySetInnerHTML={{ __html: code }}
+          />
+        ))}
+      </>
+    );
+  } catch (error) {
+    console.error('Failed to render structured data:', error);
     return null;
   }
-
-  return (
-    <>
-      {blocks.map(({ id, code }) => (
-        <script
-          key={id}
-          type="application/ld+json"
-          data-structured-data={id}
-          dangerouslySetInnerHTML={{ __html: code }}
-        />
-      ))}
-    </>
-  );
 }

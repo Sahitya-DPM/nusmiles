@@ -1,6 +1,42 @@
 import { BlogPost } from '../types/blog';
 import { SITE_URL } from './site';
 
+type FirestoreTimestampLike = {
+  toDate?: () => Date;
+  seconds?: number;
+};
+
+function formatBlogDate(value: unknown, fallback: string): string {
+  if (!value) {
+    return fallback;
+  }
+
+  if (value instanceof Date) {
+    return Number.isNaN(value.getTime()) ? fallback : value.toISOString().split('T')[0];
+  }
+
+  if (typeof value === 'object' && value !== null) {
+    const timestamp = value as FirestoreTimestampLike;
+
+    if (typeof timestamp.toDate === 'function') {
+      const date = timestamp.toDate();
+      return Number.isNaN(date.getTime()) ? fallback : date.toISOString().split('T')[0];
+    }
+
+    if (typeof timestamp.seconds === 'number') {
+      const date = new Date(timestamp.seconds * 1000);
+      return Number.isNaN(date.getTime()) ? fallback : date.toISOString().split('T')[0];
+    }
+  }
+
+  if (typeof value === 'string' || typeof value === 'number') {
+    const date = new Date(value);
+    return Number.isNaN(date.getTime()) ? fallback : date.toISOString().split('T')[0];
+  }
+
+  return fallback;
+}
+
 function stripScriptWrapper(code: string): string {
   const wrapped = code.match(
     /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/i
@@ -46,8 +82,20 @@ function extractJsonPayload(code: string): string | null {
  * Normalizes admin-provided schema that may be pasted as raw JSON,
  * a JSON-encoded string, or a full <script> tag with escaped quotes.
  */
-export function normalizeSchemaCode(raw: string | undefined): string | null {
-  if (!raw?.trim()) {
+export function normalizeSchemaCode(raw: unknown): string | null {
+  if (raw == null) {
+    return null;
+  }
+
+  if (typeof raw === 'object') {
+    try {
+      return JSON.stringify(raw);
+    } catch {
+      return null;
+    }
+  }
+
+  if (typeof raw !== 'string' || !raw.trim()) {
     return null;
   }
 
@@ -79,18 +127,16 @@ export function normalizeSchemaCode(raw: string | undefined): string | null {
 }
 
 export function buildDefaultBlogSchema(post: BlogPost, canonicalUrl: string): string {
+  const publishDate = formatBlogDate(post.publishDate, new Date().toISOString().split('T')[0]);
+  const modifiedDate = formatBlogDate(post.updatedAt, publishDate);
+
   const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.metaTitle || post.title,
     description: post.metaDescription || post.description || post.excerpt || '',
-    datePublished: post.publishDate,
-    dateModified:
-      post.updatedAt instanceof Date
-        ? post.updatedAt.toISOString().split('T')[0]
-        : post.updatedAt
-          ? new Date(post.updatedAt).toISOString().split('T')[0]
-          : post.publishDate,
+    datePublished: publishDate,
+    dateModified: modifiedDate,
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': canonicalUrl,

@@ -61,8 +61,14 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
-  const post = await getBlogPostBySlug(slug);
   const canonicalUrl = getBlogPostCanonicalUrl(slug);
+  let post = null;
+
+  try {
+    post = await getBlogPostBySlug(slug);
+  } catch (error) {
+    console.error(`Error loading blog post "${slug}":`, error);
+  }
 
   return (
     <>
