@@ -62,10 +62,13 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
   const post = await getBlogPostBySlug(slug);
+  const canonicalUrl = getBlogPostCanonicalUrl(slug);
 
   return (
     <>
       <StructuredData
+        post={post}
+        canonicalUrl={canonicalUrl}
         jsonLdCode={post?.jsonLdCode}
         breadcrumbCode={post?.breadcrumbCode}
         faqCode={post?.faqCode}
