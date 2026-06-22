@@ -1,0 +1,133 @@
+'use client';
+
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import Header from '@/components/Header';
+
+const ResourcesPage = () => {
+  const resources = [
+    {
+      title: "Before & After Gallery",
+      description: "View real patient transformations and see the amazing results our dental procedures can achieve.",
+      image: "/Cosmetic Dentistry.jpeg",
+      link: "/smile-gallery",
+      features: [
+        "Smile Makeovers",
+        "Dental Implants",
+        "Veneers & Crowns",
+        "Invisalign Results"
+      ]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="relative h-80 md:h-96 flex items-center justify-center mt-24">
+        <Image
+          src="/office1.jpg.webp"
+          alt="Dental Resources"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="relative z-10 text-center text-white px-4">
+          <h1 className="text-[27px] md:text-5xl font-bold mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+            Dental Resources
+          </h1>
+          <p className="text-[16px] md:text-[16px] max-w-2xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            Everything you need to know about dental care and patient results
+          </p>
+        </div>
+      </section>
+
+      {/* Resources Grid */}
+      <section className="py-10 md:py-20 px-4 md:px-8 lg:px-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="text-[27px] md:text-4xl font-bold text-gray-800 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              Helpful Resources
+            </h2>
+            <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              Access important information and see real patient results to help you make informed decisions about your dental care.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+            {resources.map((resource, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="relative h-64">
+                  <Image
+                    src={resource.image}
+                    alt={resource.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-[22px] md:text-[16px] font-bold text-gray-800 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                    {resource.title}
+                  </h3>
+                  <p className="text-[16px] text-gray-600 mb-4" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                    {resource.description}
+                  </p>
+                  <ul className="mb-6">
+                    {resource.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-700 mb-2 text-[16px]" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                        <svg className="w-4 h-4 text-primary mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link 
+                    href={resource.link}
+                    className="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-dark transition-colors font-semibold text-[15px] md:text-base"
+                    style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-primary py-10 md:py-20 px-4 md:px-8 lg:px-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-[27px] md:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+            Ready to Experience Exceptional Dental Care?
+          </h2>
+          <p className="text-[16px] md:text-[16px] text-white mb-8" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            Join our family of satisfied patients and discover why Nu Smile Dental is the trusted choice for dental care in Stockton.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/appointment"
+              className="bg-white text-primary px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-[15px] md:text-base"
+              style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+            >
+              Book Appointment
+            </Link>
+            <a 
+              href="tel:+12099551800"
+              className="bg-transparent text-white border-2 border-white px-8 py-3 rounded-lg hover:bg-white hover:text-primary transition-colors font-semibold text-[15px] md:text-base"
+              style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+            >
+              Call (209) 955-1800
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default ResourcesPage; 
