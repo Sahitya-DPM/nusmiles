@@ -17,6 +17,7 @@ export interface BlogPost {
   faqCode?: string;
   medicalConditionCode?: string;
   author?: string;
+  category?: string;
   tags?: string[];
   status: 'draft' | 'published';
   createdAt: Date;

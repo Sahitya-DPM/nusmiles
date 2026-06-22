@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Header from '../../components/Header';
 import { getPublishedBlogPosts, getAllBlogPosts } from '../../lib/blogService';
+import { getCategoriesFromPosts } from '../../lib/blogCategories';
 import { BlogPost } from '../../types/blog';
 
 export default function BlogPage() {
@@ -37,6 +38,7 @@ export default function BlogPage() {
 
   const visibleBlogPosts = blogPosts.slice(0, visibleCount);
   const hasMoreBlogs = visibleCount < blogPosts.length;
+  const categories = getCategoriesFromPosts(blogPosts);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -94,6 +96,29 @@ export default function BlogPage() {
           </nav>
         </div>
       </section>
+
+      {/* Categories */}
+      {categories.length > 0 && (
+        <section className="py-6 bg-white border-b border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg font-semibold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              Categories
+            </h2>
+            <div className="flex flex-wrap gap-3">
+              {categories.map((category) => (
+                <Link
+                  key={category.slug}
+                  href={`/blog/category/${category.slug}`}
+                  className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-colors"
+                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+                >
+                  {category.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Blog Posts Grid */}
       <section className="py-10 md:py-20 bg-white">

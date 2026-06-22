@@ -128,6 +128,7 @@ export const createBlogPost = async (blogData: BlogFormData): Promise<string> =>
     if (blogPost.breadcrumbCode) firestoreData.breadcrumbCode = blogPost.breadcrumbCode;
     if (blogPost.faqCode) firestoreData.faqCode = blogPost.faqCode;
     if (blogPost.medicalConditionCode) firestoreData.medicalConditionCode = blogPost.medicalConditionCode;
+    if (blogPost.category) firestoreData.category = blogPost.category;
     if (blogPost.author) firestoreData.author = blogPost.author;
 
     console.log('Saving to Firestore...');

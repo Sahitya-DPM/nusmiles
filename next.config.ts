@@ -195,8 +195,13 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: '/patient-education/dentures',
-        destination: '/',
+        source: '/category/:slug',
+        destination: '/blog/category/:slug',
+        permanent: true,
+      },
+      {
+        source: '/category/:slug/',
+        destination: '/blog/category/:slug',
         permanent: true,
       },
     ];
