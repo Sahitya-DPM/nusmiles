@@ -182,8 +182,8 @@ export default function DentalImplantCostPage({ page }: DentalImplantCostPagePro
       {/* Dental Implants vs Other Options */}
       <section className="py-10 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+            <div className="flex flex-col justify-center h-full text-center lg:text-left">
               <SectionHeading>
                 Dental Implants vs. Other Tooth Replacement Options: What&apos;s the Difference?
               </SectionHeading>
@@ -217,8 +217,8 @@ export default function DentalImplantCostPage({ page }: DentalImplantCostPagePro
                 </p>
               </div>
             </div>
-            <div className="relative">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl aspect-[4/3]">
+            <div className="relative flex items-stretch h-full">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl w-full aspect-[4/3] lg:aspect-auto lg:h-full">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent z-10" />
                 <Image
                   src={bottomImage}
