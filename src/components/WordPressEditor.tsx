@@ -123,7 +123,7 @@ const WordPressEditor: React.FC<WordPressEditorProps> = ({
   const [tableCols, setTableCols] = React.useState(3);
   const [withHeaderRow, setWithHeaderRow] = React.useState(true);
   const [isCodeMode, setIsCodeMode] = React.useState(false);
-  const [codeText, setCodeText] = React.useState('');
+  const isCodeModeRef = React.useRef(false);
 
   const editor = useEditor({
     immediatelyRender: false,
@@ -173,8 +173,11 @@ const WordPressEditor: React.FC<WordPressEditorProps> = ({
       RawCode,
     ],
     content: value,
-    onUpdate: ({ editor }) => {
-      onChange(editor.getHTML());
+    onUpdate: ({ editor: currentEditor }) => {
+      if (isCodeModeRef.current) {
+        return;
+      }
+      onChange(currentEditor.getHTML());
     },
     editorProps: {
       attributes: {
@@ -185,10 +188,17 @@ const WordPressEditor: React.FC<WordPressEditorProps> = ({
   });
 
   React.useEffect(() => {
-    if (editor && value !== editor.getHTML()) {
-      editor.commands.setContent(value);
+    isCodeModeRef.current = isCodeMode;
+  }, [isCodeMode]);
+
+  React.useEffect(() => {
+    if (!editor || isCodeMode) {
+      return;
     }
-  }, [value, editor]);
+    if (value !== editor.getHTML()) {
+      editor.commands.setContent(value || '', { emitUpdate: false });
+    }
+  }, [value, editor, isCodeMode]);
 
   const isInTable = useEditorState({
     editor,
@@ -208,21 +218,16 @@ const WordPressEditor: React.FC<WordPressEditorProps> = ({
     setWithHeaderRow(true);
   };
 
-  const handleApplyCode = () => {
-    if (!editor || !codeText.trim()) return;
-    editor.chain().focus().insertRawCode({ code: codeText }).run();
-    setIsCodeMode(false);
-    setCodeText('');
-  };
+  const handleToggleCodeMode = () => {
+    if (isCodeMode) {
+      isCodeModeRef.current = false;
+      setIsCodeMode(false);
+      editor?.commands.setContent(value || '', { emitUpdate: false });
+      return;
+    }
 
-  const handleOpenCodeMode = () => {
-    setCodeText('');
+    isCodeModeRef.current = true;
     setIsCodeMode(true);
-  };
-
-  const handleCloseCodeMode = () => {
-    setIsCodeMode(false);
-    setCodeText('');
   };
 
   if (!editor) {
@@ -345,9 +350,9 @@ const WordPressEditor: React.FC<WordPressEditorProps> = ({
       </button>
       <button
         type="button"
-        onClick={() => (isCodeMode ? handleCloseCodeMode() : handleOpenCodeMode())}
+        onClick={handleToggleCodeMode}
         className={`px-3 py-1 text-sm border border-gray-300 rounded bg-white hover:bg-gray-50 ${
-          isCodeMode || editor.isActive('rawCode') ? 'bg-blue-100 border-blue-300' : ''
+          isCodeMode ? 'bg-blue-100 border-blue-300' : ''
         }`}
         title="Code"
       >
@@ -547,37 +552,15 @@ const WordPressEditor: React.FC<WordPressEditorProps> = ({
       )}
       <div className="border border-gray-300 border-t-0 rounded-b-md">
         {isCodeMode ? (
-          <div className="p-4 bg-slate-900">
-            <label htmlFor="body-code-editor" className="block text-sm font-medium text-slate-200 mb-2">
-              Code
-            </label>
-            <textarea
-              id="body-code-editor"
-              value={codeText}
-              onChange={(e) => setCodeText(e.target.value)}
-              rows={16}
-              autoFocus
-              placeholder="Enter any code here..."
-              className="w-full min-h-[400px] px-3 py-2 text-sm font-mono text-slate-100 bg-slate-950 border border-slate-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <div className="flex justify-end gap-2 mt-3">
-              <button
-                type="button"
-                onClick={handleCloseCodeMode}
-                className="px-4 py-2 text-sm border border-slate-600 rounded-md bg-slate-800 text-slate-100 hover:bg-slate-700"
-              >
-                Cancel
-              </button>
-              <button
-                type="button"
-                onClick={handleApplyCode}
-                disabled={!codeText.trim()}
-                className="px-4 py-2 text-sm text-white bg-blue-600 rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                Apply
-              </button>
-            </div>
-          </div>
+          <textarea
+            id="body-code-editor"
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
+            rows={16}
+            autoFocus
+            placeholder={placeholder}
+            className="w-full min-h-[400px] px-4 py-3 text-sm font-mono text-slate-100 bg-slate-950 border-0 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+          />
         ) : (
           <EditorContent editor={editor} />
         )}
