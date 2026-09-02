@@ -15,7 +15,6 @@ import TableRow from '@tiptap/extension-table-row';
 import TableCell from '@tiptap/extension-table-cell';
 import TableHeader from '@tiptap/extension-table-header';
 import RawCode from '../extensions/RawCodeExtension';
-import { CODE_LANGUAGE_OPTIONS, resolveCodeLanguage } from '../lib/rawCode';
 
 interface WordPressEditorProps {
   value: string;
@@ -31,15 +30,6 @@ interface TableInsertDialogProps {
   onRowsChange: (rows: number) => void;
   onColsChange: (cols: number) => void;
   onWithHeaderRowChange: (withHeaderRow: boolean) => void;
-  onInsert: () => void;
-  onClose: () => void;
-}
-
-interface CodeInsertDialogProps {
-  language: string;
-  code: string;
-  onLanguageChange: (language: string) => void;
-  onCodeChange: (code: string) => void;
   onInsert: () => void;
   onClose: () => void;
 }
@@ -122,76 +112,6 @@ const TableInsertDialog: React.FC<TableInsertDialogProps> = ({
   </div>
 );
 
-const CodeInsertDialog: React.FC<CodeInsertDialogProps> = ({
-  language,
-  code,
-  onLanguageChange,
-  onCodeChange,
-  onInsert,
-  onClose,
-}) => (
-  <div
-    className="fixed inset-0 z-50 flex items-center justify-center bg-black/40"
-    onClick={onClose}
-  >
-    <div
-      className="bg-white rounded-lg shadow-xl p-6 w-full max-w-2xl mx-4"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">Insert Code</h3>
-      <div className="space-y-4">
-        <div>
-          <label htmlFor="code-language" className="block text-sm font-medium text-gray-700 mb-1">
-            Code type
-          </label>
-          <select
-            id="code-language"
-            value={language}
-            onChange={(e) => onLanguageChange(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            {CODE_LANGUAGE_OPTIONS.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div>
-          <label htmlFor="code-content" className="block text-sm font-medium text-gray-700 mb-1">
-            Code
-          </label>
-          <textarea
-            id="code-content"
-            value={code}
-            onChange={(e) => onCodeChange(e.target.value)}
-            rows={12}
-            placeholder="Paste HTML, CSS, JavaScript, JSON, JSON-LD/schema, or any other code..."
-            className="w-full px-3 py-2 border border-gray-300 rounded-md font-mono text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
-      </div>
-      <div className="flex justify-end gap-2 mt-6">
-        <button
-          type="button"
-          onClick={onClose}
-          className="px-4 py-2 text-sm border border-gray-300 rounded-md bg-white hover:bg-gray-50"
-        >
-          Cancel
-        </button>
-        <button
-          type="button"
-          onClick={onInsert}
-          disabled={!code.trim()}
-          className="px-4 py-2 text-sm text-white bg-blue-600 rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          Insert
-        </button>
-      </div>
-    </div>
-  </div>
-);
-
 const WordPressEditor: React.FC<WordPressEditorProps> = ({
   value,
   onChange,
@@ -202,8 +122,7 @@ const WordPressEditor: React.FC<WordPressEditorProps> = ({
   const [tableRows, setTableRows] = React.useState(3);
   const [tableCols, setTableCols] = React.useState(3);
   const [withHeaderRow, setWithHeaderRow] = React.useState(true);
-  const [showCodeDialog, setShowCodeDialog] = React.useState(false);
-  const [codeLanguage, setCodeLanguage] = React.useState('auto');
+  const [isCodeMode, setIsCodeMode] = React.useState(false);
   const [codeText, setCodeText] = React.useState('');
 
   const editor = useEditor({
@@ -289,18 +208,20 @@ const WordPressEditor: React.FC<WordPressEditorProps> = ({
     setWithHeaderRow(true);
   };
 
-  const handleInsertCode = () => {
+  const handleApplyCode = () => {
     if (!editor || !codeText.trim()) return;
-    editor
-      .chain()
-      .focus()
-      .insertRawCode({
-        language: resolveCodeLanguage(codeLanguage, codeText),
-        code: codeText,
-      })
-      .run();
-    setShowCodeDialog(false);
-    setCodeLanguage('auto');
+    editor.chain().focus().insertRawCode({ code: codeText }).run();
+    setIsCodeMode(false);
+    setCodeText('');
+  };
+
+  const handleOpenCodeMode = () => {
+    setCodeText('');
+    setIsCodeMode(true);
+  };
+
+  const handleCloseCodeMode = () => {
+    setIsCodeMode(false);
     setCodeText('');
   };
 
@@ -424,11 +345,11 @@ const WordPressEditor: React.FC<WordPressEditorProps> = ({
       </button>
       <button
         type="button"
-        onClick={() => setShowCodeDialog(true)}
+        onClick={() => (isCodeMode ? handleCloseCodeMode() : handleOpenCodeMode())}
         className={`px-3 py-1 text-sm border border-gray-300 rounded bg-white hover:bg-gray-50 ${
-          editor.isActive('rawCode') ? 'bg-blue-100 border-blue-300' : ''
+          isCodeMode || editor.isActive('rawCode') ? 'bg-blue-100 border-blue-300' : ''
         }`}
-        title="Insert Code"
+        title="Code"
       >
         Code
       </button>
@@ -624,22 +545,42 @@ const WordPressEditor: React.FC<WordPressEditorProps> = ({
           onClose={() => setShowTableDialog(false)}
         />
       )}
-      {showCodeDialog && (
-        <CodeInsertDialog
-          language={codeLanguage}
-          code={codeText}
-          onLanguageChange={setCodeLanguage}
-          onCodeChange={setCodeText}
-          onInsert={handleInsertCode}
-          onClose={() => {
-            setShowCodeDialog(false);
-            setCodeLanguage('auto');
-            setCodeText('');
-          }}
-        />
-      )}
       <div className="border border-gray-300 border-t-0 rounded-b-md">
-        <EditorContent editor={editor} />
+        {isCodeMode ? (
+          <div className="p-4 bg-slate-900">
+            <label htmlFor="body-code-editor" className="block text-sm font-medium text-slate-200 mb-2">
+              Code
+            </label>
+            <textarea
+              id="body-code-editor"
+              value={codeText}
+              onChange={(e) => setCodeText(e.target.value)}
+              rows={16}
+              autoFocus
+              placeholder="Enter any code here..."
+              className="w-full min-h-[400px] px-3 py-2 text-sm font-mono text-slate-100 bg-slate-950 border border-slate-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <div className="flex justify-end gap-2 mt-3">
+              <button
+                type="button"
+                onClick={handleCloseCodeMode}
+                className="px-4 py-2 text-sm border border-slate-600 rounded-md bg-slate-800 text-slate-100 hover:bg-slate-700"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                onClick={handleApplyCode}
+                disabled={!codeText.trim()}
+                className="px-4 py-2 text-sm text-white bg-blue-600 rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Apply
+              </button>
+            </div>
+          </div>
+        ) : (
+          <EditorContent editor={editor} />
+        )}
       </div>
       <style jsx global>{`
         .wordpress-editor .ProseMirror {

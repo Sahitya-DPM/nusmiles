@@ -23,7 +23,7 @@ export default function BlogPostContent({ blogPost }: BlogPostContentProps) {
     }
 
     const scripts = container.querySelectorAll<HTMLScriptElement>(
-      '.raw-code-block[data-language="javascript"] script, .raw-code-block[data-language="html"] script:not([type]), .raw-code-block[data-language="html"] script[type="text/javascript"]'
+      '.raw-code-block script:not([type="application/ld+json"])'
     );
 
     scripts.forEach((oldScript) => {
