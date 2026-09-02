@@ -1,4 +1,5 @@
 import { BlogPost } from '../types/blog';
+import { expandRawCodeBlocks, extractSchemasFromRawCode } from './rawCode';
 import { SITE_URL } from './site';
 
 type FirestoreTimestampLike = {
@@ -173,15 +174,26 @@ export function extractSchemaFromHtml(html: string | undefined): string[] {
   }
 
   const schemas: string[] = [];
-  const matches = html.matchAll(
+  const seen = new Set<string>();
+  const expandedHtml = expandRawCodeBlocks(html);
+  const matches = expandedHtml.matchAll(
     /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi
   );
 
-  for (const match of matches) {
-    const normalized = normalizeSchemaCode(match[1]);
-    if (normalized) {
+  const addSchema = (raw: string) => {
+    const normalized = normalizeSchemaCode(raw);
+    if (normalized && !seen.has(normalized)) {
+      seen.add(normalized);
       schemas.push(normalized);
     }
+  };
+
+  for (const match of matches) {
+    addSchema(match[1]);
+  }
+
+  for (const raw of extractSchemasFromRawCode(html)) {
+    addSchema(raw);
   }
 
   return schemas;

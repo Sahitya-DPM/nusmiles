@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Header from '../../../components/Header';
 import { BlogPost } from '../../../types/blog';
+import { expandRawCodeBlocks } from '../../../lib/rawCode';
 
 interface BlogPostContentProps {
   slug: string;
@@ -12,6 +13,29 @@ interface BlogPostContentProps {
 }
 
 export default function BlogPostContent({ blogPost }: BlogPostContentProps) {
+  const contentRef = React.useRef<HTMLDivElement>(null);
+  const renderedContent = blogPost?.content ? expandRawCodeBlocks(blogPost.content) : '';
+
+  React.useEffect(() => {
+    const container = contentRef.current;
+    if (!container) {
+      return;
+    }
+
+    const scripts = container.querySelectorAll<HTMLScriptElement>(
+      '.raw-code-block[data-language="javascript"] script, .raw-code-block[data-language="html"] script:not([type]), .raw-code-block[data-language="html"] script[type="text/javascript"]'
+    );
+
+    scripts.forEach((oldScript) => {
+      const newScript = document.createElement('script');
+      Array.from(oldScript.attributes).forEach((attr) => {
+        newScript.setAttribute(attr.name, attr.value);
+      });
+      newScript.textContent = oldScript.textContent;
+      oldScript.parentNode?.replaceChild(newScript, oldScript);
+    });
+  }, [renderedContent]);
+
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
@@ -79,8 +103,9 @@ export default function BlogPostContent({ blogPost }: BlogPostContentProps) {
             <p className="text-sm">Published on {formatDate(blogPost.publishDate)}</p>
           </div>
 
-          {blogPost.content ? (
+          {renderedContent ? (
             <div
+              ref={contentRef}
               className="blog-content"
               style={{
                 fontFamily: 'Hind, Arial, Helvetica, sans-serif',
@@ -88,7 +113,7 @@ export default function BlogPostContent({ blogPost }: BlogPostContentProps) {
                 lineHeight: '1.75',
                 color: '#374151',
               }}
-              dangerouslySetInnerHTML={{ __html: blogPost.content }}
+              dangerouslySetInnerHTML={{ __html: renderedContent }}
             />
           ) : (
             <div
@@ -189,6 +214,19 @@ export default function BlogPostContent({ blogPost }: BlogPostContentProps) {
               background-color: transparent;
               color: inherit;
               padding: 0;
+            }
+            .blog-content .raw-code-block {
+              display: contents;
+            }
+            .blog-content .blog-code-block {
+              display: block;
+              background-color: #1f2937;
+              color: #f9fafb;
+              padding: 1rem;
+              border-radius: 0.5rem;
+              overflow-x: auto;
+              margin: 1.5rem 0;
+              white-space: pre-wrap;
             }
             .blog-content strong {
               font-weight: bold;
