@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Header from '../../../../components/Header';
 import { getCategoryNameFromPosts, postMatchesCategory } from '../../../../lib/blogCategories';
 import { getPublishedBlogPosts } from '../../../../lib/blogService';
-import { SITE_URL } from '../../../../lib/site';
+import { getBlogCategoryUrl } from '../../../../lib/site';
 import { BlogPost } from '../../../../types/blog';
 
 type BlogCategoryPageProps = {
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: BlogCategoryPageProps): Promi
     };
   }
 
-  const canonicalUrl = `${SITE_URL}/blog/category/${slug}`;
+  const canonicalUrl = getBlogCategoryUrl(slug);
 
   return {
     title: `${categoryName} Articles | NuSmile Dental Blog`,

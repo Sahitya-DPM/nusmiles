@@ -76,9 +76,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         post={post}
         canonicalUrl={canonicalUrl}
         jsonLdCode={post?.jsonLdCode}
+        blogPostingCode={post?.blogPostingCode}
+        personCode={post?.personCode}
+        dentistCode={post?.dentistCode}
         breadcrumbCode={post?.breadcrumbCode}
         faqCode={post?.faqCode}
         medicalConditionCode={post?.medicalConditionCode}
+        howToCode={post?.howToCode}
       />
       <BlogPostContent slug={slug} blogPost={post} />
     </>

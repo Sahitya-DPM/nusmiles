@@ -5,8 +5,34 @@ export const PHONE_TEL = 'tel:+12099551800';
 
 export const TESTIMONIAL_VIDEO_URL = '/NuSmileTestimonial.mp4';
 
+export function getBlogPathSlug(slug: string): string {
+  return slug
+    .trim()
+    .replace(/^\/+/, '')
+    .replace(/^blog\//i, '')
+    .replace(/^\/+/, '');
+}
+
+function encodePathSegments(path: string): string {
+  return path
+    .split('/')
+    .filter((segment) => segment.length > 0)
+    .map((segment) => encodeURIComponent(segment))
+    .join('/');
+}
+
 export function getBlogPostCanonicalUrl(slug: string): string {
-  return `${SITE_URL}/blog/${slug}`;
+  const pathSlug = getBlogPathSlug(slug);
+  return `${SITE_URL}/blog/${encodePathSegments(pathSlug)}`;
+}
+
+export function getBlogSitemapEntry(slug: string): string {
+  return getBlogPostCanonicalUrl(slug);
+}
+
+export function getBlogCategoryUrl(slug: string): string {
+  const pathSlug = getBlogPathSlug(slug);
+  return `${SITE_URL}/blog/category/${encodePathSegments(pathSlug)}`;
 }
 
 export function sanitizeSlug(value: string): string {

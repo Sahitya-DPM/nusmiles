@@ -13,9 +13,13 @@ export interface BlogPost {
   canonicalUrl?: string;
   ogImageUrl?: string;
   jsonLdCode?: string;
+  blogPostingCode?: string;
+  personCode?: string;
+  dentistCode?: string;
   breadcrumbCode?: string;
   faqCode?: string;
   medicalConditionCode?: string;
+  howToCode?: string;
   author?: string;
   category?: string;
   tags?: string[];
@@ -38,9 +42,13 @@ export interface BlogFormData {
   canonicalUrl?: string;
   ogImageUrl?: string;
   jsonLdCode?: string;
+  blogPostingCode?: string;
+  personCode?: string;
+  dentistCode?: string;
   breadcrumbCode?: string;
   faqCode?: string;
   medicalConditionCode?: string;
+  howToCode?: string;
   author?: string;
   tags: string[];
   status: 'draft' | 'published';

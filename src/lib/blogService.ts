@@ -125,9 +125,13 @@ export const createBlogPost = async (blogData: BlogFormData): Promise<string> =>
     if (blogPost.canonicalUrl) firestoreData.canonicalUrl = blogPost.canonicalUrl;
     if (blogPost.ogImageUrl) firestoreData.ogImageUrl = blogPost.ogImageUrl;
     if (blogPost.jsonLdCode) firestoreData.jsonLdCode = blogPost.jsonLdCode;
+    if (blogPost.blogPostingCode) firestoreData.blogPostingCode = blogPost.blogPostingCode;
+    if (blogPost.personCode) firestoreData.personCode = blogPost.personCode;
+    if (blogPost.dentistCode) firestoreData.dentistCode = blogPost.dentistCode;
     if (blogPost.breadcrumbCode) firestoreData.breadcrumbCode = blogPost.breadcrumbCode;
     if (blogPost.faqCode) firestoreData.faqCode = blogPost.faqCode;
     if (blogPost.medicalConditionCode) firestoreData.medicalConditionCode = blogPost.medicalConditionCode;
+    if (blogPost.howToCode) firestoreData.howToCode = blogPost.howToCode;
     if (blogPost.category) firestoreData.category = blogPost.category;
     if (blogPost.author) firestoreData.author = blogPost.author;
 

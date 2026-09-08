@@ -7,6 +7,7 @@ import { getBlogPostById, updateBlogPost } from '../../../../lib/blogService';
 import { BlogFormData, BlogPost } from '../../../../types/blog';
 import ProtectedRoute from '../../../../components/ProtectedRoute';
 import WordPressEditor from '../../../../components/WordPressEditor';
+import BlogSchemaFields from '../../../../components/BlogSchemaFields';
 import { uploadImageToCloudinary, validateImageFile } from '../../../../lib/cloudinaryService';
 
 interface EditBlogPostPageProps {
@@ -35,9 +36,13 @@ export default function EditBlogPostPage({ params }: EditBlogPostPageProps) {
     canonicalUrl: '',
     ogImageUrl: '',
     jsonLdCode: '',
+    blogPostingCode: '',
+    personCode: '',
+    dentistCode: '',
     breadcrumbCode: '',
     faqCode: '',
-    medicalConditionCode: ''
+    medicalConditionCode: '',
+    howToCode: ''
   });
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -69,9 +74,13 @@ export default function EditBlogPostPage({ params }: EditBlogPostPageProps) {
             canonicalUrl: post.canonicalUrl || '',
             ogImageUrl: post.ogImageUrl || '',
             jsonLdCode: post.jsonLdCode || '',
+            blogPostingCode: post.blogPostingCode || '',
+            personCode: post.personCode || '',
+            dentistCode: post.dentistCode || '',
             breadcrumbCode: post.breadcrumbCode || '',
             faqCode: post.faqCode || '',
-            medicalConditionCode: post.medicalConditionCode || ''
+            medicalConditionCode: post.medicalConditionCode || '',
+            howToCode: post.howToCode || ''
           });
         }
       } catch (error) {
@@ -437,73 +446,7 @@ export default function EditBlogPostPage({ params }: EditBlogPostPageProps) {
                 />
               </div>
 
-              {/* JSON-LD Code - Optional */}
-              <div>
-                <label htmlFor="jsonLdCode" className="block text-sm font-medium text-gray-700 mb-2">
-                  JSON-LD Code
-                </label>
-                <textarea
-                  id="jsonLdCode"
-                  name="jsonLdCode"
-                  value={formData.jsonLdCode}
-                  onChange={handleInputChange}
-                  rows={6}
-                  placeholder='{"@context": "https://schema.org", "@type": "Article", ...}'
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
-                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
-                />
-              </div>
-
-              {/* Breadcrumb Code - Optional */}
-              <div>
-                <label htmlFor="breadcrumbCode" className="block text-sm font-medium text-gray-700 mb-2">
-                  Breadcrumb Code
-                </label>
-                <textarea
-                  id="breadcrumbCode"
-                  name="breadcrumbCode"
-                  value={formData.breadcrumbCode}
-                  onChange={handleInputChange}
-                  rows={4}
-                  placeholder='{"@context": "https://schema.org", "@type": "BreadcrumbList", ...}'
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
-                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
-                />
-              </div>
-
-              {/* FAQ Code - Optional */}
-              <div>
-                <label htmlFor="faqCode" className="block text-sm font-medium text-gray-700 mb-2">
-                  FAQ Code
-                </label>
-                <textarea
-                  id="faqCode"
-                  name="faqCode"
-                  value={formData.faqCode}
-                  onChange={handleInputChange}
-                  rows={6}
-                  placeholder='{"@context": "https://schema.org", "@type": "FAQPage", ...}'
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
-                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
-                />
-              </div>
-
-              {/* MedicalCondition Code - Optional */}
-              <div>
-                <label htmlFor="medicalConditionCode" className="block text-sm font-medium text-gray-700 mb-2">
-                  MedicalCondition Code
-                </label>
-                <textarea
-                  id="medicalConditionCode"
-                  name="medicalConditionCode"
-                  value={formData.medicalConditionCode}
-                  onChange={handleInputChange}
-                  rows={6}
-                  placeholder='{"@context": "https://schema.org", "@type": "MedicalCondition", ...}'
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
-                  style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
-                />
-              </div>
+              <BlogSchemaFields formData={formData} onChange={handleInputChange} />
 
               {/* Content */}
               <div className="relative">

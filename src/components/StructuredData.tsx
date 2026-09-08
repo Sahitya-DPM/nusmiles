@@ -9,23 +9,31 @@ type StructuredDataProps = {
   post?: BlogPost | null;
   canonicalUrl?: string;
   jsonLdCode?: string;
+  blogPostingCode?: string;
+  personCode?: string;
+  dentistCode?: string;
   breadcrumbCode?: string;
   faqCode?: string;
   medicalConditionCode?: string;
+  howToCode?: string;
 };
 
 export default function StructuredData({
   post,
   canonicalUrl,
   jsonLdCode,
+  blogPostingCode,
+  personCode,
+  dentistCode,
   breadcrumbCode,
   faqCode,
   medicalConditionCode,
+  howToCode,
 }: StructuredDataProps) {
   try {
     const blocks: { id: string; code: string }[] = [];
 
-    let primaryJsonLd = normalizeSchemaCode(jsonLdCode);
+    let primaryJsonLd = normalizeSchemaCode(jsonLdCode) || normalizeSchemaCode(blogPostingCode);
 
     if (!primaryJsonLd && post?.content) {
       const embeddedSchemas = extractSchemaFromHtml(post.content);
@@ -45,10 +53,18 @@ export default function StructuredData({
       blocks.unshift({ id: 'json-ld', code: primaryJsonLd });
     }
 
+    const normalizedBlogPosting = normalizeSchemaCode(blogPostingCode);
+    if (normalizedBlogPosting && normalizedBlogPosting !== primaryJsonLd) {
+      blocks.push({ id: 'blog-posting', code: normalizedBlogPosting });
+    }
+
     const optionalBlocks = [
+      { id: 'person', code: normalizeSchemaCode(personCode) },
+      { id: 'dentist', code: normalizeSchemaCode(dentistCode) },
       { id: 'breadcrumb', code: normalizeSchemaCode(breadcrumbCode) },
       { id: 'faq', code: normalizeSchemaCode(faqCode) },
       { id: 'medical-condition', code: normalizeSchemaCode(medicalConditionCode) },
+      { id: 'howto', code: normalizeSchemaCode(howToCode) },
     ];
 
     for (const block of optionalBlocks) {
