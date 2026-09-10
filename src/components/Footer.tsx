@@ -4,13 +4,15 @@ import { PHONE_DISPLAY, PHONE_TEL } from '@/lib/site';
 
 const services = [
   { href: '/general-dentistry', label: 'General Dentistry' },
-  { href: '/dental-implants', label: 'Dental Implants' },
+  { href: '/dental-implants', label: 'Dental Implants in Stockton' },
   { href: '/all-on-4-implant-dentures', label: 'All-on-4® Implant Dentures' },
   { href: '/invisalign', label: 'Invisalign' },
   { href: '/platelet-rich-fibrin-therapy-prf', label: 'Platelet Rich Fibrin Therapy' },
 ];
 
 const quickLinks = [
+  { href: '/', label: 'NuSmile Dental Home' },
+  { href: '/about-us', label: 'About Us' },
   { href: '/privacy-policy', label: 'Privacy Policy' },
   { href: '/disclaimer', label: 'Disclaimer' },
   { href: '/sitemap.xml', label: 'Sitemap' },
@@ -108,7 +110,7 @@ export default function Footer() {
           {/* Address & Hours */}
           <div>
             <h3 className="text-lg font-semibold mb-4" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-              Address
+              NuSmile Dental
             </h3>
             <p className="text-gray-400 text-sm mb-6">
               1801 E March Ln A165,<br />

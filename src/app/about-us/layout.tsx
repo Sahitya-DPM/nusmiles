@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About NuSmile Dental | Stockton Team",
+  title: "About NuSmile Dental | Stockton Family Dentist",
   description:
-    "Learn about NuSmile Dental’s philosophy, patient-focused approach, and commitment to modern and comfortable dentistry.",
+    "About NuSmile Dental in Stockton, CA — the official practice page for NuSmile Dentist, NuSmile Dentistry, NuSmile Family Dentistry, and Nusmiles Dental.",
+  alternates: {
+    canonical: "https://www.nusmiledentalca.com/about-us",
+  },
 };
 
 export default function AboutUsLayout({

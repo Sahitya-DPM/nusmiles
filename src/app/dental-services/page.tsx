@@ -6,6 +6,7 @@ export default function DentalServicesPage() {
   const services = [
     {
       title: "General & Cosmetic Dentistry",
+      href: "/general-dentistry",
       description: "Comprehensive dental care including regular cleanings, exams, and cosmetic procedures to keep your smile healthy and beautiful.",
       image: "/General Dentistry.jpeg",
       features: [
@@ -21,6 +22,7 @@ export default function DentalServicesPage() {
     },
     {
       title: "Dental Implants",
+      href: "/dental-implants",
       description: "The longest-lasting tooth replacement available today, providing permanent solutions that look, feel, and function like natural teeth.",
       image: "/Dental Implants.jpeg",
       features: [
@@ -34,6 +36,7 @@ export default function DentalServicesPage() {
     },
     {
       title: "Orthodontics & Invisalign",
+      href: "/invisalign",
       description: "Modern orthodontic solutions to straighten teeth and achieve the perfect smile you've always wanted.",
       image: "/Invisalign & Orthodontics.jpeg",
       features: [
@@ -47,6 +50,7 @@ export default function DentalServicesPage() {
     },
     {
       title: "Advanced Treatments",
+      href: "/platelet-rich-fibrin-therapy-prf",
       description: "Specialized dental treatments including sedation dentistry, periodontal therapy, and advanced restorative procedures.",
       image: "/Cosmetic Dentistry.jpeg",
       features: [
@@ -127,7 +131,9 @@ export default function DentalServicesPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute bottom-6 left-6">
                     <h3 className="text-[22px] md:text-3xl font-bold text-white mb-2" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                      {service.title}
+                      <Link href={service.href} className="hover:underline">
+                        {service.title}
+                      </Link>
                     </h3>
                   </div>
                 </div>
@@ -151,6 +157,13 @@ export default function DentalServicesPage() {
                         </li>
                       ))}
                     </ul>
+                    <Link
+                      href={service.href}
+                      className="mt-6 inline-block text-primary font-semibold hover:text-primary-dark text-[15px]"
+                      style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+                    >
+                      Learn more
+                    </Link>
                   </div>
                 </div>
               </div>

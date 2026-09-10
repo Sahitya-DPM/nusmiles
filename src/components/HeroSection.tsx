@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className="relative w-full h-full">
         <Image
           src="/heroimage.jpg"
-          alt="Nu Smile Dental Office Team"
+          alt="NuSmile Dental office team in Stockton, CA"
           fill
           className="object-cover"
           style={{
@@ -26,13 +26,13 @@ export default function HeroSection() {
       <div className="absolute inset-0 flex items-end z-10 pb-20 md:pb-32">
         <div className="text-left text-white px-4 sm:px-8 md:px-16 lg:px-24 max-w-4xl w-full">
           <h1 className="text-[24px] sm:text-[26px] md:text-6xl lg:text-7xl font-bold leading-tight break-words" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif', marginBottom: '40px' }}>
-            Welcome to Our Practice
+            NuSmile Dental
           </h1>
           <p className="text-[18px] sm:text-[22px] md:text-[16px] lg:text-[16px] mb-4 leading-relaxed break-words" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-            Welcome to Nu Smile Dental, Your Dentist in Stockton, CA
+            Family Dentist in Stockton, CA
           </p>
           <p className="text-[14px] sm:text-[16px] md:text-[16px] lg:text-[16px] mb-4 leading-loose break-words" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-            Welcome! The dental professionals at Nu Smile Dental are pleased to welcome you to our practice located in Stockton, CA.
+            Welcome to NuSmile Dental — Stockton’s family dentist, also known as NuSmile Dentistry and NuSmile Family Dentistry. Our doctors are pleased to welcome you to our practice at 1801 E March Ln.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
             <Link href="/appointment" className="bg-primary text-white px-6 sm:px-10 py-4 sm:py-5 rounded-lg text-[14px] sm:text-[15px] md:text-[16px] font-semibold hover:bg-primary-dark transition-colors shadow-lg uppercase inline-block text-center w-full sm:w-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>

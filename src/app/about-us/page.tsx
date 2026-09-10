@@ -21,10 +21,10 @@ export default function AboutUsPage() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-            About Us
+            About NuSmile Dental
           </h1>
           <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-            Dedicated to providing exceptional dental care with compassion, expertise, and the latest technology.
+            Stockton&apos;s family dentist — also known as NuSmile Dentist, NuSmile Dentistry, NuSmile Family Dentistry, and Nusmiles Dental.
           </p>
         </div>
       </section>
@@ -36,11 +36,11 @@ export default function AboutUsPage() {
             {/* Text Content */}
             <div className="space-y-6 text-center lg:text-left">
               <h2 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                Your Trusted Dental Care Partner
+                Your Trusted Family Dentist in Stockton
               </h2>
               
               <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                Welcome! The dental professionals at Nu Smile Dental are pleased to welcome you to our practice located in Stockton, CA.
+                Welcome to <Link href="/" className="text-primary font-semibold hover:underline">NuSmile Dental</Link>, our official practice name. Whether you searched NuSmile Dentist, NuSmile Dentistry, NuSmile Family Dentistry, or Nusmiles Dental, you have found the same Stockton family dental office.
               </p>
               
               <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -52,7 +52,12 @@ export default function AboutUsPage() {
               </p>
               
               <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                We want you to feel confident that when you choose Nu Smile Dental, you're working with doctors and other professionals who are qualified, experienced and caring.
+                We want you to feel confident that when you choose NuSmile Dental, you&apos;re working with doctors and other professionals who are qualified, experienced and caring. Learn about <Link href="/dental-implants" className="text-primary font-semibold hover:underline">dental implants in Stockton</Link> or <Link href="/appointment" className="text-primary font-semibold hover:underline">book a visit</Link>.
+              </p>
+              <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                NuSmile Dental<br />
+                1801 E March Ln A165, Stockton, CA 95210<br />
+                (209) 955-1800
               </p>
             </div>
 
@@ -62,7 +67,7 @@ export default function AboutUsPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent z-10"></div>
                 <Image
                   src="/Stockton Dentist.jpg"
-                  alt="Stockton Dentist"
+                  alt="NuSmile Dental family dentist in Stockton"
                   width={600}
                   height={700}
                   className="w-full h-auto object-cover"

@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '../../components/Header';
+import { dentalImplantFaqs } from '../../lib/dentalImplantFaqs';
 
 export default function DentalImplantsPage() {
   const [openFaq, setOpenFaq] = useState(0); // First FAQ open by default
@@ -32,32 +33,7 @@ export default function DentalImplantsPage() {
     }
   ];
 
-  const faqs = [
-    {
-      question: "How Many Teeth Can Be Replaced With Dental Implants?",
-      answer: "You can replace a single tooth, multiple teeth or all your teeth with implants. You don't even need one implant for every missing tooth. As few as two Implants can support a removable lower denture, while as few as four implants can provide a full, permanent set of top or bottom teeth."
-    },
-    {
-      question: "Is Dental Implant Surgery Painful?",
-      answer: "Most people find dental implant surgery very easy to tolerate. Any post-operative discomfort can usually be managed with over-the-counter anti-inflammatory medication such as ibuprofen or OTC pain-relievers. Ice can also be helpful."
-    },
-    {
-      question: "Are Stockton, CA Dental Implants Expensive?",
-      answer: "At the outset, implants are more expensive than other tooth-replacement methods such as dentures or bridgework. But they also last many years longer and in fact should never need replacement. So they offer the best, most cost-effective option when viewed as a long-term investment in your health, comfort and well-being."
-    },
-    {
-      question: "How Do You Care For Dental Implants?",
-      answer: "They require exactly the same care as natural teeth: daily brushing and flossing, along with regular dental checkups and professional cleanings. Although implant teeth will never decay, the gum tissues around them can become inflamed or infected in the absence of good oral hygiene. Properly cared-for dental implants should last a lifetime."
-    },
-    {
-      question: "Can My Body Reject A Dental Implant?",
-      answer: "Strictly speaking, implants can't be rejected because they contain no living cells or genetically coded material. The titanium of which they are made is completely biocompatible, and allergies are extremely rare. But an implant can fail to integrate with the jawbone if an infection develops in the absence of good oral hygiene, or if it is subjected to biting forces too soon. However, this is rare; implants regularly achieve success rates in excess of 95%."
-    },
-    {
-      question: "Am I A Good Candidate For Dental Implants?",
-      answer: "There's a good chance that you are, but this can only be determined after a complete oral examination that includes x-rays of your jaws. Please call our Stockton office schedule a consultation with Dr. Parikh to begin the exciting process of restoring your smile and bite."
-    }
-  ];
+  const faqs = dentalImplantFaqs;
 
   return (
     <div className="min-h-screen bg-white">
@@ -68,7 +44,7 @@ export default function DentalImplantsPage() {
         <div className="absolute inset-0">
           <Image
             src="/Dental Implants s.jpeg"
-            alt="Dental Implants"
+            alt="Dental implants in Stockton, CA at NuSmile Dental"
             fill
             className="object-cover"
             sizes="100vw"
@@ -77,13 +53,21 @@ export default function DentalImplantsPage() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-            Dental Implants
+            Dental Implants in Stockton, CA
           </h1>
           <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-            Permanent tooth replacement solution in Stockton, CA
+            Permanent tooth replacement from your Stockton implant dentist
           </p>
         </div>
       </section>
+
+      <nav className="bg-gray-50 py-3" aria-label="Breadcrumb">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+          <Link href="/" className="hover:text-primary">NuSmile Dental</Link>
+          <span className="mx-2">/</span>
+          <span className="text-gray-900">Dental Implants in Stockton</span>
+        </div>
+      </nav>
 
       {/* Introduction Section */}
       <section className="py-10 md:py-20 bg-white">
@@ -96,7 +80,7 @@ export default function DentalImplantsPage() {
               <div className="w-24 h-1 bg-primary rounded-full mb-8 mx-auto lg:mx-0"></div>
               <div className="space-y-6 text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                 <p className="text-[16px] md:text-[16px] leading-relaxed">
-                  Dental implants from Nu Smile Dental are small titanium posts that replace the roots of missing teeth. They are inserted into your jawbone during a minor surgical procedure that takes place at our dental office in Stockton, CA.
+                  Dental implants Stockton patients choose at NuSmile Dental are small titanium posts that replace the roots of missing teeth. They are inserted into your jawbone during a minor surgical procedure at our dental office in Stockton, CA.
                 </p>
                 <p className="text-[16px] md:text-[16px] leading-relaxed">
                   After the implant has been placed in your jawbone, a completely lifelike porcelain tooth crown is attached. In some cases, the implant needs to fuse with the bone for several months before it is permanently crowned; in other cases, you can have new (but temporary) teeth the same day your implants are placed.
@@ -180,7 +164,7 @@ export default function DentalImplantsPage() {
               Frequently Asked Questions
             </h2>
             <p className="text-[16px] md:text-[16px] text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-              Everything you need to know about dental implants
+              Common questions about dental implants in Stockton, CA
             </p>
           </div>
 

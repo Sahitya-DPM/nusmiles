@@ -15,6 +15,17 @@ export const legacyRedirects: LegacyRedirect[] = [
   { source: '/implant-dentistry', destination: '/dental-implants', permanent: true },
   { source: '/services/dental-implants', destination: '/dental-implants', permanent: true },
   { source: '/dental-implants-stockton', destination: '/dental-implants', permanent: true },
+  { source: '/dental-implants-in-stockton', destination: '/dental-implants', permanent: true },
+  { source: '/stockton-dental-implants', destination: '/dental-implants', permanent: true },
+
+  // Brand variants (K-03) → canonical homepage
+  { source: '/nusmile', destination: '/', permanent: true },
+  { source: '/nusmiles', destination: '/', permanent: true },
+  { source: '/nusmile-dental', destination: '/', permanent: true },
+  { source: '/nusmile-dentist', destination: '/', permanent: true },
+  { source: '/nusmile-dentistry', destination: '/', permanent: true },
+  { source: '/nusmile-family-dentistry', destination: '/', permanent: true },
+  { source: '/nusmiles-dental', destination: '/', permanent: true },
 
   // Booking-intent aliases for /all-on-4-implant-dentures
   { source: '/all-on-4', destination: '/all-on-4-implant-dentures', permanent: true },

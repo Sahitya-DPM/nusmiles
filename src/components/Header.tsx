@@ -22,7 +22,7 @@ export default function Header() {
               <div className="relative w-28 h-14 sm:w-40 sm:h-20">
                 <Image
                   src="https://cdcssl.ibsrv.net/ibimg/smb/218x100_80/webmgr/0t/1/w/64b6d9599db5c_nusmilelogo.png.webp?ab8c818672eef3a981e2d0a2dbd11bd4"
-                  alt="Nusmiles Logo"
+                  alt="NuSmile Dental"
                   fill
                   className="object-contain"
                   priority

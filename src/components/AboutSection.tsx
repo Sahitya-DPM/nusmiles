@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function AboutSection() {
   return (
@@ -14,13 +15,13 @@ export default function AboutSection() {
           <div className="space-y-8">
             <div className="space-y-6">
               <h2 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                Your Trusted Dental Care Partner
+                Your Trusted Family Dentist in Stockton
               </h2>
               
               <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
               
               <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                Welcome! The dental professionals at Nu Smile Dental are pleased to welcome you to our practice located in Stockton, CA.
+                Welcome to <Link href="/" className="text-primary font-semibold hover:underline">NuSmile Dental</Link>, Stockton&apos;s family dentist. Patients also know us as NuSmile Dentist, NuSmile Dentistry, NuSmile Family Dentistry, and Nusmiles Dental — one practice, one official name.
               </p>
               
               <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
@@ -32,7 +33,7 @@ export default function AboutSection() {
               </p>
               
               <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                Please take a few moments to look through this site to get a better feel for Nu Smile Dental's capabilities and services. We also invite you to email or call our office at any time to request an appointment or ask any questions. Thank you.
+                Please take a few moments to look through this site to get a better feel for NuSmile Dental&apos;s capabilities and services, including <Link href="/dental-implants" className="text-primary font-semibold hover:underline">dental implants in Stockton</Link>. We also invite you to email or <Link href="/contact" className="text-primary font-semibold hover:underline">call our office</Link> at any time to request an appointment or ask any questions. Thank you.
               </p>
             </div>
           </div>
@@ -43,7 +44,7 @@ export default function AboutSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent z-10"></div>
               <Image
                 src="/trusted-partner.jpeg"
-                alt="Stockton Dentist"
+                alt="NuSmile Dental family dentist in Stockton"
                 width={600}
                 height={700}
                 className="w-full h-auto object-cover"

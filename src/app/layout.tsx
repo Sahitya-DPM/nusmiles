@@ -8,9 +8,14 @@ import { AuthProvider } from "../contexts/AuthContext";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.nusmiledentalca.com'),
-  title: "NuSmile Dental | Family Dentist in Stockton",
-  description: "Visit NuSmile Dental for modern, comfortable dental care in Stockton offering implants, Invisalign, and general dentistry for all ages.",
-  keywords: "dentist, dental implants, veneers, emergency dental, Fresno, CA, family dentist",
+  title: {
+    default: "NuSmile Dental | Family Dentist in Stockton, CA",
+    template: "%s",
+  },
+  description:
+    "NuSmile Dental is a family dentist in Stockton, CA. Visit Dr. Rujul Parikh and our team for general, cosmetic, and restorative care.",
+  keywords:
+    "NuSmile Dental, NuSmile Dentist, NuSmile Dentistry, NuSmile Family Dentistry, Nusmiles Dental, Stockton dentist, family dentist Stockton",
   icons: {
     icon: [
       { url: '/favicon.png', sizes: 'any' },

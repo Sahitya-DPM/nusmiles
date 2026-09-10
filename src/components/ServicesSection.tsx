@@ -18,8 +18,8 @@ export default function ServicesSection() {
     },
     {
       id: 2,
-      title: "Dental Implants",
-      description: "Before development of dental implants, dentures were the only alternative to replacing a missing tooth or teeth.",
+      title: "Dental Implants in Stockton",
+      description: "Dental implants in Stockton from NuSmile Dental replace missing teeth with a permanent solution that looks, feels, and functions like natural teeth.",
       image: "/AdobeStock_1019988262.jpeg",
       href: "/dental-implants",
       icon: (
@@ -79,7 +79,9 @@ export default function ServicesSection() {
               {/* Service Content */}
               <div className="p-6">
                 <h3 className="text-[22px] md:text-[16px] font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                  {service.title}
+                  <Link href={service.href} className="hover:text-primary transition-colors">
+                    {service.title}
+                  </Link>
                 </h3>
                 <p className="text-[16px] md:text-base text-gray-600 leading-relaxed mb-6" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                   {service.description}

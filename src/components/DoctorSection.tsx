@@ -65,7 +65,7 @@ export default function DoctorSection() {
               {/* Description */}
               <div className="prose prose-lg max-w-none">
                 <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                  For more than 25 years, Dr. Rujul G. Parikh DDS has been committed to creating beautiful, healthy smiles. His main priorities are oral health and patient care. As a General Dentist, he has invested many hours in continuing education and constantly updated and educated in dentistry. His continual pursuit of better methods, depth of understanding, and range of experience make him skilled in numerous dental procedures with primary focus on Dental Implants and Dentures.
+                  For more than 25 years, Dr. Rujul G. Parikh DDS has been committed to creating beautiful, healthy smiles. His main priorities are oral health and patient care. As a General Dentist, he has invested many hours in continuing education and constantly updated and educated in dentistry. His continual pursuit of better methods, depth of understanding, and range of experience make him skilled in numerous dental procedures with primary focus on <Link href="/dental-implants" className="text-primary font-semibold hover:underline">dental implants in Stockton</Link> and dentures.
                 </p>
               </div>
 
@@ -78,8 +78,8 @@ export default function DoctorSection() {
                     </svg>
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">Dental Implants</div>
-                    <div className="text-sm text-gray-600">Specialized Focus</div>
+                    <Link href="/dental-implants" className="font-semibold text-gray-900 hover:text-primary">Dental Implants</Link>
+                    <div className="text-sm text-gray-600">Stockton implant dentist</div>
                   </div>
                 </div>
 

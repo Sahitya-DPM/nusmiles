@@ -1,6 +1,21 @@
 import { BlogPost } from '../types/blog';
 import { expandRawCodeBlocks, extractSchemasFromRawCode } from './rawCode';
-import { SITE_URL } from './site';
+import {
+  ADDRESS_COUNTRY,
+  ADDRESS_LOCALITY,
+  ADDRESS_REGION,
+  BUSINESS_ALTERNATE_NAMES,
+  BUSINESS_NAME,
+  GEO_LATITUDE,
+  GEO_LONGITUDE,
+  LOGO_URL,
+  PHONE_E164,
+  POSTAL_CODE,
+  SAME_AS,
+  SITE_URL,
+  STREET_ADDRESS,
+} from './site';
+import { dentalImplantFaqs } from './dentalImplantFaqs';
 
 type FirestoreTimestampLike = {
   toDate?: () => Date;
@@ -197,4 +212,155 @@ export function extractSchemaFromHtml(html: string | undefined): string[] {
   }
 
   return schemas;
+}
+
+function postalAddress() {
+  return {
+    '@type': 'PostalAddress',
+    streetAddress: STREET_ADDRESS,
+    addressLocality: ADDRESS_LOCALITY,
+    addressRegion: ADDRESS_REGION,
+    postalCode: POSTAL_CODE,
+    addressCountry: ADDRESS_COUNTRY,
+  };
+}
+
+function dentistOrganization() {
+  return {
+    '@type': ['Dentist', 'LocalBusiness', 'MedicalBusiness'],
+    '@id': `${SITE_URL}/#dentist`,
+    name: BUSINESS_NAME,
+    alternateName: BUSINESS_ALTERNATE_NAMES,
+    url: `${SITE_URL}/`,
+    telephone: PHONE_E164,
+    image: LOGO_URL,
+    logo: LOGO_URL,
+    address: postalAddress(),
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: GEO_LATITUDE,
+      longitude: GEO_LONGITUDE,
+    },
+    sameAs: SAME_AS,
+    priceRange: '$$',
+    areaServed: {
+      '@type': 'City',
+      name: 'Stockton',
+      addressRegion: 'CA',
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday'],
+        opens: '09:30',
+        closes: '18:00',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: 'Wednesday',
+        opens: '09:30',
+        closes: '17:00',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Thursday', 'Friday'],
+        opens: '09:30',
+        closes: '18:00',
+      },
+    ],
+  };
+}
+
+export function buildHomeBrandSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      dentistOrganization(),
+      {
+        '@type': 'WebSite',
+        '@id': `${SITE_URL}/#website`,
+        url: `${SITE_URL}/`,
+        name: BUSINESS_NAME,
+        alternateName: BUSINESS_ALTERNATE_NAMES,
+        publisher: { '@id': `${SITE_URL}/#dentist` },
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${SITE_URL}/#webpage`,
+        url: `${SITE_URL}/`,
+        name: `${BUSINESS_NAME} | Family Dentist in Stockton, CA`,
+        isPartOf: { '@id': `${SITE_URL}/#website` },
+        about: { '@id': `${SITE_URL}/#dentist` },
+      },
+    ],
+  };
+}
+
+export function buildDentalImplantPageSchema() {
+  const pageUrl = `${SITE_URL}/dental-implants`;
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        ...dentistOrganization(),
+        medicalSpecialty: 'https://schema.org/Dentistry',
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Dental implants in Stockton',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'MedicalProcedure',
+                name: 'Dental Implants in Stockton, CA',
+                url: pageUrl,
+              },
+            },
+          ],
+        },
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: 'Dental Implants in Stockton, CA | NuSmile Dental',
+        description:
+          'Dental implants in Stockton, CA at NuSmile Dental. Permanent tooth replacement with transparent pricing and a free consultation.',
+        isPartOf: { '@id': `${SITE_URL}/#website` },
+        about: {
+          '@type': 'MedicalProcedure',
+          name: 'Dental implants',
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: `${SITE_URL}/`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Dental Implants in Stockton',
+            item: pageUrl,
+          },
+        ],
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: dentalImplantFaqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
+      },
+    ],
+  };
 }

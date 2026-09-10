@@ -33,11 +33,13 @@ export default function GeneralDentistryPage() {
     },
     {
       title: "Dental Implants",
-      description: "for the longest-lasting tooth replacement available today"
+      description: "for the longest-lasting tooth replacement available today",
+      href: "/dental-implants"
     },
     {
       title: "Implant-Supported Dentures",
-      description: "to help you smile again"
+      description: "to help you smile again",
+      href: "/all-on-4-implant-dentures"
     },
     {
       title: "Oral Cancer Screenings",
@@ -108,7 +110,13 @@ export default function GeneralDentistryPage() {
             {generalServices.map((service, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
                 <h3 className="text-[22px] md:text-[16px] font-semibold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                  {service.title}
+                  {'href' in service && service.href ? (
+                    <Link href={service.href} className="hover:text-primary">
+                      {service.title}
+                    </Link>
+                  ) : (
+                    service.title
+                  )}
                 </h3>
                 <p className="text-gray-600 text-[16px]" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                   {service.description}

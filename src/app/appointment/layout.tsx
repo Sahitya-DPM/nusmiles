@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Book Dental Appointment in Stockton",
+  title: "Book a Dental Appointment | NuSmile Dental",
   description:
-    "Schedule your dental appointment at NuSmile Dental easily online for preventive, cosmetic, and restorative treatments.",
+    "Request an appointment with NuSmile Dental in Stockton. Choose a preferred date and service and our scheduling team will confirm your visit.",
   alternates: {
     canonical: "https://www.nusmiledentalca.com/appointment",
   },
