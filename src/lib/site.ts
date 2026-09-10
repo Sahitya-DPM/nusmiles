@@ -21,20 +21,6 @@ function encodePathSegments(path: string): string {
     .join('/');
 }
 
-export function getBlogPostCanonicalUrl(slug: string): string {
-  const pathSlug = getBlogPathSlug(slug);
-  return `${SITE_URL}/blog/${encodePathSegments(pathSlug)}`;
-}
-
-export function getBlogSitemapEntry(slug: string): string {
-  return getBlogPostCanonicalUrl(slug);
-}
-
-export function getBlogCategoryUrl(slug: string): string {
-  const pathSlug = getBlogPathSlug(slug);
-  return `${SITE_URL}/blog/category/${encodePathSegments(pathSlug)}`;
-}
-
 export function sanitizeSlug(value: string): string {
   return value
     .trim()
@@ -44,4 +30,43 @@ export function sanitizeSlug(value: string): string {
     .replace(/[^a-z0-9-]/g, '-')
     .replace(/-+/g, '-')
     .replace(/^-|-$/g, '');
+}
+
+export function getCanonicalBlogSlug(slug: string): string {
+  return sanitizeSlug(getBlogPathSlug(slug));
+}
+
+export function getBlogPostCanonicalUrl(slug: string): string {
+  const pathSlug = getCanonicalBlogSlug(slug) || getBlogPathSlug(slug);
+  return `${SITE_URL}/blog/${encodePathSegments(pathSlug)}`;
+}
+
+export function getBlogSitemapEntry(slug: string): string {
+  return getBlogPostCanonicalUrl(slug);
+}
+
+export function getBlogCategoryUrl(slug: string): string {
+  const pathSlug = sanitizeSlug(getBlogPathSlug(slug)) || getBlogPathSlug(slug);
+  return `${SITE_URL}/blog/category/${encodePathSegments(pathSlug)}`;
+}
+
+export function isCanonicalIndexablePath(path: string): boolean {
+  if (path === '/') {
+    return true;
+  }
+
+  if (!path.startsWith('/')) {
+    return false;
+  }
+
+  if (
+    path.startsWith('/admin') ||
+    path.startsWith('/api') ||
+    path.includes('//') ||
+    path.endsWith('/')
+  ) {
+    return false;
+  }
+
+  return /^\/[a-z0-9]+(?:[a-z0-9\-/]*[a-z0-9])?$/.test(path);
 }

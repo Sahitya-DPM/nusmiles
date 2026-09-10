@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
+import { permanentRedirect } from 'next/navigation';
 import StructuredData from '../../../components/StructuredData';
 import { getBlogPostBySlug } from '../../../lib/blogService';
-import { getBlogPostCanonicalUrl } from '../../../lib/site';
+import { getBlogPostCanonicalUrl, getCanonicalBlogSlug } from '../../../lib/site';
 import BlogPostContent from './BlogPostContent';
 
 type BlogPostPageProps = {
@@ -61,6 +62,11 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
+  const canonicalSlug = getCanonicalBlogSlug(slug);
+  if (canonicalSlug && canonicalSlug !== slug) {
+    permanentRedirect(`/blog/${canonicalSlug}`);
+  }
+
   const canonicalUrl = getBlogPostCanonicalUrl(slug);
   let post = null;
 

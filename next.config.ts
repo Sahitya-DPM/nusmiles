@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { legacyRedirects } from "./src/lib/legacyRedirects";
 
 const contentSecurityPolicy = [
   "default-src 'self'",
@@ -183,28 +184,7 @@ const nextConfig: NextConfig = {
     ];
   },
   async redirects() {
-    return [
-      {
-        source: '/sitemap',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/patient-education/root-canal-therapy',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/category/:slug',
-        destination: '/blog/category/:slug',
-        permanent: true,
-      },
-      {
-        source: '/category/:slug/',
-        destination: '/blog/category/:slug',
-        permanent: true,
-      },
-    ];
+    return legacyRedirects;
   },
 };
 

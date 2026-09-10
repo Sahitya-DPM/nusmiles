@@ -4,6 +4,13 @@ export const metadata: Metadata = {
   title: "Book Dental Appointment in Stockton",
   description:
     "Schedule your dental appointment at NuSmile Dental easily online for preventive, cosmetic, and restorative treatments.",
+  alternates: {
+    canonical: "https://www.nusmiledentalca.com/appointment",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function AppointmentLayout({

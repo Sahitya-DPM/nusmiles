@@ -5,6 +5,8 @@ import { dentalImplantCostPages, getDentalImplantCostPageUrl } from '../lib/dent
 import {
   getBlogCategoryUrl,
   getBlogSitemapEntry,
+  getCanonicalBlogSlug,
+  isCanonicalIndexablePath,
   SITE_URL,
 } from '../lib/site';
 
@@ -38,20 +40,20 @@ const FALLBACK_BLOG_SLUGS = [
   'biting-into-an-apple-again-a-real-dental-implant-success-story',
   'missing-teeth-and-your-health-why-dental-implants-are-more-than-a-cosmetic-fix',
   'how-to-replace-a-missing-tooth-without-affecting-the-rest',
-  'Replacing One Tooth? Why a Single Tooth Implant Might Be Ideal',
+  'replacing-one-tooth-why-a-single-tooth-implant-might-be-ideal',
   'do-full-denture-implants-feel-like-real-teeth',
-  'Can You Eat Normally With a Front Tooth Implant?',
+  'can-you-eat-normally-with-a-front-tooth-implant',
   'can-get-complete-dental-implants-if-i-have-bone-loss',
   'permanent-teeth-in-a-day',
   'what-are-the-different-materials-used-for-dental-implants',
-  'Can Dental Implants Be Done on the Same Day as Tooth Extraction?',
+  'can-dental-implants-be-done-on-the-same-day-as-tooth-extraction',
   'how-painful-is-getting-a-dental-implant',
   'can-i-get-a-dental-implant-if-i-have-sensitive-teeth',
   'what-are-the-benefits-of-a-single-tooth-implant',
   'how-long-does-it-take-for-dental-implants-to-fully-integrate-into-the-jawbone-in-stockton-ca',
   'how-dr-shivli-arora-ensures-a-pain-free-dental-implant-experience-in-stockton-ca',
   'full-mouth-implants-vs-traditional-dentures-unlock-the-secret-to-a-radiant-long-lasting-smile',
-  'Happy Holidays! Healthy Holidays!',
+  'happy-holidays-healthy-holidays',
 ];
 
 type FirestoreTimestampLike = {
@@ -174,82 +176,98 @@ function toAbsoluteUrl(path: string): string {
   return `${SITE_URL}${path}`;
 }
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const entries: MetadataRoute.Sitemap = STATIC_PATHS.map(({ path, priority }) => ({
-    url: toAbsoluteUrl(path),
-    lastModified: new Date(),
-    changeFrequency: path === '/' || path === '/blog' ? 'weekly' : 'monthly',
-    priority,
-  }));
-
-  for (const page of dentalImplantCostPages) {
-    entries.push({
-      url: getDentalImplantCostPageUrl(page.slug),
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    });
-  }
-
-  const seen = new Set(entries.map((entry) => entry.url));
-
-  const addBlogUrl = (slug: string, lastModified?: Date) => {
-    if (!slug?.trim()) {
-      return;
-    }
-
-    const url = getBlogSitemapEntry(slug);
-    if (seen.has(url)) {
-      return;
-    }
-
-    seen.add(url);
-    entries.push({
-      url,
-      lastModified: lastModified || new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    });
-  };
-
+function pathFromAbsoluteUrl(url: string): string {
   try {
-    const posts = await getPublishedBlogPosts();
+    const parsed = new URL(url);
+    return parsed.pathname || '/';
+  } catch {
+    return '';
+  }
+}
 
-    for (const post of posts) {
-      addBlogUrl(post.slug, toDate(post.updatedAt) || toDate(post.publishDate));
-    }
+function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T | null> {
+  return Promise.race([
+    promise.then((value) => value).catch(() => null),
+    new Promise<null>((resolve) => {
+      setTimeout(() => resolve(null), ms);
+    }),
+  ]);
+}
 
-    for (const category of getCategoriesFromPosts(posts)) {
-      const url = getBlogCategoryUrl(category.slug);
-      if (seen.has(url)) {
-        continue;
+function buildStaticEntries(): MetadataRoute.Sitemap {
+  return STATIC_PATHS.filter(({ path }) => isCanonicalIndexablePath(path)).map(
+    ({ path, priority }) => ({
+      url: toAbsoluteUrl(path),
+      lastModified: new Date(),
+      changeFrequency: path === '/' || path === '/blog' ? 'weekly' : 'monthly',
+      priority,
+    })
+  );
+}
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  try {
+    const entries: MetadataRoute.Sitemap = buildStaticEntries();
+    const seen = new Set(entries.map((entry) => entry.url));
+
+    const addUrl = (
+      url: string,
+      lastModified?: Date,
+      changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'] = 'weekly',
+      priority = 0.7
+    ) => {
+      const path = pathFromAbsoluteUrl(url);
+      if (!url.startsWith(`${SITE_URL}/`) || !isCanonicalIndexablePath(path) || seen.has(url)) {
+        return;
       }
 
       seen.add(url);
       entries.push({
         url,
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: 0.6,
+        lastModified: lastModified || new Date(),
+        changeFrequency,
+        priority,
       });
+    };
+
+    for (const page of dentalImplantCostPages) {
+      addUrl(getDentalImplantCostPageUrl(page.slug), new Date(), 'monthly', 0.7);
     }
+
+    const posts = await withTimeout(getPublishedBlogPosts(), 4000);
+
+    if (posts) {
+      for (const post of posts) {
+        const slug = getCanonicalBlogSlug(post.slug);
+        if (!slug) {
+          continue;
+        }
+
+        addUrl(
+          getBlogSitemapEntry(slug),
+          toDate(post.updatedAt) || toDate(post.publishDate),
+          'weekly',
+          0.7
+        );
+      }
+
+      for (const category of getCategoriesFromPosts(posts)) {
+        addUrl(getBlogCategoryUrl(category.slug), new Date(), 'weekly', 0.6);
+      }
+    }
+
+    for (const slug of FALLBACK_BLOG_SLUGS) {
+      const canonicalSlug = getCanonicalBlogSlug(slug);
+      if (canonicalSlug) {
+        addUrl(getBlogSitemapEntry(canonicalSlug));
+      }
+    }
+
+    addUrl(getBlogCategoryUrl('dental-implant'), new Date(), 'weekly', 0.6);
+
+    return entries;
   } catch (error) {
-    console.error('Failed to add published blog posts to sitemap:', error);
+    console.error('Sitemap generation failed; returning canonical static URLs:', error);
+    return buildStaticEntries();
   }
-
-  for (const slug of FALLBACK_BLOG_SLUGS) {
-    addBlogUrl(slug);
-  }
-
-  const fallbackCategoryUrl = getBlogCategoryUrl('dental-implant');
-  if (!seen.has(fallbackCategoryUrl)) {
-    entries.push({
-      url: fallbackCategoryUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.6,
-    });
-  }
-
-  return entries;
 }

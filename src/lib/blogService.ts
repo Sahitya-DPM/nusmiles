@@ -231,8 +231,8 @@ export const getBlogPostBySlug = async (slug: string): Promise<BlogPost | null> 
   try {
     checkFirebaseAvailability();
 
-    // Normalize slug: trim whitespace and convert to lowercase for comparison
-    const normalizedSlug = slug.trim().toLowerCase();
+    // Normalize slug: trim, lowercase, and sanitize so title-style slugs still match
+    const normalizedSlug = sanitizeSlug(slug) || slug.trim().toLowerCase();
     console.log('Searching for blog post with slug:', slug, '(normalized:', normalizedSlug + ')');
 
     // Helper function to normalize status for comparison
@@ -244,7 +244,7 @@ export const getBlogPostBySlug = async (slug: string): Promise<BlogPost | null> 
     // Helper function to normalize slug for comparison
     const normalizeSlugForComparison = (slugValue: string | undefined): string => {
       if (!slugValue) return '';
-      return String(slugValue).trim().toLowerCase();
+      return sanitizeSlug(String(slugValue)) || String(slugValue).trim().toLowerCase();
     };
 
     // First try to find by slug only (to debug)
