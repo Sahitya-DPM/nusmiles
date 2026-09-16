@@ -80,6 +80,12 @@ export default function TechnologyPage() {
           excerpt: 'CEREC technology allows for same-day crown fabrication and placement.',
           category: 'Technology',
           readMore: '/patient-education/same-day-crowns'
+        },
+        {
+          title: 'Latest Dentures Technology (2026)',
+          excerpt: 'Digital dentures, new false teeth technology, and the newest implant-supported denture options.',
+          category: 'Technology',
+          readMore: '/blog/1222367-latest-dentures-technology'
         }
       ]
     }

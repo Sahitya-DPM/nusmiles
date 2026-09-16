@@ -84,4 +84,32 @@ export const legacyRedirects: LegacyRedirect[] = [
   // Legacy WordPress category archives
   { source: '/category/:slug', destination: '/blog/category/:slug', permanent: true },
   { source: '/category/:slug/', destination: '/blog/category/:slug', permanent: true },
+
+  // Blog 1222367 dentures-technology cluster
+  {
+    source: '/blog/1222367',
+    destination: '/blog/1222367-latest-dentures-technology',
+    permanent: true,
+  },
+  {
+    source: '/blog/latest-dentures-technology',
+    destination: '/blog/1222367-latest-dentures-technology',
+    permanent: true,
+  },
+  {
+    source: '/blog/new-false-teeth-technology',
+    destination: '/blog/1222367-latest-dentures-technology',
+    permanent: true,
+  },
+  {
+    source: '/blog/newest-dentures-technology',
+    destination: '/blog/1222367-latest-dentures-technology',
+    permanent: true,
+  },
+
+  // Insurance / Medi-Cal aliases
+  { source: '/accepted-insurance', destination: '/insurance', permanent: true },
+  { source: '/insurance-accepted', destination: '/insurance', permanent: true },
+  { source: '/medi-cal', destination: '/insurance', permanent: true },
+  { source: '/medical', destination: '/insurance', permanent: true },
 ];

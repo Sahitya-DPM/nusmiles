@@ -243,6 +243,13 @@ function dentistOrganization() {
     },
     sameAs: SAME_AS,
     priceRange: '$$',
+    acceptedInsurance: [
+      'Medi-Cal',
+      'Denti-Cal',
+      'Health Plan of San Joaquin',
+      'Blue Cross of California',
+      'Medicare',
+    ],
     areaServed: {
       '@type': 'City',
       name: 'Stockton',
@@ -326,7 +333,7 @@ export function buildDentalImplantPageSchema() {
         url: pageUrl,
         name: 'Dental Implants in Stockton, CA | NuSmile Dental',
         description:
-          'Dental implants in Stockton, CA at NuSmile Dental. Permanent tooth replacement with transparent pricing and a free consultation.',
+          'Affordable dental implants in California at NuSmile Dental in Stockton. Transparent pricing, financing, and a free consultation.',
         isPartOf: { '@id': `${SITE_URL}/#website` },
         about: {
           '@type': 'MedicalProcedure',

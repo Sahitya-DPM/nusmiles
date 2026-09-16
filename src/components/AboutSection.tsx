@@ -29,7 +29,11 @@ export default function AboutSection() {
               </p>
               
               <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-                Our website also provides you with background about our staff, office hours, insurance policies, appointment procedures, maps, directions to our office and other useful information. We know how hectic life can be and are committed to making our practice convenient and accessible. And we want you to feel confident that when you choose Nu Smile Dental, you're working with doctors and other professionals who are qualified, experienced and caring.
+                Our website also provides you with background about our staff, office hours,{' '}
+                <Link href="/insurance" className="text-primary font-semibold hover:underline">
+                  insurance policies
+                </Link>
+                , appointment procedures, maps, directions to our office and other useful information. We know how hectic life can be and are committed to making our practice convenient and accessible. And we want you to feel confident that when you choose Nu Smile Dental, you're working with doctors and other professionals who are qualified, experienced and caring.
               </p>
               
               <p className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>

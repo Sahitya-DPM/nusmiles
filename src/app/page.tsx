@@ -9,6 +9,7 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import TestimonialVideoSection from '@/components/TestimonialVideoSection';
 import GalleryCarousel from '@/components/GalleryCarousel';
 import CTASection from '@/components/CTASection';
+import InsuranceSection from '@/components/InsuranceSection';
 import JsonLd from '@/components/JsonLd';
 import { buildHomeBrandSchema } from '@/lib/schema';
 import { SITE_URL } from '@/lib/site';
@@ -16,7 +17,7 @@ import { SITE_URL } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'NuSmile Dental | Family Dentist in Stockton, CA',
   description:
-    'NuSmile Dental — also searched as NuSmile Dentist, NuSmile Dentistry, NuSmile Family Dentistry, and Nusmiles Dental — is your family dentist in Stockton, CA.',
+    'Family dentist in Stockton, CA and a dentist that take medical in Stockton CA. NuSmile Dental accepts Medi-Cal, Denti-Cal, and major dental plans.',
   alternates: {
     canonical: `${SITE_URL}/`,
   },
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/`,
     title: 'NuSmile Dental | Family Dentist in Stockton, CA',
     description:
-      'Official homepage for NuSmile Dental in Stockton, CA. Family dentistry from Dr. Rujul Parikh and team.',
+      'Official homepage for NuSmile Dental in Stockton, CA. Family dentist that takes Medi-Cal and major dental insurance.',
     type: 'website',
   },
   robots: {
@@ -40,6 +41,7 @@ export default function Home() {
       <Header />
       <HeroSection />
       <AboutSection />
+      <InsuranceSection />
       <DoctorSection />
       <TestimonialsSection />
       <TestimonialVideoSection />

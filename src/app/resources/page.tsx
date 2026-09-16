@@ -18,6 +18,18 @@ const ResourcesPage = () => {
         "Veneers & Crowns",
         "Invisalign Results"
       ]
+    },
+    {
+      title: "Insurance & Medi-Cal",
+      description: "See accepted plans if you need a dentist that take medical in Stockton CA, including Medi-Cal and major PPO coverage.",
+      image: "/office1.jpg.webp",
+      link: "/insurance",
+      features: [
+        "Medi-Cal / Denti-Cal",
+        "Health Plan of San Joaquin",
+        "Blue Cross of California",
+        "Most PPO dental plans"
+      ]
     }
   ];
 

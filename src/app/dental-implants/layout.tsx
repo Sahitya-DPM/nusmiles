@@ -3,19 +3,19 @@ import JsonLd from "../../components/JsonLd";
 import { buildDentalImplantPageSchema } from "../../lib/schema";
 
 export const metadata: Metadata = {
-  title: "Dental Implants in Stockton, CA | NuSmile Dental",
+  title: "Affordable Dental Implants in California | Stockton Pricing",
   description:
-    "Dental implants in Stockton, CA at NuSmile Dental. Permanent tooth replacement with transparent pricing, experienced implant dentists, and a free consultation.",
+    "Looking for cheap dental implants in California? NuSmile Dental in Stockton publishes transparent implant pricing from $5,999, affordable implants packages, and monthly financing.",
   keywords:
-    "dental implants Stockton, dental implants in Stockton, Stockton dental implants, implant dentist Stockton",
+    "cheap dental implants in california, affordable implants, dental implants Stockton, dental implant financing, implant dentist Stockton",
   alternates: {
     canonical: "https://www.nusmiledentalca.com/dental-implants",
   },
   openGraph: {
     url: "https://www.nusmiledentalca.com/dental-implants",
-    title: "Dental Implants in Stockton, CA | NuSmile Dental",
+    title: "Affordable Dental Implants in California | Stockton Pricing",
     description:
-      "Permanent tooth replacement with dental implants in Stockton, CA. See pricing and book a free consultation at NuSmile Dental.",
+      "Transparent California implant pricing, affordable implants from $5,999, and financing at NuSmile Dental in Stockton. Book a free consultation.",
     type: "website",
   },
   robots: {

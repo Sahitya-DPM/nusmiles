@@ -53,10 +53,10 @@ export default function DentalImplantsPage() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-[27px] md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-            Dental Implants in Stockton, CA
+            Affordable Dental Implants in California
           </h1>
           <p className="text-[16px] md:text-[16px] text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-            Permanent tooth replacement from your Stockton implant dentist
+            Cheap dental implants in California with transparent Stockton pricing, published packages from $5,999, and monthly financing
           </p>
         </div>
       </section>
@@ -75,10 +75,13 @@ export default function DentalImplantsPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <h2 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-                Dental Implants in Stockton, CA
+                Affordable Implants Without Guesswork
               </h2>
               <div className="w-24 h-1 bg-primary rounded-full mb-8 mx-auto lg:mx-0"></div>
               <div className="space-y-6 text-gray-700" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                <p className="text-[16px] md:text-[16px] leading-relaxed">
+                  Patients comparing cheap dental implants in California often leave other offices with no written price. At NuSmile Dental in Stockton, affordable implants are listed up front: snap-on implant dentures from $5,999 and All-on-X full-arch treatment from $14,999 per arch. You see what is included — and what is not — before you book.
+                </p>
                 <p className="text-[16px] md:text-[16px] leading-relaxed">
                   Dental implants Stockton patients choose at NuSmile Dental are small titanium posts that replace the roots of missing teeth. They are inserted into your jawbone during a minor surgical procedure at our dental office in Stockton, CA.
                 </p>
@@ -109,10 +112,10 @@ export default function DentalImplantsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-              Dental Implant Pricing
+              Transparent Pricing for Affordable Implants
             </h2>
             <p className="text-[16px] md:text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-              Transparent pricing for all your dental implant needs
+              Published California package prices, clear inclusions, and financing on All-on-X treatment. Bone grafts are never hidden inside the fee.
             </p>
           </div>
 
@@ -153,6 +156,63 @@ export default function DentalImplantsPage() {
               </div>
             ))}
           </div>
+
+          <p className="text-center text-gray-600 text-[16px] mt-10 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            Compare these Stockton packages with other cheap dental implants in California quotes — then{' '}
+            <Link href="/appointment" className="text-primary font-semibold hover:underline">
+              book a free consultation
+            </Link>{' '}
+            for a written estimate. Learn how modern dentures and implants work together in our guide to{' '}
+            <Link href="/blog/1222367-latest-dentures-technology" className="text-primary font-semibold hover:underline">
+              the latest dentures technology
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
+
+      {/* Financing Section */}
+      <section className="py-10 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+              Financing Affordable Implants in California
+            </h2>
+            <p className="text-[16px] text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+              Transparent pricing is only useful if you can pay for treatment. We help Stockton and Central Valley patients spread the cost of affordable implants into monthly payments.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-gray-50 rounded-2xl p-8">
+              <h3 className="text-[22px] font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                Monthly payment plans
+              </h3>
+              <p className="text-gray-700 text-[16px] leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                Financing is available on All-on-X packages so the $14,999 or $19,999 per-arch fee can be broken into installments. Ask for your estimated monthly payment at the free consultation.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-2xl p-8">
+              <h3 className="text-[22px] font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                Insurance, HSA, and FSA
+              </h3>
+              <p className="text-gray-700 text-[16px] leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                Some dental plans help with extractions, grafting, or the crown. We review benefits, file claims when we can, and apply HSA or FSA funds toward affordable implants.{' '}
+                <Link href="/insurance" className="text-primary font-semibold hover:underline">
+                  See accepted insurance and Medi-Cal
+                </Link>
+                .
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-2xl p-8">
+              <h3 className="text-[22px] font-bold text-gray-900 mb-3" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                What you pay — and what you do not
+              </h3>
+              <p className="text-gray-700 text-[16px] leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+                Package prices include the items listed on each card. Bone grafts are extra when your jaw needs them. The consultation is free. You leave with a written plan, not a surprise balance.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -164,7 +224,7 @@ export default function DentalImplantsPage() {
               Frequently Asked Questions
             </h2>
             <p className="text-[16px] md:text-[16px] text-gray-600" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
-              Common questions about dental implants in Stockton, CA
+              Cost, financing, and treatment questions patients also ask about cheap dental implants in California
             </p>
           </div>
 
@@ -187,7 +247,7 @@ export default function DentalImplantsPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className={`overflow-hidden transition-all duration-300 ${openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div className={`overflow-hidden transition-all duration-300 ${openFaq === index ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
                   <div className="px-6 py-4 bg-white">
                     <p className="text-gray-700 leading-relaxed text-[16px]" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
                       {faq.answer}

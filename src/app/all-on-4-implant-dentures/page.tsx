@@ -238,6 +238,22 @@ export default function AllOn4ImplantDenturesPage() {
 
 
 
+      <section className="py-10 md:py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-[16px] text-gray-700 leading-relaxed" style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}>
+            Want a current look at the{' '}
+            <Link href="/blog/1222367-latest-dentures-technology" className="text-primary font-semibold hover:underline">
+              latest dentures technology
+            </Link>
+            , including new false teeth and the newest digital denture options? Read our September 2026 guide, then compare{' '}
+            <Link href="/dental-implants" className="text-primary font-semibold hover:underline">
+              affordable implant pricing
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-10 md:py-20 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

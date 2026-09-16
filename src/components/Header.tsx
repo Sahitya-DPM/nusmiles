@@ -147,6 +147,9 @@ export default function Header() {
                 <Link href="/patient-education" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
                   Patient Education
                 </Link>
+                <Link href="/insurance" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
+                  Insurance &amp; Medi-Cal
+                </Link>
               </div>
             </div>
 
@@ -398,6 +401,13 @@ export default function Header() {
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Patient Education
+                    </Link>
+                    <Link
+                      href="/insurance"
+                      className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Insurance &amp; Medi-Cal
                     </Link>
                   </div>
                 </div>

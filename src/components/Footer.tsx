@@ -13,6 +13,7 @@ const services = [
 const quickLinks = [
   { href: '/', label: 'NuSmile Dental Home' },
   { href: '/about-us', label: 'About Us' },
+  { href: '/insurance', label: 'Insurance & Medi-Cal' },
   { href: '/privacy-policy', label: 'Privacy Policy' },
   { href: '/disclaimer', label: 'Disclaimer' },
   { href: '/sitemap.xml', label: 'Sitemap' },

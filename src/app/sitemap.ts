@@ -54,6 +54,8 @@ const FALLBACK_BLOG_SLUGS = [
   'how-dr-shivli-arora-ensures-a-pain-free-dental-implant-experience-in-stockton-ca',
   'full-mouth-implants-vs-traditional-dentures-unlock-the-secret-to-a-radiant-long-lasting-smile',
   'happy-holidays-healthy-holidays',
+  '1222367-latest-dentures-technology',
+  'latest-dentures-technology',
 ];
 
 type FirestoreTimestampLike = {
@@ -77,6 +79,7 @@ const STATIC_PATHS: Array<{ path: string; priority: number }> = [
   { path: '/platelet-rich-fibrin-therapy-prf', priority: 0.8 },
   { path: '/blog', priority: 0.8 },
   { path: '/resources', priority: 0.8 },
+  { path: '/insurance', priority: 0.8 },
   { path: '/patient-education', priority: 0.8 },
   { path: '/contact', priority: 0.8 },
   { path: '/appointment', priority: 0.8 },
