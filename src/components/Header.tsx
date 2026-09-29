@@ -148,7 +148,7 @@ export default function Header() {
                   Patient Education
                 </Link>
                 <Link href="/insurance" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
-                  Insurance &amp; Medi-Cal
+                  Insurance
                 </Link>
               </div>
             </div>
