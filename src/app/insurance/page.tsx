@@ -8,29 +8,19 @@ import { insuranceFaqs } from '@/lib/insuranceFaqs';
 
 const acceptedPlans = [
   {
-    name: 'Medi-Cal (Denti-Cal)',
-    detail:
-      'California medical / Medi-Cal dental benefits for eligible exams, cleanings, and covered treatment. Bring your Benefits Identification Card.',
-  },
-  {
     name: 'Health Plan of San Joaquin',
     detail:
-      'Local managed-care coverage used by many Stockton families. We verify HPSJ-linked dental benefits before your visit.',
+      'Local coverage used by many Stockton families. We verify your dental benefits before your visit.',
   },
   {
     name: 'Blue Cross of California',
     detail:
-      'Anthem Blue Cross of California dental and medical-linked benefits, including many employer PPO plans.',
-  },
-  {
-    name: 'Medicare (when dental benefits apply)',
-    detail:
-      'Medicare does not cover every dental service. If your Advantage or supplemental plan includes dental, we check those benefits for you.',
+      'We verify eligible dental benefits, including applicable employer PPO plans, before your appointment.',
   },
   {
     name: 'Most PPO dental plans',
     detail:
-      'We work with the majority of PPO dental cards. If your plan is not named here, call us — we still run a benefits check.',
+      'We work with most PPO dental plans. If your plan is not named here, call us and we’ll check your benefits.',
   },
 ];
 
@@ -58,14 +48,13 @@ export default function InsurancePage() {
             className="text-[27px] md:text-6xl font-bold text-white mb-6"
             style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
           >
-            Dentist That Take Medical in Stockton CA
+            Dentist Accepting PPO Dental Plans in Stockton, CA
           </h1>
           <p
             className="text-[16px] text-white/90 max-w-3xl mx-auto"
             style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
           >
-            Medi-Cal, Denti-Cal, Health Plan of San Joaquin, Blue Cross of California, and most PPO
-            plans accepted. Verify your card before you book.
+            NuSmile Dental works with most PPO dental plans. Call us to check your benefits before you book.
           </p>
         </div>
       </section>
@@ -91,7 +80,7 @@ export default function InsurancePage() {
                 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-6"
                 style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
               >
-                A Stockton Dentist That Takes Medical and Medi-Cal
+                A Stockton Dentist That Works With Most PPO Dental Plans
               </h2>
               <div className="w-24 h-1 bg-primary rounded-full mb-8" />
               <div
@@ -99,22 +88,14 @@ export default function InsurancePage() {
                 style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
               >
                 <p>
-                  Searching for a dentist that take medical in Stockton CA usually means you need a
-                  practice that accepts Medi-Cal (Denti-Cal) and will confirm your benefits before
-                  the appointment. NuSmile Dental does both. We are a family dentist at 1801 E March
-                  Ln A165, and our team checks eligibility so you know what is covered.
+                Looking for a dentist in Stockton, CA, who works with your PPO dental plan? NuSmile Dental is a family dental practice at 1801 E March Ln A165. Our team can check your benefits before your appointment so you have a clearer idea of what your plan covers.
                 </p>
                 <p>
-                  Patients also bring PPO dental cards, Health Plan of San Joaquin coverage, Blue
-                  Cross of California, and Medicare plans that include dental. If you are uninsured,
-                  we still see you — ask about cash fees and financing for{' '}
-                  <Link href="/dental-implants" className="text-primary font-semibold hover:underline">
-                    affordable implants
-                  </Link>
+                If you do not have dental insurance, you can still visit us. Ask our team about cash fees and financing options.
                   .
                 </p>
                 <p>
-                  Ready to verify a card?{' '}
+                Ready to check your plan?{' '}
                   <Link href="/appointment" className="text-primary font-semibold hover:underline">
                     Request an appointment
                   </Link>{' '}
@@ -179,16 +160,16 @@ export default function InsurancePage() {
             className="text-[27px] md:text-4xl font-bold text-gray-900 mb-6"
             style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
           >
-            How to Use Medi-Cal at Our Office
+            How to Use Your PPO Dental Plan at Our Office
           </h2>
           <ol
             className="space-y-4 text-gray-700 text-[16px] leading-relaxed list-decimal pl-6"
             style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
           >
-            <li>Call or book online and tell us you have Medi-Cal / medical coverage.</li>
-            <li>Have your member ID or Benefits Identification Card ready.</li>
-            <li>We confirm eligibility and which dental services your plan covers.</li>
-            <li>You arrive for care knowing any estimated patient share in advance.</li>
+            <li>Call or book online and tell us which PPO dental plan you have.</li>
+            <li>Have your insurance card or member ID ready.</li>
+            <li>We check your benefits for the care you need.</li>
+            <li>We explain any estimated patient costs before your visit.</li>
           </ol>
         </div>
       </section>
@@ -259,8 +240,7 @@ export default function InsurancePage() {
             className="text-[16px] text-white/90 mb-8 max-w-2xl mx-auto"
             style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
           >
-            Bring your insurance or Medi-Cal card to NuSmile Dental in Stockton. We will verify
-            benefits and get you on the schedule.
+            Have your PPO dental insurance card ready and contact NuSmile Dental in Stockton. We will check your benefits and help you schedule an appointment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

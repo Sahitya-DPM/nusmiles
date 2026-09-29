@@ -1,27 +1,27 @@
 export const insuranceFaqs = [
   {
-    question: 'Is there a dentist that take medical in Stockton CA?',
+    question: 'Does NuSmile Dental accept PPO dental insurance?',
     answer:
-      'Yes. NuSmile Dental is a Stockton dentist that take medical / Medi-Cal for eligible dental benefits. We also work with Health Plan of San Joaquin, Blue Cross of California, Medicare dental benefits when they apply, and most PPO dental plans. Call (209) 955-1800 with your member ID so we can confirm your plan before you book.',
+      'NuSmile Dental works with most PPO dental plans. Call (209) 955-1800 with your insurance information so our team can check your specific plan.',
   },
   {
-    question: 'Does NuSmile Dental accept Medi-Cal or Denti-Cal?',
+    question: 'How do I find out whether my treatment is covered?',
     answer:
-      'We accept Medi-Cal (often called Denti-Cal for dental benefits) for covered services when your eligibility is active. Bring your Benefits Identification Card. Coverage depends on the procedure — cleanings, exams, and many restorative services may be covered; cosmetic care usually is not.',
+      'Share your insurance information with our team. We can check your benefits and explain any estimated patient costs before your appointment.',
   },
   {
-    question: 'What insurance plans does NuSmile Dental accept in Stockton?',
+    question: 'What if my PPO dental plan is not listed?',
     answer:
-      'Accepted plans include Medi-Cal / Denti-Cal, Health Plan of San Joaquin, Blue Cross of California, Medicare (when dental benefits are included), and most major PPO dental plans. If your card is not on this list, we still verify benefits at no extra charge.',
+      'Call us anyway. We can check your plan and let you know whether you can use it at our office.',
   },
   {
-    question: 'Do I need a referral to use Medi-Cal at your office?',
+    question: 'Do I need to bring my insurance card?',
     answer:
-      'Most patients do not need a medical referral for routine dental visits. Some managed-care plans ask you to choose a dental home first. Our front desk will tell you if your plan requires anything extra when we check eligibility.',
+      'Yes. Bring your PPO dental insurance card or have your member ID ready when you call and when you visit.',
   },
   {
-    question: 'What if my medical or dental plan does not cover a treatment?',
+    question: 'Can I book an appointment without dental insurance?',
     answer:
-      'We explain what is covered, what your share may be, and the cash or financing options for the rest. HSA and FSA funds can often be used. Implant packages are published on our dental implants page so you can plan ahead.',
+      'Yes. Patients without dental insurance can ask our team about cash fees and financing options.',
   },
 ];

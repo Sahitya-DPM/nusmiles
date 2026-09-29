@@ -6,9 +6,9 @@ import { insuranceFaqs } from '@/lib/insuranceFaqs';
 const pageUrl = `${SITE_URL}/insurance`;
 
 export const metadata: Metadata = {
-  title: 'Dentist That Take Medical in Stockton CA | Medi-Cal',
+  title: 'PPO Dental Insurance in Stockton, CA | NuSmile Dental',
   description:
-    'Looking for a dentist that take medical in Stockton CA? NuSmile Dental accepts Medi-Cal, Denti-Cal, Health Plan of San Joaquin, Blue Cross of California, and most PPO plans.',
+    'NuSmile Dental works with most PPO dental plans in Stockton, CA. Call (209) 955-1800 to check your benefits and schedule a dental appointment.',
   keywords:
     'dentist that take medical in stockton ca, medi-cal dentist stockton, denti-cal stockton, insurance accepted dentist stockton',
   alternates: {
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: pageUrl,
-    title: 'Dentist That Take Medical in Stockton CA | Medi-Cal',
+    title: 'PPO Dental Insurance in Stockton, CA | NuSmile Dental',
     description:
-      'NuSmile Dental accepts Medi-Cal and major dental plans. Verify benefits and book at our Stockton office.',
+      'NuSmile Dental works with most PPO dental plans in Stockton, CA. Call (209) 955-1800 to check your benefits and schedule a dental appointment.',
     type: 'website',
   },
   robots: {
