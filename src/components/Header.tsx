@@ -407,7 +407,7 @@ export default function Header() {
                       className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      Insurance &amp; Medi-Cal
+                      Insurance
                     </Link>
                   </div>
                 </div>
