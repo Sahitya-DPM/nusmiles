@@ -68,7 +68,7 @@ export default function InsurancePage() {
             NuSmile Dental
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-gray-900">Insurance &amp; Medi-Cal</span>
+          <span className="text-gray-900">Insurance</span>
         </div>
       </nav>
 
