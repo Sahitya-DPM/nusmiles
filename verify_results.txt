@@ -1,0 +1,44 @@
+Verifying Meta Tags...
+[FAIL] Title for /
+   Expected: Dental Experts - Your Family's Best Dentist in Fresno, CA
+   Actual:   NuSmile Dental | Family Dentist in Stockton
+[FAIL] Desc for /
+   Expected: Life-Changing Dental Implants. Painless Dental Veneers. Same-Day Emergency Appointments. Interest-Free Financing Available. Free Financing Consults. Se Habla EspaÃ±ol.
+   Actual:   Visit NuSmile Dental for modern, comfortable dental care in Stockton offering implants, Invisalign, and general dentistry for all ages.
+[FAIL] Title for /dental-services
+   Expected: Dental Experts - Your Family's Best Dentist in Fresno, CA
+   Actual:   Complete Dental Services in Stockton
+[PASS] Title for /dental-implants
+[PASS] Desc for /dental-implants
+[PASS] Title for /dental-staff
+[PASS] Desc for /dental-staff
+[PASS] Title for /smile-gallery
+[PASS] Desc for /smile-gallery
+[PASS] Title for /platelet-rich-fibrin-therapy-prf
+[PASS] Desc for /platelet-rich-fibrin-therapy-prf
+[PASS] Title for /general-dentistry
+[PASS] Desc for /general-dentistry
+[PASS] Title for /services/dental-implants-all-on-4-faqs-stockton
+[PASS] Desc for /services/dental-implants-all-on-4-faqs-stockton
+[PASS] Title for /patient-education
+[PASS] Desc for /patient-education
+[PASS] Title for /office
+[PASS] Desc for /office
+[PASS] Title for /contact
+[PASS] Desc for /contact
+[PASS] Title for /all-on-4-implant-dentures
+[PASS] Desc for /all-on-4-implant-dentures
+[PASS] Title for /testimonials
+[PASS] Desc for /testimonials
+[PASS] Title for /invisalign
+[PASS] Desc for /invisalign
+[PASS] Title for /blog
+[PASS] Desc for /blog
+[PASS] Title for /appointment
+[PASS] Desc for /appointment
+[PASS] Title for /about-us
+[PASS] Desc for /about-us
+[PASS] Title for /resources
+[PASS] Desc for /resources
+
+Verification FAILED
