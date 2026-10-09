@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -6,7 +5,8 @@ import Link from 'next/link';
 
 export default function DentalBenefitsSection() {
   return (
-    <section className="py-10 md:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section className="py-10 md:py-16 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-primary/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full translate-x-1/2 translate-y-1/2"></div>
@@ -15,7 +15,8 @@ export default function DentalBenefitsSection() {
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
 
           {/* Left Column - Supporting Homepage Copy */}
-          <div className="flex flex-col justify-center space-y-6 md:space-y-8 py-4 lg:py-8">
+          <div className="flex flex-col justify-center space-y-6 md:space-y-8 py-4 lg:py-6">
+
             {/* Section Label */}
             <div>
               <span
@@ -79,27 +80,30 @@ export default function DentalBenefitsSection() {
               </div>
             </div>
 
-            
           </div>
 
-          {/* Right Column - Portrait Dental Benefits Flyer */}
-          <div className="relative group w-full max-w-[520px] mx-auto lg:ml-auto lg:mr-0">
-            <div className="absolute -inset-3 bg-primary/5 rounded-2xl transform rotate-2 transition-transform duration-500 group-hover:rotate-1"></div>
+          {/* Right Column - Full Dental Benefits Flyer */}
+          <div className="relative group w-full max-w-[480px] mx-auto lg:ml-auto lg:mr-0">
 
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-white border border-gray-100">
+            {/* Decorative background */}
+            <div className="absolute -inset-2 bg-primary/5 rounded-2xl transform rotate-1 transition-transform duration-500 group-hover:rotate-0"></div>
+
+            {/* Flyer container - No forced height or white background */}
+            <div className="relative overflow-hidden rounded-2xl shadow-xl bg-transparent">
               <Image
                 src="/DentalBenefitsSection.png"
                 alt="Nu Smile Dental year-end 2026 dental benefits flyer"
                 width={500}
                 height={500}
                 priority
-                className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]"
-                sizes="(max-width: 1023px) 100vw, 520px"
+                className="block w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.01]"
+                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 480px, 480px"
               />
             </div>
 
             {/* Decorative accent */}
-            <div className="absolute -bottom-3 -left-3 w-16 h-16 bg-secondary/10 rounded-full -z-10"></div>
+            <div className="absolute -bottom-3 -left-3 w-12 h-12 bg-secondary/10 rounded-full -z-10"></div>
+
           </div>
 
         </div>

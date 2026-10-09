@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -6,7 +5,7 @@ import Link from 'next/link';
 
 export default function TrunkOrTreatSection() {
   return (
-    <section className="py-10 md:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section className="py-10 md:py-16 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-primary/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full translate-x-1/2 translate-y-1/2"></div>
@@ -14,41 +13,47 @@ export default function TrunkOrTreatSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
 
-          {/* Left Column - Portrait Flyer */}
-          <div className="relative group w-full max-w-[520px] mx-auto lg:mx-0">
-            <div className="absolute -inset-3 bg-primary/5 rounded-2xl transform rotate-2 transition-transform duration-500 group-hover:rotate-1"></div>
+          {/* Left Column - Full Flyer Without Cropping */}
+          <div className="relative group w-full max-w-[480px] mx-auto lg:mx-0 lg:my-auto">
+            {/* Decorative background */}
+            <div className="absolute -inset-2 bg-primary/5 rounded-2xl transform rotate-1 transition-transform duration-500 group-hover:rotate-0"></div>
 
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-white border border-gray-100">
+            {/* Flyer container */}
+            <div className="relative overflow-hidden rounded-2xl shadow-xl bg-transparent">
               <Image
                 src="/trunk-or-treat-flyer.jpg"
                 alt="Nu Smile Dental Trunk or Treat Halloween event flyer"
                 width={800}
                 height={900}
                 priority
-                className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]"
-                sizes="(max-width: 1023px) 100vw, 520px"
+                className="block w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.01]"
+                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 480px, 480px"
               />
             </div>
 
             {/* Decorative accent */}
-            <div className="absolute -bottom-3 -left-3 w-16 h-16 bg-secondary/10 rounded-full -z-10"></div>
+            <div className="absolute -bottom-3 -left-3 w-12 h-12 bg-secondary/10 rounded-full -z-10"></div>
           </div>
 
           {/* Right Column - Event Information */}
-          <div className="flex flex-col justify-center space-y-6 md:space-y-8 py-4 lg:py-8">
+          <div className="flex flex-col justify-center space-y-6 md:space-y-8 py-4 lg:py-6">
 
             {/* Section Label */}
             <div>
               <span
                 className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4"
-                style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+                style={{
+                  fontFamily: 'Hind, Arial, Helvetica, sans-serif',
+                }}
               >
                 Nu Smile Dental Presents
               </span>
 
               <h2
                 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-4 leading-tight"
-                style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+                style={{
+                  fontFamily: 'Montserrat, Arial, Helvetica, sans-serif',
+                }}
               >
                 Your Halloween Plans Just Got More Fun
               </h2>
@@ -59,7 +64,9 @@ export default function TrunkOrTreatSection() {
             {/* Promotional Copy */}
             <p
               className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed"
-              style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+              style={{
+                fontFamily: 'Hind, Arial, Helvetica, sans-serif',
+              }}
             >
               Bring your best costume and your biggest smile to Nu Smile Dental
               for an evening of candy, decorated trunks, and Halloween fun for
@@ -91,13 +98,18 @@ export default function TrunkOrTreatSection() {
                 <div>
                   <div
                     className="text-sm text-gray-600 mb-1"
-                    style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+                    style={{
+                      fontFamily: 'Hind, Arial, Helvetica, sans-serif',
+                    }}
                   >
                     Event Date
                   </div>
+
                   <div
                     className="font-semibold text-gray-900"
-                    style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+                    style={{
+                      fontFamily: 'Hind, Arial, Helvetica, sans-serif',
+                    }}
                   >
                     October 21, 2026
                   </div>
@@ -132,13 +144,18 @@ export default function TrunkOrTreatSection() {
                 <div>
                   <div
                     className="text-sm text-gray-600 mb-1"
-                    style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+                    style={{
+                      fontFamily: 'Hind, Arial, Helvetica, sans-serif',
+                    }}
                   >
                     Event Time
                   </div>
+
                   <div
                     className="font-semibold text-gray-900"
-                    style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+                    style={{
+                      fontFamily: 'Hind, Arial, Helvetica, sans-serif',
+                    }}
                   >
                     4:30 PM–6:30 PM
                   </div>
@@ -149,13 +166,14 @@ export default function TrunkOrTreatSection() {
             {/* Closing Copy */}
             <p
               className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed"
-              style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
+              style={{
+                fontFamily: 'Hind, Arial, Helvetica, sans-serif',
+              }}
             >
               Join us for a festive Trunk or Treat celebration filled with
               treats, costumes, and plenty of reasons to smile.
             </p>
 
-           
           </div>
         </div>
       </div>
