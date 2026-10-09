@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import DentalBenefitsSection from './DentalBenefitsSection';
 import TrunkOrTreatSection from './TrunkOrTreatSection';
 
-const SLIDE_DURATION = 6000;
+const SLIDE_DURATION = 4000;
 
 export default function DentalPromoSlider() {
   const [activeSlide, setActiveSlide] = useState(0);
