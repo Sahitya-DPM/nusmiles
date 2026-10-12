@@ -1,6 +1,7 @@
+
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import HeroSection from './HeroSection';
 import HomeAllOnXDentalImplant from './HomeAllOnXDentalImplant';
@@ -21,21 +22,14 @@ const slides = [
 export default function HomeHeroSlider() {
   const [activeSlide, setActiveSlide] = useState(0);
 
-  // Automatically change slides every 6 seconds
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setActiveSlide((current) => (current + 1) % slides.length);
-    }, 4000);
-
-    return () => window.clearInterval(timer);
-  }, []);
-
+  // Manually navigate to the previous slide
   const previousSlide = () => {
     setActiveSlide(
       (current) => (current - 1 + slides.length) % slides.length
     );
   };
 
+  // Manually navigate to the next slide
   const nextSlide = () => {
     setActiveSlide((current) => (current + 1) % slides.length);
   };
@@ -52,7 +46,10 @@ export default function HomeHeroSlider() {
         <motion.div
           key={slides[activeSlide].id}
           className="relative col-start-1 row-start-1 m-0 w-full min-w-0 p-0"
-          style={{ gridArea: '1 / 1', zIndex: 1 }}
+          style={{
+            gridArea: '1 / 1',
+            zIndex: 1,
+          }}
           initial={{ x: '100%' }}
           animate={{ x: '0%' }}
           exit={{ x: '-100%' }}
