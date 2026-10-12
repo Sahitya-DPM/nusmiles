@@ -1,7 +1,10 @@
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
+<<<<<<< HEAD
 import HomeHeroSlider from '@/components/HomeHeroSlider';
+=======
+>>>>>>> 18c977a3f363a37faca865e95eb440ad6b70fa25
 import DentalPromoSlider from '@/components/DentalPromoSlider';
 import AboutSection from '@/components/AboutSection';
 import ServicesSection from '@/components/ServicesSection';
@@ -41,7 +44,10 @@ export default function Home() {
     <>
       <JsonLd data={buildHomeBrandSchema()} />
       <Header />
+
       <HomeHeroSlider />
+
+     
       <DentalPromoSlider />
       <AboutSection />
       <InsuranceSection />
