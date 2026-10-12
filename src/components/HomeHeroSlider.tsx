@@ -25,7 +25,7 @@ export default function HomeHeroSlider() {
   useEffect(() => {
     const timer = window.setInterval(() => {
       setActiveSlide((current) => (current + 1) % slides.length);
-    }, 6000);
+    }, 4000);
 
     return () => window.clearInterval(timer);
   }, []);
