@@ -204,7 +204,9 @@ export default function TrunkOrTreatSection() {
                       fontFamily: 'Hind, Arial, Helvetica, sans-serif',
                     }}
                   >
-                    Spreckels Park
+                    Spreckels Park<br></br>
+                    626 E. Yosemite Ave.
+Manteca, CA 95336
                   </div>
                 </div>
               </div>
