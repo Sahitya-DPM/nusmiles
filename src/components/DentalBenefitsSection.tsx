@@ -23,7 +23,7 @@ export default function DentalBenefitsSection() {
                 className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4"
                 style={{ fontFamily: 'Hind, Arial, Helvetica, sans-serif' }}
               >
-                Nu Smile Dental
+                NuSmile Dental
               </span>
 
               <h2

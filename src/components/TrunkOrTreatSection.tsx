@@ -38,7 +38,7 @@ export default function TrunkOrTreatSection() {
           {/* Right Column - Event Information */}
           <div className="flex flex-col justify-center space-y-6 md:space-y-8 py-4 lg:py-6">
 
-            {/* Section Label */}
+            {/* Section Heading */}
             <div>
               <span
                 className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4"
@@ -46,7 +46,7 @@ export default function TrunkOrTreatSection() {
                   fontFamily: 'Hind, Arial, Helvetica, sans-serif',
                 }}
               >
-                Nu Smile Dental Presents
+                NuSmile Dental Presents
               </span>
 
               <h2
@@ -68,12 +68,13 @@ export default function TrunkOrTreatSection() {
                 fontFamily: 'Hind, Arial, Helvetica, sans-serif',
               }}
             >
-              Bring your best costume and your biggest smile to Nu Smile Dental
-              for an evening of candy, decorated trunks, and Halloween fun for
-              the whole family.
+              NuSmile Dental is excited to share a fun Halloween event
+              happening at <strong>Spreckels Park</strong>. Bring your best
+              costume and your biggest smile for an evening filled with candy,
+              decorated trunks, and Halloween fun for the whole family.
             </p>
 
-            {/* Event Date and Time */}
+            {/* Event Date, Time, and Location */}
             <div className="grid sm:grid-cols-2 gap-4">
 
               {/* Date Card */}
@@ -161,9 +162,55 @@ export default function TrunkOrTreatSection() {
                   </div>
                 </div>
               </div>
+
+              {/* Location Card */}
+              <div className="sm:col-span-2 flex items-start space-x-3 p-4 bg-primary/5 rounded-xl border border-primary/10">
+                <div className="w-10 h-10 shrink-0 bg-primary rounded-full flex items-center justify-center">
+                  <svg
+                    className="w-5 h-5 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 21s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"
+                    />
+                    <circle
+                      cx="12"
+                      cy="9"
+                      r="2.5"
+                      strokeWidth={2}
+                    />
+                  </svg>
+                </div>
+
+                <div>
+                  <div
+                    className="text-sm text-gray-600 mb-1"
+                    style={{
+                      fontFamily: 'Hind, Arial, Helvetica, sans-serif',
+                    }}
+                  >
+                    Location
+                  </div>
+
+                  <div
+                    className="font-semibold text-gray-900"
+                    style={{
+                      fontFamily: 'Hind, Arial, Helvetica, sans-serif',
+                    }}
+                  >
+                    Spreckels Park
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Closing Copy */}
+            {/* Closing Copy 
             <p
               className="text-[16px] md:text-[16px] text-gray-700 leading-relaxed"
               style={{
@@ -172,7 +219,7 @@ export default function TrunkOrTreatSection() {
             >
               Join us for a festive Trunk or Treat celebration filled with
               treats, costumes, and plenty of reasons to smile.
-            </p>
+            </p>*/}
 
           </div>
         </div>
