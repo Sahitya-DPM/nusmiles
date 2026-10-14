@@ -14,14 +14,6 @@ export default function DentalStaffPage() {
       description: "Dr. Parikh has been passionate about making healthy smiles for more than 25 years. His primary goal is patient care and dental health. He has been educated from a very reputed college GDCH, Ahemedabad, India and he was educated by various professors from Loma Linda University, UCLA, UCSF, UOP, and many others.",
       additionalInfo: "His constant seeking of better technique, knowledge, and wide range of experience made him proficient in many phases of dentistry. He has done countless hours of continuous education. He is a graduate in Orthodontics from the United States Dental Institute and in dental implants, Associate Fellow of AAID, and Fellow of ICOI.",
       personalInfo: "He is happily married with three children and he likes to play table tennis and golf in his free time. He also likes hiking and bicycling. His broad knowledge and attention to detail will make you comfortable in stress full dental environment."
-    },
-    {
-      name: "Dr. Shivli Arora DDS",
-      title: "Dentist in Stockton, CA",
-      image: "/Shivli Arora.jpg",
-      description: "Working under Dr. Parikh, Dr. Shivli Arora has nearly 10 years of hands on clinical experience and has a passion for cosmetic dentistry in providing patients with the beautiful smile they always wanted.",
-      additionalInfo: "Having a major in Periodontics from the prestigious Amrita School of Dentistry and an MDS from Rajiv Gandhi University of Health Sciences in India, along with dental credentials from the renowned UCSF. Dr. Arora is certified in Lasers for dental treatment and she strives to further pursue her education for excellence involving Dental Implants, that translates clinical skills and extends to patients emotional well being.",
-      personalInfo: "She is happily married with a daughter and loves to spend quality time with her friends and family, cooking, and camping. Offering only the best care, you will feel comfortable receiving treatment from both of our doctors."
     }
   ];
 
@@ -91,7 +83,7 @@ export default function DentalStaffPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-[27px] md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
-              Our Doctors
+              Our Doctor
             </h2>
             <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
           </div>
