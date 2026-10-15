@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -111,6 +112,11 @@ export default function Header() {
 
                 <Link href="/all-on-4-implant-dentures" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
                   All-on-4® Implant Dentures
+                </Link>
+
+                {/* All-on-X Dental Implants */}
+                <Link href="/all-on-x-dental-implants" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
+                  All-on-X Dental Implants
                 </Link>
 
                 <Link href="/invisalign" className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">
@@ -335,6 +341,16 @@ export default function Header() {
                     >
                       All-on-4® Implant Dentures
                     </Link>
+
+                    {/* All-on-X Dental Implants */}
+                    <Link
+                      href="/all-on-x-dental-implants"
+                      className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      All-on-X Dental Implants
+                    </Link>
+
                     <Link
                       href="/invisalign"
                       className="block py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md px-2 transition-colors"
@@ -443,4 +459,4 @@ export default function Header() {
       </div>
     </header>
   );
-} 
+}
