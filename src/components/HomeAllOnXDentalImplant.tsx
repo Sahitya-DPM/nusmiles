@@ -12,7 +12,7 @@ export default function HomeAllOnXDentalImplant() {
       {/* Office Team Photo */}
       <div className="relative h-full w-full">
         <Image
-          src="/HomeAllOnXDentalImplant.jpg"
+          src="/all-on-x-hero.jpeg"
           alt="All-on-X dental implants in Stockton, CA"
           fill
           className="object-cover"
@@ -24,7 +24,8 @@ export default function HomeAllOnXDentalImplant() {
         />
 
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
+        {/* Overlay for better text readability on desktop and mobile */}
+<div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90" />
       </div>
 
       {/* Content Overlay */}
@@ -52,8 +53,17 @@ export default function HomeAllOnXDentalImplant() {
           </p>
 
           <div className="flex flex-col gap-4 sm:flex-row sm:gap-6">
+          <Link
+              href="/all-on-x-dental-implants"
+              className="inline-block w-full rounded-lg border-2 border-white px-6 py-4 text-center text-[14px] font-semibold uppercase text-white shadow-lg transition-colors hover:bg-white hover:text-primary sm:w-auto sm:px-10 sm:py-5 sm:text-[15px] md:text-[16px]"
+              style={{
+                fontFamily: 'Hind, Arial, Helvetica, sans-serif',
+              }}
+            >
+              Learn More
+            </Link>
             <Link
-              href="/appointment"
+              href="/contact"
               className="inline-block w-full rounded-lg bg-primary px-6 py-4 text-center text-[14px] font-semibold uppercase text-white shadow-lg transition-colors hover:bg-primary-dark sm:w-auto sm:px-10 sm:py-5 sm:text-[15px] md:text-[16px]"
               style={{
                 fontFamily: 'Hind, Arial, Helvetica, sans-serif',
@@ -62,15 +72,7 @@ export default function HomeAllOnXDentalImplant() {
               Book An Appointment
             </Link>
 
-            <Link
-              href="/about-us"
-              className="inline-block w-full rounded-lg border-2 border-white px-6 py-4 text-center text-[14px] font-semibold uppercase text-white shadow-lg transition-colors hover:bg-white hover:text-primary sm:w-auto sm:px-10 sm:py-5 sm:text-[15px] md:text-[16px]"
-              style={{
-                fontFamily: 'Hind, Arial, Helvetica, sans-serif',
-              }}
-            >
-              Learn More
-            </Link>
+            
           </div>
         </div>
       </div>
