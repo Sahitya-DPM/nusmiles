@@ -14,6 +14,30 @@ export default function DentalBenefitsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
 
+           {/* Right Column - Full Dental Benefits Flyer */}
+           <div className="relative group w-full max-w-[480px] mx-auto lg:ml-auto lg:mr-0">
+
+{/* Decorative background */}
+<div className="absolute -inset-2 bg-primary/5 rounded-2xl transform rotate-1 transition-transform duration-500 group-hover:rotate-0"></div>
+
+{/* Flyer container - No forced height or white background */}
+<div className="relative overflow-hidden rounded-2xl shadow-xl bg-transparent">
+  <Image
+    src="/DentalBenefitsSection.png"
+    alt="Nu Smile Dental year-end 2026 dental benefits flyer"
+    width={500}
+    height={500}
+    priority
+    className="block w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.01]"
+    sizes="(max-width: 639px) 100vw, (max-width: 1023px) 480px, 480px"
+  />
+</div>
+
+{/* Decorative accent */}
+<div className="absolute -bottom-3 -left-3 w-12 h-12 bg-secondary/10 rounded-full -z-10"></div>
+
+</div>
+
           {/* Left Column - Supporting Homepage Copy */}
           <div className="flex flex-col justify-center space-y-6 md:space-y-8 py-4 lg:py-6">
 
@@ -82,29 +106,7 @@ export default function DentalBenefitsSection() {
 
           </div>
 
-          {/* Right Column - Full Dental Benefits Flyer */}
-          <div className="relative group w-full max-w-[480px] mx-auto lg:ml-auto lg:mr-0">
-
-            {/* Decorative background */}
-            <div className="absolute -inset-2 bg-primary/5 rounded-2xl transform rotate-1 transition-transform duration-500 group-hover:rotate-0"></div>
-
-            {/* Flyer container - No forced height or white background */}
-            <div className="relative overflow-hidden rounded-2xl shadow-xl bg-transparent">
-              <Image
-                src="/DentalBenefitsSection.png"
-                alt="Nu Smile Dental year-end 2026 dental benefits flyer"
-                width={500}
-                height={500}
-                priority
-                className="block w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.01]"
-                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 480px, 480px"
-              />
-            </div>
-
-            {/* Decorative accent */}
-            <div className="absolute -bottom-3 -left-3 w-12 h-12 bg-secondary/10 rounded-full -z-10"></div>
-
-          </div>
+       
 
         </div>
       </div>

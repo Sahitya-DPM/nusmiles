@@ -17,6 +17,7 @@ import InsuranceSection from '@/components/InsuranceSection';
 import JsonLd from '@/components/JsonLd';
 import { buildHomeBrandSchema } from '@/lib/schema';
 import { SITE_URL } from '@/lib/site';
+import DentalBenefitsSection from '@/components/DentalBenefitsSection';
 
 export const metadata: Metadata = {
   title: 'NuSmile Dental | Family Dentist in Stockton, CA',
@@ -47,7 +48,7 @@ export default function Home() {
       <HomeHeroSlider />
 
      
-      <DentalPromoSlider />
+      <DentalBenefitsSection/>
       <AboutSection />
       <InsuranceSection />
       <DoctorSection />
