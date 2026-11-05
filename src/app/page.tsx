@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/`,
     title: 'NuSmile Dental | Family Dentist in Stockton, CA',
     description:
-      'Official homepage for NuSmile Dental in Stockton, CA. Family dentist that takes Medi-Cal and major dental insurance.',
+      'Official homepage for NuSmile Dental in Stockton, CA. Family dentist that takes major dental insurance.',
     type: 'website',
   },
   robots: {

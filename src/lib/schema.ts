@@ -244,9 +244,9 @@ function dentistOrganization() {
     sameAs: SAME_AS,
     priceRange: '$$',
     acceptedInsurance: [
-      'Medi-Cal',
+      
       'Denti-Cal',
-      'Health Plan of San Joaquin',
+      
       'Blue Cross of California',
       'Medicare',
     ],

@@ -323,7 +323,7 @@ export default function LatestDenturesTechnologyPage() {
             </li>
             <li>
               <Link href="/insurance" className="text-primary font-semibold hover:underline">
-                Insurance and Medi-Cal accepted in Stockton
+                Insurance accepted in Stockton
               </Link>
               .
             </li>

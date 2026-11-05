@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     'NuSmile Dental works with most PPO dental plans in Stockton, CA. Call (209) 955-1800 to check your benefits and schedule a dental appointment.',
   keywords:
-    'dentist that take medical in stockton ca, medi-cal dentist stockton, denti-cal stockton, insurance accepted dentist stockton',
+    'dentist that take medical in stockton ca, denti-cal stockton, insurance accepted dentist stockton',
   alternates: {
     canonical: pageUrl,
   },
