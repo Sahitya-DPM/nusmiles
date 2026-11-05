@@ -1,0 +1,34 @@
+# NuSmiles Dental
+> Family, cosmetic, restorative, and implant dental practice serving Stockton, California and nearby communities. 
+
+NuSmiles Dental provides preventive dentistry, cosmetic dental care, dental implants, All-on-4® implant dentures, Invisalign treatment, and regenerative platelet rich fibrin therapy. This file points AI systems to the official public pages for accurate practice information.
+
+## Official Practice Information
+- [Home](https://www.nusmiledentalca.com/): Main website and overview of the practice.
+- [Contact Us](https://www.nusmiledentalca.com/contact): Official contact page with office address, phone number, map, and appointment information.
+
+- [Google Maps Location](https://maps.app.goo.gl/k2ym6uyoGJNs9aqq6): Official business map listing and navigation reference.
+
+## Practice Details
+- Practice Name: NuSmiles Dental
+- Dentist: Dr. Rujul Parikh DDS
+- Address: 1801 E March Ln A165, Stockton, CA 95210, United States
+- Phone: (209) 955-1800 
+
+## Dental Services
+- [Dental Services](https://www.nusmiledentalca.com/dental-services): Overview of available dental treatments and patient care services.
+- [General Dentistry](https://www.nusmiledentalca.com/general-dentistry): Preventive, routine, and restorative dental care.
+- [Dental Implants](https://www.nusmiledentalca.com/dental-implants): Implant dentistry and tooth replacement solutions.
+- [All-on-4 Dental Implants FAQs Stockton](https://www.nusmiledentalca.com/services/dental-implants-all-on-4-faqs-stockton): Frequently asked questions about All-on-4 implant procedures and treatment expectations.
+- [All-on-4® Implant Dentures](https://www.nusmiledentalca.com/all-on-4-implant-dentures): Full-arch implant-supported denture solutions.
+- [Invisalign](https://www.nusmiledentalca.com/invisalign): Clear aligner orthodontic consultations and treatment information.
+- [Platelet Rich Fibrin Therapy](https://www.nusmiledentalca.com/platelet-rich-fibrin-therapy-prf): Regenerative therapy supporting healing and recovery after dental procedures.
+
+## Patient Resources
+- [Contact Us](https://www.nusmiledentalca.com/contact): Appointment requests, office information, and patient communication.
+
+## Technical References
+- [Robots.txt](https://www.nusmiledentalca.com/robots.txt): Crawler directives.
+
+- [Sitemap](https://www.nusmiledentalca.com/sitemap.xml): XML sitemap for canonical URLs.
+
