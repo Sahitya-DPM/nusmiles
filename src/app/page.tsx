@@ -22,7 +22,7 @@ import DentalBenefitsSection from '@/components/DentalBenefitsSection';
 export const metadata: Metadata = {
   title: 'NuSmile Dental | Family Dentist in Stockton, CA',
   description:
-    'Family dentist in Stockton, CA and a dentist that take medical in Stockton CA. NuSmile Dental accepts Medi-Cal, Denti-Cal, and major dental plans.',
+    'Family dentist in Stockton, CA and a dentist that take medical in Stockton CA. NuSmile Dental accepts Denti-Cal, and major dental plans.',
   alternates: {
     canonical: `${SITE_URL}/`,
   },
