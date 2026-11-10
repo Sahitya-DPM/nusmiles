@@ -10,7 +10,7 @@ export default function DentalStaffPage() {
     {
       name: "Dr. Rujul Parikh DDS",
       title: "Dentist in Stockton, CA",
-      image: "/dr parikh-doc.webp",
+      image: "/dr parikh.jpg",
       description: "Dr. Parikh has been passionate about making healthy smiles for more than 25 years. His primary goal is patient care and dental health. He has been educated from a very reputed college GDCH, Ahemedabad, India and he was educated by various professors from Loma Linda University, UCLA, UCSF, UOP, and many others.",
       additionalInfo: "His constant seeking of better technique, knowledge, and wide range of experience made him proficient in many phases of dentistry. He has done countless hours of continuous education. He is a graduate in Orthodontics from the United States Dental Institute and in dental implants, Associate Fellow of AAID, and Fellow of ICOI.",
       personalInfo: "He is happily married with three children and he likes to play table tennis and golf in his free time. He also likes hiking and bicycling. His broad knowledge and attention to detail will make you comfortable in stress full dental environment."
@@ -22,7 +22,7 @@ export default function DentalStaffPage() {
       name: "Carolina RDH",
       title: "Registered Dental Hygienist",
       language: "",
-      image: "/carolina-staff.webp",
+      image: "/carolina.jpg",
       description: "With 5 years of Hygiene experience & 15 years total in dentistry, Carolina provides an easy & comfortable experience for our patients during their cleanings.",
       personalInfo: "On her free time, she enjoys spending quality time with her 3 kids & going out to new places!"
     },
@@ -30,7 +30,7 @@ export default function DentalStaffPage() {
       name: "Donna",
       title: "Office Manager/Treatment Coordinator",
       language: "",
-      image: "/donna-staff.webp",
+      image: "/donna.jpg",
       description: "With more than 20 years of experience, Donna is charismatic, knowledgeable, and always willing to go the extra mile to provide a comfortable experience for our patients.",
       personalInfo: "Outside of work, she enjoys spending her time with family, watching anime, and taking care of her tortoise and cats!"
     },

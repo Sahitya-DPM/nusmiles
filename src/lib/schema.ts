@@ -227,7 +227,7 @@ function postalAddress() {
 
 function dentistOrganization() {
   return {
-    '@type': ['Dentist', 'LocalBusiness', 'MedicalBusiness'],
+    '@type': ['Dentist', 'LocalBusiness'],
     '@id': `${SITE_URL}/#dentist`,
     name: BUSINESS_NAME,
     alternateName: BUSINESS_ALTERNATE_NAMES,
@@ -311,7 +311,7 @@ export function buildDentalImplantPageSchema() {
     '@graph': [
       {
         ...dentistOrganization(),
-        medicalSpecialty: 'https://schema.org/Dentistry',
+        // medicalSpecialty: 'https://schema.org/Dentistry',
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
           name: 'Dental implants in Stockton',
@@ -319,7 +319,7 @@ export function buildDentalImplantPageSchema() {
             {
               '@type': 'Offer',
               itemOffered: {
-                '@type': 'MedicalProcedure',
+                // '@type': 'MedicalProcedure',
                 name: 'Dental Implants in Stockton, CA',
                 url: pageUrl,
               },
@@ -336,7 +336,7 @@ export function buildDentalImplantPageSchema() {
           'Affordable dental implants in California at NuSmile Dental in Stockton. Transparent pricing, financing, and a free consultation.',
         isPartOf: { '@id': `${SITE_URL}/#website` },
         about: {
-          '@type': 'MedicalProcedure',
+          // '@type': 'MedicalProcedure',
           name: 'Dental implants',
         },
       },

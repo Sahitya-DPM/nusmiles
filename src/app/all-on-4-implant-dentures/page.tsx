@@ -207,7 +207,7 @@ export default function AllOn4ImplantDenturesPage() {
               <div className="relative overflow-hidden rounded-2xl shadow-2xl w-full min-h-[600px]">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent z-10"></div>
                 <Image
-                  src="/dr parikh-doc.webp"
+                  src="/dr parikh.jpg"
                   alt="Dr. Rujul Parikh Stockton, CA"
                   fill
                   className="object-cover"

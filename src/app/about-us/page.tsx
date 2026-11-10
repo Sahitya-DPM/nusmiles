@@ -66,7 +66,7 @@ export default function AboutUsPage() {
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent z-10"></div>
                 <Image
-                  src="/tx coordinator huddle.webp"
+                  src="/Tx coordinator huddle.jpeg"
                   alt="NuSmile Dental family dentist in Stockton"
                   width={600}
                   height={700}

@@ -849,7 +849,7 @@ export default function AllOnXDentalImplantsPage() {
               <div className="relative overflow-hidden rounded-2xl shadow-2xl w-full min-h-[400px] md:min-h-[600px]">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent z-10" />
                 <Image
-                  src="/dr parikh-doc.webp"
+                  src="/dr parikh.jpg"
                   alt="Dr. Rujul G. Parikh, DDS"
                   fill
                   className="object-cover"

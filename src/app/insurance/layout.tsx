@@ -61,7 +61,7 @@ const schema = {
         {
           '@type': 'ListItem',
           position: 2,
-          name: 'Insurance & Medi-Cal',
+          name: 'Insurance',
           item: pageUrl,
         },
       ],
