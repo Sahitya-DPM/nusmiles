@@ -52,7 +52,7 @@ export default function DoctorSection() {
                 <div className="absolute inset-0 z-10 bg-gradient-to-t from-primary/20 to-transparent" />
 
                 <Image
-                  src="/dr parikh.jpg"
+                  src="/Dr Parikh.jpg"
                   alt="Dr. Rujul G. Parikh DDS"
                   fill
                   priority
