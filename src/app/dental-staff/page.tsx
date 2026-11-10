@@ -34,6 +34,22 @@ export default function DentalStaffPage() {
       description: "With more than 20 years of experience, Donna is charismatic, knowledgeable, and always willing to go the extra mile to provide a comfortable experience for our patients.",
       personalInfo: "Outside of work, she enjoys spending her time with family, watching anime, and taking care of her tortoise and cats!"
     },
+    {
+      name: "Jasmin",
+      title: "Dental Assistant",
+      language: "",
+      image: "/Jasmin.jpeg",
+      description: "Jasmin is our Registered Dental Assistant with 3 years of experience in the dental field. She is skilled in providing chairside support, ensuring patient comfort, and assisting with a wide range of dental procedures. Jasmin takes pride in creating a calm, welcoming experience for every patient while helping the clinical team deliver high-quality care."
+      // personalInfo: "When outside of work, she enjoys going out to concerts with friends and being her with family!"
+    },
+    {
+      name: "Kassandra",
+      title: "Dental Assistant",
+      language: "",
+      image: "/Kassandra.jpeg",
+      description: "Kassandra is our Dental Assistant with hands-on experience supporting the dental team and caring for patients. She is dedicated to making each visit comfortable and efficient, assisting with procedures, and ensuring the clinical room runs smoothly. Kassandra brings a positive attitude and a strong commitment to patient care every day."
+      // personalInfo: "Outside of work, she loves to spend time with her friends and family and traveling as much as she can!"
+    }
     // {
     //   name: "Serena",
     //   title: "Receptionist/Scheduling Coordinator",
@@ -138,7 +154,7 @@ export default function DentalStaffPage() {
             <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-4 lg:grid-cols-4 gap-4">
             {staffMembers.map((staff, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300" style={{ padding: '2rem' }}>
                 <div className="text-center mb-6">
