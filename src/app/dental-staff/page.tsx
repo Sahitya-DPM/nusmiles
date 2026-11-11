@@ -23,7 +23,7 @@ export default function DentalStaffPage() {
       title: "Registered Dental Hygienist",
       language: "",
       image: "/carolina.jpg",
-      description: "With 5 years of Hygiene experience & 15 years total in dentistry, Carolina provides an easy & comfortable experience for our patients during their cleanings.",
+      description: "With 8 years of experience as a Registered Dental Hygienist & 18 years total in dentistry, Carolina provides an easy & comfortable experience for our patients during their cleanings.",
       personalInfo: "On her free time, she enjoys spending quality time with her 3 kids & going out to new places!"
     },
     {
@@ -36,7 +36,7 @@ export default function DentalStaffPage() {
     },
     {
       name: "Jasmin",
-      title: "Dental Assistant",
+      title: "Registered Dental Assistant",
       language: "",
       image: "/Jasmin.jpeg",
       description: "Jasmin is our Registered Dental Assistant with 3 years of experience in the dental field. She is skilled in providing chairside support, ensuring patient comfort, and assisting with a wide range of dental procedures. Jasmin takes pride in creating a calm, welcoming experience for every patient while helping the clinical team deliver high-quality care."
